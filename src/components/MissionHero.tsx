@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Heart, ArrowRight, HelpCircle } from 'lucide-react';
+import { Heart, ArrowRight, Lightbulb, Calculator } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import davidHeadshot from '/images/f2474b23-8549-4599-8f5a-5ee1f6ad1022.png';
 
@@ -33,21 +33,21 @@ export const MissionHero = () => {
                   size="lg" 
                   className="bg-gradient-orange text-white hover:scale-105 transition-all duration-200 shadow-brand text-base px-8 py-3"
                 >
-                  <Link to="/kalkulacka">
-                    <ArrowRight className="w-5 h-5 mr-2" />
-                    {t('mission.hero.cta')}
+                  <Link to="/validace">
+                    <Lightbulb className="w-5 h-5 mr-2" />
+                    Ověř svůj nápad
                   </Link>
                 </Button>
-                
-                <Button 
-                  asChild 
-                  variant="outline" 
+
+                <Button
+                  asChild
+                  variant="outline"
                   size="lg"
                   className="border-brand-wine text-brand-wine hover:bg-brand-wine hover:text-white transition-all duration-200 text-base px-8 py-3"
                 >
-                  <Link to="/pred-zacatkem">
-                    <HelpCircle className="w-5 h-5 mr-2" />
-                    {t('mission.hero.ctaSecondary')}
+                  <Link to="/kalkulacka">
+                    <Calculator className="w-5 h-5 mr-2" />
+                    Spočítej, jestli to vydělá
                   </Link>
                 </Button>
               </div>
