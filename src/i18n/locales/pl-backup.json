@@ -1,0 +1,467 @@
+{
+  "nav": {
+    "home": "Zacznij",
+    "beforeStart": "Zanim zaczniesz",
+    "calculator": "Kalkulator finansowy",
+    "checklist": "Checklista startowa",
+    "about": "O mnie",
+    "main": {
+      "label": "Główna nawigacja"
+    },
+    "mobile": {
+      "label": "Nawigacja mobilna"
+    },
+    "utilities": {
+      "label": "Ustawienia strony"
+    }
+  },
+  "site": {
+    "title": "Nowy e-sklep",
+    "description": "Twoja droga do udanego biznesu online zaczyna się tutaj – krok po kroku, bez strachu i z wsparciem",
+    "home": {
+      "label": "Przejdź do strony głównej"
+    }
+  },
+  "accessibility": {
+    "skipToMain": "Przejdź do głównej treści"
+  },
+  "mission": {
+    "hero": {
+      "title": "Nie bój się uruchomić e-sklepu!",
+      "subtitle": "Każda odnosząca sukces przedsiębiorczyni zaczynała tak samo jak Ty – od pomysłu i mnóstwa pytań",
+      "description": "Ta strona została stworzona tak, aby podsumować najważniejsze materiały ze szkoleń, które prowadziłem dla Holky z Byznysu. Znajdziesz tu wszystko, co najważniejsze, w jednym miejscu.",
+      "cta": "Rozpocznij swoją podróż",
+      "ctaSecondary": "Nie jestem pewna, od czego zacząć",
+      "story": "Jestem David i od ponad 9 lat pomagam setkom przedsiębiorczyń i przedsiębiorców. Wiem, jak się czujesz – i wiem, że dasz radę!"
+    },
+    "support": {
+      "title": "Nie jesteś w tym sama",
+      "helpText": "Uruchomienie e-sklepu nie musi być stresujące. Masz wsparcie i doświadczenie, które doprowadzą Cię do celu.",
+      "confidence": "Każdy krok jest przemyślany tak, aby dać Ci pewność siebie i jasny kierunek."
+    }
+  },
+  "organizations": {
+    "title": "Część społeczności, która Cię wspiera",
+    "subtitle": "Współpracuję z organizacjami, które wierzą w siłę kobiecej przedsiębiorczości i edukacji młodych",
+    "holkyZByznysu": {
+      "name": "Holky z Byznysu",
+      "description": "Największa społeczność przedsiębiorczyń w Czechach – miejsce, gdzie znajdziesz inspirację, wsparcie i konkretne porady",
+      "focus": "Skierowane do kobiet, które chcą prowadzić działalność gospodarczą lub już ją prowadzą",
+      "link": "holkyzbyznysu.cz"
+    },
+    "muzesPodnikat": {
+      "name": "Můžeš Podnikat",
+      "description": "Program dla szkół średnich – pokazać młodym, że prowadzenie firmy to nie fizyka kwantowa",
+      "focus": "Edukacja i inspiracja dla przyszłych przedsiębiorców",
+      "link": "muzespodnikat.cz"
+    },
+    "mentoring": {
+      "title": "Indywidualny mentoring",
+      "description": "Udzielam osobistego mentoringu założycielkom w ramach Holky z Byznysu",
+      "note": "Ponieważ każdy biznes jest inny i czasem potrzebujesz indywidualnej porady"
+    }
+  },
+  "currency": {
+    "names": {
+      "czk": "Korona czeska",
+      "eur": "Euro",
+      "usd": "Dolar amerykański",
+      "pln": "Złoty"
+    },
+    "regions": {
+      "czech": "Czechy",
+      "europe": "Europa",
+      "usa": "Stany Zjednoczone",
+      "poland": "Polska"
+    },
+    "selector": {
+      "label": "Wybierz walutę. Aktualna: {{current}}"
+    },
+    "menu": {
+      "label": "Menu wyboru waluty",
+      "title": "Wybierz walutę"
+    },
+    "changed": "Waluta zmieniona na {{currency}}",
+    "selected": "Wybrane"
+  },
+  "language": {
+    "selector": {
+      "label": "Wybierz język. Aktualny: {{current}}",
+      "description": "Zmień język interfejsu"
+    },
+    "menu": {
+      "label": "Menu wyboru języka",
+      "title": "Wybierz język"
+    },
+    "changed": "Język zmieniony na {{language}}",
+    "selected": "Wybrane"
+  },
+  "learningPath": {
+    "title": "Twoja droga do sukcesu",
+    "subtitle": "Krok po kroku, bez pomijania etapów i z jasnym celem",
+    "beforeStart": {
+      "title": "Zanim zaczniesz",
+      "description": "Nie jesteś pewna, czy e-sklep jest dla Ciebie? Boisz się? To normalne!",
+      "time": "15 minut",
+      "link": "/pred-zacatkem"
+    },
+    "calculator": {
+      "title": "Sprawdź, czy to ma sens",
+      "description": "W 3 minuty dowiesz się, czy Twój pomysł może zarabiać pieniądze",
+      "time": "3 minuty",
+      "link": "/kalkulacka"
+    },
+    "checklist": {
+      "title": "Uruchom swój e-sklep",
+      "description": "15-dniowy plan z konkretnymi zadaniami – krok po kroku do celu",
+      "time": "15 dni",
+      "link": "/checklist"
+    }
+  },
+  "encouragement": {
+    "fear": {
+      "title": "To normalne, że się boisz",
+      "points": [
+        "Każda odnosząca sukces przedsiębiorczyni zaczynała z wątpliwościami",
+        "Strach oznacza, że Ci na tym zależy",
+        "Najważniejsze to zacząć – reszty nauczysz się po drodze",
+        "Masz wsparcie i nie jesteś w tym sama"
+      ]
+    },
+    "reality": {
+      "title": "Realność prowadzenia biznesu",
+      "honest": "Nie będzie łatwo, ale na pewno dasz radę",
+      "points": [
+        "Pierwsze miesiące będą wymagające – to normalne",
+        "Nie musisz od razu zarabiać tysięcy – zacznij od małego zysku",
+        "Błędy są częścią nauki, nie porażki",
+        "Każdego dnia nauczysz się czegoś nowego"
+      ]
+    }
+  },
+  "beforeStart": {
+    "title": "Nie jesteś pewna, od czego zacząć?",
+    "subtitle": "To jest całkowicie normalne. Każda odnosząca sukces przedsiębiorczyni przeszła przez tę samą niepewność.",
+    "hero": {
+      "title": "To normalne, że się boisz",
+      "description": "Kiedy uruchamiałem swój pierwszy e-sklep, też myślałem, że nic nie wiem. Że wszyscy wokół mnie są lepsi. Syndrom oszusta jest brutalny – ale właśnie ta presja zmusiła mnie do nauki, zadawania pytań i ciągłego doskonalenia się. Dziś wiem, że każda odnosząca sukces przedsiębiorczyni przeszła przez to samo uczucie 'nie wiem, co robię'."
+    },
+    "commonFears": {
+      "title": "Najczęstsze obawy (i dlaczego są nieuzasadnione)",
+      "fears": [
+        {
+          "fear": "\"Nie mam wystarczającego doświadczenia\"",
+          "reality": "Nikt go nie miał, kiedy zaczynał. Doświadczenie zdobywasz po drodze – to jedyna droga."
+        },
+        {
+          "fear": "\"Co jeśli to nie zadziała?\"",
+          "reality": "Wtedy to zmienisz albo zaczniesz od nowa. Żaden e-sklep nie jest idealny od razu."
+        },
+        {
+          "fear": "\"Konkurencja jest wszędzie\"",
+          "reality": "Konkurencja jest dowodem na to, że rynek istnieje. Twoja wartość będzie polegać na tym, jak zrobisz to inaczej."
+        },
+        {
+          "fear": "\"Nie wiem, czego nie wiem\"",
+          "reality": "Dlatego tu jestem. Pokażę Ci krok po kroku, co musisz wiedzieć."
+        }
+      ]
+    },
+    "realityCheck": {
+      "title": "Realność pierwszych miesięcy",
+      "honest": "Będę z Tobą szczery – nie będzie łatwo, ale na pewno jest to do zrobienia",
+      "points": [
+        "Pierwsze 3 miesiące: Uczysz się podstaw, masz pierwsze zamówienia, mnóstwo pytań",
+        "Miesiące 4-6: Zaczynasz rozumieć, co działa, a co nie",
+        "Po pół roku: Masz rytm i jasność, dokąd dalej zmierzać",
+        "Po roku: Dokładnie wiesz, co robisz, i możesz się rozwijać"
+      ]
+    },
+    "firstSteps": {
+      "title": "Twoje pierwsze kroki (bez stresu)",
+      "intro": "Zacznij od małego testu – nie musisz od razu budować wielkiego e-sklepu",
+      "steps": [
+        {
+          "title": "Przetestuj kalkulator",
+          "description": "W 3 minuty dowiesz się, czy Twój pomysł ma sens",
+          "action": "Uruchom test",
+          "link": "/kalkulacka"
+        },
+        {
+          "title": "Przejrzyj materiały",
+          "description": "Spójrz na praktyczne poradniki i dowiedz się, co Cię czeka",
+          "action": "Przeglądaj materiały",
+          "link": "/materialy"
+        },
+        {
+          "title": "Zerknij na checklistę",
+          "description": "15-dniowy plan pokaże Ci konkretne kroki",
+          "action": "Wyświetl plan",
+          "link": "/checklist"
+        }
+      ]
+    },
+    "support": {
+      "title": "Nie jesteś w tym sama",
+      "communities": [
+        {
+          "name": "Holky z Byznysu",
+          "description": "Społeczność tysięcy przedsiębiorczyń, które Ci doradzą i wesprą",
+          "link": "https://holkyzbyznysu.cz"
+        },
+        {
+          "name": "Indywidualny mentoring",
+          "description": "Osobiste konsultacje w przypadku bardziej skomplikowanych pytań",
+          "contact": "david@soundsgood.agency"
+        }
+      ]
+    },
+    "cta": {
+      "ready": "Jestem gotowa, żeby zacząć",
+      "readyLink": "/kalkulacka",
+      "needMore": "Chcę wiedzieć więcej o Davidzie",
+      "needMoreLink": "/o-mne"
+    }
+  },
+  "calculator": {
+    "encouragement": "Jesteś na dobrej drodze! 💪",
+    "title": "Kalkulator finansowy dla e-sklepu",
+    "subtitle": "Sprawdź, czy Twój pomysł ma potencjał być rentowny",
+    "tip": "Jeśli nie jesteś pewna niektórych liczb, użyj oszacowań. Kalkulator pokaże ci, czy pomysł jest perspektywiczny - dokładne liczby dopracujesz później.",
+    "notReady": "Jeszcze nie jestem gotowa",
+    "learnMore": "Chcesz dowiedzieć się więcej?",
+    "learnMoreDesc": "W naszej kompleksowej prezentacji znajdziesz szczegółowe procedury, strategie i praktyczne wskazówki dotyczące uruchomienia skutecznego e-sklepu.",
+    "openGuide": "Otwórz kompletny przewodnik",
+    "wizard": {
+      "title": "Kalkulator zysku e-sklepu",
+      "step1": {
+        "title": "Twój cel",
+        "description": "Ile chcesz zarobić?",
+        "question": "Ile chcesz zarobić na e-sklepie?",
+        "hint": "Zysk to to, co zostanie Ci po odjęciu wszystkich kosztów",
+        "monthly": "Miesięcznie",
+        "yearly": "Rocznie",
+        "placeholder": "Np. {{amount}}",
+        "average": "Przeciętny e-sklep zazwyczaj: {{range}}"
+      },
+      "step2": {
+        "title": "Twój e-sklep",
+        "description": "Podstawowe dane o produktach",
+        "question": "Opowiedz nam o swoim e-sklepie",
+        "hint": "Podstawowe dane o produktach i kosztach",
+        "aov": "Średnia wartość zamówienia (AOV)",
+        "aovTooltip": "Ile średnio klient wydaje na jedno zamówienie",
+        "aovHint": "Odzież: zazwyczaj niższe, Elektronika: wyższe wartości, Kosmetyki: średnie ceny",
+        "cogs": "Koszt sprzedanych towarów (COGS)",
+        "cogsTooltip": "Ile kosztują Cię produkty, które sprzedajesz (zakup + dostawa do Ciebie)",
+        "cogsHint": "Zazwyczaj 40-60% ceny sprzedaży",
+        "extra": "Dodatkowe koszty na zamówienie",
+        "extraTooltip": "Dostawa do klienta, opakowanie, bramka płatności itp.",
+        "extraHint": "Dostawa, opakowanie, płatności – zazwyczaj 10-15% AOV",
+        "margin": "Marża: {{percent}}%"
+      },
+      "step3": {
+        "title": "Marketing",
+        "description": "Jak zdobywasz klientów?",
+        "question": "Jak zdobywasz klientów?",
+        "hint": "Informacje o odwiedzających i marketingu",
+        "conversion": "Współczynnik konwersji (%)",
+        "conversionTooltip": "Jaki procent odwiedzających dokonuje zakupu. Na 100 odwiedzających przy 2% konwersji, 2 osoby dokonają zakupu.",
+        "conversionHint": "Średnia w e-commerce: 1-3%",
+        "budget": "Budżet marketingowy (miesięcznie)",
+        "budgetTooltip": "Ile wydajesz na reklamę, media społecznościowe i inne formy promocji",
+        "budgetHint": "Zazwyczaj 10-20% planowanego obrotu"
+      },
+      "navigation": {
+        "back": "Wstecz",
+        "next": "Dalej",
+        "calculate": "Oblicz",
+        "step": "Krok {{current}} z {{total}}"
+      }
+    },
+    "results": {
+      "title": "Twoja droga do zysku",
+      "changeData": "Zmień dane",
+      "yourResults": "Twoje wyniki",
+      "monthlyProfit": "Miesięczny zysk",
+      "yearlyProfit": "Roczny zysk",
+      "grossMargin": "Marża brutto",
+      "netMargin": "Marża netto",
+      "requirements": "Co potrzebujesz do sukcesu",
+      "ordersPerMonth": "Zamówień miesięcznie",
+      "visitorsPerMonth": "Odwiedzających miesięcznie",
+      "profitAfterMarketing": "Zysk po marketingu",
+      "breakEven": "Próg rentowności (zamówienia)"
+    },
+    "validation": {
+      "invalidData": "Sprawdź wprowadzone dane",
+      "invalidInput": "Nieprawidłowe dane wejściowe"
+    }
+  },
+  "checklist": {
+    "title": "15-dniowa lista kontrolna do uruchomienia e-sklepu",
+    "subtitle": "Prosty, praktyczny plan, który działa na każdej platformie",
+    "guide": {
+      "title": "Szczegółowy przewodnik",
+      "description": "Szczegółowe materiały i procedury dla każdego kroku w prezentacji",
+      "button": "Otwórz prezentację"
+    },
+    "progress": {
+      "completed": "z {{total}} ukończonych",
+      "done": "gotowe"
+    },
+    "actions": {
+      "reset": "Resetuj",
+      "exportPdf": "Eksportuj do PDF",
+      "markComplete": "Oznacz jako ukończone",
+      "markIncomplete": "Oznacz jako nieukończone",
+      "resetAll": "Resetuj wszystko"
+    },
+    "day": {
+      "title": "Dzień {{day}}",
+      "progress": "{{completed}}/{{total}} zadań ukończonych"
+    },
+    "priority": {
+      "high": "Wysoki",
+      "medium": "Średni",
+      "low": "Niski"
+    },
+    "notes": {
+      "placeholder": "Notatki do tego zadania..."
+    },
+    "categories": {
+      "preLaunch": "Przed uruchomieniem",
+      "launch": "Uruchomienie",
+      "postLaunch": "Po uruchomieniu",
+      "marketing": "Marketing",
+      "optimization": "Optymalizacja"
+    },
+    "export": {
+      "title": "Eksport checklisty",
+      "description": "Pobierz swój postęp jako PDF"
+    },
+    "pdf": {
+      "title": "15-dniowa Lista Kontrolna do Uruchomienia E-sklepu",
+      "subtitle": "Twoja droga do udanego biznesu online",
+      "progress": "Postęp: {{completed}}/{{total}} zadań ({{rate}}%)",
+      "completedTasks": "UKOŃCZONE ZADANIA:",
+      "notes": "NOTATKI:",
+      "dayTask": "✓ Dzień {{day}}: {{title}}",
+      "dayNotes": "Dzień {{day}} - {{title}}:",
+      "contact": "Kontakt i Media Społecznościowe:",
+      "exportInfo": "Eksport utworzony: {{date}}"
+    },
+    "tip": "Wskazówka:"
+  },
+  "currency": {
+    "label": "Waluta",
+    "czk": "Korona czeska (CZK)",
+    "eur": "Euro (EUR)",
+    "usd": "Dolar amerykański (USD)",
+    "pln": "Złoty polski (PLN)"
+  },
+  "theme": {
+    "light": "Jasny motyw",
+    "dark": "Ciemny motyw",
+    "toggle": "Przełącz motyw"
+  },
+  "loading": {
+    "calculating": "Obliczam...",
+    "loading": "Ładuję...",
+    "pleaseWait": "Proszę czekać"
+  },
+  "errors": {
+    "general": "Coś poszło nie tak",
+    "tryAgain": "Spróbuj ponownie",
+    "reload": "Odśwież stronę"
+  },
+  "offline": {
+    "title": "Jesteś offline",
+    "description": "Jesteś offline. Niektóre funkcje mogą być niedostępne.",
+    "back": "Powrót online"
+  },
+  "general": {
+    "breadcrumb": {
+      "home": "Strona główna",
+      "pred-zacatkem": "Zanim zaczniesz",
+      "kalkulacka": "Kalkulator finansowy",
+      "checklist": "Plan działania",
+      "o-mne": "O mnie",
+      "calculator": "Kalkulator finansowy",
+      "about": "O mnie"
+    }
+  },
+  "about": {
+    "title": "O Davidzie Simõesie",
+    "subtitle": "Założyciel pierwszej agencji Shopify w Czechach • Członek Shopsys Group • Partner Shopify od 2016 z oceną 5.0⭐",
+    "intro": {
+      "greeting": "Cześć! Jestem David Simões, założyciel soundsgood.agency i Twój przewodnik po świecie e-commerce.",
+      "experience": "Mam za sobą ponad 9 lat praktycznego doświadczenia z różnymi typami biznesów online – od małych startupów po firmy z obrotami przekraczającymi 3 miliardy CZK rocznie.",
+      "approach": "Moje podejście jest proste: Keep It Simple, Stupid! Nauczyłem się tego w USA i to działa.",
+      "honesty": "Mam za sobą sukcesy i porażki. I to właśnie z porażek nauczyłem się najwięcej."
+    },
+    "credentials": {
+      "title": "Zweryfikowane referencje",
+      "shopifyPartner": "Partner Shopify od maja 2016",
+      "rating": "Ocena 5.0⭐ na podstawie 121 recenzji",
+      "shopsysGroup": "Członek Shopsys Group (po przejęciu)",
+      "webinarInstructor": "Wykładowca webinarów holkyzbyznysu.cz",
+      "czechCrunch": "Wspomniany w Czech Crunch"
+    },
+    "upcomingWebinar": {
+      "title": "Nadchodzący webinar",
+      "name": "Jak zbudować e-sklep od zera",
+      "date": "czw, 24.07.2025, 18:00–20:00",
+      "contact": "david@soundsgood.agency • +420 774 051 374"
+    }
+  },
+  "meta": {
+    "keywords": "e-shop lista zadań, uruchomienie e-sklepu, kalkulator finansowy, biznes online, edukacja e-commerce, David Simões"
+  },
+  "terminology": {
+    "title": "Szybkie wyjaśnienie pojęć 📚",
+    "profit": {
+      "title": "Zysk",
+      "description": "To, co zostaje Ci po odjęciu wszystkich kosztów. Pieniądze, które możesz zatrzymać lub ponownie zainwestować w biznes."
+    },
+    "aov": {
+      "title": "AOV (Average Order Value)",
+      "description": "Średnia kwota, którą klient wydaje na jedno zamówienie. Obliczasz ją: całkowity obrót ÷ liczba zamówień."
+    },
+    "cogs": {
+      "title": "COGS (Cost of Goods Sold)",
+      "description": "Koszty towaru – ile kosztują Cię produkty, które sprzedajesz (zakup, produkcja, pakowanie, wysyłka)."
+    },
+    "margin": {
+      "title": "Marża",
+      "description": "Procent, który zostaje Ci z zamówienia po odjęciu kosztów. Brutto = bez dodatkowych kosztów, netto = z nimi."
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "Kontakt",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "twitter": "X (Twitter)"
+    },
+    "agency": {
+      "title": "Eksperci Shopify",
+      "name": "Sounds Good Agency",
+      "description": "Agencja Shopify skupiona na technologii i strategii dla e-commerce"
+    },
+    "platform": {
+      "title": "Platforma e-sklepu",
+      "shopify": "Rozpocznij e-sklep z Shopify",
+      "description": "Najpopularniejsza platforma e-commerce na świecie"
+    },
+    "education": {
+      "title": "Edukacja",
+      "podcast": "Exec Talks Podcast",
+      "description": "Podcast o e-commerce i biznesie"
+    },
+    "bottom": {
+      "created": "Stworzone z ❤️ dla wszystkich, którzy chcą odnieść sukces w e-commerce",
+      "success": "Razem do udanego biznesu! 🚀"
+    }
+  }
+}

@@ -1,0 +1,1096 @@
+{
+  "site": {
+    "title": "Nový e-shop",
+    "description": "Praktická finanční kalkulačka pro plánování tvého e-shopu a online byznysu",
+    "home": {
+      "label": "Přejít na domovskou stránku"
+    }
+  },
+  "general": {
+    "loading": "Načítá se...",
+    "error": "Něco se pokazilo",
+    "breadcrumb": {
+      "home": "Domů",
+      "kalkulacka": "Kalkulačka",
+      "pred-zacatkem": "Před začátkem",
+      "calculator": "Kalkulačka",
+      "checklist": "Checklist",
+      "o-mne": "O mně",
+      "about": "O mně"
+    }
+  },
+  "nav": {
+    "home": "Začít",
+    "beforeStart": "Před začátkem",
+    "calculator": "Finanční kalkulačka",
+    "checklist": "Spouštěcí checklist",
+    "faq": "FAQ",
+    "about": "O mně",
+    "main": {
+      "label": "Hlavní navigace"
+    },
+    "mobile": {
+      "label": "Mobilní navigace"
+    },
+    "utilities": {
+      "label": "Nastavení webu"
+    }
+  },
+  "mission": {
+    "hero": {
+      "title": "Neboj se spustit e-shop!",
+      "subtitle": "Každá úspěšná podnikatelka začínala stejně jako ty – s nápadem a spoustou otázek",
+      "description": "Tahle stránka vznikla, aby shrnovala ty nejdůležitější materiály ze školení, které jsem dělal pro Holky z Byznysu. Najdeš tu vše podstatné na jednom místě.",
+      "cta": "Začni svou cestu",
+      "ctaSecondary": "Nejsem si jistá, kde začít",
+      "story": "Jsem David a za 9+ let jsem pomohl stovkám podnikatelek a podnikatelů. Vím, jak se cítíš – a vím, že to dáš!"
+    },
+    "support": {
+      "title": "Nejsi v tom sama",
+      "helpText": "Spouštění e-shopu nemusí být stresující. Máš po boku podporu a zkušenosti, které tě dovedou k cíli.",
+      "confidence": "Každý krok je promyšlený tak, aby ti dal sebevědomí a jasný směr."
+    }
+  },
+  "learningPath": {
+    "title": "Tvoje cesta k úspěchu",
+    "subtitle": "Krok za krokem, bez přeskakování a s jasným cílem",
+    "beforeStart": {
+      "title": "Než začneš",
+      "description": "Nejsi si jistá, jestli je e-shop pro tebe? Bojíš se? To je normální!",
+      "time": "15 minut",
+      "link": "/pred-zacatkem"
+    },
+    "calculator": {
+      "title": "Zjisti, jestli to má smysl",
+      "description": "Za 3 minuty zjistíš, jestli tvůj nápad může vydělávat peníze",
+      "time": "3 minuty",
+      "link": "/kalkulacka"
+    },
+    "checklist": {
+      "title": "Spusť svůj e-shop",
+      "description": "15denní plán s konkrétními úkoly – krok za krokem k cíli",
+      "time": "15 dní",
+      "link": "/checklist"
+    }
+  },
+  "organizations": {
+    "title": "Součást komunity, která tě podporuje",
+    "subtitle": "Spolupracuji s organizacemi, které věří v sílu ženského podnikání a vzdělávání mladých"
+  },
+  "encouragement": {
+    "fear": {
+      "title": "Je normální mít strach",
+      "points": [
+        "Každá úspěšná podnikatelka začínala s pochybnostmi úplně stejně.",
+        "Strach znamená, že ti na tom záleží",
+        "Nejdůležitější je začít – zbytek se naučíš cestou",
+        "Máš podporu a nejsi v tom sama"
+      ]
+    },
+    "reality": {
+      "title": "Realita podnikání",
+      "honest": "Nebude to snadné, ale rozhodně to zvládneš",
+      "points": [
+        "První měsíce budou náročné – to je normální",
+        "Bude dní, kdy se nic neprodá – také normální",
+        "Chyby jsou součást učení, ne selhání",
+        "Každý den se něco nového naučíš"
+      ]
+    }
+  },
+  "beforeStart": {
+    "title": "Nejsi si jistá, kde začít?",
+    "subtitle": "To je úplně v pořádku. Každá úspěšná podnikatelka prošla stejnou nejistotou.",
+    "hero": {
+      "title": "Je normální mít strach",
+      "subtitle": "Každá úspěšná podnikatelka začínala s pochybnostmi",
+      "description": "Strach z neznámého, z toho, že něco nezvládneš, nebo že investuješ peníze zbytečně. To je všechno přirozené a znamená to, že ti na tom záleží.",
+      "cta": "Pokračovat ke kalkulačce",
+      "secondaryCta": "Chci vědět více"
+    },
+    "commonFears": {
+      "title": "Nejčastější obavy (a proč nejsou oprávněné)",
+      "fears": [
+        {
+          "fear": "\"Neznám se do technologií\"",
+          "reality": "Dnes jsou e-shop platformy jako Shopify nebo Shoptet tak jednoduché, že to zvládne každý. Nepotřebuješ být programátorka."
+        },
+        {
+          "fear": "\"Nemám dost peněz\"",
+          "reality": "E-shop můžeš spustit už za pár tisíc korun. Začni malým rozpočtem a postupně investuj víc podle růstu."
+        },
+        {
+          "fear": "\"Co když se nic neprodá?\"",
+          "reality": "Právě proto máme kalkulačku – abys věděla, jestli tvůj nápad má potenciál. A pokud se zpočátku neprodává, je to o ladění, ne o selhání."
+        },
+        {
+          "fear": "\"Konkurence je všude\"",
+          "reality": "Konkurence znamená, že existuje trh. Tvým úkolem není porazit všechny, ale najít své zákazníky."
+        }
+      ]
+    },
+    "realityCheck": {
+      "title": "Realita e-commerce (bez růžových brýlí)",
+      "honest": "Nebude to snadné, ale rozhodně to zvládneš",
+      "points": [
+        "První měsíce nebudeš vydělávat tisíce – to je normální",
+        "Bude dní, kdy se nic neprodá – také normální",
+        "Naučíš se spoustu nových věcí – od marketingu po logistiku",
+        "Postupně si postavíš stabilní byznys, který ti dá svobodu"
+      ]
+    },
+    "firstSteps": {
+      "title": "Kde konkrétně začít?",
+      "intro": "Rozdělili jsme to na tři jednoduché kroky:",
+      "steps": [
+        {
+          "title": "Ověř si svůj nápad",
+          "description": "Pomocí naší kalkulačky za 3 minuty zjistíš, jestli tvůj nápad může vydělávat peníze",
+          "action": "Spustit kalkulačku",
+          "link": "/kalkulacka"
+        },
+        {
+          "title": "Naplánuj si spuštění",
+          "description": "15denní checklist ti ukáže přesně, co máš kdy udělat",
+          "action": "Zobrazit checklist",
+          "link": "/checklist"
+        },
+        {
+          "title": "Začni jednoduše",
+          "description": "Zvol platformu, nahraj pár produktů a začni. Zbytek si doladíš za pochodu.",
+          "action": "Více o platformách",
+          "link": "/o-mne"
+        }
+      ]
+    },
+    "support": {
+      "communities": [
+        {
+          "name": "Holky z byznysu",
+          "description": "Komunita žen podnikatelek",
+          "link": "https://holkyzbyznysu.cz"
+        }
+      ]
+    },
+    "cta": {
+      "ready": "Začít s kalkulačkou",
+      "readyLink": "/kalkulacka",
+      "needMore": "Chci vědět více",
+      "needMoreLink": "/o-mne",
+      "finalTitle": "Připravená začít svou cestu?",
+      "guide": {
+        "title": "Kompletní průvodce",
+        "description": "Podrobný materiál s všemi kroky, tipy a strategiemi pro spuštění úspěšného e-shopu.",
+        "button": "Otevřít prezentaci"
+      }
+    }
+  },
+  "about": {
+    "title": "Ahoj, jsem David Simões!",
+    "subtitle": "E-commerce konzultant, který věří, že každý nápad si zaslouží šanci",
+    "intro": {
+      "title": "Kdo jsem a proč můžu pomoci",
+      "greeting": "Jsem David Simões, e-commerce konzultant s více než 9 lety zkušeností. Pomáhám podnikatelkám a podnikatelům spouštět a optimalizovat jejich online byznysy.",
+      "experience": "Za ty roky jsem viděl všechny možné chyby, které se dají udělat – a některé jsem udělal i sám. Vím, co funguje a co ne.",
+      "honesty": "Nejsem tady proto, abych ti prodával růžové sny. Chci ti pomoct realisticky posoudit tvůj nápad a dát ti praktické kroky.",
+      "mistakes": "Proto ti můžu pomoct vyhnout se chybám, které jsem udělal já nebo které jsem viděl u jiných."
+    },
+    "approach": {
+      "title": "Můj přístup k tobě",
+      "honest": {
+        "title": "Nejsem perfektní",
+        "content": "a ani se za to nevydávám. Jsem Portugalec, takže občas můžu mluvit trochu divně - klidně mi řekni, když mi nerozumíš!"
+      },
+      "questions": {
+        "title": "Ptej se na cokoli",
+        "content": "není cílem jen projít materiály, ale skutečně ti pomoct s tvými konkrétními výzvami. Každý e-shop je jiný a každý má jiné problémy."
+      },
+      "contact": {
+        "title": "Zůstanu s tebou v kontaktu",
+        "content": "i po školení se můžeš ozvat, když budeš potřebovat radu. Tvůj úspěch je můj úspěch."
+      }
+    },
+    "contact": {
+      "title": "Zůstaňme v kontaktu",
+      "description": "Máš otázku? Potřebuješ radu? Nebo se ti prostě něco nedaří? Ozvi se!"
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "Kontakt",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "twitter": "Twitter"
+    },
+    "agency": {
+      "title": "Agentura",
+      "name": "soundsgood.agency",
+      "description": "První agentura v ČR specializující se výhradně na Shopify"
+    },
+    "platform": {
+      "title": "Platforma",
+      "shopify": "Začít Shopify e-shop",
+      "description": "Nejpopulárnější globální e-commerce platforma na světě"
+    },
+    "education": {
+      "title": "Vzdělávání",
+      "podcast": "Exec Talks podcast by Shopsys",
+      "description": "Špičkové e-shopy z našeho trhu sdílejí své zkušenosti"
+    },
+    "bottom": {
+      "created": "Vytvořeno s láskou pro ty, kteří se nebojí začít svůj e-shop",
+      "success": "Každý úspěšný e-shop začínal první objednávkou. Tvá může být zítra! 💫"
+    }
+  },
+  "checklist": {
+    "title": "15denní akční checklist pro spuštění e-shopu v ČR",
+    "subtitle": "Jednoduchý, praktický plán, který funguje na jakékoli platformě",
+    "guide": {
+      "title": "Podrobný průvodce",
+      "description": "Detailní materiály a postupy pro každý krok v prezentaci",
+      "button": "Otevřít prezentaci"
+    },
+    "progress": {
+      "completed": "{{completed}} z {{total}} úkolů dokončeno",
+      "done": "hotovo"
+    },
+    "actions": {
+      "reset": "Resetovat postup"
+    },
+    "day": {
+      "title": "Den {{day}}",
+      "progress": "{{completed}}/{{total}} úkolů dokončeno"
+    },
+    "priority": {
+      "high": "Vysoká",
+      "medium": "Střední",
+      "low": "Nízká"
+    },
+    "notes": {
+      "placeholder": "Přidejte své poznámky..."
+    },
+    "pdf": {
+      "title": "Checklist spuštění e-shopu - Postup",
+      "subtitle": "Vytvořeno pomocí E-shop Financial Calculator od Davida Simõese",
+      "progress": "Postup: {{completed}}/{{total}} úkolů dokončeno ({{rate}}%)",
+      "completedTasks": "Dokončené úkoly:",
+      "dayTask": "Den {{day}}: {{title}}",
+      "notes": "Poznámky:",
+      "dayNotes": "Den {{day}} - {{title}}:",
+      "contact": "Kontakt na autora:",
+      "exportInfo": "Exportováno dne {{date}} z eshopcalculator.cz"
+    },
+    "tip": "Tip:",
+    "legalResources": {
+      "title": "Právní podpora",
+      "description": "Pro orientaci v právních požadavcích e-commerce doporučujeme specialisty z Elegal, kteří mají online spoustu užitečného obsahu o tom, na co si dát pozor.",
+      "button": "Prozkoumat Elegal"
+    },
+    "tasks": {
+      "day1": {
+        "zivnost": {
+          "title": "Založit živnost / s.r.o.",
+          "description": "Vyřiď si živnostenský list nebo založení s.r.o. podle plánovaného obratu",
+          "time": "1-3 hodiny"
+        },
+        "bankAccount": {
+          "title": "Otevřít podnikatelský účet",
+          "description": "Zřiď si účet pro podnikání oddělený od osobních financí",
+          "time": "1 hodina"
+        },
+        "accounting": {
+          "title": "Zajistit účetní a přípravu účetnictví",
+          "description": "Najdi účetní a připrav si nastavení účetnictví pro vedení správné evidence",
+          "time": "2 hodiny",
+          "tips": "Doporučujeme kontaktovat účetní již na začátku - pomohou ti s nastavením a povinnostmi"
+        },
+        "budget": {
+          "title": "Stanovit startovací rozpočet",
+          "description": "Rozhodni, kolik investuješ na začátek (platforma, zboží, marketing)",
+          "time": "30 minut"
+        }
+      },
+      "day2": {
+        "paymentGateway": {
+          "title": "Vybrat platební bránu",
+          "description": "Rozhodni se mezi Stripe, PayPal, GoPay nebo Comgate",
+          "time": "1 hodina",
+          "tips": "Stripe má nejnižší poplatky, GoPay je nejpopulárnější v ČR"
+        },
+        "shipping": {
+          "title": "Vybrat dopravu",
+          "description": "Domluv se s Českou poštou, PPL, Zásilkovnou nebo DPD",
+          "time": "2 hodiny"
+        },
+        "shippingPrices": {
+          "title": "Nastavit ceny dopravy",
+          "description": "Rozhodni, zda doprava bude zdarma nebo za poplatek",
+          "time": "30 minut"
+        }
+      },
+      "day3": {
+        "legalDocs": {
+          "title": "Připravit právní dokumenty",
+          "description": "VOP, zásady ochrany osobních údajů, reklamační řád",
+          "time": "2 hodiny",
+          "tips": "Použij generátor VOP online nebo se poraď s právníkem"
+        },
+        "moodboard": {
+          "title": "Vytvořit moodboard značky",
+          "description": "Definuj barvy, fonty a celkový styl tvé značky",
+          "time": "1 hodina"
+        },
+        "legalRequirements": {
+          "title": "Prověřit legislativní požadavky",
+          "description": "GDPR, cookies, DPH, elektronický prodej - co se tě týká?",
+          "time": "1 hodina"
+        }
+      },
+      "day4": {
+        "logo": {
+          "title": "Vytvořit logo",
+          "description": "Navrhni si logo sám nebo zadej designérovi",
+          "time": "2 hodiny",
+          "tips": "Canva má skvělé šablony zdarma"
+        },
+        "products": {
+          "title": "Definovat prvních 5-10 produktů",
+          "description": "Vyber si produkty, kterými začneš - lépe méně, ale kvalitně",
+          "time": "2 hodiny"
+        },
+        "socialMedia": {
+          "title": "Vytvořit sociální sítě",
+          "description": "Instagram, Facebook, TikTok - podle tvé cílové skupiny",
+          "time": "1 hodina"
+        },
+        "pricing": {
+          "title": "Stanovit cenovou strategii",
+          "description": "Spočítej si náklady + marži a prověř konkurenci",
+          "time": "2 hodiny"
+        }
+      },
+      "day5": {
+        "platform": {
+          "title": "Vybrat platformu",
+          "description": "Shopify, Shoptet, WooCommerce - podle rozpočtu a potřeb",
+          "time": "1 hodina",
+          "tips": "Shopify pro začátečníky, WooCommerce pro pokročilé"
+        },
+        "basicPages": {
+          "title": "Vytvořit základní stránky",
+          "description": "O nás, Kontakt, Doprava a platba, FAQ",
+          "time": "3 hodiny"
+        },
+        "domain": {
+          "title": "Koupit doménu",
+          "description": "Vyber si doménu, která odpovídá tvé značce",
+          "time": "30 minut"
+        }
+      },
+      "day6": {
+        "uploadProducts": {
+          "title": "Nahrát produkty",
+          "description": "Vytvoř popis, nahraj fotky a nastav ceny prvních produktů",
+          "time": "4 hodiny",
+          "tips": "Kvalitní fotky jsou základ - investuj do nich čas"
+        },
+        "seoBasics": {
+          "title": "Základy SEO",
+          "description": "Title tagy, meta descriptions, URL struktury",
+          "time": "2 hodiny"
+        },
+        "keywords": {
+          "title": "Výzkum klíčových slov",
+          "description": "Najdi si 10-20 klíčových slov pro své produkty",
+          "time": "1 hodina"
+        }
+      },
+      "day7": {
+        "integratePayments": {
+          "title": "Integrace plateb",
+          "description": "Připoj si platební bránu a otestuj fungování",
+          "time": "2 hodiny"
+        },
+        "integrateShipping": {
+          "title": "Integrace dopravy",
+          "description": "Nastav si automatické počítání poštovného",
+          "time": "2 hodiny"
+        },
+        "paymentMethods": {
+          "title": "Nastavit platební metody",
+          "description": "Karta, převodem, dobírka - co budeš nabízet?",
+          "time": "1 hodina",
+          "tips": "Nabídni min. 2-3 způsoby platby"
+        },
+        "shippingPrices": {
+          "title": "Nastavit poštovné",
+          "description": "Nastav ceny dopravy včetně balného",
+          "time": "30 minut"
+        }
+      },
+      "day8": {
+        "legalFooter": {
+          "title": "Právní zápatí",
+          "description": "IČ, DIČ, sídlo, registrace u soudu",
+          "time": "30 minut"
+        },
+        "mobileResponsive": {
+          "title": "Mobilní responsivita",
+          "description": "Zkontroluj, jak vypadá e-shop na telefonu",
+          "time": "1 hodina"
+        },
+        "pageSpeed": {
+          "title": "Rychlost načítání",
+          "description": "Otestuj rychlost stránek a optimalizuj obrázky",
+          "time": "1 hodina",
+          "tips": "Použij Google PageSpeed Insights"
+        },
+        "checkout": {
+          "title": "Proces objednávky",
+          "description": "Zjednoduš checkout na minimum nutných kroků",
+          "time": "2 hodiny"
+        }
+      },
+      "day9": {
+        "testOrder": {
+          "title": "Testovací objednávka",
+          "description": "Udělej si zkušební objednávku od A do Z",
+          "time": "1 hodina",
+          "tips": "Otestuj i různé platební metody"
+        },
+        "friendsFeedback": {
+          "title": "Feedback od přátel",
+          "description": "Nech kamarády projít celý nákupní proces",
+          "time": "2 hodiny"
+        },
+        "deviceTesting": {
+          "title": "Testování na zařízeních",
+          "description": "Vyzkoušej na mobilu, tabletu i počítači",
+          "time": "1 hodina"
+        }
+      },
+      "day10": {
+        "legalInfo": {
+          "title": "Doplnit právní informace",
+          "description": "VOP, ochrana dat, reklamační řád - vše na svém místě",
+          "time": "1 hodina"
+        },
+        "support": {
+          "title": "Zákaznická podpora",
+          "description": "Nastav si systém na řešení dotazů a reklamací",
+          "time": "1 hodina"
+        },
+        "analytics": {
+          "title": "Google Analytics",
+          "description": "Nainstaluj si měření návštěvnosti a konverzí",
+          "time": "1 hodina",
+          "tips": "Nastav si i Google Analytics Enhanced Ecommerce"
+        },
+        "searchConsole": {
+          "title": "Google Search Console",
+          "description": "Přidej si stránky do Search Console",
+          "time": "30 minut"
+        },
+        "automation": {
+          "title": "Email automaty",
+          "description": "Uvítací email, potvrzení objednávky, tracking",
+          "time": "2 hodiny"
+        }
+      },
+      "day11": {
+        "softLaunch": {
+          "title": "Soft launch",
+          "description": "Spusť pro úzký okruh známých a získej první feedback",
+          "time": "Celý den",
+          "tips": "Začni malým okruhem - rodinní příslušníci a blízcí přátelé"
+        },
+        "collectFeedback": {
+          "title": "Sbírat zpětnou vazbu",
+          "description": "Aktivně se ptej na zkušenosti s nákupem",
+          "time": "2 hodiny"
+        },
+        "specificQuestions": {
+          "title": "Konkrétní otázky",
+          "description": "Bylo něco nejasného? Co by se dalo zlepšit?",
+          "time": "1 hodina"
+        }
+      },
+      "day12": {
+        "brandStory": {
+          "title": "Příběh značky",
+          "description": "Napiš o sobě a proč děláš právě tohle",
+          "time": "2 hodiny",
+          "tips": "Lidé nakupují od lidí - buď autentická"
+        },
+        "launchPosts": {
+          "title": "Spouštěcí příspěvky",
+          "description": "Připrav si sérii příspěvků pro spuštění",
+          "time": "3 hodiny"
+        },
+        "optimizeContent": {
+          "title": "Optimalizace obsahu",
+          "description": "Dopracuj popisy produktů podle feedbacku",
+          "time": "2 hodiny"
+        }
+      },
+      "day13": {
+        "finalCheck": {
+          "title": "Finální kontrola",
+          "description": "Projdi celý e-shop s chladnou hlavou",
+          "time": "2 hodiny",
+          "tips": "Představ si, že jsi zákazník, který tě nezná"
+        },
+        "planLaunch": {
+          "title": "Naplánovat spuštění",
+          "description": "Vyber si datum a čas pro oficiální spuštění",
+          "time": "30 minut"
+        },
+        "problemList": {
+          "title": "Seznam známých problémů",
+          "description": "Sepiš si, co ještě budeš řešit později",
+          "time": "30 minut"
+        }
+      },
+      "day14": {
+        "ads": {
+          "title": "Příprava reklam",
+          "description": "Facebook/Instagram Ads nebo Google Ads - začni malým rozpočtem",
+          "time": "3 hodiny",
+          "tips": "Začni s 20-50 Kč denně"
+        },
+        "socialPromotion": {
+          "title": "Propagace na sítích",
+          "description": "Stories, příspěvky, možná i TikTok video",
+          "time": "2 hodiny"
+        },
+        "discountCode": {
+          "title": "Slevový kód",
+          "description": "Vytvoř slevový kód pro první zákazníky",
+          "time": "15 minut"
+        }
+      },
+      "day15": {
+        "launch": {
+          "title": "Spuštění!",
+          "description": "Oficiálně spusť e-shop a řekni to světu",
+          "time": "Celý den",
+          "tips": "Oslav to! Právě jsi se stala podnikatelkou"
+        },
+        "monitorAnalytics": {
+          "title": "Sledování analytiky",
+          "description": "Koukej na čísla, ale nepropadej panice z malého návštěvnosti",
+          "time": "30 minut"
+        },
+        "notifications": {
+          "title": "Nastavit notifikace",
+          "description": "Zapni si upozornění na nové objednávky",
+          "time": "15 minut"
+        },
+        "focusAreas": {
+          "title": "Oblasti pro zlepšení",
+          "description": "Zaměř se na 1-2 věci, které budeš zlepšovat týden po týdnu",
+          "time": "30 minut"
+        }
+      }
+    },
+    "celebration": {
+      "task": "Úkol splněn! 🎉",
+      "day": "Den dokončen! Skvělá práce! ⭐",
+      "milestone": "Milestone dosažen! 🏆",
+      "completion": "Checklist dokončen! Jsi úžasná! 🎊"
+    },
+    "onboarding": {
+      "step1": {
+        "title": "Přehled pokroku",
+        "content": "Zde vidíš celkový pokrok a kolik úkolů máš hotových. Bude tě to krásně motivovat!"
+      },
+      "step2": {
+        "title": "Pokrok po dnech",
+        "content": "Každý den má své úkoly. Můžeš je plnit v tempu, které ti vyhovuje."
+      },
+      "step3": {
+        "title": "Úkoly",
+        "content": "Klikni na úkol pro více detailů. Můžeš přidávat poznámky a označovat úkoly jako splněné."
+      },
+      "step4": {
+        "title": "Export do PDF",
+        "content": "Kdykoli si můžeš stáhnout svůj pokrok jako PDF nebo ho zálohovat."
+      },
+      "next": "Další",
+      "prev": "Zpět",
+      "finish": "Dokončit"
+    },
+    "backup": {
+      "title": "Zálohování a obnovení",
+      "warning": "Zálohuj si svůj pokrok, abys o něj nepřišla při změně prohlížeče nebo zařízení.",
+      "export": {
+        "title": "Export pokroku",
+        "description": "Stáhni si zálohu svého pokroku",
+        "button": "Stáhnout zálohu"
+      },
+      "import": {
+        "title": "Import pokroku",
+        "description": "Obnov pokrok ze záložního souboru",
+        "button": "Nahrát zálohu"
+      },
+      "importing": "Nahrávám...",
+      "exportSuccess": "Záloha stažena",
+      "exportSuccessDesc": "Tvůj pokrok byl úspěšně zálohován",
+      "exportError": "Chyba při exportu",
+      "exportErrorDesc": "Nepodařilo se vytvořit zálohu",
+      "importSuccess": "Pokrok obnoven",
+      "importSuccessDesc": "Tvůj pokrok byl úspěšně obnoven",
+      "importError": "Chyba při importu",
+      "importErrorDesc": "Nepodařilo se načíst záložní soubor"
+    },
+    "insights": {
+      "title": "Tvoje pokroky a tipy",
+      "description": "Na základě tvého pokroku máme pro tebe tyto pozorování:",
+      "difficulty": {
+        "title": "Hodnocení obtížnosti",
+        "description": "Jak obtížný byl tento úkol?",
+        "submitRating": "Ohodnotit"
+      },
+      "helpfulness": {
+        "title": "Jak užitečný byl úkol?",
+        "description": "Pomohl ti tento úkol posunout se dál?",
+        "submitRating": "Ohodnotit"
+      }
+    },
+    "czechResources": {
+      "title": "České služby a náklady",
+      "banks": {
+        "title": "Doporučené banky",
+        "items": [
+          "Fio banka - 0 Kč měsíčně, dobrý internet banking",
+          "ČSOB - podnikatelský účet od 149 Kč/měsíc",
+          "Airbank - od 199 Kč/měsíc s kartou zdarma"
+        ]
+      },
+      "payment": {
+        "title": "Platební brány",
+        "items": [
+          "Stripe - 1,4% + 5 Kč za transakci",
+          "PayPal - 3,4% + 10 Kč za transakci",
+          "ČSOB Gateway - 1,5% za transakci + měsíční poplatek",
+          "GoPay - 1,9% za transakci (slovenská alternativa)"
+        ]
+      },
+      "shipping": {
+        "title": "Dopravci a náklady",
+        "items": [
+          "Česká pošta - balík do 1kg od 99 Kč",
+          "PPL - doručení do 24h od 79 Kč",
+          "DPD - doručení další den od 89 Kč",
+          "Zásilkovna - výdejní místa od 39 Kč"
+        ]
+      },
+      "platforms": {
+        "title": "E-shop platformy",
+        "items": [
+          "Shoptet - od 499 Kč/měsíc (český)",
+          "Upgates - od 290 Kč/měsíc (český)",
+          "Shopify - od $29/měsíc (~700 Kč)",
+          "WooCommerce - zdarma + hosting od 200 Kč/měsíc"
+        ]
+      },
+      "legal": {
+        "title": "Právní náklady",
+        "items": [
+          "Živnostenský list - 1000 Kč jednorázově",
+          "Obchodní podmínky - od 5000 Kč (právník)",
+          "GDPR compliance - od 3000 Kč konzultace",
+          "Ochrana spotřebitele - povinné info zdarma na portálu APPE"
+        ]
+      },
+      "marketing": {
+        "title": "Marketing náklady",
+        "items": [
+          "Facebook reklamy - doporučuji začít s 50 Kč/den",
+          "Google Ads - minimum 30 Kč/den",
+          "Instagram reklamy - sdílí rozpočet s Facebook",
+          "Influencer marketing - 500-5000 Kč za post"
+        ]
+      }
+    }
+  },
+  "calculator": {
+    "encouragement": "Jsi na dobré cestě! 💪",
+    "title": "Finanční kalkulačka pro e-shop",
+    "subtitle": "Za 3 minuty zjistíš, jestli tvůj nápad může vydělávat peníze",
+    "tip": "Buď realistická s čísly – lepší je být překvapená pozitivně než negativně",
+    "notReady": "Ještě nejsem připravená",
+    "learnMore": "Chceš se dozvědět víc?",
+    "learnMoreDesc": "Podívej se na detailní prezentaci s postupy a tipy pro spuštění e-shopu",
+    "openGuide": "Otevřít průvodce",
+    "results": {
+      "changeData": "Změnit data",
+      "yourResults": "Tvoje výsledky",
+      "monthlyProfit": "Měsíční zisk",
+      "yearlyProfit": "Roční zisk",
+      "grossMargin": "Hrubá marže",
+      "netMargin": "Čistá marže",
+      "requirements": "Požadavky na dosažení cíle",
+      "ordersPerMonth": "Objednávek měsíčně",
+      "visitorsPerMonth": "Návštěvníků měsíčně",
+      "profitAfterMarketing": "Zisk po marketingu",
+      "breakEven": "Bod zvratu",
+      "terminology": {
+        "title": "Vysvětlení pojmů",
+        "profit": {
+          "title": "Zisk",
+          "description": "Peníze, které ti zbydou po odečtení všech nákladů od tržeb"
+        },
+        "aov": {
+          "title": "Průměrná hodnota objednávky (AOV)",
+          "description": "Kolik v průměru utratí zákazník za jednu objednávku"
+        },
+        "cogs": {
+          "title": "Náklady na prodané zboží (COGS)",
+          "description": "Přímé náklady na produkty, které prodáváš"
+        },
+        "margin": {
+          "title": "Marže",
+          "description": "Rozdíl mezi prodejní cenou a náklady, vyjádřený v procentech"
+        },
+        "conversion": {
+          "title": "Konverzní poměr",
+          "description": "Procento návštěvníků, kteří se stanou zákazníky"
+        },
+        "cac": {
+          "title": "Náklady na získání zákazníka (CAC)",
+          "description": "Kolik stojí získat jednoho nového zákazníka"
+        }
+      }
+    },
+    "validation": {
+      "lowMargin": "Pozor! Marže pod 20% může být problematická",
+      "highTraffic": "Upozornění: Potřebuješ hodně návštěvníků",
+      "highCac": "CAC je příliš vysoký – sniž marketingové náklady"
+    },
+    "export": {
+      "title": "Export & sdílení",
+      "downloadHtml": "Stáhnout HTML",
+      "downloadCsv": "Stáhnout CSV",
+      "sendEmail": "Poslat emailem",
+      "addCalendar": "Přidat do kalendáře"
+    },
+    "success": {
+      "title": "Úspěšné příběhy",
+      "subtitle": "Reálné výsledky českých e-shopů podle kalkulačky",
+      "monthlyOrders": "Objednávky/měsíc",
+      "monthlyRevenue": "Tržby/měsíc",
+      "monthlyProfit": "Zisk/měsíc",
+      "growthTime": "Doba růstu",
+      "category": {
+        "sport": "Sport",
+        "kids": "Děti",
+        "beauty": "Beauty"
+      }
+    },
+    "wizard": {
+      "title": "Průvodce výpočtem",
+      "step1": {
+        "title": "Tvůj cíl",
+        "description": "Kolik chceš vydělávat?",
+        "question": "Kolik chceš vydělávat?",
+        "hint": "Začni realisticky – můžeš cíl později zvýšit",
+        "monthly": "Měsíčně",
+        "yearly": "Ročně",
+        "placeholder": "Např. {{amount}}",
+        "average": "Začínající e-shop obvykle: {{range}}"
+      },
+      "step2": {
+        "title": "Tvůj e-shop",
+        "description": "Základní údaje o produktech",
+        "question": "Řekni nám o svém e-shopu",
+        "hint": "Základní údaje o produktech a nákladech",
+        "aov": "Průměrná hodnota objednávky",
+        "aovTooltip": "Kolik v průměru utratí zákazník za jednu objednávku",
+        "aovHint": "Oblečení: obvykle nižší, Elektronika: vyšší hodnoty, Kosmetika: střední ceny",
+        "cogs": "Náklady na zboží",
+        "cogsTooltip": "Kolik tě stojí produkty, které prodáváš (nákup + doprava k tobě)",
+        "cogsHint": "Obvykle 40-60% z prodejní ceny",
+        "extra": "Další náklady na objednávku",
+        "extraTooltip": "Doprava k zákazníkovi, balení, platební brána, atd.",
+        "extraHint": "Doprava, balení, platby – obvykle 10-15% z AOV",
+        "margin": "Marže: {{percent}}%"
+      },
+      "step3": {
+        "title": "Marketing",
+        "description": "Jak získáváš zákazníky?",
+        "question": "Jak získáváš zákazníky?",
+        "hint": "Informace o návštěvnících a marketingu",
+        "conversion": "Konverzní poměr (%)",
+        "conversionTooltip": "Kolik procent návštěvníků nakoupí. Ze 100 návštěvníků při 2% konverzi nakoupí 2 lidi.",
+        "conversionHint": "Průměr v e-commerce: 1-3%",
+        "budget": "Rozpočet na marketing (měsíčně)",
+        "budgetTooltip": "Kolik vydáváš na reklamu, sociální sítě a jiné formy propagace",
+        "budgetHint": "Obvykle 10-20% z plánovaného obratu"
+      },
+      "navigation": {
+        "back": "Zpět",
+        "next": "Další",
+        "step": "Krok {{current}} z {{total}}",
+        "calculate": "Spočítat"
+      }
+    }
+  },
+  "faq": {
+    "title": "FAQ: Tvoje otázky mimo rámec prezentace",
+    "subtitle": "Ahoj! Tady najdeš odpovědi na otázky, které jsi položila a které jsme na školení neprobraly do hloubky. Vše je napsané jednoduše, aby to pochopila i úplná začátečnice, a s přátelským tónem, protože vím, že start e-shopu může být trochu děsivý. 😊 Ke každé otázce přidávám odkazy na důvěryhodné české zdroje, kde si můžeš přečíst víc a naučit se, co potřebuješ.",
+    "sections": {
+      "legal": {
+        "title": "Právní požadavky a soulad (Compliance)",
+        "icon": "Scale",
+        "color": "text-brand-wine",
+        "questions": [
+          {
+            "q": "Jaké jsou absolutně minimální právní požadavky pro nový e-shop v ČR?",
+            "a": "Když rozjíždíš e-shop, musíš mít jasné obchodní podmínky, zásady ochrany osobních údajů (GDPR), reklamační řád a info o právu na odstoupení od smlouvy do 14 dní. Taky je potřeba uvádět správné údaje o sobě (např. IČO, adresu) a ceny včetně DPH.",
+            "links": [
+              {
+                "text": "Dostupný advokát – Jak správně založit e-shop",
+                "url": "https://dostupnyadvokat.cz/blog/jak-spravne-na-zalozeni-eshopu"
+              }
+            ]
+          },
+          {
+            "q": "Kde najdu spolehlivé šablony pro právní dokumenty, jako jsou obchodní podmínky nebo GDPR?",
+            "a": "Šablony najdeš u APEC – Asociace pro elektronickou komerci, která má vzory připravené pro e-shopy. Na GDPR je skvělá příručka od Úřadu pro ochranu osobních údajů, která ti vše vysvětlí polopatě. Pokud chceš jistotu, konzultuj s právníkem.",
+            "links": [
+              {
+                "text": "APEK – Vzorové obchodní podmínky",
+                "url": "https://www.apek.cz/vzorove-obchodni-podminky-apek"
+              },
+              {
+                "text": "AK Šmarda – GDPR pro malé a střední podniky",
+                "url": "https://www.aksmarda.cz/rady-a-tipy/pravni-aspekty-gdpr-pro-male-a-stredni-podniky/"
+              },
+              {
+                "text": "Vzorové právní dokumenty pro e-shop",
+                "url": "https://help.eshop-rychle.cz/cs/article/vzorove-pravni-dokumenty-pro-e-shop-126bezo/"
+              }
+            ]
+          },
+          {
+            "q": "Mají některé produkty (např. hračky, potraviny, elektronika) extra pravidla?",
+            "a": "Ano, každý typ produktu má své specifické požadavky. Hračky potřebují CE značku, potraviny musí splňovat hygienické normy a mít označení alergenů, a u elektroniky je třeba řešit recyklaci (např. přes ASEKOL). Mrkni na weby příslušných úřadů nebo se poraď s odborníkem.",
+            "links": [
+              {
+                "text": "SZPI – Značení potravin a legislativa",
+                "url": "https://www.szpi.gov.cz/clanek/oznacovani-potravin.aspx"
+              },
+              {
+                "text": "Úřad pro technickou normalizaci – CE značení",
+                "url": "https://www.unmz.cz/urad/ce-znaceni"
+              }
+            ]
+          }
+        ]
+      },
+      "ux": {
+        "title": "Uživatelská zkušenost (UX) a optimalizace konverzního poměru (CRO)",
+        "icon": "Users",
+        "color": "text-brand-orange",
+        "questions": [
+          {
+            "q": "Jaké jsou 2–3 jednoduché kroky, jak zlepšit zážitek zákazníků a zvýšit prodeje na e-shopu?",
+            "a": "1. Zjednoduš nákupní proces: Měj co nejméně kroků v košíku, umožni platbu bez registrace a dej jasná tlačítka \"Přidat do košíku\" nebo \"Objednat\".\n\n2. Přizpůsob e-shop mobilům: Většina lidí nakupuje přes telefon, takže tvůj web musí být přehledný i na malé obrazovce.\n\n3. Urychli načítání stránek: Pomalý web lidi odrazuje. Zmenši obrázky a vyber rychlý hosting.",
+            "links": [
+              {
+                "text": "Shopify – Ecommerce UX Guide",
+                "url": "https://www.shopify.com/blog/ecommerce-ux"
+              },
+              {
+                "text": "YouTube – Ecommerce UX Tips",
+                "url": "https://www.youtube.com/watch?v=EVBf3HldPhk"
+              }
+            ]
+          },
+          {
+            "q": "Co nejčastěji brání zákazníkům dokončit nákup?",
+            "a": "1. Skryté poplatky: Např. nečekané poštovné v košíku.\n\n2. Složitý proces objednávky: Pomalé načítání nebo příliš mnoho polí ve formuláři.\n\n3. Málo informací o produktu: Chybí kvalitní fotky, popisky nebo recenze.",
+            "links": [
+              {
+                "text": "Příčiny opuštění e-shopu – studie Baymard Institute",
+                "url": "https://baymard.com/lists/cart-abandonment-rate"
+              }
+            ]
+          },
+          {
+            "q": "Jak změřím, jestli je můj e-shop příjemný pro uživatele, kromě prodejů?",
+            "a": "Sleduj v Google Analytics metriky jako míra okamžitého opuštění (Bounce Rate), průměrná doba na stránce nebo cesty uživatelů.\n\nPoužij Hotjar nebo Microsoft Clarity na heatmapy a nahrávky, abys viděla, kam lidé klikají.\n\nZkus krátké dotazníky přes Survicate nebo Typeform, kde se zeptáš na spokojenost.",
+            "links": [
+              {
+                "text": "Návod na Google Analytics 4 – Websusmevem",
+                "url": "https://www.websusmevem.cz/blog/navod-na-google-analytics-4/"
+              },
+              {
+                "text": "Hotjar – Heatmapy a analýza chování",
+                "url": "https://help.hotjar.com/hc/en-us/articles/115009336727-Getting-Started-with-Heatmaps"
+              }
+            ]
+          }
+        ]
+      },
+      "seo": {
+        "title": "Organická návštěvnost a SEO taktika",
+        "icon": "Search",
+        "color": "text-brand-pink",
+        "questions": [
+          {
+            "q": "Jaké metriky v Google Analytics mi ukážou, proč mi na e-shop nechodí lidi?",
+            "a": "Počet uživatelů a relací: Kolik lidí přišlo a jak často.\n\nZdroje/Média: Odkud přicházejí (např. vyhledávače, sociální sítě).\n\nStránky a vstupy: Které stránky jsou nejnavštěvovanější.\n\nMíra okamžitého opuštění (Bounce Rate): Pokud je vysoká, něco lidi odrazuje.",
+            "links": [
+              {
+                "text": "Návod na Google Analytics 4 – Websusmevem",
+                "url": "https://www.websusmevem.cz/blog/navod-na-google-analytics-4/"
+              }
+            ]
+          },
+          {
+            "q": "Jaké jsou 2–3 jednoduché SEO triky pro začátečníky, které zlepší viditelnost e-shopu?",
+            "a": "1. Piš unikátní popisky produktů: Vlož do nich klíčová slova, která lidé hledají.\n\n2. Uspořádej kategorie: Měj přehlednou strukturu kategorií, aby se v e-shopu dalo snadno hledat.\n\n3. Zrychli web: Rychlý web má lepší pozice ve vyhledávačích.",
+            "links": [
+              {
+                "text": "Včelište – 7 zásadních tipů SEO pro e-shop",
+                "url": "https://vceliste.cz/blog/7-zasadnich-tipu-jak-na-seo-pro-e-shop-co-nedelat-aby-byla-optimalizace-uspesna/"
+              },
+              {
+                "text": "Optimalizace e-shopu pro vyhledávače",
+                "url": "https://www.h1.cz/seo/e-shop"
+              }
+            ]
+          }
+        ]
+      },
+      "finance": {
+        "title": "Finance pro malé/hobby e-shopy",
+        "icon": "DollarSign",
+        "color": "text-brand-wine",
+        "questions": [
+          {
+            "q": "Jaké jsou minimální náklady na založení malého e-shopu jako vedlejší činnosti?",
+            "a": "Platforma: Od 500 Kč/měsíc (např. Shoptet, E-shop Rychle).\n\nDoména: 200–500 Kč/rok.\n\nProdukty: Nákup nebo výroba zboží.\n\nMarketing: Malé částky na PPC reklamy nebo sociální sítě.",
+            "links": [
+              {
+                "text": "Nástroje pro web – Cena e-shopu",
+                "url": "https://www.nastrojeproweb.cz/clanky/eshop-cena"
+              }
+            ]
+          }
+        ]
+      },
+      "niche": {
+        "title": "Niche obchodní modely",
+        "icon": "Target",
+        "color": "text-brand-orange",
+        "questions": [
+          {
+            "q": "Které platformy jsou nejlepší pro prodej služeb nebo digitálního obsahu (např. videí, kurzů)?",
+            "a": "Pro e-shopy s digitálními produkty: Shopify nebo WordPress s WooCommerce pro vlastní řešení.\n\nPro online kurzy: Globálně Teachable a Thinkific, v ČR je vhodná Seduo.cz pro lokální publikum.\n\nPro automatizaci prodeje a fakturace: FAPI – ideální pro český trh a integruje se s většinou platforem.",
+            "links": [
+              {
+                "text": "8 nejlepších mezinárodních platforem pro kurzy",
+                "url": "https://club.coolpeople.cz/8-nejlepsich-mezinarodnich-platforem-nejen-pro-it-kurzy/1282.html"
+              }
+            ]
+          },
+          {
+            "q": "Jaké jsou specifika pro charitativní e-shop?",
+            "a": "Specifika pro charitativní e-shop spočívají především v transparentnosti a jasné komunikaci, kam přesně putují vybrané peníze.\n\nPro prodej fyzických či symbolických produktů: Běžné e-commerce platformy jako Shopify nebo Wix s důrazem na detailní informace o poslání a účelu zisku.\n\nPro přímé dárcovství a sbírky: Specializované fundraisingové platformy – české Darujme.cz, Donio.cz nebo Znesnáze21, které usnadňují bezpečné přijímání darů a budování důvěry dárců, často s možností odečitatelnosti z daní.",
+            "links": [
+              {
+                "text": "Donio.cz – Komerční projekty",
+                "url": "https://donio.cz/rady/komercni-projekty"
+              }
+            ]
+          }
+        ]
+      },
+      "investment": {
+        "title": "Počáteční investice a rozpočtování",
+        "icon": "TrendingUp",
+        "color": "text-brand-pink",
+        "questions": [
+          {
+            "q": "Kolik procent rozpočtu mám dát na marketing nového e-shopu?",
+            "a": "Doporučuju dát 20–40 % rozpočtu na marketing v prvním roce. Začni s jednoduchými PPC reklamami (např. Sklik nebo Google Ads) a sociálními sítěmi.",
+            "links": [
+              {
+                "text": "Jak rozdělit peníze do marketingových kanálů",
+                "url": "https://blog.shoptet.cz/jak-rozdelit-penize-do-marketingovych-kanalu/"
+              }
+            ]
+          },
+          {
+            "q": "Jaké investice můžu odložit na později?",
+            "a": "1. Pokročilé SEO audity: Základní SEO stačí na začátek, složitější analýzy přijdou později.\n\n2. Věrnostní programy: Začni s jednoduchými slevami, složité systémy můžou počkat.\n\n3. Velké zásoby zboží: Kup jen malé množství produktů a rozšiřuj podle poptávky.",
+            "links": [
+              {
+                "text": "E-shop jako investice",
+                "url": "https://www.investujeme.cz/clanky/eshop-jako-investice/"
+              }
+            ]
+          }
+        ]
+      },
+      "payments": {
+        "title": "Platby a technická integrace",
+        "icon": "CreditCard",
+        "color": "text-brand-wine",
+        "questions": [
+          {
+            "q": "Jak přidám platební brány do e-shopu?",
+            "a": "Většina platforem (Shoptet, Shopify, WooCommerce) má moduly pro české brány jako GoPay, ComGate nebo Shoptet Pay. Stačí se zaregistrovat u poskytovatele, dostaneš API klíče a vložíš je do nastavení e-shopu. Návody najdeš přímo u bran.",
+            "links": [
+              {
+                "text": "GoPay – Integrace",
+                "url": "https://www.gopay.com/cs/integrace/"
+              },
+              {
+                "text": "ComGate – E-shop platformy",
+                "url": "https://help.comgate.cz/docs/e-shop-platformy-1"
+              }
+            ]
+          }
+        ]
+      },
+      "tips": {
+        "title": "Tipy pro začátečnice",
+        "icon": "Lightbulb",
+        "color": "text-brand-orange",
+        "questions": [
+          {
+            "q": "Jak začít s e-shopem, když jsem úplná začátečnice?",
+            "a": "Začni postupně: Nevrhej se hned do velkých investic. Zkus levné platformy jako Shoptet nebo E-shop Rychle a postupně vylepšuj.\n\nVyuži AI jako svého spoluzakladatele: Místo googling použij ChatGPT, Claude nebo další AI nástroje. Ptej se na cokoli – od psaní popisků produktů až po marketingové strategie. AI ti může pomoci napsat texty, vytvořit plány, analyzovat konkurenci i poradit s problémy 24/7.\n\nBuď trpělivá: Úspěch v e-shopu chce čas. AI ti ale může výrazně zrychlit učení a produktivitu. Nenech se odradit a makaj dál! 😊"
+          }
+        ]
+      }
+    },
+    "footer": {
+      "title": "Ať se ti daří s tvým e-shopem!",
+      "subtitle": "Pokud budeš mít další otázky, sem s nimi! 🚀"
+    }
+  },
+  "currency": {
+    "names": {
+      "czk": "Česká koruna",
+      "eur": "Euro"
+    },
+    "regions": {
+      "czech": "Česká republika",
+      "europe": "Evropa"
+    },
+    "selector": {
+      "label": "Vyber měnu. Aktuální: {{current}}"
+    },
+    "menu": {
+      "label": "Menu výběru měny",
+      "title": "Vybrat měnu"
+    },
+    "changed": "Měna změněna na {{currency}}",
+    "selected": "Vybráno"
+  }
+}

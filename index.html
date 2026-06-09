@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-shop, který vydělává — kalkulačka, diagnostika a kit pro začínající podnikatelky</title>
+    <meta name="description" content="Otevřený nástroj a referenční kit pro spuštění e-shopu, který vydělává. Kalkulačka životaschopnosti, diagnostika 'neprodává', persona nástroj a checklist. Od Davida Simõese pro #HolkyzByznysu." />
+    <!-- Dynamic meta tags managed by React Helmet (MetaTags.tsx) -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+
+    <!-- Accessibility styles -->
+    <style>
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: #000;
+        color: #fff;
+        padding: 8px;
+        text-decoration: none;
+        z-index: 1000;
+        border-radius: 4px;
+      }
+      .skip-link:focus {
+        top: 6px;
+      }
+    </style>
+
+    <!-- Dynamic structured data will be managed by React Helmet -->
+  </head>
+
+  <body>
+    <!-- Skip navigation link for accessibility - will be dynamically managed -->
+    <a href="#main-content" class="skip-link" id="skip-link">Přeskočit na hlavní obsah</a>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Holky z Byznysu brand colors - Enhanced for accessibility */
+    --background: 0 0% 100%;
+    --foreground: 340 85% 25%; /* Darker for better contrast (4.5:1) */
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 85% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 85% 25%;
+
+    --primary: 25 95% 48%; /* Slightly darker orange for better contrast */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 340 82% 45%; /* Darker wine for better contrast */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 330 100% 96%; /* Slightly darker pink background */
+    --muted-foreground: 340 85% 30%; /* Better contrast on muted background */
+
+    --accent: 315 88% 55%; /* Darker pink for better contrast */
+    --accent-foreground: 340 85% 25%; /* Dark text on accent background */
+
+    /* Custom brand colors */
+    --brand-orange: 25 95% 53%;
+    --brand-pink: 315 88% 70%;
+    --brand-wine: 340 82% 52%;
+    --brand-light-pink: 330 100% 98%;
+    
+    /* Gradients */
+    --gradient-brand: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(var(--brand-pink)));
+    --gradient-orange: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(25 95% 63%));
+    --gradient-soft: linear-gradient(180deg, hsl(var(--brand-light-pink)), hsl(var(--background)));
+    
+    /* Shadows */
+    --shadow-brand: 0 4px 20px -2px hsl(var(--brand-orange) / 0.3);
+    --shadow-soft: 0 2px 10px -1px hsl(var(--brand-wine) / 0.1);
+    --shadow-glow: 0 0 20px hsl(var(--brand-orange) / 0.4);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 340 85% 25%; /* High contrast focus ring */
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with high contrast ratios */
+    --background: 340 20% 8%; /* Dark wine background */
+    --foreground: 330 100% 95%; /* Light pink text */
+
+    --card: 340 15% 12%;
+    --card-foreground: 330 100% 95%;
+
+    --popover: 340 15% 12%;
+    --popover-foreground: 330 100% 95%;
+
+    --primary: 25 95% 55%; /* Brighter orange for dark mode */
+    --primary-foreground: 340 20% 8%;
+
+    --secondary: 340 82% 60%; /* Lighter wine for dark mode */
+    --secondary-foreground: 340 20% 8%;
+
+    --muted: 340 15% 15%; /* Dark muted background */
+    --muted-foreground: 330 50% 80%; /* Light muted text */
+
+    --accent: 315 88% 75%; /* Lighter pink for dark mode */
+    --accent-foreground: 340 20% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 15% 20%;
+    --input: 340 15% 20%;
+    --ring: 315 88% 75%; /* Light pink focus ring for dark mode */
+
+    --sidebar-background: 340 15% 10%;
+    --sidebar-foreground: 330 50% 80%;
+    --sidebar-primary: 330 100% 95%;
+    --sidebar-primary-foreground: 340 20% 8%;
+    --sidebar-accent: 340 15% 18%;
+    --sidebar-accent-foreground: 330 100% 95%;
+    --sidebar-border: 340 15% 20%;
+    --sidebar-ring: 315 88% 75%;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Background utilities */
+  .bg-gradient-soft {
+    background: var(--gradient-soft);
+  }
+  
+  .bg-gradient-orange {
+    background: var(--gradient-orange);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Animation utilities */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .hover-scale {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
