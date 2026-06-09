@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Nový e-shop",
-    "description": "Praktická finanční kalkulačka pro plánování tvého e-shopu a online byznysu",
+    "title": "E-shop, který vydělává",
+    "description": "Praktické nástroje a otevřený kit pro spuštění e-shopu, který vydělává — kalkulačka, diagnostika, persona a checklist pro začínající podnikatelky.",
     "home": {
       "label": "Přejít na domovskou stránku"
     }
@@ -34,7 +34,9 @@
     },
     "utilities": {
       "label": "Nastavení webu"
-    }
+    },
+    "validace": "Ověř nápad",
+    "diagnostika": "Diagnostika"
   },
   "mission": {
     "hero": {

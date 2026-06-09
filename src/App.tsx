@@ -14,6 +14,8 @@ import { usePerformance } from "@/hooks/usePerformance";
 import Index from "./pages/Index";
 import BeforeStart from "./pages/BeforeStart";
 import Calculator from "./pages/Calculator";
+import Validace from "./pages/Validace";
+import Diagnostika from "./pages/Diagnostika";
 import Checklist from "./pages/Checklist";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
@@ -49,7 +51,9 @@ const App = () => {
                 <Routes>
                   <Route path="/" element={<Index />} />
                   <Route path="/pred-zacatkem" element={<BeforeStart />} />
+                  <Route path="/validace" element={<Validace />} />
                   <Route path="/kalkulacka" element={<Calculator />} />
+                  <Route path="/diagnostika" element={<Diagnostika />} />
                   <Route path="/checklist" element={<Checklist />} />
                   <Route path="/o-mne" element={<About />} />
                   <Route path="/faq" element={<FAQ />} />

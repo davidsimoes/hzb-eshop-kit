@@ -10,7 +10,7 @@ interface MetaTagsProps {
   structuredData?: object;
 }
 
-const BASE_URL = 'https://nove-eshop.cz';
+const BASE_URL = 'https://hzb.davidjose.net';
 
 export const MetaTags = ({ 
   title, 
@@ -41,7 +41,7 @@ export const MetaTags = ({
       "@type": "Person",
       "name": "David Simões",
       "jobTitle": "E-commerce Consultant",
-      "url": "https://nove-eshop.cz/about"
+      "url": `${BASE_URL}/o-mne`
     },
     "offers": {
       "@type": "Offer",
