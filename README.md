@@ -1,73 +1,106 @@
-# Welcome to your Lovable project
+# E-shop, který vydělává 🛍️
 
-## Project info
+> Otevřený nástroj a referenční kit pro spuštění e-shopu, který opravdu vydělává.
+> Pro začínající podnikatelky (a kohokoli, kdo začíná). Od Davida Simõese pro
+> komunitu **#HolkyzByznysu**.
 
-**URL**: https://lovable.dev/projects/8b98960e-9d27-41c8-8549-bdb6cf0954b3
+**Web:** https://hzb.davidjose.net · **Licence:** [CC BY 4.0](LICENSE)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🇨🇿 Co to je
 
-**Use Lovable**
+Tohle není kurz, který skončí a zapomeneš ho. Je to **živá reference**, která ti
+zůstane — a kterou navíc můžeš „nakrmit“ vlastní AI (ChatGPT, Claude, Gemini),
+aby ti radila konkrétně k tvému e-shopu.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8b98960e-9d27-41c8-8549-bdb6cf0954b3) and start prompting.
+Skládá se ze dvou částí:
 
-Changes made via Lovable will be committed automatically to this repo.
+1. **Web s nástroji** ([hzb.davidjose.net](https://hzb.davidjose.net)) — klikací,
+   bez instalace:
+   - **Ověř nápad** (`/validace`) — sestav personu a ověř, že o to někdo stojí.
+   - **Kalkulačka** (`/kalkulacka`) — spočítej, jestli ti to vydělá, a kolik potřebuješ.
+   - **Diagnostika** (`/diagnostika`) — „Co když to neprodává?“ Najde nejslabší článek.
+   - **Checklist** (`/checklist`) — krok za krokem ke spuštění.
 
-**Use your preferred IDE**
+2. **Kit ke čtení i pro AI** — průvodci a prompty v jednoduchých textových
+   souborech (`docs/`, `prompts/`). Můžeš si je přečíst, nebo je dát své AI a nechat
+   si poradit na míru.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🤖 Jak to použít s AI (to nejlepší)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Celý kit je napsaný tak, aby ho zvládla jakákoli AI — žádné speciální nástroje.
 
-Follow these steps:
+**Nejjednodušší způsob:**
+1. Otevři ChatGPT, Claude nebo Gemini.
+2. Zkopíruj obsah souboru z `prompts/` (např. `prompts/validace-persony.md`) a vlož ho.
+3. Doplň svoje informace a nech si poradit.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+**Pro pokročilé (nakrm AI celým kitem):**
+1. Stáhni si tenhle repozitář (zelené tlačítko **Code → Download ZIP**, nebo `git clone`).
+2. Nahraj složku `docs/` do AI, která umí číst soubory (Claude Projects, ChatGPT
+   s nahráním souborů, NotebookLM…).
+3. Ptej se: *„Podle tohohle kitu mi poraď, jak…“* — AI bude radit v duchu téhle metody.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+> Prompty v `prompts/` jsou napsané v běžné češtině. Klidně si je uprav.
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 📚 Obsah kitu (`docs/`)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+| # | Téma | Soubor |
+|---|------|--------|
+| 0 | Začni tady (a strach ze startu) | [`docs/00-zacni-tady.md`](docs/00-zacni-tady.md) |
+| 1 | Validace nápadu a persona | [`docs/01-validace.md`](docs/01-validace.md) |
+| 2 | Výběr platformy | [`docs/02-vyber-platformy.md`](docs/02-vyber-platformy.md) |
+| 3 | Spuštění, checklist a právní minimum | [`docs/03-spusteni-a-pravo.md`](docs/03-spusteni-a-pravo.md) |
+| 4 | Marketing a značka | [`docs/04-marketing-a-znacka.md`](docs/04-marketing-a-znacka.md) |
+| 5 | Provoz, finance a dodavatelé | [`docs/05-provoz-a-finance.md`](docs/05-provoz-a-finance.md) |
+| 6 | Když to neprodává | [`docs/06-kdyz-to-neprodava.md`](docs/06-kdyz-to-neprodava.md) |
+| 7 | Příběhy a inspirace | [`docs/07-pribehy.md`](docs/07-pribehy.md) |
+
+Prompty pro AI: [`prompts/`](prompts/)
+
+## 🧭 Metoda v jedné větě
+
+**Validace → Plán → Spuštění** — nejdřív ověř, že to někdo chce a že to vydělá,
+pak naplánuj, pak spusť. AI ti pomáhá v každém kroku.
+
+## ❤️ Komu patří dík
+
+Kit vznikl pro webinář komunity **#HolkyzByznysu**. Sdílej ho dál — je to k tomu určené.
+
+---
+
+## 🇬🇧 In English
+
+**E-shop that earns** — an open tool + reference kit for launching an e-commerce
+store that actually makes money. Built for beginner (women) entrepreneurs by
+David Simões for the Czech **#HolkyzByznysu** community.
+
+It has two parts:
+
+1. **A web app** ([hzb.davidjose.net](https://hzb.davidjose.net)) — no install:
+   idea/persona **validation**, a viability **calculator**, a "why isn't it selling?"
+   **diagnostic**, and a launch **checklist**.
+2. **An AI-feedable kit** — plain-Markdown guides (`docs/`) and prompts (`prompts/`)
+   that work with **any** LLM (ChatGPT, Claude, Gemini). Read them, or feed them to
+   your AI for tailored advice.
+
+**Content is in Czech** (the audience is Czech). The structure is agent-agnostic —
+no Claude-specific tooling required.
+
+**Use with AI:** copy a file from `prompts/` into your LLM and fill in your details,
+or clone the repo and upload `docs/` to an LLM that reads files, then ask it to
+advise "according to this kit."
+
+**License:** [CC BY 4.0](LICENSE) — share and adapt with attribution. Brand names and
+David's personal photos are excluded; replace them when adapting.
+
+## 🛠️ Run locally (developers)
+
+```bash
+npm install
+npm run dev      # http://localhost:8080
+npm run build    # production build to dist/
 ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8b98960e-9d27-41c8-8549-bdb6cf0954b3) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Stack: Vite + React + TypeScript + Tailwind + shadcn/ui. Czech (single locale).
