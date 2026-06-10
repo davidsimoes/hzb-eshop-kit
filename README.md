@@ -59,6 +59,12 @@ Celý kit je napsaný tak, aby ho zvládla jakákoli AI — žádné speciální
 
 Prompty pro AI: [`prompts/`](prompts/)
 
+## 🎤 Pro lektora
+
+Prezentace ke školení je na trase [`/prezentace`](https://hzb.davidjose.net/prezentace) —
+ovládá se šipkami / mezerníkem, `N` přepíná poznámky lektora. Demo tlačítka přepnou
+rovnou na živé nástroje.
+
 ## 🧭 Metoda v jedné větě
 
 **Validace → Plán → Spuštění** — nejdřív ověř, že to někdo chce a že to vydělá,
