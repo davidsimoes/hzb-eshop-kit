@@ -27,7 +27,7 @@ const About = () => {
     icon: Users,
     highlight: "Průkopník předplatných služeb"
   }, {
-    title: "Americká B2B dentální společnost",
+    title: "TEPE USA (B2B dentální)",
     description: "KISS (Keep It Simple, Stupid!) - jednoduchý a efektivní přístup k e-commerce",
     icon: TrendingUp,
     highlight: "Americký know-how"

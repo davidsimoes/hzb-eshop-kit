@@ -60,10 +60,10 @@ const Home = () => {
                 David Simões - váš průvodce e-commerce
               </h3>
               <p className="text-brand-wine/80 text-sm leading-relaxed">
-                Zakladatel soundsgood.agency s praktickými zkušenostmi z různých typů e-shopů: 
-                od B2B (ETA), přes omnichannel (Erotic City), až po DTC (Galleria Armadoro). 
-                Pomohl spustit jednu z prvních předplacených služeb v Česku (Mana) a aplikuje 
-                přístup "Keep It Simple, Stupid!" z USA.
+                Zakladatel soundsgood.agency s praktickými zkušenostmi napříč různými typy
+                e-shopů — od B2B (ETA, TEPE USA) až po DTC a předplatné (Mana). Spolupracoval
+                mimo jiné s Pavlínek, Mandimu, Yoggies nebo mybelka.cz a aplikuje přístup
+                "Keep It Simple, Stupid!".
               </p>
             </div>
           </div>
