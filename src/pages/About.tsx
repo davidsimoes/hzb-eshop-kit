@@ -13,14 +13,9 @@ const About = () => {
   } = useTranslation();
   const experiences = [{
     title: "soundsgood.agency",
-    description: "Zakladatel první Shopify agentury v Česku, později akvírované skupinou Shopsys",
+    description: "Zakladatel první Shopify agentury v ČR a na Slovensku",
     icon: Building,
-    highlight: "První Shopify agency v ČR"
-  }, {
-    title: "Shopsys Group",
-    description: "Obchodní ředitel odpovědný za obchodní strategii celé skupiny po akvizici",
-    icon: TrendingUp,
-    highlight: "Commercial Director"
+    highlight: "První Shopify agency v ČR/SK"
   }, {
     title: "Subscription commerce startup",
     description: "Jedna z prvních firem v Česku zaměřená na předplatné spotřebního zboží",
@@ -43,14 +38,6 @@ const About = () => {
     highlight: "Startup mentalita"
   }];
   const lessons = [{
-    title: "Okay Elektro",
-    lesson: "Nikdo není \"too big to fail\" - i velké firmy mohou selhat bez správné strategie",
-    type: "warning"
-  }, {
-    title: "Sofsy",
-    lesson: "Perfekcionismus je nepřítel dokončené práce - lepší hotovo než dokonalé",
-    type: "tip"
-  }, {
     title: "Moje první e-shopy",
     lesson: "Financials are key! - bez správné kalkulace nemůžeš dlouhodobě vydělávat",
     type: "critical"
@@ -90,7 +77,7 @@ const About = () => {
                     </Badge>
                     <Badge variant="outline" className="border-brand-wine text-brand-wine">
                       <Users className="w-3 h-3 mr-1" />
-                      Shopsys Group
+                      Zakladatel SGA
                     </Badge>
                     
                   </div>
