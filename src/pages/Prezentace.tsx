@@ -103,7 +103,6 @@ const slides: Slide[] = [
       'Shopify (růst, zahraničí) · Shoptet (ČR, integrace) · začni i bez e-shopu.',
       'Hned: doména, platba, 1 doprava, pár produktů. Zbytek počká.'
     ],
-    demo: { label: 'V kitu: Výběr platformy', to: '/' },
     note: 'Tady neděláme demo nástroje — rozhodovací obsah. Odkázat na docs/02-vyber-platformy.md + AI prompt.',
     icon: Layers
   },
@@ -144,7 +143,7 @@ const slides: Slide[] = [
       'Funguje v ChatGPT, Claude i Gemini. Žádné speciální nástroje.',
       'Pokročilé: stáhni kit a „nakrm“ jím svou AI — radí pak v duchu téhle metody.'
     ],
-    demo: { label: 'Kit na GitHubu', to: '/' },
+    demo: { label: 'Kit a prompty na webu', to: '/' },
     note: 'Tohle je odlišovač. Ukázat kopírování promptu. Odkázat github.com/davidsimoes/hzb-eshop-kit.',
     icon: Sparkles
   },
