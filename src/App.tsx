@@ -16,6 +16,7 @@ import BeforeStart from "./pages/BeforeStart";
 import Calculator from "./pages/Calculator";
 import Validace from "./pages/Validace";
 import Diagnostika from "./pages/Diagnostika";
+import Prezentace from "./pages/Prezentace";
 import Checklist from "./pages/Checklist";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
@@ -54,6 +55,7 @@ const App = () => {
                   <Route path="/validace" element={<Validace />} />
                   <Route path="/kalkulacka" element={<Calculator />} />
                   <Route path="/diagnostika" element={<Diagnostika />} />
+                  <Route path="/prezentace" element={<Prezentace />} />
                   <Route path="/checklist" element={<Checklist />} />
                   <Route path="/o-mne" element={<About />} />
                   <Route path="/faq" element={<FAQ />} />
