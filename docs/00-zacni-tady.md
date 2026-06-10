@@ -6,7 +6,7 @@
 
 Pro tebe, jestli chceš (nebo už začínáš) prodávat něco online a chceš, aby ti to
 **vydělávalo** — ne aby ses jen nadřela. Nemusíš umět technologie. Nemusíš mít
-velký rozpočet. Stačí nápad a ochota ho ověřit dřív, než do něj nalejеš peníze.
+velký rozpočet. Stačí nápad a ochota ho ověřit dřív, než do něj naleješ peníze.
 
 ## Metoda: Validace → Plán → Spuštění
 

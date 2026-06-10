@@ -21,7 +21,7 @@ Měsíční předplatné, vše hotové, žádný vývojář. Pro 95 % začáteč
 | Platforma | Pro koho | Pozn. |
 |---|---|---|
 | **Shopify** | Chceš růst, prodávat i do zahraničí, hodně appek | Světová jednička, skvělá na škálování. V češtině přes appky/šablony. |
-| **Shoptet** | Chceš český e-shop, českou podporu, napojení na české služby | Nejrozšířenější v ČR, integrace s Heurkou, Zásilkovnou, fakturací. |
+| **Shoptet** | Chceš český e-shop, českou podporu, napojení na české služby | Nejrozšířenější v ČR, integrace s Heurekou, Zásilkovnou, fakturací. |
 | **Webnode / Wix / Squarespace** | Velmi malý sortiment, jednoduchost | Spíš web s prodejem než plnohodnotný e-shop. |
 
 ### 3. Vlastní řešení

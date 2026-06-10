@@ -4,11 +4,17 @@
 // rozsahy, které ti pomůžou poznat, jestli jsou tvoje vstupy do kalkulačky
 // realistické. Skutečná čísla se liší podle značky, ceny, sezóny a marketingu.
 //
-// Kontext 2026 (zdroj: Exec, CzechCrunch TOP 100, Velký test e-shopů 2026):
+// Kontext 2026 (vlastní odhad + veřejné zdroje: Exec, CzechCrunch TOP 100):
 //  - Roste tlak na marže — marketplaces (Temu, Shein) stlačují ceny dolů.
-//  - Průměrný limit pro dopravu zdarma vyrostl na ~2 012 Kč.
+//  - Limit pro dopravu zdarma se drží zhruba kolem 1 500–2 000 Kč (orientačně).
 //  - Malé multibrandy do ~50 mil. Kč obratu mají bez vlastní značky těžkou pozici.
-//  - Konverze na mobilu jsou nižší než na desktopu — proto se průměry drží nízko.
+//  - Konverze na mobilu jsou nižší než na desktopu — reálná konverze bývá spíš na spodní hranici.
+//
+// Kaveáty (důležité pro orientaci):
+//  - Ruční výroba: marže NEZAHRNUJE hodnotu tvojí práce — připočítej čas, ať se neklameš.
+//  - Potraviny: hodně heterogenní — doplňky stravy mají marži klidně 50–65 %, čerstvé 20–30 %.
+//  - Móda: 50 % platí pro vlastní značku; přeprodej cizích značek spíš 30–40 %.
+//  - Elektronika: AOV i marže sedí jen pro drobnou elektroniku/příslušenství.
 
 export interface IndustryBenchmark {
   industry: string;          // klíč (stabilní, nepřekládá se)
@@ -52,7 +58,7 @@ export const industryBenchmarks: IndustryBenchmark[] = [
     averageMargin: 65,
     averageCOGS: 228,
     marketingBudgetPercent: 15,
-    description: 'Ručně vyráběné zboží a malé série. Vysoká marže, omezená kapacita výroby.'
+    description: 'Ručně vyráběné zboží a malé série. Vysoká marže (ale nezahrnuje tvůj čas!), omezená kapacita.'
   },
   {
     industry: 'jewelry',

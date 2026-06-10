@@ -23,7 +23,7 @@ rozpočet) · [Diagnostika](https://hzb.davidjose.net/diagnostika) (kde se ztrá
 ## Zásoby: ani moc, ani málo
 
 - **Začni malou sérií.** Vyprodáno je lepší signál než sklad plný neprodejného zboží.
-- **Peníze v zásobách = peníze, které nemáš.** Nenakupuj „do foroty“, dokud nevíš, co jde.
+- **Peníze v zásobách = peníze, které nemáš.** Nenakupuj „do zásoby“, dokud nevíš, co jde.
 - Sleduj, **co se prodává**, a doobjednávej to. Co leží, vyřaď nebo zlevni.
 - Měj **rezervu** na dopravu, reklamace a výkyvy. Ne všechno do zboží.
 

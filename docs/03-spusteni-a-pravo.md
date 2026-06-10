@@ -16,8 +16,9 @@
    „Výroba, obchod a služby…“). Vyřídíš na živnostenském úřadě nebo online.
 2. **IČO a evidence** — po ohlášení živnosti dostaneš IČO. Daň z příjmů a (případně)
    sociální/zdravotní pojištění řeš s účetní; na malý start často stačí paušál.
-3. **DPH** — plátcem se nemusíš stát hned. Sleduj zákonný obrat pro povinnou
-   registraci. Do té doby fakturuješ bez DPH (ověř aktuální limit).
+3. **DPH** — plátcem se nemusíš stát hned. Limit pro povinnou registraci je
+   **2 000 000 Kč obratu** (limit platný od 1. 1. 2025; vyšší práh pro okamžitou
+   registraci ~2,5 mil. Kč). Do té doby fakturuješ bez DPH. Vždy si ověř aktuální stav.
 4. **Obchodní podmínky (VOP)** — povinné. Musí pokrýt mj.:
    - identifikaci prodejce (jméno/firma, IČO, kontakt)
    - cenu, dopravu, platby
@@ -26,6 +27,9 @@
 5. **Ochrana osobních údajů (GDPR)** — zásady zpracování osobních údajů + souhlas
    s cookies, pokud měříš návštěvnost/reklamu.
 6. **Informační povinnosti** — viditelně kontakt, dodací a reklamační podmínky.
+7. **Tlačítko „Odstoupit od smlouvy"** — od ~června 2026 (EU směrnice 2023/2673)
+   musí mít e-shop viditelné, vždy dostupné tlačítko pro odstoupení od smlouvy.
+   Ověř, že to tvoje platforma řeší.
 
 > Většinu textů (VOP, GDPR, reklamační řád) ti vygeneruje platforma nebo generátor
 > šablon. Nech si je projít účetní/právníkem, ať sedí na tvůj případ.

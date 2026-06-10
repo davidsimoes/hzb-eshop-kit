@@ -31,7 +31,7 @@ const fields: { key: keyof DiagnosticInput; label: string; hint: string; suffix?
   { key: 'aov', label: 'Průměrná objednávka (AOV)', hint: 'Kolik průměrně utratí jedna zákaznice', suffix: 'Kč' },
   { key: 'cogs', label: 'Náklady na zboží / objednávku', hint: 'Co tě stojí zboží v jedné objednávce', suffix: 'Kč' },
   { key: 'extraCosts', label: 'Ostatní náklady / objednávku', hint: 'Doprava, balné, poplatky platební brány', suffix: 'Kč' },
-  { key: 'monthlyMarketing', label: 'Marketing za měsíc', hint: 'Kolik měsíčně dáváš do reklamy. Nemáš? Dej 0.', suffix: 'Kč' }
+  { key: 'monthlyMarketing', label: 'Marketing za měsíc', hint: 'Kolik měsíčně dáváš do reklamy? Nemáš? Dej 0.', suffix: 'Kč' }
 ];
 
 const Diagnostika = () => {
@@ -100,8 +100,8 @@ Mluv ke mně lidsky, bez žargonu.`;
             </Badge>
             <h1 className="text-3xl lg:text-4xl font-bold text-brand-wine mb-4">Co když to neprodává?</h1>
             <p className="text-lg text-brand-wine/70">
-              Zadej svoje skutečná (nebo odhadovaná) čísla. Najdeme nejslabší článek — místo, kde se
-              ztrácí nejvíc peněz — a poradíme, co řešit jako první.
+              Zadej svoje skutečná (nebo odhadovaná) čísla. Najdeš nejslabší článek — místo, kde se
+              ztrácí nejvíc peněz — a uvidíš, co řešit jako první.
             </p>
           </div>
 

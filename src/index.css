@@ -8,37 +8,37 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Holky z Byznysu brand colors - Enhanced for accessibility */
+    /* Holky z Byznysu brand colors - aligned to real HZB palette (wine #A71D4F, orange #FF4E16, midnight plum text, cream bg) 2026 */
     --background: 0 0% 100%;
-    --foreground: 340 85% 25%; /* Darker for better contrast (4.5:1) */
+    --foreground: 331 93% 11%; /* Darker for better contrast (4.5:1) */
 
     --card: 0 0% 100%;
-    --card-foreground: 340 85% 25%;
+    --card-foreground: 331 93% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 340 85% 25%;
+    --popover-foreground: 331 93% 11%;
 
-    --primary: 25 95% 48%; /* Slightly darker orange for better contrast */
+    --primary: 14 100% 48%; /* Slightly darker orange for better contrast */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 340 82% 45%; /* Darker wine for better contrast */
+    --secondary: 338 70% 38%; /* Darker wine for better contrast */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 330 100% 96%; /* Slightly darker pink background */
-    --muted-foreground: 340 85% 30%; /* Better contrast on muted background */
+    --muted: 46 100% 97%; /* Slightly darker pink background */
+    --muted-foreground: 338 60% 30%; /* Better contrast on muted background */
 
-    --accent: 315 88% 55%; /* Darker pink for better contrast */
-    --accent-foreground: 340 85% 25%; /* Dark text on accent background */
+    --accent: 313 60% 60%; /* Darker pink for better contrast */
+    --accent-foreground: 331 93% 11%; /* Dark text on accent background */
 
     /* Custom brand colors */
-    --brand-orange: 25 95% 53%;
-    --brand-pink: 315 88% 70%;
-    --brand-wine: 340 82% 52%;
-    --brand-light-pink: 330 100% 98%;
+    --brand-orange: 14 100% 54%;
+    --brand-pink: 313 74% 77%;
+    --brand-wine: 338 70% 38%;
+    --brand-light-pink: 340 89% 93%;
     
     /* Gradients */
-    --gradient-brand: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(var(--brand-pink)));
-    --gradient-orange: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(25 95% 63%));
+    --gradient-brand: linear-gradient(135deg, hsl(var(--brand-wine)), hsl(var(--brand-orange)));
+    --gradient-orange: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(14 100% 64%));
     --gradient-soft: linear-gradient(180deg, hsl(var(--brand-light-pink)), hsl(var(--background)));
     
     /* Shadows */
@@ -49,9 +49,9 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 340 85% 25%; /* High contrast focus ring */
+    --border: 33 28% 88%;
+    --input: 33 28% 88%;
+    --ring: 338 70% 38%; /* High contrast focus ring */
 
     --radius: 0.5rem;
 
@@ -120,7 +120,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }
 
