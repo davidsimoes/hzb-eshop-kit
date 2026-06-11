@@ -27,10 +27,9 @@ Gemini.
 To má skoro každá. Pár věcí, které pomáhají:
 
 - **Nemusíš být připravená na 100 %.** Musíš být připravená udělat **další jeden krok**.
-- **Začni malá.** První prodej nemusí být přes e-shop — může být kamarádce, na trhu,
-  z Instagramu. Cílem je ověřit, že lidé zaplatí.
+- **Začni malá.** První prodej nemusí být přes e-shop — může být na trhu nebo z Instagramu cizímu člověku. Pozor: prodej **kamarádce nebo rodině je povzbuzení, ne důkaz poptávky** — cílem je ověřit, že zaplatí i lidé, co tě neznají.
 - **Strach z technologií je dnes lichý.** Platformy i AI udělají těžkou práci za tebe.
-- **Hotovo je lepší než dokonalé.** Dokonalý e-shop, který nikdy nespustíš, vydělá 0 Kč.
+- **Hotovo je lepší než dokonalé** — u vzhledu, textů, pár produktů navíc. NE ale u košíku, právních stránek a všeho, co se dotýká peněz nebo dat zákaznice. Dokonalý e-shop, který nikdy nespustíš, vydělá 0 Kč.
 - **Nejsi v tom sama.** Komunita #HolkyzByznysu existuje přesně proto.
 
 > 💬 **Prompt pro AI:** *„Chci začít prodávat [co]. Bojím se hlavně [čeho]. Polož mi

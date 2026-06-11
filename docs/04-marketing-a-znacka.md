@@ -5,19 +5,19 @@
 
 ## Pořadí, které funguje
 
-Začátečnice často řeší logo a barvy týdny. **To počká.** Pořadí, které vydělává:
+Začátečnice často řeší logo a barvy týdny. **Leštění značky (dokonalé logo, brand book, obaly) počká.** Ale pozor: **značka jako důvěra** — tvůj příběh, tvoje tvář, proč zrovna ty, konzistentní tón — NENÍ až poslední. To je přesně to, čím získáš první zákaznice a odlišíš se od Temu/Shein. Odkládej design, ne důvěru. Pořadí, které vydělává:
 
 1. **První zákaznice** (i bez dokonalé značky)
 2. **Důvěra** (recenze, fotky, kontakt)
 3. **Opakované nákupy** (e-mail, péče o zákaznici)
-4. **Až pak** doleštění značky
+4. **Až pak** vizuální doleštění (dokonalé logo, obaly) — příběh a důvěru ale buduj od začátku
 
 ## Značka v kostce (minimum, které stačí na start)
 
 - **Jméno + logo** — čitelné, zapamatovatelné. Logo zvládne i jednoduchý nástroj/AI.
 - **Jeden vizuální styl** — 1–2 barvy, 1 font, konzistentní fotky. Konzistence >
   dokonalost.
-- **Tvůj příběh** — proč to děláš. Lidé kupují od lidí. Tohle je tvoje výhoda proti
+- **Tvůj příběh** — proč to děláš. Lidé kupují od lidí. Na cenu a rychlost Temu/Shein neporazíš (ani to nezkoušej) — tvoje výhoda je u zákaznic, které chtějí důvěru, kvalitu a člověka za značkou. Tohle je tvoje výhoda proti
   velkým e-shopům i marketplacům.
 - **Jasný slib** — co zákaznice dostane a proč zrovna od tebe (z [validace](01-validace.md)).
 
@@ -28,8 +28,8 @@ Začátečnice často řeší logo a barvy týdny. **To počká.** Pořadí, kte
 | **Instagram / Reels** | Vizuální produkty, lifestyle | Ukazuj produkt v akci, příběh, tvář. |
 | **Doporučení / komunita** | Cokoli | Nejlevnější a nejdůvěryhodnější. Začni u svých lidí. |
 | **Pinterest** | Móda, domov, handmade, svatby | Dlouhý dosah, lidé tam hledají inspiraci k nákupu. |
-| **E-mail / newsletter** | Opakované nákupy | Sbírej e-maily od začátku. Tvůj jediný kanál, který „vlastníš“. |
-| **Placená reklama** | Když máš ověřený produkt a marži | Až když víš, že to prodává. Ne na ověřování nápadu. |
+| **E-mail / newsletter** | Opakované nákupy | Sbírej e-maily od začátku. První a nejspolehlivější kanál, který „vlastníš“ — na rozdíl od sledujících na Instagramu/TikToku, které ti platforma může omezit nebo zrušit. |
+| **Placená reklama** | Když máš ověřený produkt a marži | Malý testovací rozpočet (jestli zaplatí i cizí lidé) je OK — ber to jako učení. Ale **neškáluj** výdaje, dokud ti čísla nedávají reálnou marži. |
 | **Heureka / srovnávače** | ČR, cenově konkurenční zboží | Lidé tam nakupují s úmyslem koupit. |
 
 > Pravidlo: **1–2 kanály dělané pravidelně** porazí 6 kanálů dělaných občas.

@@ -132,8 +132,11 @@ export function diagnose(input: DiagnosticInput): DiagnosticResult {
     }
   }
 
-  // 3) Konverze — chodí lidi, ale nekupují
-  if (visitors >= 200 && conv > 0 && conv < 1.0) {
+  // 3) Konverze — chodí lidi, ale nekupují.
+  // Pozn.: nízká konverze je „kritická" jen při dost velkém vzorku (>=500 návštěv) a u běžného
+  // AOV. U dražšího/rozmýšleného zboží (vysoké AOV) je sub-1 % často normální → jen varování.
+  const highAov = aov > avg.averageAOV * 1.3;
+  if (visitors >= 500 && conv > 0 && conv < 1.0 && !highAov) {
     issues.push({
       id: 'conversion-low',
       area: 'conversion',
@@ -142,6 +145,16 @@ export function diagnose(input: DiagnosticInput): DiagnosticResult {
       finding: `Konverze je ${conv.toFixed(1)} %. Z ${visitors.toLocaleString('cs-CZ')} návštěv vznikne jen ${monthlyOrders} objednávek. Trh: ${avg.averageConversion} %.`,
       fix: 'Zaměř se na: jasné fotky a popisy, důvěru (recenze, kontakt, doprava/vrácení), jednoduchou objednávku bez registrace, rychlost na mobilu. Často je problém v jednom kroku košíku.',
       priority: 2
+    });
+  } else if (visitors >= 200 && conv > 0 && conv < 1.0) {
+    issues.push({
+      id: 'conversion-low-soft',
+      area: 'conversion',
+      severity: 'warning',
+      title: 'Konverze je nízká (ale vzorek/obor to změkčuje)',
+      finding: `Konverze ${conv.toFixed(1)} %.${highAov ? ' U dražšího zboží s delším rozmýšlením bývá sub-1 % normální.' : ' Vzorek je zatím malý — než z toho budeš dělat závěry, nasbírej víc návštěv.'}`,
+      fix: 'Projdi objednávku na mobilu jako zákaznice, přidej recenze a trust prvky. Ale nepanikař — u tvojí návštěvnosti/oboru to ještě nemusí být problém.',
+      priority: 6
     });
   } else if (conv > 0 && conv < avg.averageConversion * 0.7) {
     issues.push({
@@ -189,11 +202,11 @@ export function diagnose(input: DiagnosticInput): DiagnosticResult {
   if (monthlyOrders === 0) {
     headline = 'Zatím tu nejsou objednávky k diagnóze — doplň reálná (nebo odhadovaná) čísla.';
   } else if (isProfitable && issues.length === 0) {
-    headline = `Vypadá to zdravě: čistý zisk ${fmtCZK(monthlyNetProfit)} měsíčně. Drž se toho a škáluj návštěvnost.`;
+    headline = `Po marketingu ti zbývá ${fmtCZK(monthlyNetProfit)} měsíčně — ale POZOR: ještě před fixními náklady (nájem, nástroje) a tvým časem. Drž se toho a škáluj návštěvnost.`;
   } else if (isProfitable) {
-    headline = `Jsi v plusu (${fmtCZK(monthlyNetProfit)}/měs.), ale je co zlepšit. Začni nejvyšší prioritou níž.`;
+    headline = `Po marketingu ti zbývá ${fmtCZK(monthlyNetProfit)}/měs. (ještě bez fixních nákladů a tvého času), ale je co zlepšit. Začni nejvyšší prioritou níž.`;
   } else {
-    headline = `Takhle jsi měsíčně v minusu ${fmtCZK(monthlyNetProfit)}. Níž je seřazené, co řešit jako první.`;
+    headline = `Takhle jsi měsíčně v minusu ${fmtCZK(monthlyNetProfit)} — a to ještě před fixními náklady a tvým časem. Níž je seřazené, co řešit jako první.`;
   }
 
   return {

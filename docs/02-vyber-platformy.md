@@ -6,7 +6,7 @@
 ## Hlavní pravidlo
 
 **Vyber to nejjednodušší, co tě nezabrzdí, a začni prodávat.** Platformu jde
-později změnit. Promarněný čas a peníze ne. Nehledej „nejlepší e-shop na světě“ —
+později změnit — ale je to reálná práce (ztráta SEO, re-import, nový vzhled), takže vyber uvážlivě z jednoduchých možností a pak se drž. Promarněný čas a peníze ne. Nehledej „nejlepší e-shop na světě“ —
 hledej „ten, na kterém prodám první kus tenhle měsíc“.
 
 ## Tři cesty (od nejjednodušší)

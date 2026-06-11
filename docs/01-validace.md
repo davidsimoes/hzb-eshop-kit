@@ -37,7 +37,7 @@ zákaznici**, jako bys ji znala:
 2. **Zjisti poptávku.** Hledají to lidé? Sklik / Google Keyword Planner, počty
    hledání, skupiny na FB, dotazy na Heurece.
 3. **Mrkni na konkurenci.** 3+ konkurenti = trh existuje. Hledej mezeru, ne prázdno.
-   (Úplně prázdný trh často znamená, že o to nikdo nestojí.)
+   (Hodně konkurentů = poptávka existuje, ale musíš se odlišit. Úplně prázdný trh = buď jsi brzy, nebo o to nikdo nestojí — zjisti které, neber to jako automatický stopku.)
 4. **Získej signál, že zaplatí.** Předobjednávka, čekací listina, prodej na trhu,
    nebo prosté „kde to koupím?“ pod fotkou.
 5. **Spočítej čísla.** Pokryje marže náklady i tvůj čas? → [Kalkulačka](https://hzb.davidjose.net/kalkulacka).

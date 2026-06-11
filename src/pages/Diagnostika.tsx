@@ -179,7 +179,7 @@ Mluv ke mně lidsky, bez žargonu.`;
                       >
                         {fmtCZK(result.monthlyNetProfit)}
                       </div>
-                      <div className="text-xs text-brand-wine/70">čistý zisk / měs.</div>
+                      <div className="text-xs text-brand-wine/70">zbývá po marketingu</div>
                     </div>
                   </div>
                   <p
@@ -188,6 +188,10 @@ Mluv ke mně lidsky, bez žargonu.`;
                     }`}
                   >
                     {result.headline}
+                  </p>
+                  <p className="text-xs text-brand-wine/70 bg-brand-orange/10 p-3 rounded-lg">
+                    ⚠️ Tohle <strong>nezapočítává tvůj čas ani fixní náklady</strong> (nájem, software, předplatné).
+                    I „kladné" číslo tady tě nemusí uživit — přidej si do výpočtu vlastní mzdu. Skutečný zisk je až po nich.
                   </p>
                 </CardContent>
               </Card>

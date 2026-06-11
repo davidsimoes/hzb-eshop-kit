@@ -8,11 +8,10 @@ rozpočet) · [Diagnostika](https://hzb.davidjose.net/diagnostika) (kde se ztrá
 
 ## Finance: čísla, která musíš znát
 
-- **Marže** = (cena − náklady na zboží) / cena. Pod ~25 % se těžko vydělává.
+- **Marže** = (cena − náklady na zboží) / cena. Pod ~25 % se těžko vydělává. (Sleduj hlavně **příspěvkovou marži** — po odečtení dopravy, balného, poplatků a vratek; ta tě může živit i při nižší hrubé marži, pokud máš objem.)
 - **Zisk z objednávky** = cena − zboží − doprava − balné − poplatky brány. **Musí být
   kladný**, jinak čím víc prodáš, tím víc proděláš.
-- **Náklad na zákaznici (CAC)** = marketing / počet objednávek. Musí být **menší** než
-  zisk z objednávky (ideálně výrazně, ať ti něco zbyde).
+- **Náklad na zákaznici (CAC)** = marketing / počet objednávek. Musí být **menší** než zisk z objednávky (ideálně výrazně). To je bezpečná hranice, dokud nemáš data o opakovaných nákupech. Jakmile vidíš, že se zákaznice vracejí, reálným cílem je **celková hodnota zákaznice ≥ 3× CAC**.
 - **AOV** (průměrná objednávka) — zvedneš ho bundly a limitem pro dopravu zdarma.
 - **Cashflow** ≠ zisk. Můžeš být „v zisku“ a přitom bez peněz, protože ti leží
   v zásobách. Sleduj **peníze na účtu**, ne jen tabulku.
@@ -38,7 +37,7 @@ rozpočet) · [Diagnostika](https://hzb.davidjose.net/diagnostika) (kde se ztrá
 ## Doprava a balení (kde se tiše ztrácí zisk)
 
 - Spočítej **reálnou cenu dopravy a balného** do zisku z objednávky.
-- **Limit pro dopravu zdarma** (orientačně kolem 1 500–2 000 Kč) zvedá AOV — ale
+- **Limit pro dopravu zdarma** — nenastavuj fixně, ale ~15–30 % nad TVÉ aktuální AOV (ať se kvalifikuje zhruba 50–70 % objednávek; trh 2026: průměr ~2 012 Kč, medián 1 500). Zvedá AOV — ale
   nesmí ti sníst marži. Spočítej to.
 - Vrátky umí být drahé. Jasné popisky a fotky = méně vrácení.
 

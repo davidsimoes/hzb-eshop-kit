@@ -71,13 +71,27 @@ const Validace = () => {
   const filledCount = Object.values(form).filter((v) => v.trim().length > 0).length;
   const checkedCount = validationSteps.filter((s) => checked[s.id]).length;
 
-  // skóre připravenosti: 40 % za vyplněnou personu, 60 % za ověřovací kroky
+  // Orientační skóre připravenosti (persona + ověření). Čísla jsou hrubá pomůcka, ne věda.
   const personaScore = (filledCount / formFields.length) * 40;
   const validationScore = (checkedCount / validationSteps.length) * 60;
   const readiness = Math.round(personaScore + validationScore);
 
-  const readinessLabel =
-    readiness >= 80 ? 'Připravená spustit' : readiness >= 50 ? 'Na dobré cestě' : readiness >= 25 ? 'Začátek' : 'Pojďme na to';
+  // HARD GATE: bez reálného signálu, že lidé zaplatí (předobjednávka / prodej cizímu),
+  // nemůžeš být „připravená spustit" — i kdyby skóre bylo vysoké. Persona se nedá „uskákat".
+  const hasPaidSignal = !!checked['presell'];
+  const readinessLabel = !hasPaidSignal
+    ? readiness >= 50
+      ? 'Skoro — chybí důkaz, že lidé zaplatí'
+      : readiness >= 25
+        ? 'Začátek'
+        : 'Pojďme na to'
+    : readiness >= 80
+      ? 'Připravená spustit'
+      : readiness >= 50
+        ? 'Na dobré cestě'
+        : readiness >= 25
+          ? 'Začátek'
+          : 'Pojďme na to';
 
   const aiPrompt = `Pomoz mi ověřit nápad na e-shop a vybrousit cílovou zákaznici (personu).
 

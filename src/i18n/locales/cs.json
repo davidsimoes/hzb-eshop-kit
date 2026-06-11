@@ -333,9 +333,9 @@
       "day3": {
         "legalDocs": {
           "title": "Připravit právní dokumenty",
-          "description": "VOP, zásady ochrany osobních údajů, reklamační řád",
+          "description": "VOP (vč. 14denního práva na odstoupení od smlouvy), zásady ochrany osobních údajů (GDPR), reklamační řád",
           "time": "2 hodiny",
-          "tips": "Použij generátor VOP online nebo se poraď s právníkem"
+          "tips": "Použij generátor VOP online nebo se poraď s právníkem. Pozor: od ~června 2026 musíš mít na webu i viditelné tlačítko „Odstoupit od smlouvy\" — ověř, že to platforma řeší."
         },
         "moodboard": {
           "title": "Vytvořit moodboard značky",
@@ -344,7 +344,7 @@
         },
         "legalRequirements": {
           "title": "Prověřit legislativní požadavky",
-          "description": "GDPR, cookies, DPH, elektronický prodej - co se tě týká?",
+          "description": "GDPR, cookie lišta se souhlasem, DPH (limit 2 mil. Kč obratu), 14denní odstoupení, tlačítko „Odstoupit od smlouvy\" (2026) - co se tě týká?",
           "time": "1 hodina"
         }
       },
@@ -433,7 +433,7 @@
       "day8": {
         "legalFooter": {
           "title": "Právní zápatí",
-          "description": "IČ, DIČ, sídlo, registrace u soudu",
+          "description": "IČ, DIČ, sídlo, kontakt, odkaz na VOP, dodací a reklamační podmínky",
           "time": "30 minut"
         },
         "mobileResponsive": {
