@@ -4,9 +4,9 @@
 // rozsahy, které ti pomůžou poznat, jestli jsou tvoje vstupy do kalkulačky
 // realistické. Skutečná čísla se liší podle značky, ceny, sezóny a marketingu.
 //
-// Kontext 2026 (vlastní odhad + veřejné zdroje: Exec, CzechCrunch TOP 100):
+// Kontext 2026 (zdroj: VTE 2026 — vzorek 209 čes. e-shopů, + Exec, CzechCrunch TOP 100):
 //  - Roste tlak na marže — marketplaces (Temu, Shein) stlačují ceny dolů.
-//  - Limit pro dopravu zdarma se drží zhruba kolem 1 500–2 000 Kč (orientačně).
+//  - Průměrný limit pro dopravu zdarma vyrostl na ~2 012 Kč (+26 % YoY), medián 1 500 Kč (VTE 2026).
 //  - Malé multibrandy do ~50 mil. Kč obratu mají bez vlastní značky těžkou pozici.
 //  - Konverze na mobilu jsou nižší než na desktopu — reálná konverze bývá spíš na spodní hranici.
 //
