@@ -1,6 +1,7 @@
 import { Header } from '@/components/Header/Header';
 import { MissionHero } from '@/components/MissionHero';
 import { LearningPath } from '@/components/LearningPath';
+import { ClientLogos } from '@/components/ClientLogos';
 import { OrganizationPartnership } from '@/components/OrganizationPartnership';
 import { Card, CardContent } from '@/components/ui/card';
 import { useTranslation } from 'react-i18next';
@@ -19,6 +20,9 @@ const Index = () => {
       <main id="main-content" role="main" aria-label={t('site.description')}>
         {/* Mission Hero */}
         <MissionHero />
+
+        {/* Client logos — light credibility strip */}
+        <ClientLogos />
 
         {/* Fear Reduction Section */}
         <section className="py-16 bg-white">
