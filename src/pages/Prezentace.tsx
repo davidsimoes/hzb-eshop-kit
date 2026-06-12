@@ -27,7 +27,23 @@ interface Slide {
   note?: string; // poznámka pro lektora (jen v presenter liště)
   icon?: typeof Lightbulb;
   variant?: 'title' | 'menu' | 'block' | 'plain' | 'close';
+  logos?: boolean;     // zobrazit pruh log klientů (stejná sada jako web)
+  qr?: string;         // QR kód (cesta k obrázku)
+  slidoCode?: string;  // kód do sli.do
 }
+
+// Stejná sada log jako na webu (ClientLogos)
+const DECK_LOGOS = [
+  ['/images/clients/yoggies.svg', 'Yoggies'],
+  ['/images/clients/mana.svg', 'MANA'],
+  ['/images/clients/wild-coco.svg', 'Wild & Coco'],
+  ['/images/clients/eta.svg', 'ETA'],
+  ['/images/clients/tepe.svg', 'TePe'],
+  ['/images/clients/bloom-robbins.svg', 'Bloom Robbins'],
+  ['/images/clients/econea.svg', 'Econea'],
+  ['/images/clients/tonak.svg', 'TONAK'],
+  ['/images/clients/pavlinek.svg', 'Pavlínek']
+];
 
 const slides: Slide[] = [
   {
@@ -36,7 +52,8 @@ const slides: Slide[] = [
     title: 'E-shop, který vydělává',
     kicker: '#HolkyzByznysu · školení s Davidem',
     bullets: ['Praktické nástroje + kit, který ti zůstane.', 'Dnes spustíme nápad, ne jen prezentaci.'],
-    note: 'Přivítání, energie. Kdo jsem, proč tohle dělám. Žádný stres — odcházíš s nástroji.',
+    slidoCode: '#2754067',
+    note: 'Přivítání, energie. Kdo jsem, proč tohle dělám. Žádný stres — odcházíš s nástroji. Ukaž sli.do kód.',
     icon: ShoppingBag
   },
   {
@@ -45,11 +62,12 @@ const slides: Slide[] = [
     kicker: 'Krátce o mně',
     title: 'Proč mě poslouchat',
     bullets: [
-      '10+ let v e-commerce, stovky e-shopů.',
+      '10+ let v e-commerce — pomohl jsem stovkám podnikatelek a podnikatelů.',
       'Vím, jak vypadá start zevnitř — i ty pochybnosti.',
       'Dnes ti předám zkratky, které šetří peníze i nervy.'
     ],
-    note: 'Kredibilita stručně. Nepřeprodávej se — buduj důvěru a vřelost.',
+    logos: true,
+    note: 'Kredibilita stručně. Nepřeprodávej se — buduj důvěru a vřelost. Loga = konkrétní důkaz.',
     icon: Heart
   },
   {
@@ -60,9 +78,9 @@ const slides: Slide[] = [
     bullets: [
       '1 · Validace nápadu   ·   2 · Výběr platformy   ·   3 · Spuštění a právo',
       '4 · Marketing a značka   ·   5 · Provoz a finance   ·   6 · Když to neprodává',
-      'Všech 6 máš v kitu. Dnes jdeme do hloubky na 3 — a kam mě zatáhneš.'
+      'Všech 6 máš v kitu. Dnes jdeme do hloubky na 3: Validace, Platforma, Diagnostika — a kam mě zatáhneš.'
     ],
-    note: 'Tohle je „menu“. Řekni: všechno je v kitu, dnes deep-dive na 3. Steering rukama / sli.do.',
+    note: 'Tohle je „menu“. Řekni: všechno je v kitu, dnes deep-dive na 3 oblasti (Validace má 2 nástroje — persona + kalkulačka). Steering rukama / sli.do.',
     icon: Layers
   },
   {
@@ -86,7 +104,7 @@ const slides: Slide[] = [
     title: 'Spočítej, jestli to vydělá',
     bullets: [
       'Kolik objednávek a návštěv potřebuješ na svůj cíl.',
-      'Marže, AOV, náklad na zákaznici — bez tabulek.',
+      'Počítá i tvůj příjem — kolik si chceš vydělat ty, ne jen pokrýt zboží.',
       '2026 benchmarky podle oboru = realita check tvých čísel.'
     ],
     demo: { label: 'Živě: Kalkulačka', to: '/kalkulacka' },
@@ -157,7 +175,8 @@ const slides: Slide[] = [
       'Web: hzb.davidjose.net · Kit zdarma pod CC BY 4.0.',
       'Začni dnes jedním malým krokem. Hotovo > dokonalé.'
     ],
-    note: 'Zopakovat 3 kroky. CTA na web + kit. Pozvat k otázkám. Poděkovat.',
+    qr: '/images/qr-hzb.svg',
+    note: 'Zopakovat 3 kroky. CTA na web + kit. Ukaž QR. Pozvat k otázkám. Poděkovat.',
     icon: Heart
   }
 ];
@@ -240,6 +259,31 @@ const Prezentace = () => {
                   {s.demo.label}
                 </Link>
               </Button>
+            </div>
+          )}
+
+          {s.logos && (
+            <div className="mt-10">
+              <p className="text-xs uppercase tracking-wide text-brand-wine/50 mb-5">Značky, se kterými jsem pracoval</p>
+              <div className="flex flex-wrap items-center gap-x-8 gap-y-5">
+                {DECK_LOGOS.map(([src, alt]) => (
+                  <img key={alt} src={src} alt={alt} className="h-6 lg:h-7 w-auto object-contain opacity-70" />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {s.slidoCode && (
+            <div className="mt-10 inline-flex items-center gap-3 bg-white/70 rounded-full px-5 py-2 shadow-soft">
+              <span className="text-sm text-brand-wine/70">Připoj se do sli.do:</span>
+              <span className="text-lg font-bold text-brand-wine tracking-wider">{s.slidoCode}</span>
+            </div>
+          )}
+
+          {s.qr && (
+            <div className="mt-10 flex flex-col items-center gap-3">
+              <img src={s.qr} alt="QR kód na hzb.davidjose.net" className="w-36 h-36 lg:w-44 lg:h-44 rounded-xl bg-white p-2 shadow-soft" />
+              <span className="text-sm text-brand-wine/60">Naskenuj a máš web v kapse</span>
             </div>
           )}
 
