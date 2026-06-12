@@ -27,7 +27,7 @@ export const ClientLogos = () => {
               src={l.src}
               alt={l.alt}
               loading="lazy"
-              className="h-7 lg:h-8 w-auto object-contain opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+              className="h-7 lg:h-8 w-auto object-contain opacity-55 hover:opacity-100 transition-opacity duration-300"
             />
           ))}
         </div>
