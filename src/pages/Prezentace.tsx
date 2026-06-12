@@ -62,7 +62,7 @@ const slides: Slide[] = [
     kicker: 'Krátce o mně',
     title: 'Proč mě poslouchat',
     bullets: [
-      '10+ let v e-commerce — pomohl jsem stovkám podnikatelek a podnikatelů.',
+      '10+ let v e-commerce, stovky e-shopů.',
       'Vím, jak vypadá start zevnitř — i ty pochybnosti.',
       'Dnes ti předám zkratky, které šetří peníze i nervy.'
     ],
