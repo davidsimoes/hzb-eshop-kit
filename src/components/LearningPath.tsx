@@ -12,7 +12,7 @@ const pathSteps = [
   {
     icon: Lightbulb,
     title: '1. Ověř nápad',
-    description: 'Sestav personu a ověř, že o tvůj nápad někdo stojí — dřív, než do něj dáš peníze.',
+    description: 'Sestav personu a ověř, že o tvůj nápad někdo stojí, dřív, než do něj dáš peníze.',
     time: '15 min',
     link: '/validace',
     cta: 'Ověřit nápad',
@@ -22,7 +22,7 @@ const pathSteps = [
   {
     icon: Calculator,
     title: '2. Spočítej, jestli to vydělá',
-    description: 'Kalkulačka ti řekne, kolik objednávek a návštěv potřebuješ — a jestli ti to dává smysl.',
+    description: 'Kalkulačka ti řekne, kolik objednávek a návštěv potřebuješ, a jestli ti to dává smysl.',
     time: '10 min',
     link: '/kalkulacka',
     cta: 'Spočítat',
@@ -42,7 +42,7 @@ const pathSteps = [
   {
     icon: CheckSquare,
     title: '4. Spusť krok za krokem',
-    description: 'Spouštěcí checklist tě provede vším od živnosti po první objednávku — nic nezapomeneš.',
+    description: 'Spouštěcí checklist tě provede vším od živnosti po první objednávku. Nic nezapomeneš.',
     time: 'průběžně',
     link: '/checklist',
     cta: 'Otevřít checklist',
@@ -107,7 +107,7 @@ export const LearningPath = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-brand-wine mb-2">
-                  Celý kit ke stažení — i pro tvou AI
+                  Celý kit ke stažení, i pro tvou AI
                 </h3>
                 <p className="text-brand-wine/70">
                   Průvodci a hotové prompty pro všech 6 oblastí (validace, platforma, spuštění,

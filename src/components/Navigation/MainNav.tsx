@@ -1,7 +1,7 @@
 
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { HelpCircle, Calculator, CheckSquare, User, MessageCircleQuestion, Lightbulb, Stethoscope } from 'lucide-react';
+import { HelpCircle, Calculator, CheckSquare, User, MessageCircleQuestion, Lightbulb, Stethoscope, Compass, Wallet } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface MainNavProps {
@@ -14,6 +14,8 @@ export const MainNav = ({ onItemClick }: MainNavProps) => {
   const navItems = [
     { to: '/validace', label: t('nav.validace'), icon: Lightbulb },
     { to: '/kalkulacka', label: t('nav.calculator'), icon: Calculator },
+    { to: '/vyber-platformy', label: t('nav.vyberPlatformy'), icon: Compass },
+    { to: '/roi-kalkulacka', label: t('nav.roi'), icon: Wallet },
     { to: '/diagnostika', label: t('nav.diagnostika'), icon: Stethoscope },
     { to: '/checklist', label: t('nav.checklist'), icon: CheckSquare },
     { to: '/pred-zacatkem', label: t('nav.beforeStart'), icon: HelpCircle },

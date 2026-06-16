@@ -52,7 +52,7 @@ const formFields: {
 ];
 
 const validationSteps: { id: string; label: string; help: string }[] = [
-  { id: 'talk5', label: 'Promluvila jsem s 5+ lidmi z cílovky o tom problému', help: 'Ne s rodinou — s reálnými potenciálními zákaznicemi.' },
+  { id: 'talk5', label: 'Promluvila jsem s 5+ lidmi z cílovky o tom problému', help: 'Ne s rodinou, s reálnými potenciálními zákaznicemi.' },
   { id: 'demand', label: 'Ověřila jsem, že lidé to opravdu hledají', help: 'Google (Sklik/Keyword Planner), počty hledání, skupiny na FB, Heureka.' },
   { id: 'competitors', label: 'Podívala jsem se na 3+ konkurenty', help: 'Co dělají dobře, kde je mezera, jak mám být jiná.' },
   { id: 'presell', label: 'Mám aspoň 1 signál, že lidé zaplatí', help: 'Předobjednávka, čekací listina, prodej na trhu, nebo „kde to koupím?“.' },
@@ -108,7 +108,7 @@ Proč ode mě: ${form.whyMe || '(doplň)'}
 Prosím:
 1. Sepiš mi z toho jasnou personu (jméno, situace, co řeší, čeho se bojí, co ji přesvědčí).
 2. Řekni mi narovinu, kde je nápad slabý nebo rizikový.
-3. Dej mi konkrétní plán na ověření za 1 týden — co mám udělat, s kým mluvit, co změřit.
+3. Dej mi konkrétní plán na ověření za 1 týden: co mám udělat, s kým mluvit, co změřit.
 4. Navrhni 3 věty, kterými bych produkt popsala přesně téhle zákaznici.
 Mluv ke mně lidsky a bez žargonu.`;
 

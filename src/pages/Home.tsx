@@ -61,7 +61,7 @@ const Home = () => {
               </h3>
               <p className="text-brand-wine/80 text-sm leading-relaxed">
                 Zakladatel soundsgood.agency s praktickými zkušenostmi napříč různými typy
-                e-shopů — od B2B (ETA, TEPE USA) až po DTC a předplatné (Mana). Spolupracoval
+                e-shopů, od B2B (ETA, TEPE USA) až po DTC a předplatné (Mana). Spolupracoval
                 mimo jiné s Pavlínek, Mandimu, Yoggies nebo mybelka.cz a aplikuje přístup
                 "Keep It Simple, Stupid!".
               </p>

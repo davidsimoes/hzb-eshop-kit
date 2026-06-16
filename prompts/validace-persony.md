@@ -18,9 +18,9 @@ Chci ověřit nápad na e-shop a vybrousit cílovou zákaznici (personu).
 **Proč ode mě, a ne od konkurence:** [např. unikátní vůně, příběh, lokální výroba]
 
 Prosím:
-1. Sepiš z toho **jasnou personu** — dej jí jméno, situaci, co řeší, čeho se bojí, co ji přesvědčí.
+1. Sepiš z toho **jasnou personu**: dej jí jméno, situaci, co řeší, čeho se bojí, co ji přesvědčí.
 2. Řekni mi **narovinu, kde je nápad slabý nebo rizikový**.
-3. Dej mi **konkrétní plán na ověření za 1 týden** — co udělat, s kým mluvit, co změřit.
+3. Dej mi **konkrétní plán na ověření za 1 týden**: co udělat, s kým mluvit, co změřit.
 4. Navrhni **3 věty**, kterými bych produkt popsala přesně téhle zákaznici.
 
 Na závěr mi polož 1–2 otázky, které ti pomůžou radu zpřesnit.
@@ -29,5 +29,5 @@ Na závěr mi polož 1–2 otázky, které ti pomůžou radu zpřesnit.
 
 **Pokračování (volitelné):** Nech AI hrát tvou skeptickou zákaznici:
 
-> *„Teď buď tou personou. Já ti zkusím prodat [produkt]. Reaguj upřímně — namítej,
+> *„Teď buď tou personou. Já ti zkusím prodat [produkt]. Reaguj upřímně, namítej,
 > ptej se na cenu, řekni, co by tě odradilo.“*

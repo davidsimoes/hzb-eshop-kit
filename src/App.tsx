@@ -16,6 +16,8 @@ import BeforeStart from "./pages/BeforeStart";
 import Calculator from "./pages/Calculator";
 import Validace from "./pages/Validace";
 import Diagnostika from "./pages/Diagnostika";
+import VyberPlatformy from "./pages/VyberPlatformy";
+import RoiKalkulacka from "./pages/RoiKalkulacka";
 import Prezentace from "./pages/Prezentace";
 import Checklist from "./pages/Checklist";
 import About from "./pages/About";
@@ -55,6 +57,8 @@ const App = () => {
                   <Route path="/validace" element={<Validace />} />
                   <Route path="/kalkulacka" element={<Calculator />} />
                   <Route path="/diagnostika" element={<Diagnostika />} />
+                  <Route path="/vyber-platformy" element={<VyberPlatformy />} />
+                  <Route path="/roi-kalkulacka" element={<RoiKalkulacka />} />
                   <Route path="/prezentace" element={<Prezentace />} />
                   <Route path="/checklist" element={<Checklist />} />
                   <Route path="/o-mne" element={<About />} />

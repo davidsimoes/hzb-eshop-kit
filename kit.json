@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "kit": "e-shop-ktery-vydelava",
+  "title": "E-shop, který vydělává",
+  "version": "1.0.0",
+  "language": "cs",
+  "license": "CC BY 4.0",
+  "audience": "Začínající podnikatelky (a kdokoli, kdo začíná s e-shopem)",
+  "web": "https://hzb.davidjose.net",
+  "agent_entrypoint": "AGENTS.md",
+  "method": {
+    "phases": ["validace", "plan", "spusteni", "provoz"],
+    "one_liner": "Nejdřív ověř, že to někdo chce a že to vydělá, pak naplánuj, pak spusť, pak provozuj a diagnostikuj.",
+    "principle": "E-shopy neselhávají kvůli webu, ale kvůli chybějící poptávce nebo nesedící ekonomice. Proto validace předchází technice."
+  },
+  "modules": [
+    { "id": "00", "phase": "validace",  "title": "Začni tady",            "doc": "docs/00-zacni-tady.md" },
+    { "id": "01", "phase": "validace",  "title": "Validace a persona",    "doc": "docs/01-validace.md" },
+    { "id": "02", "phase": "plan",      "title": "Výběr platformy",       "doc": "docs/02-vyber-platformy.md" },
+    { "id": "03", "phase": "spusteni",  "title": "Spuštění a právo",      "doc": "docs/03-spusteni-a-pravo.md" },
+    { "id": "04", "phase": "provoz",    "title": "Marketing a značka",    "doc": "docs/04-marketing-a-znacka.md" },
+    { "id": "05", "phase": "provoz",    "title": "Provoz a finance",      "doc": "docs/05-provoz-a-finance.md" },
+    { "id": "06", "phase": "provoz",    "title": "Když to neprodává",     "doc": "docs/06-kdyz-to-neprodava.md" },
+    { "id": "07", "phase": "vse",       "title": "Příběhy a inspirace",   "doc": "docs/07-pribehy.md" }
+  ],
+  "tools": [
+    { "id": "validace",    "title": "Ověř nápad",   "url": "https://hzb.davidjose.net/validace",    "use": "Sestavit personu a ověřit poptávku interaktivně." },
+    { "id": "kalkulacka",  "title": "Kalkulačka",   "url": "https://hzb.davidjose.net/kalkulacka",  "use": "Spočítat ziskovost a potřebný rozpočet." },
+    { "id": "diagnostika", "title": "Diagnostika",  "url": "https://hzb.davidjose.net/diagnostika", "use": "Najít nejslabší článek, když to neprodává." },
+    { "id": "checklist",   "title": "Checklist",    "url": "https://hzb.davidjose.net/checklist",   "use": "Krok za krokem ke spuštění." }
+  ],
+  "standalone_prompts": [
+    { "id": "popisky", "title": "Popisky produktů", "file": "prompts/popisky-produktu.md", "use_when": "Uživatelka potřebuje prodejní texty produktů." }
+  ],
+  "data_connectors": {
+    "guide": "prompts/connect-data.md",
+    "sources": [
+      { "id": "ga4",      "title": "Google Analytics 4", "provides": ["navstevnost", "konverze", "zdroje navstev", "chovani na webu"] },
+      { "id": "meta",     "title": "Meta (Facebook/Instagram Ads + Insights)", "provides": ["dosah", "proklik", "naklady na reklamu", "ROAS"] },
+      { "id": "platform", "title": "Platforma e-shopu (Shoptet/Shopify/...)",  "provides": ["objednavky", "AOV", "trzby", "opustene kosiky", "top produkty"] }
+    ]
+  },
+  "chain": {
+    "description": "Řetězené prompty produkující kompletní plán postavení byznysu. Každý krok bere výstupy předchozích jako vstup.",
+    "stop_after_each_step": true,
+    "steps": [
+      {
+        "step": 1,
+        "phase": "validace",
+        "prompt": "prompts/chain/01-persona.md",
+        "output": "01-persona.md",
+        "inputs": [],
+        "produces": "Persona + plán ověření na 1 týden",
+        "next": 2
+      },
+      {
+        "step": 2,
+        "phase": "validace",
+        "prompt": "prompts/chain/02-validace.md",
+        "output": "02-validace.md",
+        "inputs": ["01-persona.md"],
+        "produces": "Rozhodnutí GO / UPRAV / STOP + důkazy poptávky a ekonomiky",
+        "next_if_go": 3,
+        "next_if_stop": "loop:01"
+      },
+      {
+        "step": 3,
+        "phase": "plan",
+        "prompt": "prompts/chain/03-platforma.md",
+        "output": "03-platforma.md",
+        "inputs": ["01-persona.md", "02-validace.md"],
+        "produces": "Doporučená platforma + první krok + skryté náklady",
+        "next": 4
+      },
+      {
+        "step": 4,
+        "phase": "spusteni",
+        "prompt": "prompts/chain/04-launch-plan.md",
+        "output": "04-launch-plan.md",
+        "inputs": ["01-persona.md", "02-validace.md", "03-platforma.md"],
+        "produces": "Spouštěcí checklist + právní minimum ČR",
+        "next": 5
+      },
+      {
+        "step": 5,
+        "phase": "provoz",
+        "prompt": "prompts/chain/05-marketing-plan.md",
+        "output": "05-marketing-plan.md",
+        "inputs": ["01-persona.md", "02-validace.md", "04-launch-plan.md"],
+        "produces": "Plán obsahu na 14 dní cílený na první objednávky",
+        "next": 6
+      },
+      {
+        "step": 6,
+        "phase": "provoz",
+        "prompt": "prompts/chain/06-diagnostika.md",
+        "output": "06-diagnostika.md",
+        "inputs": ["01-persona.md", "02-validace.md", "03-platforma.md", "04-launch-plan.md", "05-marketing-plan.md"],
+        "optional_data": "prompts/connect-data.md",
+        "produces": "Nejslabší článek + akční plán na 2 týdny + zpětná smyčka",
+        "loop_back_to": [1, 5],
+        "next": null
+      }
+    ]
+  },
+  "agent_rules": {
+    "tone": "Česky, lidsky, tykání, laskavě ale upřímně. Žádné pomlčky em.",
+    "one_step_at_a_time": true,
+    "recommend_dont_list": true,
+    "not_a_lawyer": true,
+    "validate_before_build": true
+  }
+}

@@ -5,7 +5,7 @@
 ## Pro koho to je
 
 Pro tebe, jestli chceš (nebo už začínáš) prodávat něco online a chceš, aby ti to
-**vydělávalo** — ne aby ses jen nadřela. Nemusíš umět technologie. Nemusíš mít
+**vydělávalo**, ne aby ses jen nadřela. Nemusíš umět technologie. Nemusíš mít
 velký rozpočet. Stačí nápad a ochota ho ověřit dřív, než do něj naleješ peníze.
 
 ## Metoda: Validace → Plán → Spuštění
@@ -13,11 +13,11 @@ velký rozpočet. Stačí nápad a ochota ho ověřit dřív, než do něj nalej
 Většina e-shopů neselže kvůli špatnému webu. Selže proto, že **nikdo nechtěl to,
 co prodávaly**, nebo proto, že čísla nikdy nemohla vyjít. Proto je pořadí takhle:
 
-1. **Validace** — Ověř, že o to někdo stojí a že to může vydělat. *(Než utratíš.)*
-2. **Plán** — Vyber platformu, spočítej rozpočet, naplánuj spuštění.
-3. **Spuštění** — Spusť malý, prodej, uč se z reálných objednávek.
+1. **Validace.** Ověř, že o to někdo stojí a že to může vydělat. *(Než utratíš.)*
+2. **Plán.** Vyber platformu, spočítej rozpočet, naplánuj spuštění.
+3. **Spuštění.** Spusť malý, prodej, uč se z reálných objednávek.
 
-A přes všechno se táhne jedna věc navíc: **AI jako tvůj asistent.** Není to kouzlo —
+A přes všechno se táhne jedna věc navíc: **AI jako tvůj asistent.** Není to kouzlo,
 je to nástroj, který ti pomůže rychleji přemýšlet, psát a rozhodovat se. V každé
 kapitole najdeš konkrétní prompt, který můžeš zkopírovat do ChatGPT, Claude nebo
 Gemini.
@@ -27,9 +27,9 @@ Gemini.
 To má skoro každá. Pár věcí, které pomáhají:
 
 - **Nemusíš být připravená na 100 %.** Musíš být připravená udělat **další jeden krok**.
-- **Začni malá.** První prodej nemusí být přes e-shop — může být na trhu nebo z Instagramu cizímu člověku. Pozor: prodej **kamarádce nebo rodině je povzbuzení, ne důkaz poptávky** — cílem je ověřit, že zaplatí i lidé, co tě neznají.
+- **Začni malá.** První prodej nemusí být přes e-shop, může být na trhu nebo z Instagramu cizímu člověku. Pozor: prodej **kamarádce nebo rodině je povzbuzení, ne důkaz poptávky**. Cílem je ověřit, že zaplatí i lidé, co tě neznají.
 - **Strach z technologií je dnes lichý.** Platformy i AI udělají těžkou práci za tebe.
-- **Hotovo je lepší než dokonalé** — u vzhledu, textů, pár produktů navíc. NE ale u košíku, právních stránek a všeho, co se dotýká peněz nebo dat zákaznice. Dokonalý e-shop, který nikdy nespustíš, vydělá 0 Kč.
+- **Hotovo je lepší než dokonalé**, u vzhledu, textů, pár produktů navíc. NE ale u košíku, právních stránek a všeho, co se dotýká peněz nebo dat zákaznice. Dokonalý e-shop, který nikdy nespustíš, vydělá 0 Kč.
 - **Nejsi v tom sama.** Komunita #HolkyzByznysu existuje přesně proto.
 
 > 💬 **Prompt pro AI:** *„Chci začít prodávat [co]. Bojím se hlavně [čeho]. Polož mi
@@ -37,10 +37,10 @@ To má skoro každá. Pár věcí, které pomáhají:
 
 ## Jak používat tento kit
 
-- **Web** ([hzb.davidjose.net](https://hzb.davidjose.net)) — klikací nástroje:
+- **Web** ([hzb.davidjose.net](https://hzb.davidjose.net)), klikací nástroje:
   ověření nápadu, kalkulačka, diagnostika, checklist.
-- **Tyhle texty** (`docs/`) — přečti si je, nebo je dej své AI a nech si poradit na míru.
-- **Prompty** (`prompts/`) — hotové formulace pro AI. Zkopíruj, doplň svoje, použij.
+- **Tyhle texty** (`docs/`): přečti si je, nebo je dej své AI a nech si poradit na míru.
+- **Prompty** (`prompts/`): hotové formulace pro AI. Zkopíruj, doplň svoje, použij.
 
 ## Kam dál
 

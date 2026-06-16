@@ -34,6 +34,23 @@ const fields: { key: keyof DiagnosticInput; label: string; hint: string; suffix?
   { key: 'monthlyMarketing', label: 'Marketing za měsíc', hint: 'Kolik měsíčně dáváš do reklamy? Nemáš? Dej 0.', suffix: 'Kč' }
 ];
 
+// Volitelná pole pro skutečný čistý zisk (mzda + fixní náklady).
+const trueNetFields: { key: keyof DiagnosticInput; label: string; hint: string; suffix?: string }[] = [
+  { key: 'ownerSalary', label: 'Tvoje měsíční mzda (volitelné)', hint: 'Kolik si chceš sama vyplatit za měsíc. Nech prázdné, pokud zatím nevíš.', suffix: 'Kč' },
+  { key: 'fixedCosts', label: 'Fixní náklady / měsíc (volitelné)', hint: 'Nájem, software, předplatné, doména, co platíš bez ohledu na počet objednávek.', suffix: 'Kč' }
+];
+
+// Volitelná pole pro hlubší diagnostiku.
+const deeperFields: { key: keyof DiagnosticInput; label: string; hint: string; suffix?: string }[] = [
+  { key: 'shippingCost', label: 'Doprava / objednávku (volitelné)', hint: 'Kolik tě stojí doprava u jedné objednávky. Nech prázdné, pokud nevíš.', suffix: 'Kč' },
+  { key: 'returnRate', label: 'Vratkovost (volitelné)', hint: 'Kolik % objednávek se ti vrací.', suffix: '%' },
+  { key: 'repeatRate', label: 'Opakované nákupy (volitelné)', hint: 'Kolik % zákaznic u tebe nakoupí víc než jednou.', suffix: '%' },
+  { key: 'mobileShare', label: 'Podíl mobilu (volitelné)', hint: 'Kolik % návštěv chodí z mobilu (z Google Analytics).', suffix: '%' },
+  { key: 'mobileConversionRate', label: 'Konverze na mobilu (volitelné)', hint: 'Konverze počítaná jen z mobilních návštěv.', suffix: '%' }
+];
+
+const optionalFields = [...trueNetFields, ...deeperFields];
+
 const Diagnostika = () => {
   const [input, setInput] = useState<DiagnosticInput>(defaultInput);
   const [submitted, setSubmitted] = useState(false);
@@ -41,9 +58,21 @@ const Diagnostika = () => {
 
   const result = diagnose(input);
 
+  // Volitelná pole nechávají prázdný vstup jako undefined (genuinely "blank").
+  // Povinná pole drží dosavadní chování: prázdné = 0.
+  const optionalKeys = new Set<keyof DiagnosticInput>(
+    optionalFields.map((f) => f.key)
+  );
+
   const setField = (key: keyof DiagnosticInput, value: string) => {
-    const num = value === '' ? 0 : parseFloat(value.replace(',', '.'));
-    setInput((prev) => ({ ...prev, [key]: isNaN(num) ? 0 : num }));
+    if (value === '') {
+      const empty = optionalKeys.has(key) ? undefined : 0;
+      setInput((prev) => ({ ...prev, [key]: empty }));
+      return;
+    }
+    const num = parseFloat(value.replace(',', '.'));
+    const fallback = optionalKeys.has(key) ? undefined : 0;
+    setInput((prev) => ({ ...prev, [key]: isNaN(num) ? fallback : num }));
   };
 
   const aiPrompt = `Jsem začínající podnikatelka s e-shopem a potřebuju poradit, proč mi to dobře neprodává.
@@ -54,9 +83,17 @@ Moje současná čísla za měsíc:
 - Průměrná objednávka (AOV): ${input.aov} Kč
 - Náklady na zboží v objednávce: ${input.cogs} Kč
 - Ostatní náklady na objednávku (doprava, balné, poplatky): ${input.extraCosts} Kč
-- Marketing měsíčně: ${input.monthlyMarketing} Kč
+- Marketing měsíčně: ${input.monthlyMarketing} Kč${
+    result.hasTrueNetInputs
+      ? `\n- Moje měsíční mzda (chci si vyplatit): ${input.ownerSalary ?? 0} Kč\n- Fixní náklady měsíčně (nájem, software, předplatné): ${input.fixedCosts ?? 0} Kč`
+      : ''
+  }
 
-Z toho mi vychází: ${result.monthlyOrders} objednávek, obrat ${fmtCZK(result.monthlyRevenue)}, čistý zisk po marketingu ${fmtCZK(result.monthlyNetProfit)}.
+Z toho mi vychází: ${result.monthlyOrders} objednávek, obrat ${fmtCZK(result.monthlyRevenue)}, čistý zisk po marketingu ${fmtCZK(result.monthlyNetProfit)}.${
+    result.hasTrueNetInputs
+      ? ` Skutečný čistý zisk po mojí mzdě a fixních nákladech: ${fmtCZK(result.trueNetProfit)}.`
+      : ' (Mzdu ani fixní náklady jsem zatím nezapočítala.)'
+  }
 
 Nejslabší článek podle rychlé diagnostiky je: ${result.topFix ? result.topFix.title : 'zatím nejasný'}.
 
@@ -72,7 +109,7 @@ Mluv ke mně lidsky, bez žargonu.`;
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      /* schránka nedostupná — ignoruj */
+      /* schránka nedostupná, ignoruj */
     }
   };
 
@@ -100,8 +137,8 @@ Mluv ke mně lidsky, bez žargonu.`;
             </Badge>
             <h1 className="text-3xl lg:text-4xl font-bold text-brand-wine mb-4">Co když to neprodává?</h1>
             <p className="text-lg text-brand-wine/70">
-              Zadej svoje skutečná (nebo odhadovaná) čísla. Najdeš nejslabší článek — místo, kde se
-              ztrácí nejvíc peněz — a uvidíš, co řešit jako první.
+              Zadej svoje skutečná (nebo odhadovaná) čísla. Najdeš nejslabší článek, místo, kde se
+              ztrácí nejvíc peněz, a uvidíš, co řešit jako první.
             </p>
           </div>
 
@@ -137,6 +174,71 @@ Mluv ke mně lidsky, bez žargonu.`;
                     <p className="text-xs text-brand-wine/60 mt-1">{f.hint}</p>
                   </div>
                 ))}
+
+                {/* Volitelné vstupy. Pro výpočet skutečného čistého zisku. */}
+                <div className="pt-2 border-t border-brand-light-pink">
+                  <p className="text-xs font-semibold text-brand-wine/80 mb-3">
+                    Volitelné: pro skutečný čistý zisk (po tvojí mzdě a fixních nákladech)
+                  </p>
+                  {trueNetFields.map((f) => (
+                    <div key={f.key} className="mb-4">
+                      <Label htmlFor={f.key} className="text-brand-wine font-semibold">
+                        {f.label}
+                      </Label>
+                      <div className="relative mt-1">
+                        <Input
+                          id={f.key}
+                          type="number"
+                          inputMode="decimal"
+                          min={0}
+                          value={input[f.key] == null || input[f.key] === 0 ? '' : input[f.key]}
+                          placeholder="nech prázdné"
+                          onChange={(e) => setField(f.key, e.target.value)}
+                          className="pr-14"
+                        />
+                        {f.suffix && (
+                          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-brand-wine/50">
+                            {f.suffix}
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-xs text-brand-wine/60 mt-1">{f.hint}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Volitelné vstupy. Pro hlubší diagnostiku. */}
+                <div className="pt-2 border-t border-brand-light-pink">
+                  <p className="text-xs font-semibold text-brand-wine/80 mb-3">
+                    Volitelné: pro hlubší diagnostiku (doprava, vratky, opakované nákupy, mobil)
+                  </p>
+                  {deeperFields.map((f) => (
+                    <div key={f.key} className="mb-4">
+                      <Label htmlFor={f.key} className="text-brand-wine font-semibold">
+                        {f.label}
+                      </Label>
+                      <div className="relative mt-1">
+                        <Input
+                          id={f.key}
+                          type="number"
+                          inputMode="decimal"
+                          min={0}
+                          value={input[f.key] == null || input[f.key] === 0 ? '' : input[f.key]}
+                          placeholder="nech prázdné"
+                          onChange={(e) => setField(f.key, e.target.value)}
+                          className="pr-14"
+                        />
+                        {f.suffix && (
+                          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-brand-wine/50">
+                            {f.suffix}
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-xs text-brand-wine/60 mt-1">{f.hint}</p>
+                    </div>
+                  ))}
+                </div>
+
                 <Button
                   className="w-full bg-brand-wine hover:bg-brand-wine/90"
                   onClick={() => setSubmitted(true)}
@@ -189,10 +291,36 @@ Mluv ke mně lidsky, bez žargonu.`;
                   >
                     {result.headline}
                   </p>
-                  <p className="text-xs text-brand-wine/70 bg-brand-orange/10 p-3 rounded-lg">
-                    ⚠️ Tohle <strong>nezapočítává tvůj čas ani fixní náklady</strong> (nájem, software, předplatné).
-                    I „kladné" číslo tady tě nemusí uživit — přidej si do výpočtu vlastní mzdu. Skutečný zisk je až po nich.
-                  </p>
+                  {result.hasTrueNetInputs ? (
+                    <>
+                      <div
+                        className={`text-center p-4 rounded-lg ${
+                          result.trueNetProfit >= 0 ? 'bg-brand-light-pink' : 'bg-destructive/10'
+                        }`}
+                      >
+                        <div
+                          className={`text-2xl font-bold ${
+                            result.trueNetProfit >= 0 ? 'text-brand-wine' : 'text-destructive'
+                          }`}
+                        >
+                          {fmtCZK(result.trueNetProfit)}
+                        </div>
+                        <div className="text-xs text-brand-wine/70 mt-1">
+                          skutečný čistý zisk / měs. (po marketingu, tvojí mzdě {fmtCZK(result.ownerSalary)} i fixních nákladech {fmtCZK(result.fixedCosts)})
+                        </div>
+                      </div>
+                      <p className="text-xs text-brand-wine/70 bg-brand-orange/10 p-3 rounded-lg">
+                        ✅ Tohle už je <strong>poctivé číslo</strong>, počítá s tvojí mzdou i fixními náklady.
+                        Pořád v něm ale není daň ani rezerva na horší měsíc, takže si nech polštář.
+                      </p>
+                    </>
+                  ) : (
+                    <p className="text-xs text-brand-wine/70 bg-brand-orange/10 p-3 rounded-lg">
+                      ⚠️ Tohle <strong>nezapočítává tvůj čas ani fixní náklady</strong> (nájem, software, předplatné).
+                      I „kladné" číslo tady tě nemusí uživit, doplň si výše vlastní mzdu a fixní náklady a uvidíš
+                      <strong> skutečný čistý zisk</strong>.
+                    </p>
+                  )}
                 </CardContent>
               </Card>
 
@@ -238,7 +366,7 @@ Mluv ke mně lidsky, bez žargonu.`;
                   <CardContent className="p-6 flex items-center gap-3">
                     <CheckCircle2 className="w-6 h-6 text-brand-wine" />
                     <p className="text-brand-wine">
-                      Nenašli jsme zásadní problém — základ vypadá zdravě. Soustřeď se na škálování
+                      Nenašli jsme zásadní problém, základ vypadá zdravě. Soustřeď se na škálování
                       návštěvnosti a opakované nákupy.
                     </p>
                   </CardContent>

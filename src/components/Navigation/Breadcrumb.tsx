@@ -21,6 +21,8 @@ export const Breadcrumb = () => {
     else if (segment === 'checklist') label = t('general.breadcrumb.checklist');
     else if (segment === 'o-mne') label = t('general.breadcrumb.o-mne');
     else if (segment === 'about') label = t('general.breadcrumb.about');
+    else if (segment === 'vyber-platformy') label = t('general.breadcrumb.vyber-platformy');
+    else if (segment === 'roi-kalkulacka') label = t('general.breadcrumb.roi-kalkulacka');
     
     return { path, label, isLast };
   });

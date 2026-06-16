@@ -1,6 +1,6 @@
 # Prompty pro AI 🤖
 
-Hotové prompty, které fungují s **jakoukoli AI** — ChatGPT, Claude, Gemini i dalšími.
+Hotové prompty, které fungují s **jakoukoli AI**: ChatGPT, Claude, Gemini i dalšími.
 Žádné speciální nástroje. Jen zkopíruj, doplň svoje a vlož do AI.
 
 ## Jak na to

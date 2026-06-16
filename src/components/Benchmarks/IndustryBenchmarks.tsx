@@ -102,7 +102,7 @@ export const IndustryBenchmarks = ({
               );
             })}
             <p className="text-xs text-brand-wine/60">
-              Průměr napříč obory. Najdi svůj obor v tabulce níž — bude přesnější.
+              Průměr napříč obory. Najdi svůj obor v tabulce níž, bude přesnější.
             </p>
           </div>
         )}

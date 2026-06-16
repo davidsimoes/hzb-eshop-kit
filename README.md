@@ -44,6 +44,57 @@ Celý kit je napsaný tak, aby ho zvládla jakákoli AI — žádné speciální
 
 > Prompty v `prompts/` jsou napsané v běžné češtině. Klidně si je uprav.
 
+<!-- AGENTNÍ VRSTVA, přidáno při restrukturalizaci „GitHub = agentní vrstva“ -->
+## 🤖 Naval na to celou AI (klonování a krmení), pro netechnické
+
+Tenhle repozitář je psaný tak, aby ho zvládla **jakákoli AI** (ChatGPT, Claude,
+Gemini), klidně i bez instalace. Web je pro tebe (čteš, klikáš). Repozitář je pro
+tvou AI (dostane z něj data, prompty a celý postup, jak ti pomoct stavět byznys).
+
+### Co stáhnout
+Nahoře na stránce repozitáře klikni na zelené **Code → Download ZIP** a rozbal ho.
+(Nebo `git clone`, pokud umíš.) Důležité složky: `AGENTS.md`, `kit.json`,
+`prompts/chain/`.
+
+### ChatGPT
+1. Otevři nový chat (ideálně s modelem, který umí nahrávat soubory).
+2. Nahraj soubory `AGENTS.md`, `kit.json` a celou složku `prompts/chain/`
+   (klidně i `docs/`).
+3. Napiš: *„Přečti AGENTS.md a kit.json a proveď mě kitem od kroku 1. Ptej se mě
+   jen na to, co nevíš.“*
+
+### Claude
+1. Použij **Claude Projects** (nebo nahraj soubory do chatu).
+2. Přetáhni do projektu `AGENTS.md`, `kit.json` a `prompts/chain/`.
+3. Napiš stejnou větu jako výš. Claude bude brát výstupy jedněch kroků do dalších.
+
+### Gemini / NotebookLM
+1. Nahraj soubory (Gemini umí přílohy; NotebookLM je dělaný přímo na čtení zdrojů).
+2. Napiš: *„Tohle je kit ‚E-shop, který vydělává‘. Řiď se AGENTS.md, začni krokem 1
+   a postupuj po krocích.“*
+
+### Co z toho vznikne
+AI tě provede řetězcem a pomůže ti vytvořit sadu souborů, které dohromady tvoří
+tvůj plán postavení byznysu:
+
+```
+01-persona.md → 02-validace.md → 03-platforma.md → 04-launch-plan.md → 05-marketing-plan.md → 06-diagnostika.md
+```
+
+Ulož si je. Jsou tvoje a budeš se k nim vracet.
+
+> Nechceš nic stahovat? Pořád můžeš zkopírovat jednotlivý prompt z `prompts/` a
+> vložit ho do AI. Klonování celého kitu je jen pohodlnější, protože AI pak zná
+> celý postup a navazuje kroky sama.
+
+### 📁 Jak je repozitář rozdělený
+
+| Vrstva | Kde | Pro koho |
+|---|---|---|
+| **Web** ([hzb.davidjose.net](https://hzb.davidjose.net)) | nasazená aplikace | **lidi**, čteš, klikáš na nástroje |
+| **Lidská reference** | `docs/` | **lidi**, texty ke čtení |
+| **Agentní vrstva** | `AGENTS.md`, `kit.json`, `prompts/chain/`, `prompts/connect-data.md` | **AI**, data, prompty a postup pro tvého asistenta |
+
 ## 📚 Obsah kitu (`docs/`)
 
 | # | Téma | Soubor |

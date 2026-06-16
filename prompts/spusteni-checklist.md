@@ -15,10 +15,10 @@ checklist, ne přednášku.
 
 Prosím:
 1. Sestav mi **checklist ke spuštění krok za krokem**, seřazený podle pořadí.
-2. Zvlášť vypíš **právní minimum pro ČR** (živnost, VOP, GDPR, 14 dní na vrácení) —
+2. Zvlášť vypíš **právní minimum pro ČR** (živnost, VOP, GDPR, 14 dní na vrácení),
    stručně a srozumitelně.
 3. U mého typu zboží upozorni na **specifika**, na která se často zapomíná.
 4. Označ, co je **nutné před spuštěním** a co **klidně počká**.
 
-Důležité: nejsi právník — u právních věcí mi řekni, ať si finální texty nechám
+Důležité: nejsi právník, u právních věcí mi řekni, ať si finální texty nechám
 zkontrolovat účetní/právníkem.

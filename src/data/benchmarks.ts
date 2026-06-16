@@ -1,20 +1,21 @@
-// Orientační benchmarky českého e-commerce — aktualizace 2026.
+// Orientační benchmarky českého e-commerce, aktualizace 2026.
 //
 // POZOR: Tohle nejsou záruky ani přesná čísla pro tvůj obor. Jsou to orientační
 // rozsahy, které ti pomůžou poznat, jestli jsou tvoje vstupy do kalkulačky
 // realistické. Skutečná čísla se liší podle značky, ceny, sezóny a marketingu.
 //
-// Kontext 2026 (zdroj: VTE 2026 — vzorek 209 čes. e-shopů, + Exec, CzechCrunch TOP 100):
-//  - Roste tlak na marže — marketplaces (Temu, Shein) stlačují ceny dolů.
-//  - Průměrný limit pro dopravu zdarma vyrostl na ~2 012 Kč (+26 % YoY), medián 1 500 Kč (VTE 2026).
-//  - Malé multibrandy do ~50 mil. Kč obratu mají bez vlastní značky těžkou pozici.
-//  - Konverze na mobilu jsou nižší než na desktopu — reálná konverze bývá spíš na spodní hranici.
+// Kontext 2026 (zdroj: VTE 2025/2026 vzorek čes. e-shopů, Exec, CzechCrunch TOP 100,
+// firemní výsledky GymBeam/Footshop/Pilulka):
+//  - Roste tlak na marže, marketplaces (Temu, Shein) stlačují ceny dolů.
+//  - Průměrný limit pro dopravu zdarma vyrostl na ~2 012 Kč, medián 1 500 Kč.
+//  - Malé multibrandy bez vlastní značky mají těžkou pozici.
+//  - Konverze na mobilu jsou nižší než na desktopu, reálná konverze bývá spíš na spodní hranici.
 //
 // Kaveáty (důležité pro orientaci):
-//  - Ruční výroba: marže NEZAHRNUJE hodnotu tvojí práce — připočítej čas, ať se neklameš.
-//  - Potraviny: hodně heterogenní — doplňky stravy mají marži klidně 50–65 %, čerstvé 20–30 %.
-//  - Móda: 50 % platí pro vlastní značku; přeprodej cizích značek spíš 30–40 %.
-//  - Elektronika: AOV i marže sedí jen pro drobnou elektroniku/příslušenství.
+//  - Ruční výroba: marže NEZAHRNUJE hodnotu tvojí práce, připočítej čas, ať se neklameš.
+//  - Potraviny: hodně heterogenní, doplňky stravy mají marži klidně 50 až 65 %, čerstvé 20 až 30 %.
+//  - Móda: 50 % platí pro vlastní značku, přeprodej cizích značek spíš 30 až 40 %.
+//  - Elektronika: AOV i marže sedí jen pro drobnou elektroniku a příslušenství.
 
 export interface IndustryBenchmark {
   industry: string;          // klíč (stabilní, nepřekládá se)
@@ -33,22 +34,22 @@ export const industryBenchmarks: IndustryBenchmark[] = [
   {
     industry: 'fashion',
     label: 'Móda a oblečení',
-    averageAOV: 950,
+    averageAOV: 1100,
     averageConversion: 1.4,
     averageMargin: 50,
-    averageCOGS: 475,
+    averageCOGS: 550,
     marketingBudgetPercent: 18,
-    description: 'Oblečení, obuv a módní doplňky. Vysoká konkurence, hodně vratek.'
+    description: 'Oblečení, obuv a módní doplňky. Vysoká konkurence, hodně vratek. Marže 50 % platí pro vlastní značku, u přeprodeje spíš 30 až 40 %.'
   },
   {
     industry: 'cosmetics',
     label: 'Kosmetika a péče',
     averageAOV: 700,
-    averageConversion: 2.4,
+    averageConversion: 1.8,
     averageMargin: 60,
     averageCOGS: 280,
-    marketingBudgetPercent: 20,
-    description: 'Kosmetika, drogerie a osobní péče. Dobrá marže, opakované nákupy.'
+    marketingBudgetPercent: 15,
+    description: 'Kosmetika, drogerie a osobní péče. Dobrá marže, opakované nákupy. Vyšší konverze mají hlavně velcí hráči s velkou základnou věrných zákaznic.'
   },
   {
     industry: 'handmade',
@@ -74,11 +75,11 @@ export const industryBenchmarks: IndustryBenchmark[] = [
     industry: 'kids',
     label: 'Děti a maminky',
     averageAOV: 800,
-    averageConversion: 2.0,
+    averageConversion: 1.6,
     averageMargin: 45,
     averageCOGS: 440,
     marketingBudgetPercent: 16,
-    description: 'Dětské zboží, hračky a potřeby pro maminky. Loajální, vracející se zákaznice.'
+    description: 'Dětské zboží, hračky a potřeby pro maminky. Loajální zákaznice, ale silný tlak marketplaců (Temu, Shein) na konverzi.'
   },
   {
     industry: 'home',
@@ -92,13 +93,13 @@ export const industryBenchmarks: IndustryBenchmark[] = [
   },
   {
     industry: 'food',
-    label: 'Potraviny a nápoje',
-    averageAOV: 550,
+    label: 'Potraviny a doplňky stravy',
+    averageAOV: 750,
     averageConversion: 3.0,
-    averageMargin: 32,
-    averageCOGS: 374,
-    marketingBudgetPercent: 22,
-    description: 'Potraviny, doplňky stravy a nápoje. Nízká marže, vysoká frekvence nákupů.'
+    averageMargin: 38,
+    averageCOGS: 465,
+    marketingBudgetPercent: 17,
+    description: 'Doplňky stravy a specializované potraviny (ne čerstvá donáška). Doplňky mají marži 50 až 65 %, čerstvé 20 až 30 %. Vysoká frekvence opakovaných nákupů.'
   },
   {
     industry: 'sports',
@@ -111,14 +112,24 @@ export const industryBenchmarks: IndustryBenchmark[] = [
     description: 'Sportovní vybavení a volný čas. Sezónní výkyvy.'
   },
   {
+    industry: 'pets',
+    label: 'Mazlíčci a chovatelské potřeby',
+    averageAOV: 850,
+    averageConversion: 2.7,
+    averageMargin: 42,
+    averageCOGS: 493,
+    marketingBudgetPercent: 14,
+    description: 'Krmivo, pomůcky a potřeby pro zvířata. Velmi věrné, vracející se zákaznice (skoro jako předplatné). Vlastní značka má marži vyšší, značkové krmivo nižší.'
+  },
+  {
     industry: 'electronics',
     label: 'Elektronika',
     averageAOV: 1800,
     averageConversion: 1.1,
     averageMargin: 22,
     averageCOGS: 1404,
-    marketingBudgetPercent: 10,
-    description: 'Elektronika a spotřebiče. Nízká marže, silná cenová konkurence — pro start těžké.'
+    marketingBudgetPercent: 13,
+    description: 'Elektronika a spotřebiče. Nízká marže, silná cenová konkurence, pro start těžké. Malý e-shop musí na marketing dát víc než velcí hráči.'
   }
 ];
 

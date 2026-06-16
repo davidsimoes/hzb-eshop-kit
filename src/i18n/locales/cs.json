@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "E-shop, který vydělává",
-    "description": "Praktické nástroje a otevřený kit pro spuštění e-shopu, který vydělává — kalkulačka, diagnostika, persona a checklist pro začínající podnikatelky.",
+    "description": "Praktické nástroje a otevřený kit pro spuštění e-shopu, který vydělává. Kalkulačka, diagnostika, persona a checklist pro začínající podnikatelky.",
     "home": {
       "label": "Přejít na domovskou stránku"
     }
@@ -16,7 +16,9 @@
       "calculator": "Kalkulačka",
       "checklist": "Checklist",
       "o-mne": "O mně",
-      "about": "O mně"
+      "about": "O mně",
+      "vyber-platformy": "Výběr platformy",
+      "roi-kalkulacka": "ROI kalkulačka"
     }
   },
   "nav": {
@@ -36,7 +38,9 @@
       "label": "Nastavení webu"
     },
     "validace": "Ověř nápad",
-    "diagnostika": "Diagnostika"
+    "diagnostika": "Diagnostika",
+    "vyberPlatformy": "Výběr platformy",
+    "roi": "ROI kalkulačka"
   },
   "mission": {
     "hero": {
@@ -335,7 +339,7 @@
           "title": "Připravit právní dokumenty",
           "description": "VOP (vč. 14denního práva na odstoupení od smlouvy), zásady ochrany osobních údajů (GDPR), reklamační řád",
           "time": "2 hodiny",
-          "tips": "Použij generátor VOP online nebo se poraď s právníkem. Pozor: od ~června 2026 musíš mít na webu i viditelné tlačítko „Odstoupit od smlouvy\" — ověř, že to platforma řeší."
+          "tips": "Použij generátor VOP online nebo se poraď s právníkem. Pozor: od ~června 2026 musíš mít na webu i viditelné tlačítko „Odstoupit od smlouvy\", ověř, že to platforma řeší."
         },
         "moodboard": {
           "title": "Vytvořit moodboard značky",
@@ -849,11 +853,33 @@
         "questions": [
           {
             "q": "Jaké jsou absolutně minimální právní požadavky pro nový e-shop v ČR?",
-            "a": "Když rozjíždíš e-shop, musíš mít jasné obchodní podmínky, zásady ochrany osobních údajů (GDPR), reklamační řád a info o právu na odstoupení od smlouvy do 14 dní. Taky je potřeba uvádět správné údaje o sobě (např. IČO, adresu) a ceny včetně DPH.",
+            "a": "Když rozjíždíš e-shop, musíš mít jasné obchodní podmínky (VOP), zásady ochrany osobních údajů (GDPR), reklamační řád a info o právu na odstoupení od smlouvy do 14 dní. Taky je potřeba uvádět správné údaje o sobě (např. IČO, adresu) a ceny včetně DPH.\n\nVOP musí pokrýt zejména identifikaci prodejce (jméno nebo firma, IČO, kontakt), cenu, dopravu, způsoby platby, právo na odstoupení od smlouvy do 14 dní (u spotřebitelky) a reklamace a vrácení zboží. Nově (od cca června 2026) musí mít e-shop i snadno dostupné tlačítko pro odstoupení od smlouvy, ověř si, že to tvoje platforma řeší.\n\nVětšinu textů (VOP, GDPR, reklamační řád) ti vygeneruje sama platforma nebo šablony. Nejjistější jsou vzory od APEK, připravené přímo pro e-shopy. AI použij na první draft, ale finální verzi nech projít člověkem, ať sedí na tvůj případ.",
             "links": [
               {
                 "text": "Dostupný advokát – Jak správně založit e-shop",
                 "url": "https://dostupnyadvokat.cz/blog/jak-spravne-na-zalozeni-eshopu"
+              },
+              {
+                "text": "APEK – vzorové obchodní podmínky",
+                "url": "https://www.apek.cz/vzorove-obchodni-podminky-apek"
+              }
+            ]
+          },
+          {
+            "q": "Co potřebuju po právní stránce na úplný start? Od živnosti po VOP",
+            "a": "Žádné drama, ale pár věcí mít musíš. (Tohle není právní poradenství, jen praktický přehled toho, čeho se start malého českého e-shopu obvykle týká. U konkrétní situace se opři o oficiální zdroje nebo o účetní či právničku.)\n\n1. Podnikatelské oprávnění: pro začátečnici je nejjednodušší cesta OSVČ, tedy živnost. Většina holek začíná jako OSVČ s volnou živností (Výroba, obchod a služby neuvedené v přílohách 1 až 3 živnostenského zákona). Ohlásíš ji na živnostenském úřadě nebo online, zaplatíš správní poplatek a můžeš podnikat. Není potřeba zakládat s.r.o., to má smysl až později při větších obratech nebo s parťačkou. Po ohlášení dostaneš IČO.\n\n2. Daně a pojištění: daň z příjmů a sociální a zdravotní pojištění řeš s účetní. Pro malý start často stačí paušální daň (jedna platba měsíčně, minimum papírování) nebo paušální výdaje procentem.\n\n3. DPH: plátkyní se nemusíš stát hned. Povinná registrace přichází až při překročení limitu obratu (ověř si aktuální výši, mění se). Do té doby fakturuješ bez DPH.\n\n4. Obchodní podmínky (VOP), ochrana osobních údajů (GDPR) a informační povinnosti, viz otázka o minimálních právních požadavcích výš.",
+            "links": [
+              {
+                "text": "Jak získat živnostenský list (Jak podnikat)",
+                "url": "https://www.jakpodnikat.cz/zivnostensky-list-ziskat.php"
+              },
+              {
+                "text": "Paušální daň pro OSVČ (Jak podnikat)",
+                "url": "https://www.jakpodnikat.cz/pausal-osvc.php"
+              },
+              {
+                "text": "Úřad pro ochranu osobních údajů (GDPR)",
+                "url": "https://www.uoou.gov.cz/"
               }
             ]
           },
@@ -933,6 +959,24 @@
                 "url": "https://help.hotjar.com/hc/en-us/articles/115009336727-Getting-Started-with-Heatmaps"
               }
             ]
+          },
+          {
+            "q": "Jak nafotit produkty (i s AI), když nemám fotoateliér?",
+            "a": "Fotky prodávají. Zákaznice si zboží nemůže osahat, takže fotka je to jediné, čemu věří. Dobrá zpráva: na profesionálně vypadající fotky dnes nepotřebuješ drahou techniku ani ateliér, často stačí mobil, denní světlo a chytré nástroje.\n\nZáklad, který zvládneš svépomocí:\n1. Denní světlo u okna je tvůj nejlepší kamarád. Foť přes den, vyhni se přímému slunci i žlutému umělému světlu.\n2. Čisté, jednoduché pozadí (bílý papír, kus látky, neutrální stěna). Produkt má být hvězda, ne nepořádek za ním.\n3. Víc úhlů a detail: celek, detail materiálu, produkt v použití (jak se nosí, jak vypadá na stole).\n4. Stejný styl u všech fotek, jednotný vzhled působí profesionálně a buduje značku.\n\nAI nástroje, které ti to extrémně usnadní:\n. Phottr, z obyčejné fotky produktu udělá profi produktovou fotku (čisté nebo stylové pozadí, lepší světlo). Skvělé česky dostupné řešení.\n. Remove.bg, jedním kliknutím odstraní pozadí, ideální na čisté bílé produktovky pro Heureku a katalog.\n. Photoroom nebo Canva, AI úpravy, doplnění pozadí, sjednocení stylu, jednoduché bannery a koláže.\n\nTip navíc: AI ti vyfotografování neušetří, ale úpravu ano. Vyfoť produkt slušně na mobil za denního světla a teprve pak nech AI doladit pozadí a světlo. A nezapomeň fotky před nahráním zmenšit, ať ti nezpomalují web.",
+            "links": [
+              {
+                "text": "Phottr – AI produktové fotky (CZ)",
+                "url": "https://phottr.com/cs"
+              },
+              {
+                "text": "Remove.bg – odstranění pozadí (CZ)",
+                "url": "https://www.remove.bg/cs"
+              },
+              {
+                "text": "Photoroom – AI úpravy fotek",
+                "url": "https://www.photoroom.com/"
+              }
+            ]
           }
         ]
       },
@@ -974,11 +1018,33 @@
         "questions": [
           {
             "q": "Jaké jsou minimální náklady na založení malého e-shopu jako vedlejší činnosti?",
-            "a": "Platforma: Od 500 Kč/měsíc (např. Shoptet, E-shop Rychle).\n\nDoména: 200–500 Kč/rok.\n\nProdukty: Nákup nebo výroba zboží.\n\nMarketing: Malé částky na PPC reklamy nebo sociální sítě.",
+            "a": "Dobrá zpráva: rozjet malý e-shop jako vedlejší činnost se dá za pár tisíc korun. Špatná zpráva: spousta nákladů se schovává v detailech (poplatky, balné, vratky), takže si je spočítej dopředu.\n\nPravidelné měsíční náklady:\n. Platforma: zhruba od 300 až 500 Kč za měsíc u základních tarifů (Shoptet, E-shop Rychle), Shopify obvykle o něco výš.\n. Doplňkové aplikace: 0 až několik set korun měsíčně. Na začátek se snaž vystačit s tím, co platforma umí sama.\n\nJednorázové a roční náklady:\n. Doména (např. tvojeznacka.cz): cca 200 až 500 Kč za rok.\n. Zboží: tvůj největší výdaj. Začni malou sérií, ať neutopíš peníze v neprodejném skladu.\n. Fotky a vzhled: můžeš zvládnout svépomocí (telefon a AI nástroje) nebo zaplatit fotografku.\n\nTransakční poplatky (snadno přehlédnutelné):\n. Platební brána: typicky malé procento z každé objednávky plus pár korun za transakci. Ujídá to z marže, počítej s tím.\n. Doprava a balné: krabice, výplň, štítky, klidně desítky korun na balíček. Musí být zahrnuté v ceně nebo v poštovném.\n\nMarketing: v prvním roce se obvykle doporučuje dát na marketing 20 až 40 % rozpočtu. Začni s malými částkami na Sklik, Google Ads a sociální sítě a sleduj, co se vrací.\n\nNejdůležitější číslo není kolik to stojí spustit, ale zisk z jedné objednávky (cena minus zboží, doprava, balné a poplatky brány). Ten musí být kladný, jinak čím víc prodáš, tím víc proděláš.",
             "links": [
               {
                 "text": "Nástroje pro web – Cena e-shopu",
                 "url": "https://www.nastrojeproweb.cz/clanky/eshop-cena"
+              },
+              {
+                "text": "Shoptet – ceník",
+                "url": "https://www.shoptet.cz/cenik/"
+              },
+              {
+                "text": "Shopify – ceník (CZ)",
+                "url": "https://www.shopify.com/cz/pricing"
+              }
+            ]
+          },
+          {
+            "q": "Kolik času e-shop zabere a dá se to dělat vedle práce?",
+            "a": "Dá se, dělá to tak většina holek, co začínají. Ale buďme upřímné: e-shop vedle hlavní práce není pasivní příjem, je to druhá (menší) směna. S realistickým plánem to ale jde zvládnout bez vyhoření.\n\nKolik hodin reálně počítat:\n. Rozjezd (první 1 až 2 měsíce): nejnáročnější fáze, počítej s 5 až 10 hodinami týdně. Stavíš web, fotíš, píšeš popisky, řešíš dopravu a právní minimum.\n. Běžný provoz: když e-shop běží, často stačí 3 až 6 hodin týdně na vyřizování objednávek, balení, komunikaci a marketing.\n\nJak to skloubit s prací (klíč je dávkování, ne každodenní drobení):\n. Batchuj podobné úkoly. Nevyřizuj objednávku po objednávce, vyhraď si pevné okno (např. obden večer nebo o víkendu) a zabal a odešli všechno najednou. Stejně tak foť 20 produktů naráz.\n. Nastav si rytmus, ne nárazy. Třeba všední dny 30 až 45 minut večer na objednávky a zprávy, víkend 2 až 3 hodiny na obsah a fotky.\n. Automatizuj a předpřipravuj: šablony e-mailů, automatické potvrzení objednávky, výdejní místa místo osobních předávek. AI ti napíše popisky i odpovědi zákaznicím.\n. Měj výdejní okno. Jasně komunikuj, že balíš třeba 2x týdně.\n\nRealistická časová osa: první prodej můžeš mít do pár dní až týdnů od spuštění. Stabilnější příjem obvykle přichází po 3 až 6 měsících soustavné práce. Než e-shop uživí a unese přechod z hlavní práce, počítej spíš v 6 až 18 měsících podle oboru a marže. Není to závod, je to maraton.",
+            "links": [
+              {
+                "text": "Minimální náklady a rozjezd e-shopu jako vedlejší činnost",
+                "url": "https://www.nastrojeproweb.cz/clanky/eshop-cena"
+              },
+              {
+                "text": "Ecommerce blog – Shoptet (provoz a tipy)",
+                "url": "https://blog.shoptet.cz/"
               }
             ]
           }
@@ -991,11 +1057,29 @@
         "questions": [
           {
             "q": "Které platformy jsou nejlepší pro prodej služeb nebo digitálního obsahu (např. videí, kurzů)?",
-            "a": "Pro e-shopy s digitálními produkty: Shopify nebo WordPress s WooCommerce pro vlastní řešení.\n\nPro online kurzy: Globálně Teachable a Thinkific, v ČR je vhodná Seduo.cz pro lokální publikum.\n\nPro automatizaci prodeje a fakturace: FAPI – ideální pro český trh a integruje se s většinou platforem.",
+            "a": "Pro e-shopy s digitálními produkty: Shopify nebo WordPress s WooCommerce pro vlastní řešení.\n\nPro online kurzy: globálně Teachable a Thinkific, v ČR je vhodná Seduo.cz pro lokální publikum.\n\nPro automatizaci prodeje a fakturace: FAPI, ideální pro český trh a integruje se s většinou platforem.",
             "links": [
               {
                 "text": "8 nejlepších mezinárodních platforem pro kurzy",
                 "url": "https://club.coolpeople.cz/8-nejlepsich-mezinarodnich-platforem-nejen-pro-it-kurzy/1282.html"
+              }
+            ]
+          },
+          {
+            "q": "Musí to být klasický e-shop s košíkem? (Kurzy, webináře, členství)",
+            "a": "Nemusí. Klasický košík je skvělý na fyzické zboží, ale pokud prodáváš znalosti, čas nebo digitální obsah (online kurz, webinář, e-book, členskou sekci, koučink), může ti sednout úplně jiný typ platformy. Vybírej podle celkového obchodního modelu, ne podle toho, co je zrovna populární.\n\nKdyž prodáváš kurzy a obsah, mrkni na specializované platformy:\n. Seduo.cz, česká platforma s vlastním publikem, které kurzy aktivně hledá.\n. Teachable, Podia nebo Thinkific, světové platformy na vlastní kurzy a členství (přehrávače videí, testy, certifikáty, komunita).\n. FAPI, český nástroj na automatizaci prodeje a fakturace digitálních produktů.\n\nCo je super: tyhle platformy mají hotové přehrávání videa, ochranu obsahu, přístup pro studentky, kapitoly, komunitu, někdy i certifikáty.\n\nNa co pozor: specializované kurzové platformy bývají slabší v marketingových funkcích, které znáš z e-shopů. Často jim chybí nebo jsou omezené analýza prodejního trychtýře (kde lidé odpadávají), cross-sell a doporučování, propracovaný e-mailing a svoboda v designu.\n\nJak se rozhodnout:\n. Prodáváš hlavně jeden, dva kurzy a chceš to mít rychle hotové, vyber specializovanou kurzovou platformu.\n. Kombinuješ fyzické zboží i digitální produkty, nebo chceš plnou kontrolu nad vzhledem, e-mailingem a daty, zvol klasický e-shop (Shopify, WooCommerce), který umí prodávat i digitální produkty (jen si přidáš appku na doručení souborů).\n. Potřebuješ hlavně fakturaci a automatizaci kolem prodeje, doplň si FAPI k čemukoli, co používáš.\n\nŽádná volba není lepší obecně. Lepší je ta, která sedí tvému byznysu.",
+            "links": [
+              {
+                "text": "Seduo.cz – kurzy",
+                "url": "https://www.seduo.cz/"
+              },
+              {
+                "text": "FAPI – prodej a fakturace digitálních produktů",
+                "url": "https://www.fapi.cz/"
+              },
+              {
+                "text": "Teachable – platforma na kurzy",
+                "url": "https://teachable.com/"
               }
             ]
           },
@@ -1028,8 +1112,22 @@
           },
           {
             "q": "Jaké investice můžu odložit na později?",
-            "a": "1. Pokročilé SEO audity: Základní SEO stačí na začátek, složitější analýzy přijdou později.\n\n2. Věrnostní programy: Začni s jednoduchými slevami, složité systémy můžou počkat.\n\n3. Velké zásoby zboží: Kup jen malé množství produktů a rozšiřuj podle poptávky.",
+            "a": "1. Pokročilé SEO audity: Základní SEO stačí na začátek, složitější analýzy přijdou později.\n\n2. Věrnostní programy: Začni s jednoduchými slevami, složité systémy můžou počkat.\n\n3. Velké zásoby zboží: Kup jen malé množství produktů a rozšiřuj podle poptávky.\n\n4. 15 doplňkových aplikací pro jistotu: každá appka je další měsíční poplatek, přidávej je až podle reálné potřeby.",
             "links": [
+              {
+                "text": "E-shop jako investice",
+                "url": "https://www.investujeme.cz/clanky/eshop-jako-investice/"
+              }
+            ]
+          },
+          {
+            "q": "Za co si připlatit a co naopak vynechat? Mysli v návratnosti, ne v ceně",
+            "a": "Nepřemýšlej je to drahé, nebo levné?, ale vrátí se mi to? Každý měsíční poplatek i jednorázová investice si musí na sebe vydělat.\n\nCo se obvykle vyplatí zaplatit hned:\n. Spolehlivá platforma a platební brána. Když nefunguje košík nebo platba, přicházíš o reálné peníze každý den.\n. Dobré fotky a popisky produktů, nejlevnější marketing, který existuje. Špatná fotka zabije prodej dřív, než zákaznice doroluje k ceně.\n. Kvalitní šablona a vzhled, pokud stavíš značku. Prémiová šablona není vyhozená koruna: hezký a důvěryhodný vzhled je investice do vnímání kvality. Levný placatý e-shop podvědomě snižuje vnímanou hodnotu zboží.\n\nCo klidně počká na později: pokročilé SEO audity, věrnostní programy a složité slevové systémy, hromada doplňkových aplikací, velké zásoby zboží.\n\nU každého výdaje se ptej: přinese mi to víc objednávek nebo vyšší průměrnou objednávku? Ušetří mi to tolik času, že se to v penězích vyplatí? Zlepší to zážitek zákaznice tak, že se vrátí?\n\nNezapomeň na měkké, dlouhodobé faktory, které rozhodují, jestli e-shop přežije: spokojenost zákaznic (vracejí se a doporučují), tvoje vlastní pohodlí v administraci (na nepřehledném systému časem vyhoříš) a důvěryhodnost značky.\n\nPravidlo palce: investuj do toho, co lidé vidí a co tě živí (fotky, vzhled, plynulý nákup), šetři na tom, co počká nebo co řeší problém, který ještě nemáš.",
+            "links": [
+              {
+                "text": "Jak rozdělit peníze do marketingových kanálů (blog Shoptet)",
+                "url": "https://blog.shoptet.cz/jak-rozdelit-penize-do-marketingovych-kanalu/"
+              },
               {
                 "text": "E-shop jako investice",
                 "url": "https://www.investujeme.cz/clanky/eshop-jako-investice/"
@@ -1067,6 +1165,42 @@
           {
             "q": "Jak začít s e-shopem, když jsem úplná začátečnice?",
             "a": "Začni postupně: Nevrhej se hned do velkých investic. Zkus levné platformy jako Shoptet nebo E-shop Rychle a postupně vylepšuj.\n\nVyuži AI jako svého spoluzakladatele: Místo googling použij ChatGPT, Claude nebo další AI nástroje. Ptej se na cokoli – od psaní popisků produktů až po marketingové strategie. AI ti může pomoci napsat texty, vytvořit plány, analyzovat konkurenci i poradit s problémy 24/7.\n\nBuď trpělivá: Úspěch v e-shopu chce čas. AI ti ale může výrazně zrychlit učení a produktivitu. Nenech se odradit a makaj dál! 😊"
+          },
+          {
+            "q": "Shopify, Shoptet, WooCommerce, nebo něco jiného? Jak vybrat platformu",
+            "a": "Nehledej nejlepší e-shop na světě. Hledej ten, na kterém prodáš první kus tenhle měsíc a u kterého ti bude příjemně dělat každodenní práci. Platformu jde později změnit, ale je to reálná práce (ztráta SEO, re-import produktů, nový vzhled), takže vyber uvážlivě a pak se drž.\n\nMísto věčné otázky Shopify, nebo Shoptet? se podívej na celé pole. Pro českou začátečnici dává smysl pět skupin:\n\n1. Shoptet (česká pronajatá platforma): nejrozšířenější řešení v ČR. Všechno je hotové a v češtině, podpora mluví česky a napojení na české služby (Zásilkovna, Balíkovna, Heureka, fakturace, GoPay, ComGate) je samozřejmost. Skvělá volba, když prodáváš hlavně do Česka a chceš co nejmíň starostí.\n\n2. Shopify (světová pronajatá platforma): světová jednička. Nejlepší, když chceš růst, prodávat i do zahraničí a sáhnout po tisících aplikací. Do češtiny se dostane přes šablony a appky, chce to o kousek víc nastavování, ale na škálování a profi vzhled je těžko k překonání.\n\n3. WooCommerce (na WordPressu, polovlastní řešení): open-source plugin do WordPressu. Levný na licencích, hodně flexibilní, ale ty se staráš o hosting, aktualizace a bezpečnost (nebo si platíš někoho). Dává smysl, když už WordPress máš. Pro úplný start spíš zbytečná starost navíc.\n\n4. Univerzální web-buildery (Wix, Squarespace, Webnode): spíš web s možností prodeje než plnohodnotný e-shop. Hodí se na velmi malý sortiment, služby nebo když primárně potřebuješ hezkou prezentaci. Jakmile budeš mít desítky produktů a chtít české dopravce a Heureku, narazíš na limity.\n\n5. Platformy na kurzy a komunity (Seduo, Teachable, Podia, FAPI): pokud neprodáváš krabice, ale své know-how (kurzy, webináře, členství, e-booky), klasický košík nemusíš vůbec potřebovat. Víc v otázce o košíku.\n\nJak se rozhodnout (5 kritérií): rychlost spuštění, náklady celkem (měsíční poplatek a transakční poplatky a nutné appky), české napojení (doprava, platby, fakturace, Heureka), růst (unese to znásobení prodejů i zahraničí?) a tvoje pohodlí (vyzkoušej demo).\n\nRychlá zkratka: prodáváš fyzické zboží hlavně v ČR a chceš klid, vyber Shoptet. Chceš růst a jít do zahraničí, vyber Shopify. Máš pár produktů nebo služby, vyber Webnode nebo Wix. Prodáváš znalosti, vyber kurzovou platformu. WooCommerce nech až na chvíli, kdy ti pronajatá platforma přestane stačit.",
+            "links": [
+              {
+                "text": "Shoptet – ceník a funkce",
+                "url": "https://www.shoptet.cz/cenik/"
+              },
+              {
+                "text": "Shopify – ceník (CZ)",
+                "url": "https://www.shopify.com/cz/pricing"
+              },
+              {
+                "text": "WooCommerce – oficiální web",
+                "url": "https://woocommerce.com/"
+              },
+              {
+                "text": "Webnode – tvorba webu a e-shopu",
+                "url": "https://www.webnode.cz/"
+              }
+            ]
+          },
+          {
+            "q": "Vystačím si jen se sociálními sítěmi, nebo potřebuju i e-shop?",
+            "a": "Sociální sítě jsou skvělé jako jeden z kanálů, na rozjezd dokonce ten nejrychlejší, ale stavět na nich celý byznys je riskantní. Klíčové je rozlišit, jestli síť používáš jako jediný akviziční kanál, nebo jako doplněk k vlastnímu prostoru.\n\nProč jsou sítě super na start: hned máš publikum a zpětnou vazbu, ověříš, jestli lidé vůbec chtějí zaplatit. První prodeje můžeš udělat přes DM nebo formulář ještě dřív, než postavíš web.\n\nProč na nich nestavět všechno (vlastněné vs. pronajaté): Instagram, Facebook a TikTok jsou pronajatý prostor, follower nepatří tobě, patří platformě. Změní se algoritmus, dosah spadne. Zruší ti účet, přijdeš o všechno přes noc. Naopak vlastněné kanály jsou tvoje napořád: e-shop, e-mailová databáze a tvoje doména.\n\nPraktický postup:\n1. Začni na sítích a ověř poptávku, klidně i bez webu.\n2. Co nejdřív si postav vlastní prostor (e-shop nebo aspoň jednoduchý web) a hlavně sbírej e-maily. E-mailová databáze je nejcennější věc, kterou v e-commerce máš.\n3. Sociální sítě používej jako trychtýř dovnitř, přiváděj z nich lidi na svůj e-shop.\n4. Nikdy nespoléhej na jediný kanál.\n\nTakže ano, ze začátku si chvíli vystačíš jen se sítěmi. Ale ber to jako odrazový můstek, ne jako cílový stav. Cíl je: sítě tě přivedou, vlastní e-shop a e-maily tě uživí.",
+            "links": [
+              {
+                "text": "Jak rozdělit peníze do marketingových kanálů (blog Shoptet)",
+                "url": "https://blog.shoptet.cz/jak-rozdelit-penize-do-marketingovych-kanalu/"
+              },
+              {
+                "text": "Ecommerce blog – Shoptet (marketing a prodej)",
+                "url": "https://blog.shoptet.cz/"
+              }
+            ]
           }
         ]
       }

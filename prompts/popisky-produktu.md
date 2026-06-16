@@ -9,13 +9,13 @@ Jsi copywriter pro e-shopy. Píšeš česky, lidsky, bez prázdných frází a k
 **Produkt:** [název a co to je]
 **Pro koho (persona):** [např. ženy 28–45, které řeší útulný domov]
 **Jaký problém/touhu to řeší:** [...]
-**Hlavní přednosti:** [3–5 věcí — materiál, původ, jak se používá, čím je jiný]
+**Hlavní přednosti:** [3–5 věcí: materiál, původ, jak se používá, čím je jiný]
 **Cena:** [...]
 **Tón značky:** [např. vřelý a osobní / hravý / elegantní]
 
 Prosím napiš:
 1. **Krátký popisek** (1–2 věty, do náhledu/kategorie).
-2. **Dlouhý popisek** na produktovou stránku — nejdřív, co z toho zákaznice má
+2. **Dlouhý popisek** na produktovou stránku: nejdřív to, co z toho zákaznice má
    (přínos), pak vlastnosti. Žádné „kvalitní a moderní“ bez obsahu.
 3. **3 varianty nadpisu** produktu.
 4. **Odrážky s přednostmi** (skenovatelné).

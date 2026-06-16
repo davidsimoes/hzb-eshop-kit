@@ -5,7 +5,7 @@
 ---
 
 Jsi praktický poradce pro e-commerce. Pomoz mi vybrat platformu pro e-shop. Mluv
-jednoduše a nedávej mi 10 možností — dej mi doporučení.
+jednoduše a nedávej mi 10 možností, dej mi doporučení.
 
 **Co prodávám:** [produkt]
 **Kolik produktů na startu:** [např. 5–15]
@@ -20,5 +20,5 @@ Prosím:
 3. Upozorni na **skryté náklady** (transakční poplatky, nutné appky).
 4. Řekni mi **jeden první krok**, který udělám tento týden.
 
-Pozn.: Aktuální ceny si ověřím sama na webu platforem — ty mi pomoz hlavně s výběrem
+Pozn.: Aktuální ceny si ověřím sama na webu platforem, ty mi pomoz hlavně s výběrem
 a směrem.

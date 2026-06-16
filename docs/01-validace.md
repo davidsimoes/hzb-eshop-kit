@@ -1,7 +1,7 @@
 # 1. Validace nápadu a persona
 
 > Nejlevnější chyba je ta, kterou uděláš na papíře. Validace = ověřit, že o to
-> někdo stojí a že to může vydělat — **dřív, než utratíš peníze.**
+> někdo stojí a že to může vydělat, **dřív, než utratíš peníze.**
 
 🔧 **Nástroj na webu:** [Ověř nápad](https://hzb.davidjose.net/validace) ·
 [Kalkulačka](https://hzb.davidjose.net/kalkulacka)
@@ -12,7 +12,7 @@
 2. **Proč** by to koupili ode mě? (problém + odlišení)
 3. **Vydělá** to? (čísla)
 
-Když máš jasné „ano“ na všechny tři, máš ověřený nápad. Když ne, víš, co doladit —
+Když máš jasné „ano“ na všechny tři, máš ověřený nápad. Když ne, víš, co doladit,
 levně a včas.
 
 ## Persona: tvoje konkrétní zákaznice
@@ -21,11 +21,11 @@ Nepiš „ženy 25–45“. To není člověk, to je statistika. Popiš **jednu 
 zákaznici**, jako bys ji znala:
 
 - **Kdo je** a v jaké je životní situaci
-- **Co řeší** — jaký problém nebo touhu tvůj produkt naplní
-- **Kdy a proč nakoupí** — situace, spouštěč (Vánoce, narozeniny, „chci si udělat radost“)
-- **Čeho se bojí** — co ji od nákupu odradí (cena? důvěra? nejistota?)
-- **Kde tráví čas** — kde ji oslovíš (Instagram, Pinterest, doporučení)
-- **Co ji přesvědčí** — recenze, příběh, ukázka, záruka
+- **Co řeší:** jaký problém nebo touhu tvůj produkt naplní
+- **Kdy a proč nakoupí:** situace, spouštěč (Vánoce, narozeniny, „chci si udělat radost“)
+- **Čeho se bojí:** co ji od nákupu odradí (cena? důvěra? nejistota?)
+- **Kde tráví čas:** kde ji oslovíš (Instagram, Pinterest, doporučení)
+- **Co ji přesvědčí:** recenze, příběh, ukázka, záruka
 
 > Čím konkrétnější persona, tím snazší marketing, texty i fotky. Mluvíš k jednomu
 > člověku, ne k davu.
@@ -37,7 +37,7 @@ zákaznici**, jako bys ji znala:
 2. **Zjisti poptávku.** Hledají to lidé? Sklik / Google Keyword Planner, počty
    hledání, skupiny na FB, dotazy na Heurece.
 3. **Mrkni na konkurenci.** 3+ konkurenti = trh existuje. Hledej mezeru, ne prázdno.
-   (Hodně konkurentů = poptávka existuje, ale musíš se odlišit. Úplně prázdný trh = buď jsi brzy, nebo o to nikdo nestojí — zjisti které, neber to jako automatický stopku.)
+   (Hodně konkurentů = poptávka existuje, ale musíš se odlišit. Úplně prázdný trh = buď jsi brzy, nebo o to nikdo nestojí. Zjisti které, neber to jako automatický stopku.)
 4. **Získej signál, že zaplatí.** Předobjednávka, čekací listina, prodej na trhu,
    nebo prosté „kde to koupím?“ pod fotkou.
 5. **Spočítej čísla.** Pokryje marže náklady i tvůj čas? → [Kalkulačka](https://hzb.davidjose.net/kalkulacka).
@@ -47,14 +47,14 @@ zákaznici**, jako bys ji znala:
 - Nadšení máš jen ty a tvoje rodina.
 - Lidé říkají „hezké!“, ale nikdo se nezeptá na cenu.
 - Marže po odečtení dopravy a poplatků skoro mizí.
-- „Budou to chtít všichni“ — produkt pro všechny je produkt pro nikoho.
+- „Budou to chtít všichni“, produkt pro všechny je produkt pro nikoho.
 
 ## AI v tomhle kroku
 
 AI je skvělá na **vybroušení persony** a na **hraní si na zákaznici**:
 
-> 💬 **Prompt:** viz [`prompts/validace-persony.md`](../prompts/validace-persony.md)
-> — vlož svoje odpovědi a AI z toho sestaví personu, najde slabá místa a navrhne
+> 💬 **Prompt:** viz [`prompts/validace-persony.md`](../prompts/validace-persony.md).
+> Vlož svoje odpovědi a AI z toho sestaví personu, najde slabá místa a navrhne
 > plán na ověření za týden.
 
 Druhý tip: nech AI hrát tvou skeptickou zákaznici. *„Jsi [persona]. Já ti zkusím

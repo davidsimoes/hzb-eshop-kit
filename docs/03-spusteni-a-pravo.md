@@ -1,6 +1,6 @@
 # 3. Spuštění, checklist a právní minimum
 
-> Jak spustit, aniž bys něco důležitého zapomněla — a jaké je právní minimum, abys
+> Jak spustit, aniž bys něco důležitého zapomněla, a jaké je právní minimum, abys
 > byla v klidu.
 
 🔧 **Nástroj na webu:** [Spouštěcí checklist](https://hzb.davidjose.net/checklist)
@@ -12,22 +12,22 @@
 
 ## Právní minimum (malý český e-shop, B2C)
 
-1. **Podnikatelské oprávnění** — nejčastěji **živnostenský list** (volná živnost
+1. **Podnikatelské oprávnění:** nejčastěji **živnostenský list** (volná živnost
    „Výroba, obchod a služby…“). Vyřídíš na živnostenském úřadě nebo online.
-2. **IČO a evidence** — po ohlášení živnosti dostaneš IČO. Daň z příjmů a (případně)
+2. **IČO a evidence:** po ohlášení živnosti dostaneš IČO. Daň z příjmů a (případně)
    sociální/zdravotní pojištění řeš s účetní; na malý start často stačí paušál.
-3. **DPH** — plátcem se nemusíš stát hned. Limit pro povinnou registraci je
+3. **DPH:** plátcem se nemusíš stát hned. Limit pro povinnou registraci je
    **2 000 000 Kč obratu** (limit platný od 1. 1. 2025; vyšší práh pro okamžitou
    registraci ~2,5 mil. Kč). Do té doby fakturuješ bez DPH. Vždy si ověř aktuální stav.
-4. **Obchodní podmínky (VOP)** — povinné. Musí pokrýt mj.:
+4. **Obchodní podmínky (VOP):** povinné. Musí pokrýt mj.:
    - identifikaci prodejce (jméno/firma, IČO, kontakt)
    - cenu, dopravu, platby
    - **právo na odstoupení do 14 dnů** (u spotřebitele)
    - reklamace a vrácení
-5. **Ochrana osobních údajů (GDPR)** — zásady zpracování osobních údajů + souhlas
+5. **Ochrana osobních údajů (GDPR):** zásady zpracování osobních údajů + souhlas
    s cookies, pokud měříš návštěvnost/reklamu.
-6. **Informační povinnosti** — viditelně kontakt, dodací a reklamační podmínky.
-7. **Tlačítko „Odstoupit od smlouvy"** — od ~června 2026 (EU směrnice 2023/2673)
+6. **Informační povinnosti:** viditelně kontakt, dodací a reklamační podmínky.
+7. **Tlačítko „Odstoupit od smlouvy":** od ~června 2026 (EU směrnice 2023/2673)
    musí mít e-shop viditelné, vždy dostupné tlačítko pro odstoupení od smlouvy.
    Ověř, že to tvoje platforma řeší.
 
@@ -50,8 +50,8 @@ Nesnaž se mít hned všechno. Spusť **malé, ale funkční**:
 
 ## Den D: než zveřejníš
 
-- [ ] Projdi e-shop **na mobilu** jako zákaznice — od fotky po potvrzení objednávky.
-- [ ] Zkontroluj ceny, dopravu zdarma (limit), náklady — ať nejsi v minusu.
+- [ ] Projdi e-shop **na mobilu** jako zákaznice, od fotky po potvrzení objednávky.
+- [ ] Zkontroluj ceny, dopravu zdarma (limit), náklady, ať nejsi v minusu.
 - [ ] Otestuj platbu i e-mail s potvrzením.
 - [ ] Připrav, jak zboží **zabalíš a odešleš** (krabice, štítky, výdejní místo).
 - [ ] Měj plán, kde řekneš lidem, že spouštíš (viz [4. Marketing](04-marketing-a-znacka.md)).
@@ -59,10 +59,10 @@ Nesnaž se mít hned všechno. Spusť **malé, ale funkční**:
 ## AI v tomhle kroku
 
 > 💬 **Prompt:** viz [`prompts/spusteni-checklist.md`](../prompts/spusteni-checklist.md)
-> — AI ti z tvého produktu a platformy sestaví checklist na míru a upozorní, na co
+> AI ti z tvého produktu a platformy sestaví checklist na míru a upozorní, na co
 > u tvého typu zboží nezapomenout.
 
-AI použij i na **koncept VOP/GDPR** jako základ — ale nech finální verzi zkontrolovat
+AI použij i na **koncept VOP/GDPR** jako základ, ale nech finální verzi zkontrolovat
 člověkem. Právní text generovaný AI ber jako draft, ne jako hotovou pravdu.
 
 → Pokračuj na [4. Marketing a značka](04-marketing-a-znacka.md).

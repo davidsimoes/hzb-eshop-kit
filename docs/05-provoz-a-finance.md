@@ -8,11 +8,11 @@ rozpočet) · [Diagnostika](https://hzb.davidjose.net/diagnostika) (kde se ztrá
 
 ## Finance: čísla, která musíš znát
 
-- **Marže** = (cena − náklady na zboží) / cena. Pod ~25 % se těžko vydělává. (Sleduj hlavně **příspěvkovou marži** — po odečtení dopravy, balného, poplatků a vratek; ta tě může živit i při nižší hrubé marži, pokud máš objem.)
+- **Marže** = (cena − náklady na zboží) / cena. Pod ~25 % se těžko vydělává. (Sleduj hlavně **příspěvkovou marži**, tedy po odečtení dopravy, balného, poplatků a vratek; ta tě může živit i při nižší hrubé marži, pokud máš objem.)
 - **Zisk z objednávky** = cena − zboží − doprava − balné − poplatky brány. **Musí být
   kladný**, jinak čím víc prodáš, tím víc proděláš.
 - **Náklad na zákaznici (CAC)** = marketing / počet objednávek. Musí být **menší** než zisk z objednávky (ideálně výrazně). To je bezpečná hranice, dokud nemáš data o opakovaných nákupech. Jakmile vidíš, že se zákaznice vracejí, reálným cílem je **celková hodnota zákaznice ≥ 3× CAC**.
-- **AOV** (průměrná objednávka) — zvedneš ho bundly a limitem pro dopravu zdarma.
+- **AOV** (průměrná objednávka): zvedneš ho bundly a limitem pro dopravu zdarma.
 - **Cashflow** ≠ zisk. Můžeš být „v zisku“ a přitom bez peněz, protože ti leží
   v zásobách. Sleduj **peníze na účtu**, ne jen tabulku.
 
@@ -29,31 +29,31 @@ rozpočet) · [Diagnostika](https://hzb.davidjose.net/diagnostika) (kde se ztrá
 ## Dodavatelé
 
 - **Víc než jeden**, ať nejsi závislá na jednom (výpadek = stojíš).
-- **Vyjednávej.** Cena, množstevní sleva, splatnost, doba dodání — vše se dá řešit.
+- **Vyjednávej.** Cena, množstevní sleva, splatnost, doba dodání, vše se dá řešit.
   Lepší nákup = lepší marže bez zvyšování ceny zákaznici.
 - **Otestuj kvalitu** dřív, než objednáš hodně. Vzorek napřed.
-- Pozor na **doby dodání** (zvlášť ze zahraničí) — ovlivní, kdy můžeš prodávat.
+- Pozor na **doby dodání** (zvlášť ze zahraničí), ovlivní, kdy můžeš prodávat.
 
 ## Doprava a balení (kde se tiše ztrácí zisk)
 
 - Spočítej **reálnou cenu dopravy a balného** do zisku z objednávky.
-- **Limit pro dopravu zdarma** — nenastavuj fixně, ale ~15–30 % nad TVÉ aktuální AOV (ať se kvalifikuje zhruba 50–70 % objednávek; trh 2026: průměr ~2 012 Kč, medián 1 500). Zvedá AOV — ale
+- **Limit pro dopravu zdarma:** nenastavuj fixně, ale ~15–30 % nad TVÉ aktuální AOV (ať se kvalifikuje zhruba 50–70 % objednávek; trh 2026: průměr ~2 012 Kč, medián 1 500). Zvedá AOV, ale
   nesmí ti sníst marži. Spočítej to.
 - Vrátky umí být drahé. Jasné popisky a fotky = méně vrácení.
 
 ## Po spuštění: co dělat dál
 
-1. **Mluv se zákaznicemi** — proč koupily, co chybělo. Zlato pro další kroky.
-2. **Sbírej recenze** — po doručení požádej. Důvěra = další prodeje.
-3. **Pečuj o opakovaný nákup** — e-mail, poděkování, malý bonus. Stávající zákaznice
+1. **Mluv se zákaznicemi:** proč koupily, co chybělo. Zlato pro další kroky.
+2. **Sbírej recenze:** po doručení požádej. Důvěra = další prodeje.
+3. **Pečuj o opakovaný nákup:** e-mail, poděkování, malý bonus. Stávající zákaznice
    je levnější než nová.
-4. **Měř a uč se** — jednou týdně mrkni na čísla. Co fungovalo, dělej víc.
+4. **Měř a uč se:** jednou týdně mrkni na čísla. Co fungovalo, dělej víc.
 5. **Když to vázne** → [6. Když to neprodává](06-kdyz-to-neprodava.md).
 
 ## AI v tomhle kroku
 
-> 💬 **Prompt:** viz [`prompts/diagnostika-prodeje.md`](../prompts/diagnostika-prodeje.md)
-> — vlož svoje čísla a AI ti řekne, kde se ztrácí zisk a co řešit první.
+> 💬 **Prompt:** viz [`prompts/diagnostika-prodeje.md`](../prompts/diagnostika-prodeje.md).
+> Vlož svoje čísla a AI ti řekne, kde se ztrácí zisk a co řešit první.
 
 AI použij i na **e-maily zákaznicím**, **poděkování k balíčku** nebo **vyjednávací
 e-mail dodavateli**. Ušetří čas, ty jen doladíš tón.
