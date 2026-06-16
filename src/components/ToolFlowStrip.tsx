@@ -5,27 +5,31 @@ interface Step {
   label: string;
   path: string;
   key: string;
+  hint: string;
 }
 
 const STEPS: Step[] = [
-  { key: 'validace', label: 'Ověr nápad', path: '/validace' },
-  { key: 'kalkulacka', label: 'Kalkulačka', path: '/kalkulacka' },
-  { key: 'vyber-platformy', label: 'Výběr platformy', path: '/vyber-platformy' },
-  { key: 'diagnostika', label: 'Diagnostika', path: '/diagnostika' },
-  { key: 'roi-kalkulacka', label: 'ROI', path: '/roi-kalkulacka' },
-  { key: 'checklist', label: 'Checklist', path: '/checklist' },
+  { key: 'validace', label: 'Ověř nápad', path: '/validace', hint: 'Ujasni si, komu a proč prodáváš, a ověř, že o to někdo stojí.' },
+  { key: 'kalkulacka', label: 'Kalkulačka', path: '/kalkulacka', hint: 'Spočítej, jestli tvůj e-shop může být finančně životaschopný.' },
+  { key: 'vyber-platformy', label: 'Výběr platformy', path: '/vyber-platformy', hint: 'Odpověz na šest otázek a zjisti, která platforma sedí na tvoji situaci.' },
+  { key: 'diagnostika', label: 'Diagnostika', path: '/diagnostika', hint: 'Zadej svá čísla a najdi nejslabší článek, kde se ztrácí peníze.' },
+  { key: 'roi-kalkulacka', label: 'ROI', path: '/roi-kalkulacka', hint: 'Ověř, jestli se ti konkrétní výdaj nebo investice vyplatí.' },
+  { key: 'checklist', label: 'Checklist', path: '/checklist', hint: 'Projdi si, co všechno potřebuješ před spuštěním zařídit.' },
 ];
+
+const STEP_HINTS: Record<string, string> = Object.fromEntries(STEPS.map((s) => [s.key, s.hint]));
 
 interface ToolFlowStripProps {
   current: string;
 }
 
 export const ToolFlowStrip = ({ current }: ToolFlowStripProps) => {
+  const hint = STEP_HINTS[current] ?? 'Každý nástroj řeší jeden krok na cestě k fungujícímu e-shopu.';
   return (
     <div className="max-w-4xl mx-auto mb-6">
       <p className="text-sm text-brand-wine/70 mb-2">
         <span className="font-semibold text-brand-wine">Jak nástroje navazují:</span>{' '}
-        Každý nástroj reší jeden krok. Tady jsi u výpočtu, jestli se ti to vyplatí.
+        {hint}
       </p>
 
       <div className="overflow-x-auto -mx-1 px-1 pb-1">

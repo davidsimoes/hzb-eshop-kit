@@ -18,7 +18,12 @@
       "o-mne": "O mně",
       "about": "O mně",
       "vyber-platformy": "Výběr platformy",
-      "roi-kalkulacka": "ROI kalkulačka"
+      "roi-kalkulacka": "ROI kalkulačka",
+      "validace": "Ověř nápad",
+      "diagnostika": "Diagnostika",
+      "faq": "Časté otázky",
+      "pruvodce": "Průvodci",
+      "prezentace": "Prezentace"
     }
   },
   "nav": {
@@ -44,9 +49,9 @@
   },
   "mission": {
     "hero": {
-      "title": "Neboj se spustit e-shop!",
-      "subtitle": "Každá úspěšná podnikatelka začínala stejně jako ty, s nápadem a spoustou otázek",
-      "description": "Tahle stránka vznikla, aby shrnovala ty nejdůležitější materiály ze školení, které jsem dělal pro Holky z Byznysu. Najdeš tu vše podstatné na jednom místě.",
+      "title": "Spusť e-shop, který vydělává",
+      "subtitle": "Zdarma nástroje, které ti spočítají, jestli tvůj nápad dává smysl, pomohou vybrat platformu a provedou tě spuštěním, plus celý kit, který si můžeš dát své AI.",
+      "description": "Neboj se, každá úspěšná podnikatelka začínala stejně jako ty, s nápadem a spoustou otázek. Najdeš tu vše podstatné na jednom místě.",
       "cta": "Začni svou cestu",
       "ctaSecondary": "Nejsem si jistá, kde začít",
       "story": "Jsem David a za 10+ let jsem pomohl stovkám podnikatelek a podnikatelů. Vím, jak se cítíš, a vím, že to dáš!"
@@ -118,19 +123,19 @@
       "title": "Nejčastější obavy (a proč nejsou oprávněné)",
       "fears": [
         {
-          "fear": "\"Neznám se do technologií\"",
+          "fear": "„Nevyznám se v technologiích“",
           "reality": "Dnes jsou e-shop platformy jako Shopify nebo Shoptet tak jednoduché, že to zvládne každý. Nepotřebuješ být programátorka."
         },
         {
-          "fear": "\"Nemám dost peněz\"",
+          "fear": "„Nemám dost peněz“",
           "reality": "E-shop můžeš spustit už za pár tisíc korun. Začni malým rozpočtem a postupně investuj víc podle růstu."
         },
         {
-          "fear": "\"Co když se nic neprodá?\"",
+          "fear": "„Co když se nic neprodá?“",
           "reality": "Právě proto máme kalkulačku, abys věděla, jestli tvůj nápad má potenciál. A pokud se zpočátku neprodává, je to o ladění, ne o selhání."
         },
         {
-          "fear": "\"Konkurence je všude\"",
+          "fear": "„Konkurence je všude“",
           "reality": "Konkurence znamená, že existuje trh. Tvým úkolem není porazit všechny, ale najít své zákazníky."
         }
       ]
@@ -328,7 +333,7 @@
           "title": "Připravit právní dokumenty",
           "description": "VOP (vč. 14denního práva na odstoupení od smlouvy), zásady ochrany osobních údajů (GDPR), reklamační řád",
           "time": "2 hodiny",
-          "tips": "Použij generátor VOP online nebo se poraď s právníkem. Pozor: od ~června 2026 musíš mít na webu i viditelné tlačítko „Odstoupit od smlouvy\", ověř, že to platforma řeší."
+          "tips": "Použij generátor VOP online nebo se poraď s právníkem. Reklamační řád nemusí být samostatný dokument, informace o právech z vadného plnění bývají součástí VOP. Nově je potřeba i snadné online odstoupení od smlouvy, ale neboj, většina platforem (Shoptet, Shopify přes aplikace) na to už má hotové řešení nebo ho brzy spustí, takže to za tebe nejčastěji vyřeší platforma."
         },
         "moodboard": {
           "title": "Vytvořit moodboard značky",
@@ -337,7 +342,7 @@
         },
         "legalRequirements": {
           "title": "Prověřit legislativní požadavky",
-          "description": "GDPR, cookie lišta se souhlasem, DPH (limit 2 mil. Kč obratu), 14denní odstoupení, tlačítko „Odstoupit od smlouvy\" (2026) - co se tě týká?",
+          "description": "GDPR, cookie lišta se souhlasem, DPH (limit 2 mil. Kč obratu), 14denní odstoupení bez udání důvodu, informace o právech z vadného plnění, snadné online odstoupení od smlouvy (řeší většinou platforma) - co se tě týká?",
           "time": "1 hodina"
         }
       },
@@ -853,8 +858,8 @@
     }
   },
   "faq": {
-    "title": "FAQ: Tvoje otázky mimo rámec prezentace",
-    "subtitle": "Ahoj! Tady najdeš odpovědi na otázky, které jsi položila a které jsme na školení nestihli probrat do hloubky. Vše je napsané jednoduše, aby to pochopila i úplná začátečnice, a s přátelským tónem, protože vím, že start e-shopu může být trochu děsivý. 😊 Ke každé otázce přidávám odkazy na důvěryhodné české zdroje, kde si můžeš přečíst víc a naučit se, co potřebuješ.",
+    "title": "Časté otázky",
+    "subtitle": "Odpovědi na nejčastější otázky kolem spuštění e-shopu, srozumitelně a bez žargonu. Vše je napsané jednoduše, aby to pochopila i úplná začátečnice, a s přátelským tónem, protože vím, že start e-shopu může být trochu děsivý. 😊 Ke každé otázce přidávám odkazy na důvěryhodné české zdroje, kde si můžeš přečíst víc a naučit se, co potřebuješ.",
     "sections": {
       "start": {
         "title": "Než začneš",
@@ -863,7 +868,7 @@
         "questions": [
           {
             "q": "Jak začít s e-shopem, když jsem úplná začátečnice?",
-            "a": "Tři věci ti z 90 % vystačí na první krok:\n\n- Začni postupně: nevrhej se hned do velkých investic. Zkus levné platformy jako Shoptet nebo E-shop Rychle a postupně vylepšuj.\n- Využi AI jako spoluzakladatelku: místo googlování použij ChatGPT nebo Claude. Napíšou ti popisky, marketingový plán, odpovědi zákaznicím i analýzu konkurence, vše 24/7 zdarma.\n- Buď trpělivá: první prodej klidně přijde za pár dnů, stabilní příjem az po 3 az 6 měsících.\n\nNemusíš vymýšlet nic sama. Projdi si checklist spuštění (krok za krokem, nic nezapomeneš) a v diagnostice za pár minut ověř, jestli má tvůj nápad šanci, ještě než do něj naliješ peníze.",
+            "a": "Tři věci ti z 90 % vystačí na první krok:\n\n- Začni postupně: nevrhej se hned do velkých investic. Zkus levné platformy jako Shoptet nebo E-shop Rychle a postupně vylepšuj.\n- Využij AI jako spoluzakladatelku: místo googlování použij ChatGPT nebo Claude. Napíšou ti popisky, marketingový plán, odpovědi zákaznicím i analýzu konkurence, vše 24/7 zdarma.\n- Buď trpělivá: první prodej klidně přijde za pár dnů, stabilní příjem až po 3 až 6 měsících.\n\nNemusíš vymýšlet nic sama. Projdi si checklist spuštění (krok za krokem, nic nezapomeneš) a v ověření nápadu za pár minut zjisti, jestli má tvůj nápad šanci, ještě než do něj naliješ peníze.",
             "links": [
               {
                 "text": "Checklist spuštění e-shopu",
@@ -871,8 +876,8 @@
                 "internal": true
               },
               {
-                "text": "Diagnostika nápadu",
-                "url": "/diagnostika",
+                "text": "Ověř svůj nápad",
+                "url": "/validace",
                 "internal": true
               },
               {
@@ -885,7 +890,7 @@
           },
           {
             "q": "Kolik času e-shop zabere a dá se to dělat vedle práce?",
-            "a": "Dá se, dělá to tak většina holek, co začínají. E-shop vedle hlavní práce ale není pasivní příjem, je to druhá (menší) směna. S realistickým plánem to jde zvládnout bez vyhoření.\n\nKolik hodin reálně počítat:\n\n- Rozjezd (první 1 až 2 měsíce): nejnáročnější fáze, počítej s 5 az 10 hodinami týdně. Stavíš web, fotíš, píšeš popisky, řešíš dopravu a právní minimum.\n- Běžný provoz: když e-shop běží, často stačí 3 az 6 hodin týdně na vyřizování objednávek, balení, komunikaci a marketing.\n\nJak to skloubit s prací (klíč je dávkování, ne každodenní drobení):\n\n- Batchuj podobné úkoly: nevyřizuj objednávku po objednávce, vyhraď si pevné okno (třeba obden večer) a zabal a odešli vše najednou.\n- Nastav si rytmus: všední dny 30 az 45 minut večer na objednávky a zprávy, přes víkend 2 az 3 hodiny na obsah a fotky.\n- Automatizuj a předpřipravuj: šablony e-mailů, automatické potvrzení objednávky, výdejní místa místo osobních předávek.\n- Měj výdejní okno: jasně komunikuj zákaznicím, že balíš třeba 2x týdně.\n\nRealistická časová osa: první prodej můžeš mít za pár dní az týdnů. Stabilnější příjem přichází po 3 az 6 měsících soustavné práce. Než e-shop uživí přechod z hlavní práce, počítej spíš 6 az 18 měsíců. Není to závod, je to maraton.",
+            "a": "Dá se, dělá to tak většina holek, co začínají. E-shop vedle hlavní práce ale není pasivní příjem, je to druhá (menší) směna. S realistickým plánem to jde zvládnout bez vyhoření.\n\nKolik hodin reálně počítat:\n\n- Rozjezd (první 1 až 2 měsíce): nejnáročnější fáze, počítej s 5 až 10 hodinami týdně. Stavíš web, fotíš, píšeš popisky, řešíš dopravu a právní minimum.\n- Běžný provoz: když e-shop běží, často stačí 3 až 6 hodin týdně na vyřizování objednávek, balení, komunikaci a marketing.\n\nJak to skloubit s prací (klíč je dávkování, ne každodenní drobení):\n\n- Batchuj podobné úkoly: nevyřizuj objednávku po objednávce, vyhraď si pevné okno (třeba obden večer) a zabal a odešli vše najednou.\n- Nastav si rytmus: všední dny 30 až 45 minut večer na objednávky a zprávy, přes víkend 2 až 3 hodiny na obsah a fotky.\n- Automatizuj a předpřipravuj: šablony e-mailů, automatické potvrzení objednávky, výdejní místa místo osobních předávek.\n- Měj výdejní okno: jasně komunikuj zákaznicím, že balíš třeba 2x týdně.\n\nRealistická časová osa: první prodej můžeš mít za pár dní až týdnů. Stabilnější příjem přichází po 3 až 6 měsících soustavné práce. Než e-shop uživí přechod z hlavní práce, počítej spíš 6 až 18 měsíců. Není to závod, je to maraton.",
             "links": [
               {
                 "text": "Minimální náklady a rozjezd e-shopu jako vedlejší činnost",
@@ -905,7 +910,7 @@
           },
           {
             "q": "Co potřebuju po právní stránce na úplný start? Od živnosti po VOP",
-            "a": "Žádné drama, ale pár věcí mít musíš. (Tohle není právní poradenství, jen praktický přehled. U konkrétní situace se opři o oficálni zdroje nebo o účetní/právničku.)\n\n1. Podnikatelské oprávnění: pro začátečnici je nejjednodušší OSVČ, tedy živnost. Ohlásíš ji na živnostenském úřadě nebo online, zaplatíš správní poplatek a můžeš podnikat. Po ohlášení dostaneš IČO.\n\n2. Daně a pojištění: daň z příjmů a sociální/zdravotní pojištění řeš s účetní. Pro malý start často stačí paušální daň (jedna platba měsíčně) nebo paušální výdaje procentem.\n\n3. DPH: plátkyní se nemusíš stát hned. Povinná registrace přichází až při překročení obratu, ověř si aktuální výši.\n\n4. Obchodní podmínky a GDPR: viz otázka o minimálních právních požadavcích níže, nebo si přečti celý průvodce.",
+            "a": "Žádné drama, ale pár věcí mít musíš. (Tohle není právní poradenství, jen praktický přehled. U konkrétní situace se opři o oficiální zdroje nebo o účetní/právničku.)\n\n1. Podnikatelské oprávnění: pro začátečnici je nejjednodušší OSVČ, tedy živnost. Ohlásíš ji na živnostenském úřadě nebo online, zaplatíš správní poplatek a můžeš podnikat. Po ohlášení dostaneš IČO.\n\n2. Daně a pojištění: daň z příjmů a sociální/zdravotní pojištění řeš s účetní. Pro malý start často stačí paušální daň (jedna platba měsíčně) nebo paušální výdaje procentem.\n\n3. DPH: plátkyní DPH se nemusíš stát hned. Povinná registrace přichází až při překročení obratu, ověř si aktuální výši.\n\n4. Obchodní podmínky a GDPR: viz otázka o minimálních právních požadavcích níže, nebo si přečti celý průvodce.",
             "links": [
               {
                 "text": "Jak získat živnostenský list (Jak podnikat)",
@@ -929,7 +934,7 @@
           },
           {
             "q": "Jaké jsou absolutně minimální právní požadavky pro nový e-shop v ČR?",
-            "a": "Když rozjíždíš e-shop, musíš mít ze zákona:\n\n- Obchodní podmínky (VOP): identifikaci prodejce (jméno/firma, IČO, kontakt), cenu, dopravu, platby, právo na odstoupení od smlouvy do 14 dní a reklamační pravidla.\n- Zásady ochrany osobních údajů (GDPR): jak nakládáš s osobními daty zákaznic.\n- Reklamační řád: postup při vrácení a reklamaci.\n- Správné údaje o sobě: IČO, adresa, ceny včetně DPH.\n- Tlačítko pro odstoupení od smlouvy: od cca června 2026 musí být snadno dostupné, ověř, že to tvoje platforma řeší.\n\nVětšinu textů (VOP, GDPR, reklamační řád) ti vygeneruje platforma nebo připravené šablony. Nejjistější jsou vzory od APEK. AI použij na první draft, ale finální verzi nech projít člověkem.",
+            "a": "Když rozjíždíš e-shop, musíš mít ze zákona:\n\n- Obchodní podmínky (VOP): identifikaci prodejce (jméno/firma, IČO, kontakt), cenu, dopravu, platby, právo na odstoupení od smlouvy do 14 dní bez udání důvodu (lhůta běží od převzetí zboží) a informace o právech z vadného plnění.\n- Informace o právech z vadného plnění (reklamace): jak může zákaznice uplatnit reklamaci. Nemusí to být samostatný dokument, nejčastěji bývá součástí obchodních podmínek.\n- Zásady ochrany osobních údajů (GDPR): jak nakládáš s osobními daty zákaznic.\n- Správné údaje o sobě: IČO, adresa, ceny včetně DPH.\n- Snadné online odstoupení od smlouvy: nová evropská povinnost, aby zákaznice mohla odstoupit od smlouvy stejně snadno online, jako nakoupila. Neboj se tím stresovat, většina platforem (Shoptet, Shopify přes aplikace) na to už má hotové řešení nebo ho brzy spustí, takže to za tebe nejčastěji vyřeší platforma.\n\nVětšinu textů (VOP, GDPR) ti vygeneruje platforma nebo připravené šablony. Nejjistější jsou vzory od APEK. AI použij na první draft, ale finální verzi nech projít člověkem.",
             "links": [
               {
                 "text": "Dostupný advokát – Jak správně založit e-shop",
@@ -1031,7 +1036,7 @@
           },
           {
             "q": "Jaké jsou minimální náklady na založení malého e-shopu jako vedlejší činnosti?",
-            "a": "Dobrá zpráva: rozjet malý e-shop jako vedlejší činnost se dá za pár tisíc korun. Špatná zpráva: spousta nákladů se schovává v detailech, takže si je spočítej dopředu.\n\nPravidelné měsíční náklady:\n\n- Platforma: od 300 az 500 Kč/měsíc u základních tarifů (Shoptet, E-shop Rychle), Shopify bývá o něco výš.\n- Doplňkové aplikace: 0 az několik set Kč/měsíc. Na začátek se snaž vystačit s tím, co platforma umí sama.\n\nJednorázové a roční náklady:\n\n- Doména (tvojeznacka.cz): cca 200 az 500 Kč za rok.\n- Zboží: tvůj největší výdaj. Začni malou sérií, ať neutopíš peníze v neprodejném skladu.\n- Fotky a vzhled: zvládneš svépomocí (telefon a AI nástroje) nebo zaplatíš fotografku.\n\nTransakční poplatky (snadno přehlédnutelné):\n\n- Platební brána: typicky malé procento z každé objednávky plus pár korun za transakci.\n- Doprava a balné: krabice, výplň, štítky, klidně desítky korun na balíček. Musí být zahrnuté v ceně nebo v poštovném.\n\nMarketing: v prvním roce doporučuju dát 20 az 40 % rozpočtu. Začni s malými částkami na Sklik, Google Ads a sociální sítě a sleduj, co se vrací.\n\nNejdůležitější číslo není kolik to stojí spustit, ale zisk z jedné objednávky (cena minus zboží, doprava, balné, poplatky brány). Ten musí být kladný, jinak čím víc prodáš, tím víc proděláš.",
+            "a": "Dobrá zpráva: rozjet malý e-shop jako vedlejší činnost se dá za pár tisíc korun. Špatná zpráva: spousta nákladů se schovává v detailech, takže si je spočítej dopředu.\n\nPravidelné měsíční náklady:\n\n- Platforma: od 300 až 500 Kč/měsíc u základních tarifů (Shoptet, E-shop Rychle), Shopify bývá o něco výš.\n- Doplňkové aplikace: 0 až několik set Kč/měsíc. Na začátek se snaž vystačit s tím, co platforma umí sama.\n\nJednorázové a roční náklady:\n\n- Doména (tvojeznacka.cz): cca 200 až 500 Kč za rok.\n- Zboží: tvůj největší výdaj. Začni malou sérií, ať neutopíš peníze v neprodejném skladu.\n- Fotky a vzhled: zvládneš svépomocí (telefon a AI nástroje) nebo zaplatíš fotografku.\n\nTransakční poplatky (snadno přehlédnutelné):\n\n- Platební brána: typicky malé procento z každé objednávky plus pár korun za transakci.\n- Doprava a balné: krabice, výplň, štítky, klidně desítky korun na balíček. Musí být zahrnuté v ceně nebo v poštovném.\n\nMarketing: v prvním roce doporučuju dát 20 až 40 % rozpočtu. Začni s malými částkami na Sklik, Google Ads a sociální sítě a sleduj, co se vrací.\n\nNejdůležitější číslo není kolik to stojí spustit, ale zisk z jedné objednávky (cena minus zboží, doprava, balné, poplatky brány). Ten musí být kladný, jinak čím víc prodáš, tím víc proděláš.",
             "links": [
               {
                 "text": "Spočítej si náklady, kalkulačka ceny e-shopu",
@@ -1079,7 +1084,7 @@
           },
           {
             "q": "Jak přidám platební brány do e-shopu?",
-            "a": "Většina platforem (Shoptet, Shopify, WooCommerce, Upgates) má hotové moduly pro české brány jako GoPay, ComGate nebo Shoptet Pay. Stačí se zaregistrovat u poskytovatele, dostaneš přístupové klíče a vložíš je do nastavení e-shopu. Návody najdeš přímo u bran.\n\nDůležité pro Shopify: v Česku zatím nefunguje Shopify Payments, takže platby u nás vyřešíš právě přes ComGate nebo GoPay.\n\nA proč na platbách záleží víc, než to vypadá: platební metoda přímo ovlivňuje, kolik nákupů se dokončí. Apple Pay a Google Pay nebo uložená karta u přihlášeného zákazníka dotáhne nákup zhruba v 90 až 95 % případů, ruční přepisování čísla karty méně. Když e-shop nenabízí metodu, na kterou je zákaznice zvyklá, podle českého výzkumu jí odradí asi třetinu lidí. Nabídni proto víc možností, ať si každý vybere.",
+            "a": "Většina platforem (Shoptet, Shopify, WooCommerce, Upgates) má hotové moduly pro české brány jako GoPay, ComGate nebo Shoptet Pay. Stačí se zaregistrovat u poskytovatele, dostaneš přístupové klíče a vložíš je do nastavení e-shopu. Návody najdeš přímo u bran.\n\nDůležité pro Shopify: v Česku zatím nefunguje Shopify Payments, takže platby u nás vyřešíš právě přes ComGate nebo GoPay.\n\nA proč na platbách záleží víc, než to vypadá: platební metoda přímo ovlivňuje, kolik nákupů se dokončí. Rychlé metody jako Apple Pay a Google Pay nebo uložená karta u přihlášeného zákazníka dotáhnou nákup výrazně častěji než ruční přepisování čísla karty. Když e-shop nenabízí metodu, na kterou je zákaznice zvyklá, část lidí nákup vzdá. Nabídni proto víc možností, ať si každý vybere.",
             "links": [
               {
                 "text": "GoPay, integrace",
@@ -1156,7 +1161,7 @@
           },
           {
             "q": "Mají některé produkty (např. hračky, potraviny, elektronika) extra pravidla?",
-            "a": "Ano, každý typ produktu má své specifické požadavky. Hračky potřebují CE značku, potraviny musí splňovat hygienické normy a mít označení alergenů, a u elektroniky je třeba řešit recyklaci (např. přes ASEKOL). Mrkni na weby příslušných úřadů nebo se poraď s odborníkem.",
+            "a": "Ano, každý typ produktu má své specifické požadavky. Hračky potřebují CE značku, potraviny musí splňovat hygienické normy a mít označení alergenů, a u elektroniky je třeba řešit recyklaci (např. přes ASEKOL, baterie přes ECOBAT).\n\nDvě věci pro rok 2026, na které se často zapomíná a týkají se skoro každého e-shopu:\n\n- GPSR (nařízení o obecné bezpečnosti výrobků, platí od 13. 12. 2024): u každého produktu musíš uvést bezpečnostní a identifikační údaje a mít v EU odpovědnou osobu (výrobce, dovozce nebo zplnomocněného zástupce se sídlem v EU).\n- Obalová EPR, registrace přes EKO-KOM: jakmile uvádíš na trh zboží v obalech (krabice, výplň, fólie), týká se tě poplatek za obaly. Platí prakticky pro každý e-shop, který něco posílá.\n\nMrkni na weby příslušných úřadů nebo se poraď s odborníkem.",
             "links": [
               {
                 "text": "SZPI – Značení potravin a legislativa",
@@ -1177,10 +1182,10 @@
         "questions": [
           {
             "q": "Jaké jsou 2–3 jednoduché kroky, jak zlepšit zážitek zákazníků a zvýšit prodeje na e-shopu?",
-            "a": "Tři kroky s největším dopadem na prodeje:\n\n1. Zjednoduš nákupní proces: co nejméně kroků v košíku, platba bez registrace, jasná tlačítka Přidat do košíku a Objednat.\n2. Přizpůsob e-shop mobilům: většina lidí nakupuje přes telefon, tvůj web musí být přehledný i na malé obrazovce.\n3. Zrychli načítání stránek: pomalý web lidi odrazuje. Zmenši obrázky a vyber rychlý hosting.\n\nPokud tě zajímá, proč se u tebe neprodává, zkus diagnostiku nebo si přečti průvodce.",
+            "a": "Tři kroky s největším dopadem na prodeje:\n\n1. Zjednoduš nákupní proces: co nejméně kroků v košíku, platba bez registrace, jasná tlačítka Přidat do košíku a Objednat.\n2. Přizpůsob e-shop mobilům: většina lidí nakupuje přes telefon, tvůj web musí být přehledný i na malé obrazovce.\n3. Zrychli načítání stránek: pomalý web lidi odrazuje. Zmenši obrázky a vyber rychlý hosting.\n\nPokud už prodáváš a zajímá tě, proč se u tebe neprodává víc, zkus diagnostiku nebo si přečti průvodce.",
             "links": [
               {
-                "text": "Otestuj svůj nápad v diagnostice",
+                "text": "Zjisti, co tě brzdí, diagnostika e-shopu",
                 "url": "/diagnostika",
                 "internal": true
               },
@@ -1202,7 +1207,7 @@
           },
           {
             "q": "Co nejčastěji brání zákazníkům dokončit nákup?",
-            "a": "Co nejčastěji zabije nákup (česká data, výzkum APEK):\n\n- Obavy o bezpečnost platby: odradí asi 47 % lidí. Řešení: viditelný kontakt, recenze, jasné podmínky.\n- Složitá nebo zdlouhavá pokladna: 44 % lidí to vzdá. Řešení: co nejkratší checkout, žádná povinná registrace.\n- Chybějící oblíbená platební metoda: 36 % lidí odchází. Řešení: nabídni víc způsobů platby.\n\nSkryté poplatky (nečekané poštovné v košíku) a málo informací o produktu (chybí fotky, popisky, recenze) jsou dalšími časté příčiny. Dobrou zprávou je, že všechny se dají odstranit bez velkých investic.",
+            "a": "Co nejčastěji zabije nákup (podle zahraničních výzkumů, např. Baymard):\n\n- Obavy o bezpečnost platby: odradí velkou část lidí. Řešení: viditelný kontakt, recenze, jasné podmínky.\n- Složitá nebo zdlouhavá pokladna: spousta lidí to vzdá. Řešení: co nejkratší checkout, žádná povinná registrace.\n- Chybějící oblíbená platební metoda: část lidí odejde. Řešení: nabídni víc způsobů platby.\n\nSkryté poplatky (nečekané poštovné v košíku) a málo informací o produktu (chybí fotky, popisky, recenze) jsou dalšími časté příčiny. Dobrou zprávou je, že všechny se dají odstranit bez velkých investic.",
             "links": [
               {
                 "text": "Příčiny opuštění e-shopu – studie Baymard Institute",
@@ -1299,8 +1304,8 @@
             "a": "Upřímná odpověď: někdy ano, často to není potřeba, a hlavně pozor na ty, co slibují rychlé zbohatnutí.\n\nKurz dává smysl, když:\n\n- Řeší konkrétní dovednost, kterou zrovna potřebuješ (reklamy, fotky produktů, e-mailing), ne mlhavé jak vydělávat online.\n- Učí ho někdo, kdo reálně provozuje e-shop, ne profesionální lektor lektorování.\n- Vejde se ti do rozpočtu a víš, co přesně se z něj chceš naučit a hned použít.\n\nNa co si dát velký pozor:\n\n- Drahé guru kurzy slibující tisíce měsíčně skoro bez práce: e-shop je řemeslo a maraton, ne zázrak.\n- Nekonečné balíčky za desetitisíce: většinou je v nich naředěné to, co najdeš zdarma na blozích a YouTube.\n\nDobrá zpráva: nejvíc se naučíš děláním. Tahle sada nástrojů (kalkulačky, diagnostika, checklist, výběr platformy) je zdarma a provede tě přesně těmi rozhodnutími, kvůli kterým si lidé kurzy kupují. Začni s ní, postav první verzi e-shopu a teprve když narazíš na konkrétní mezeru, dokup si cílený kurz. A nezapomeň na nejlevnějšího učitele 24/7: AI (ChatGPT, Claude).",
             "links": [
               {
-                "text": "Začni zdarma, diagnostika nápadu",
-                "url": "/diagnostika",
+                "text": "Začni zdarma, ověř svůj nápad",
+                "url": "/validace",
                 "internal": true
               },
               {

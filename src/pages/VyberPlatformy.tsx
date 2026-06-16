@@ -25,6 +25,7 @@ import {
   type Answers,
   type AnswerOption
 } from '@/data/platformEngine';
+import { ToolFlowStrip } from '@/components/ToolFlowStrip';
 
 /**
  * Průvodce výběrem platformy pro e-shop.
@@ -104,6 +105,8 @@ const VyberPlatformy = () => {
               sedne na to, co prodáváš, kolik chceš investovat a kam míříš.
             </p>
           </div>
+
+          <ToolFlowStrip current="vyber-platformy" />
 
           {/* Průvodce: otázka */}
           {!result && currentQuestion && (

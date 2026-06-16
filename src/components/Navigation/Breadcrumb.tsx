@@ -1,6 +1,7 @@
 import { useLocation, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ChevronRight, Home } from 'lucide-react';
+import { getGuide } from '@/data/guides';
 
 export const Breadcrumb = () => {
   const { t } = useTranslation();
@@ -13,17 +14,40 @@ export const Breadcrumb = () => {
   const breadcrumbItems = pathSegments.map((segment, index) => {
     const path = '/' + pathSegments.slice(0, index + 1).join('/');
     const isLast = index === pathSegments.length - 1;
-    
+    const prevSegment = index > 0 ? pathSegments[index - 1] : null;
+
     let label = segment;
-    if (segment === 'kalkulacka') label = t('general.breadcrumb.kalkulacka');
-    else if (segment === 'pred-zacatkem') label = t('general.breadcrumb.pred-zacatkem');
-    else if (segment === 'calculator') label = t('general.breadcrumb.calculator');
-    else if (segment === 'checklist') label = t('general.breadcrumb.checklist');
-    else if (segment === 'o-mne') label = t('general.breadcrumb.o-mne');
-    else if (segment === 'about') label = t('general.breadcrumb.about');
-    else if (segment === 'vyber-platformy') label = t('general.breadcrumb.vyber-platformy');
-    else if (segment === 'roi-kalkulacka') label = t('general.breadcrumb.roi-kalkulacka');
-    
+    // Guide slug: resolve to guide title when following /pruvodce
+    if (prevSegment === 'pruvodce') {
+      label = getGuide(segment)?.title ?? segment;
+    } else if (segment === 'kalkulacka') {
+      label = t('general.breadcrumb.kalkulacka');
+    } else if (segment === 'pred-zacatkem') {
+      label = t('general.breadcrumb.pred-zacatkem');
+    } else if (segment === 'calculator') {
+      label = t('general.breadcrumb.calculator');
+    } else if (segment === 'checklist') {
+      label = t('general.breadcrumb.checklist');
+    } else if (segment === 'o-mne') {
+      label = t('general.breadcrumb.o-mne');
+    } else if (segment === 'about') {
+      label = t('general.breadcrumb.about');
+    } else if (segment === 'vyber-platformy') {
+      label = t('general.breadcrumb.vyber-platformy');
+    } else if (segment === 'roi-kalkulacka') {
+      label = t('general.breadcrumb.roi-kalkulacka');
+    } else if (segment === 'validace') {
+      label = t('general.breadcrumb.validace');
+    } else if (segment === 'diagnostika') {
+      label = t('general.breadcrumb.diagnostika');
+    } else if (segment === 'faq') {
+      label = t('general.breadcrumb.faq');
+    } else if (segment === 'pruvodce') {
+      label = t('general.breadcrumb.pruvodce');
+    } else if (segment === 'prezentace') {
+      label = t('general.breadcrumb.prezentace');
+    }
+
     return { path, label, isLast };
   });
 

@@ -12,6 +12,7 @@ import { Progress } from '@/components/ui/progress';
 import { MetaTags } from '@/components/SEO/MetaTags';
 import { Link } from 'react-router-dom';
 import { Lightbulb, User, Sparkles, Copy, Check, ArrowRight, ClipboardCheck } from 'lucide-react';
+import { ToolFlowStrip } from '@/components/ToolFlowStrip';
 
 interface PersonaForm {
   product: string;
@@ -143,9 +144,11 @@ Mluv ke mně lidsky a bez žargonu.`;
             </h1>
             <p className="text-lg text-brand-wine/70">
               Nejdřív si ujasni, <strong>komu</strong> a <strong>proč</strong> prodáváš. Pak ověř, že o to
-              opravdu někdo stojí. Tahle dvě „ano“ ti ušetří spoustu peněz i nervů.
+              opravdu někdo stojí. Tahle dvě „ano” ti ušetří spoustu peněz i nervů.
             </p>
           </div>
+
+          <ToolFlowStrip current="validace" />
 
           <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-8">
             {/* Formulář persony */}

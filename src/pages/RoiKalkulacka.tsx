@@ -12,6 +12,7 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { MetaTags } from '@/components/SEO/MetaTags';
 import { Link } from 'react-router-dom';
 import { Calculator, AlertTriangle, CheckCircle2, ArrowRight, Sparkles, Copy, Check } from 'lucide-react';
+import { ToolFlowStrip } from '@/components/ToolFlowStrip';
 
 // ---------------------------------------------------------------------------
 // Engine (čistá logika, žádná závislost na Reactu). Inlined do jednoho souboru.
@@ -257,6 +258,8 @@ Mluv ke mně lidsky, bez žargonu.`;
               uvidíš, za jak dlouho se to vrátí a jestli do toho jít.
             </p>
           </div>
+
+          <ToolFlowStrip current="roi-kalkulacka" />
 
           <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-8">
             {/* Vstupy */}

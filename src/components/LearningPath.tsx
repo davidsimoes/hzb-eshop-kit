@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Clock, Lightbulb, Calculator, Stethoscope, CheckSquare, Sparkles, Compass, Wallet } from 'lucide-react';
+import { ArrowRight, Clock, Lightbulb, Calculator, Stethoscope, CheckSquare, Sparkles, Compass, Wallet, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const KIT_REPO = 'https://github.com/davidsimoes/hzb-eshop-kit';
@@ -134,17 +134,40 @@ export const LearningPath = () => {
                   marketing, provoz, optimalizace). Přečti si je, nebo je dej ChatGPT, Claude či
                   Gemini a nech si poradit na míru. Zdarma, pod licencí CC BY 4.0.
                 </p>
+                <p className="mt-2 text-sm text-brand-wine/50">
+                  Pro vývojáře a pokročilé:{' '}
+                  <a
+                    href={KIT_REPO}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline underline-offset-2 hover:text-brand-wine/80 transition-colors"
+                  >
+                    celý kit na GitHubu
+                  </a>
+                  {' '} (GitHub je jen místo, kde soubory bydlí).
+                </p>
               </div>
-              <Button
-                asChild
-                size="lg"
-                className="bg-brand-wine hover:bg-brand-wine/90 whitespace-nowrap"
-              >
-                <a href={KIT_REPO} target="_blank" rel="noopener noreferrer">
-                  Otevřít kit
-                  <ArrowRight className="w-4 h-4 ml-2" />
+              <div className="flex flex-col gap-3 items-stretch min-w-[11rem]">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-brand-wine hover:bg-brand-wine/90 whitespace-nowrap"
+                >
+                  <Link to="/pruvodce">
+                    Otevři kit
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </Button>
+                <a
+                  href="https://www.linkedin.com/in/davidjsimoes/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 text-sm text-brand-wine/70 hover:text-brand-wine transition-colors"
+                >
+                  <Linkedin className="w-4 h-4 flex-shrink-0" />
+                  Sleduj Davida na LinkedInu
                 </a>
-              </Button>
+              </div>
             </CardContent>
           </Card>
         </div>

@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
-import { Heart, ArrowRight, CheckCircle, Clock, Users, Mail, Calculator, BookOpen, ListTodo, ExternalLink } from 'lucide-react';
+import { Heart, ArrowRight, CheckCircle, Clock, Calculator, BookOpen, ListTodo } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const BeforeStart = () => {
   const {
@@ -27,14 +27,6 @@ const BeforeStart = () => {
     description: string;
     action: string;
     link: string;
-  }>;
-  const communities = t('beforeStart.support.communities', {
-    returnObjects: true
-  }) as Array<{
-    name: string;
-    description: string;
-    link?: string;
-    contact?: string;
   }>;
   return <>
       <Header />
@@ -159,9 +151,6 @@ const BeforeStart = () => {
             </div>
           </section>
 
-          {/* Support Section */}
-          
-
           {/* CTA Section */}
           <section className="max-w-3xl mx-auto text-center">
             <Card className="bg-gradient-orange text-white border-none">
@@ -185,7 +174,7 @@ const BeforeStart = () => {
                     <Link to="/prezentace">
                       <BookOpen className="w-4 h-4 mr-2" />
                       {t('beforeStart.cta.guide.button')}
-                      <ExternalLink className="w-4 h-4 ml-2" />
+                      <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </Button>
                 </div>

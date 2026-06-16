@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -137,8 +138,16 @@ export const ActionableResults = ({
           </div>
           
           <div className="flex gap-3 justify-center">
-            
-            
+            <Button asChild className="bg-gradient-orange text-white hover:scale-105 transition-all">
+              <Link to="/vyber-platformy">
+                Další krok: vyber platformu
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
+            <Button variant="outline" className="border-brand-wine text-brand-wine hover:bg-brand-wine/10" onClick={onExportData}>
+              <Download className="w-4 h-4 mr-2" />
+              Exportovat plán
+            </Button>
           </div>
         </CardContent>
       </Card>

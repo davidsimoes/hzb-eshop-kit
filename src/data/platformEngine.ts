@@ -11,7 +11,7 @@
  * technická náročnost vs. cena, marketplace jako validace poptávky atd.).
  *
  * Datové ukotvení (2026):
- *  - Shoptet: dominantní CZ SaaS (~43 000 e-shopů, od 2025 pod Team.blue),
+ *  - Shoptet: dominantní CZ SaaS (~30 000+ aktivních e-shopů, pod skupinou Team.blue),
  *    nativní Heureka/Zboží.cz/Balíkovna/Zásilkovna/účetnictví, česká podpora,
  *    free trial; slabší na expanzi a hodně atypický design.
  *  - Shopify: nejlepší na růst/design/expanzi; v CZ/SK NENÍ Shopify Payments
@@ -57,7 +57,7 @@ export const PLATFORMS: Record<PlatformKey, Platform> = {
     strengths: [
       'Nativní napojení na Heureku, Zboží.cz, Zásilkovnu i Balíkovnu',
       'České platební brány (Comgate, GoPay), dobírka i česká faktura v základu',
-      'Česká podpora, čeština všude a obrovská česká komunita (přes 40 000 e-shopů)'
+      'Česká podpora, čeština všude a obrovská česká komunita (přes 30 000 aktivních e-shopů)'
     ],
     watchOut:
       'Na prodej za hranice a hodně atypický design je méně ohebný než Shopify. Hodí se hlavně, dokud zůstáváš na českém a slovenském trhu.',

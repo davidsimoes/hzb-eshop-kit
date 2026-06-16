@@ -20,7 +20,7 @@ const Guides = () => {
               <span className="text-sm font-semibold uppercase tracking-wide">Průvodci</span>
             </div>
             <h1 className="text-3xl lg:text-4xl font-bold text-brand-wine mb-3">
-              Psaní průvodci ke každé oblasti
+              Průvodci ke každé oblasti
             </h1>
             <p className="text-lg text-brand-wine/70 max-w-2xl mx-auto">
               Ke každému kroku máš podrobný text, který tě provede do hloubky. Nástroje ti spočítají čísla,

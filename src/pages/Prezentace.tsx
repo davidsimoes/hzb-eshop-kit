@@ -36,6 +36,8 @@ interface Slide {
   logos?: boolean;
   qr?: string;
   qrLabel?: string;
+  qr2?: string;
+  qr2Label?: string;
   slidoCode?: string;
 }
 
@@ -244,6 +246,8 @@ const slides: Slide[] = [
     ],
     qr: '/images/qr-hzb.svg',
     qrLabel: 'Naskenuj a máš web i kit v kapse',
+    qr2: '/images/qr-linkedin.svg',
+    qr2Label: 'Sleduj mě na LinkedInu',
     icon: Heart
   }
 ];
@@ -330,15 +334,13 @@ const Prezentace = () => {
                   </>
                 );
                 return slug ? (
-                  <a
+                  <Link
                     key={idx}
-                    href={slug}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    to={slug}
                     className="flex items-center gap-3 bg-white/70 rounded-xl px-4 py-3 shadow-soft hover:bg-white/90 transition-colors"
                   >
                     {inner}
-                  </a>
+                  </Link>
                 ) : (
                   <div key={idx} className="flex items-center gap-3 bg-white/70 rounded-xl px-4 py-3 shadow-soft">
                     {inner}
@@ -363,18 +365,30 @@ const Prezentace = () => {
             <div className="mt-10 flex flex-wrap gap-3">
               {s.demo && (
                 <Button asChild size="lg" className="bg-brand-wine hover:bg-brand-wine/90 text-base">
-                  {/* open in a new tab — keeps the deck in place */}
-                  <a href={s.demo.to} target="_blank" rel="noopener noreferrer">
-                    <Sparkles className="w-5 h-5 mr-2" />
-                    {s.demo.label}
-                  </a>
+                  {s.demo.external ? (
+                    <a href={s.demo.to} target="_blank" rel="noopener noreferrer">
+                      <Sparkles className="w-5 h-5 mr-2" />
+                      {s.demo.label}
+                    </a>
+                  ) : (
+                    <Link to={s.demo.to}>
+                      <Sparkles className="w-5 h-5 mr-2" />
+                      {s.demo.label}
+                    </Link>
+                  )}
                 </Button>
               )}
               {s.demoSecondary && (
                 <Button asChild size="lg" variant="outline" className="border-brand-wine text-brand-wine hover:bg-brand-wine/10 text-base">
-                  <a href={s.demoSecondary.to} target="_blank" rel="noopener noreferrer">
-                    {s.demoSecondary.label}
-                  </a>
+                  {s.demoSecondary.external ? (
+                    <a href={s.demoSecondary.to} target="_blank" rel="noopener noreferrer">
+                      {s.demoSecondary.label}
+                    </a>
+                  ) : (
+                    <Link to={s.demoSecondary.to}>
+                      {s.demoSecondary.label}
+                    </Link>
+                  )}
                 </Button>
               )}
             </div>
@@ -391,7 +405,7 @@ const Prezentace = () => {
             </div>
           )}
 
-          {(s.slidoCode || s.qr) && (
+          {(s.slidoCode || s.qr || s.qr2) && (
             <div className={`mt-10 flex flex-wrap items-center gap-5 ${isTitle ? 'justify-center' : ''}`}>
               {s.slidoCode && (
                 <div className="inline-flex items-center gap-3 bg-white/70 rounded-full px-5 py-2 shadow-soft">
@@ -403,6 +417,12 @@ const Prezentace = () => {
                 <div className="flex flex-col items-center gap-2">
                   <img src={s.qr} alt={s.qrLabel || 'QR kód'} className="w-28 h-28 lg:w-32 lg:h-32 rounded-xl bg-white p-2 shadow-soft" />
                   <span className="text-xs text-brand-wine/60">{s.qrLabel || 'Naskenuj a máš web i kit v kapse'}</span>
+                </div>
+              )}
+              {s.qr2 && (
+                <div className="flex flex-col items-center gap-2">
+                  <img src={s.qr2} alt={s.qr2Label || 'LinkedIn QR kód'} className="w-28 h-28 lg:w-32 lg:h-32 rounded-xl bg-white p-2 shadow-soft" />
+                  <span className="text-xs text-brand-wine/60">{s.qr2Label || 'Sleduj mě na LinkedInu'}</span>
                 </div>
               )}
             </div>
@@ -418,7 +438,12 @@ const Prezentace = () => {
 
         <div className="flex items-center gap-3">
           <span className="text-sm text-brand-wine/60">{i + 1} / {slides.length}</span>
-          <Link to="/" className="text-xs text-brand-wine/50 hover:text-brand-wine underline">zpět na web</Link>
+          <Button asChild variant="outline" size="sm" className="border-brand-wine text-brand-wine hover:bg-brand-wine/10 font-medium">
+            <Link to="/">
+              <ShoppingBag className="w-4 h-4 mr-1.5" />
+              Zpět na web
+            </Link>
+          </Button>
         </div>
 
         <Button variant="ghost" size="sm" onClick={() => go(1)} disabled={i === slides.length - 1} className="text-brand-wine">

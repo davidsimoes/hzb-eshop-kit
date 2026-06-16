@@ -11,6 +11,7 @@ import { Breadcrumb } from '@/components/Navigation/Breadcrumb';
 import { useChecklist } from '@/hooks/useChecklist';
 import { checklistData, ChecklistItem } from '@/data/checklistData';
 import { CheckSquare, Square, Clock, RotateCcw, ExternalLink, ChevronDown, ChevronUp, BookOpen } from 'lucide-react';
+import { ToolFlowStrip } from '@/components/ToolFlowStrip';
 export const Checklist = () => {
   const { t, i18n } = useTranslation();
   const {
@@ -162,6 +163,8 @@ export const Checklist = () => {
             {t('checklist.subtitle')}
           </p>
         </div>
+
+        <ToolFlowStrip current="checklist" />
 
         {/* Google Slides Reference */}
         <div className="max-w-2xl mx-auto mb-8">

@@ -273,7 +273,7 @@ export const FinancialCalculator = () => {
                   Náklady jsou vyšší než cena
                 </div>
                 <div className="text-sm text-red-700/80">
-                  Náklady na zboží a ostatní náklady na objednávku dohromady převyšují prodejní cenu. Na každé objednávce bys prodělával. Uprav cenu nebo náklady, ať je z objednávky zisk.
+                  Náklady na zboží a ostatní náklady na objednávku dohromady převyšují prodejní cenu. Na každé objednávce bys prodělávala. Uprav cenu nebo náklady, ať je z objednávky zisk.
                 </div>
               </div>
             </CardContent>

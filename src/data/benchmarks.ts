@@ -7,8 +7,13 @@
 // ZDROJE A METODIKA (validováno 2026-06):
 //  - Konverze: průměr českých e-shopů ~2 %, "zdravé" pásmo 2 až 4 %, ideál 2 až 5 %,
 //    pod 1 % je problém. Reálná konverze bývá spíš na spodní hranici (mobil, malé e-shopy).
-//    Zdroj: SmartEmailing, grou.cz, Shoptet (CZ 2025). Hodnoty u oborů jsou konzervativní odhady
-//    v rámci tohoto pásma, upravené podle charakteru nákupu (impulz vs. zvážený nákup).
+//    Zdroj: SmartEmailing, grou.cz, Shoptet (CZ 2025).
+//    POZOR: veřejný CZ benchmark konverze PODLE OBORU neexistuje (žádný veřejný zdroj
+//    nedělí konverzi po kategoriích pro CZ trh). Hodnoty `averageConversion` u jednotlivých
+//    oborů jsou proto ORIENTAČNÍ ODHAD (střed realistického pásma daného oboru), odvozený od
+//    celkového CZ průměru ~2 % a upravený podle charakteru nákupu (impulz vs. zvážený nákup).
+//    Drží se konzervativně kolem ~2 % (rozptyl cca 1,4 až 2,6 %). Ber je jako vodítko, ne jako
+//    měřená data.
 //  - AOV: průměr CZ e-commerce ~1 605 Kč (Q2 2025) až ~1 900 Kč (celý 2025).
 //    Zdroj: Heureka E-commerce Insider 2025, APEK. Hodnoty u oborů jsou typické pro kategorii (odhad).
 //  - Marže (hrubá): kategoriální pásma z mezinárodních e-commerce benchmarků (stabilní napříč trhy):
@@ -44,66 +49,66 @@ export const BENCHMARKS_UPDATED = '2026-06';
 
 export const industryBenchmarks: IndustryBenchmark[] = [
   {
-    // Marže 40–60 % (benchmark) → 50 % pro vlastní značku. AOV pod CZ průměrem (typické). Konverze nízká: hodně vratek a srovnávání.
+    // Marže 40–60 % (benchmark) → 50 % pro vlastní značku. AOV pod CZ průměrem (typické). Konverze pod průměrem: hodně vratek a srovnávání (orientační odhad).
     industry: 'fashion',
     label: 'Móda a oblečení',
     averageAOV: 1100,
-    averageConversion: 1.4,
+    averageConversion: 1.8,
     averageMargin: 50,
     averageCOGS: 550,
     marketingBudgetPercent: 18,
     description: 'Oblečení, obuv a módní doplňky. Vysoká konkurence, hodně vratek. Marže 50 % platí pro vlastní značku, u přeprodeje spíš 30 až 40 %.'
   },
   {
-    // Marže 50–70 % (benchmark) → 60 %. AOV nižší (časté, menší nákupy), konverze nad médian díky opakovaným nákupům.
+    // Marže 50–70 % (benchmark) → 60 %. AOV nižší (časté, menší nákupy), konverze kolem průměru díky opakovaným nákupům (orientační odhad).
     industry: 'cosmetics',
     label: 'Kosmetika a péče',
     averageAOV: 700,
-    averageConversion: 1.8,
+    averageConversion: 2.0,
     averageMargin: 60,
     averageCOGS: 280,
     marketingBudgetPercent: 15,
     description: 'Kosmetika, drogerie a osobní péče. Dobrá marže, opakované nákupy. Vyšší konverze mají hlavně velcí hráči s velkou základnou věrných zákaznic.'
   },
   {
-    // Veřejný CZ benchmark neexistuje → odhad pro kategorii. Vysoká marže (ruční přirážka), ALE nezahrnuje cenu práce. Konverze: malá, ale loajální/cílená návštěvnost.
+    // Veřejný CZ benchmark neexistuje → orientační odhad pro kategorii. Vysoká marže (ruční přirážka), ALE nezahrnuje cenu práce. Konverze: malá, ale loajální/cílená návštěvnost.
     industry: 'handmade',
     label: 'Ruční výroba a řemeslo',
     averageAOV: 650,
-    averageConversion: 1.8,
+    averageConversion: 2.0,
     averageMargin: 65,
     averageCOGS: 227,
     marketingBudgetPercent: 15,
     description: 'Ručně vyráběné zboží a malé série. Vysoká marže (ale nezahrnuje tvůj čas!), omezená kapacita.'
   },
   {
-    // Veřejný CZ benchmark neexistuje → odhad pro kategorii. Vysoká marže (bižuterie i šperky), konverze závisí silně na fotkách a důvěře ve značku.
+    // Veřejný CZ benchmark neexistuje → orientační odhad pro kategorii. Vysoká marže (bižuterie i šperky), konverze závisí silně na fotkách a důvěře ve značku.
     industry: 'jewelry',
     label: 'Šperky a doplňky',
     averageAOV: 1100,
-    averageConversion: 1.5,
+    averageConversion: 1.8,
     averageMargin: 62,
     averageCOGS: 418,
     marketingBudgetPercent: 18,
     description: 'Šperky, bižuterie a doplňky. Silný vliv fotek a značky na konverzi.'
   },
   {
-    // Odhad pro kategorii (smíšené značkové hračky + vlastní textil). Marže 45 % je blended. Silný tlak marketplaců (Temu/Shein) na konverzi.
+    // Orientační odhad pro kategorii (smíšené značkové hračky + vlastní textil). Marže 45 % je blended. Silný tlak marketplaců (Temu/Shein) na konverzi.
     industry: 'kids',
     label: 'Děti a maminky',
     averageAOV: 800,
-    averageConversion: 1.6,
+    averageConversion: 1.9,
     averageMargin: 45,
     averageCOGS: 440,
     marketingBudgetPercent: 16,
     description: 'Dětské zboží, hračky a potřeby pro maminky. Loajální zákaznice, ale silný tlak marketplaců (Temu, Shein) na konverzi.'
   },
   {
-    // Marže 35–55 % (benchmark) → 42 %. Vyšší AOV, delší rozhodování → nižší konverze. (Nábytek by mělo AOV výrazně vyšší; tady bytové doplňky + zahrada.)
+    // Marže 35–55 % (benchmark) → 42 %. Vyšší AOV, delší rozhodování → konverze pod průměrem (orientační odhad). (Nábytek by mělo AOV výrazně vyšší; tady bytové doplňky + zahrada.)
     industry: 'home',
     label: 'Domácnost a zahrada',
     averageAOV: 1300,
-    averageConversion: 1.4,
+    averageConversion: 1.7,
     averageMargin: 42,
     averageCOGS: 754,
     marketingBudgetPercent: 14,
@@ -121,11 +126,11 @@ export const industryBenchmarks: IndustryBenchmark[] = [
     description: 'Doplňky stravy a specializované potraviny (ne čerstvá donáška). Doplňky mají marži 50 až 65 %, čerstvé 20 až 30 %. Vysoká frekvence opakovaných nákupů.'
   },
   {
-    // Marže 38 % odráží tlak globálních značek na ceny (Sportisimo: online EBIT jen 5–10 % po letech optimalizace – Exec talks). Sezónní výkyvy.
+    // Marže 38 % odráží tlak globálních značek na ceny (Sportisimo: online EBIT jen 5–10 % po letech optimalizace – Exec talks). Sezónní výkyvy. Konverze orientační odhad kolem průměru.
     industry: 'sports',
     label: 'Sport a volný čas',
     averageAOV: 1000,
-    averageConversion: 1.7,
+    averageConversion: 1.9,
     averageMargin: 38,
     averageCOGS: 620,
     marketingBudgetPercent: 17,
@@ -143,11 +148,11 @@ export const industryBenchmarks: IndustryBenchmark[] = [
     description: 'Krmivo, pomůcky a potřeby pro zvířata. Velmi věrné, vracející se zákaznice (skoro jako předplatné). Vlastní značka má marži vyšší, značkové krmivo nižší.'
   },
   {
-    // Marže 15–25 % (benchmark) → 22 %. Nejvyšší AOV, nejnižší konverze (zvážený nákup + price scraping Alza/Datart – Exec talks). Pro malý e-shop těžké.
+    // Marže 15–25 % (benchmark) → 22 %. Nejvyšší AOV, nejnižší konverze (zvážený nákup + price scraping Alza/Datart – Exec talks). Pro malý e-shop těžké. Konverze orientační odhad (spodní hranice).
     industry: 'electronics',
     label: 'Elektronika',
     averageAOV: 1800,
-    averageConversion: 1.1,
+    averageConversion: 1.4,
     averageMargin: 22,
     averageCOGS: 1404,
     marketingBudgetPercent: 13,

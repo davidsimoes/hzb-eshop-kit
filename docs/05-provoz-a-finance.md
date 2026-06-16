@@ -37,7 +37,7 @@ rozpočet) · [Diagnostika](https://hzb.davidjose.net/diagnostika) (kde se ztrá
 ## Doprava a balení (kde se tiše ztrácí zisk)
 
 - Spočítej **reálnou cenu dopravy a balného** do zisku z objednávky.
-- **Limit pro dopravu zdarma:** nenastavuj fixně, ale ~15–30 % nad TVÉ aktuální AOV (ať se kvalifikuje zhruba 50–70 % objednávek; trh 2026: průměr ~2 012 Kč, medián 1 500). Zvedá AOV, ale
+- **Limit pro dopravu zdarma:** nenastavuj fixně, ale ~15–30 % nad TVÉ aktuální AOV (ať se kvalifikuje zhruba 50–70 % objednávek; orientačně se limity na trhu drží kolem ~1 500 až 2 000 Kč podle oboru). Zvedá AOV, ale
   nesmí ti sníst marži. Spočítej to.
 - Vrátky umí být drahé. Jasné popisky a fotky = méně vrácení.
 

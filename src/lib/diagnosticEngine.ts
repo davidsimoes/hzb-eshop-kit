@@ -99,7 +99,7 @@ export function diagnose(input: DiagnosticInput): DiagnosticResult {
       id: 'margin-negative',
       area: 'margin',
       severity: 'critical',
-      title: 'Na každé objednávce prodělává­š',
+      title: 'Na každé objednávce proděláváš',
       finding: `Z jedné objednávky ti po odečtení zboží a nákladů zbyde ${fmtCZK(profitPerOrder)}. To je záporné, čím víc prodáš, tím víc ztratíš.`,
       fix: 'Zvyš cenu, sniž náklady na zboží (vyjednej s dodavatelem, jiné balení), nebo přidej dražší produkty. Marketing teď neřeš, nejdřív musí být objednávka zisková.',
       priority: 1

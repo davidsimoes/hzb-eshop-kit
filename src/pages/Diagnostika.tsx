@@ -10,6 +10,7 @@ import { MetaTags } from '@/components/SEO/MetaTags';
 import { Link } from 'react-router-dom';
 import { Stethoscope, AlertTriangle, CheckCircle2, ArrowRight, Sparkles, Copy, Check } from 'lucide-react';
 import { diagnose, DiagnosticInput } from '@/lib/diagnosticEngine';
+import { ToolFlowStrip } from '@/components/ToolFlowStrip';
 
 // ---------------------------------------------------------------------------
 // Prefill scenarios pro Diagnostiku — realisticke priklady ruznych nisnich
@@ -92,7 +93,7 @@ const defaultInput: DiagnosticInput = {
 };
 
 const fields: { key: keyof DiagnosticInput; label: string; hint: string; suffix?: string }[] = [
-  { key: 'monthlyVisitors', label: 'Návštěvnost za měsíc', hint: 'Kolik lidí přijde na web (z Google Analytics nebo odhadem)', suffix: 'lidí' },
+  { key: 'monthlyVisitors', label: 'Návštěvnost za měsíc', hint: 'Kolik lidí přijde na web (z Google Analytics, nebo klidně odhadem)', suffix: 'lidí' },
   { key: 'conversionRate', label: 'Konverze', hint: 'Kolik % návštěv skončí objednávkou. Když nevíš, dej 1.', suffix: '%' },
   { key: 'aov', label: 'Průměrná objednávka (AOV)', hint: 'Kolik průměrně utratí jedna zákaznice', suffix: 'Kč' },
   { key: 'cogs', label: 'Náklady na zboží / objednávku', hint: 'Co tě stojí zboží v jedné objednávce', suffix: 'Kč' },
@@ -208,7 +209,15 @@ Mluv ke mně lidsky, bez žargonu.`;
               Zadej svoje skutečná (nebo odhadovaná) čísla. Najdeš nejslabší článek, místo, kde se
               ztrácí nejvíc peněz, a uvidíš, co řešit jako první.
             </p>
+            <p className="text-sm text-brand-wine/60 mt-3">
+              Tahle stránka je pro e-shop, který už běží. Ještě neprodáváš nebo nemáš čísla?{' '}
+              <Link to="/validace" className="font-semibold text-brand-wine hover:text-brand-orange transition-colors">
+                Začni Ověřením nápadu →
+              </Link>
+            </p>
           </div>
+
+          <ToolFlowStrip current="diagnostika" />
 
           <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-8">
             {/* Vstupy */}
@@ -334,7 +343,12 @@ Mluv ke mně lidsky, bez žargonu.`;
 
                 <Button
                   className="w-full bg-brand-wine hover:bg-brand-wine/90"
-                  onClick={() => setSubmitted(true)}
+                  onClick={() => {
+                    setSubmitted(true);
+                    setTimeout(() => {
+                      document.getElementById('diagnostika-results')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 50);
+                  }}
                 >
                   <Stethoscope className="w-4 h-4 mr-2" />
                   Diagnostikovat
@@ -419,7 +433,7 @@ Mluv ke mně lidsky, bez žargonu.`;
 
               {/* Diagnóza */}
               {submitted && result.issues.length > 0 && (
-                <Card className="shadow-soft">
+                <Card id="diagnostika-results" className="shadow-soft">
                   <CardHeader className="bg-brand-pink text-white rounded-t-lg">
                     <CardTitle>Co řešit (seřazeno podle dopadu)</CardTitle>
                   </CardHeader>
@@ -455,7 +469,7 @@ Mluv ke mně lidsky, bez žargonu.`;
               )}
 
               {submitted && result.issues.length === 0 && result.monthlyOrders > 0 && (
-                <Card className="shadow-soft border-brand-light-pink">
+                <Card id="diagnostika-results" className="shadow-soft border-brand-light-pink">
                   <CardContent className="p-6 flex items-center gap-3">
                     <CheckCircle2 className="w-6 h-6 text-brand-wine" />
                     <p className="text-brand-wine">

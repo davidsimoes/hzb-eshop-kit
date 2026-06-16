@@ -5,7 +5,7 @@ import remarkGfm from 'remark-gfm';
 import { Header } from '@/components/Header/Header';
 import { Breadcrumb } from '@/components/Navigation/Breadcrumb';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, ArrowRight, BookOpen, Wrench, Sparkles, Copy, Check, HelpCircle } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, Wrench, Sparkles, Copy, Check, HelpCircle, Linkedin } from 'lucide-react';
 import { getGuide, adjacentGuides, getIntegration, getPromptRaw } from '@/data/guides';
 
 const GuidePage = () => {
@@ -212,6 +212,19 @@ const GuidePage = () => {
               <Button asChild variant="ghost" size="sm" className="text-brand-wine/70">
                 <Link to="/pruvodce"><BookOpen className="w-4 h-4 mr-1" /> Všichni průvodci</Link>
               </Button>
+            </div>
+
+            {/* LinkedIn follow */}
+            <div className="mt-8 pt-6 border-t border-brand-light-pink/60 text-center">
+              <a
+                href="https://www.linkedin.com/in/davidjsimoes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-brand-wine/60 hover:text-brand-wine transition-colors"
+              >
+                <Linkedin className="w-4 h-4 flex-shrink-0" />
+                Sleduj Davida na LinkedInu, reálné e-commerce příklady a chyby
+              </a>
             </div>
           </section>
         </div>
