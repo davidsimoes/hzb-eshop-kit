@@ -108,7 +108,7 @@ export const RequiredRevenueCalculator = ({
         <div className="space-y-3">
           <div className="flex items-center gap-2">
             <Label className="text-brand-wine font-semibold">Fixní náklady měsíčně</Label>
-            <Tooltip content="Nájem, mzdy, služby, náklady na zboží (COGS), ale BEZ marketingu. Marketing se počítá z marže." />
+            <Tooltip content="Nájem, mzdy, software, předplatné (BEZ nákladů na zboží a bez marketingu). Tyhle náklady už jsou totiž v čisté marži." />
           </div>
           <Input
             type="number"
@@ -118,7 +118,7 @@ export const RequiredRevenueCalculator = ({
             className="text-lg"
           />
           <div className="text-xs text-muted-foreground bg-gray-50 p-2 rounded">
-            <strong>Co zahrnout:</strong> nájem (3-8k), mzdy (20-40k), služby (2-5k), COGS (40-60% z prodejní ceny)
+            <strong>Co zahrnout:</strong> nájem (3-8k), mzdy (20-40k), software a předplatné (2-5k). Náklady na zboží sem nedávej, ty už jsou v čisté marži.
           </div>
         </div>
 

@@ -30,7 +30,7 @@ export const CACCalculator = ({
 
   const cac = requiredOrders > 0 && marketingBudget > 0 ? marketingBudget / requiredOrders : 0;
   const ltv = aov * customLTVMultiplier;
-  const isHealthy = cac > 0 && cac < ltv;
+  const isHealthy = cac > 0 && cac < ltv * 0.33;
   const defaultCACRange = "200-600 Kč";
 
   const getCACStatus = () => {
@@ -38,7 +38,8 @@ export const CACCalculator = ({
     if (cac < 100) return { color: 'text-yellow-600', message: 'CAC pod 100 Kč je v ČR nepravděpodobné' };
     if (cac > 600) return { color: 'text-red-600', message: 'CAC nad 600 Kč je v ČR nadprůměrné' };
     if (isHealthy) return { color: 'text-green-600', message: 'CAC je v pořádku pro český trh' };
-    return { color: 'text-red-600', message: 'CAC převyšuje LTV - zvaž optimalizaci' };
+    if (cac >= ltv) return { color: 'text-red-600', message: 'CAC převyšuje LTV, zvaž optimalizaci' };
+    return { color: 'text-yellow-600', message: 'CAC je vysoký, ideál je pod 30 % LTV' };
   };
 
   const status = getCACStatus();

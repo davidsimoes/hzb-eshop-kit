@@ -182,15 +182,11 @@ const BeforeStart = () => {
                     size="sm"
                     className="bg-white/20 text-white border border-white/30 hover:bg-white/30"
                   >
-                    <a 
-                      href="https://docs.google.com/presentation/d/1dOode6pH8fAmR3dAh6XjxY9U8iNRlWp-9nBIznaEl_Y/edit?usp=sharing" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
+                    <Link to="/prezentace">
                       <BookOpen className="w-4 h-4 mr-2" />
                       {t('beforeStart.cta.guide.button')}
                       <ExternalLink className="w-4 h-4 ml-2" />
-                    </a>
+                    </Link>
                   </Button>
                 </div>
                 

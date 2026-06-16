@@ -15,7 +15,7 @@ import { ExportData } from './ExportData';
 import { IndustryBenchmarks } from './Benchmarks/IndustryBenchmarks';
 import { LoadingSpinner, ResultsSkeleton } from './Loading/LoadingStates';
 import { useUnifiedCalculationEngine, BusinessMetrics } from './UnifiedCalculationEngine';
-import { Calculator, TrendingUp, Users, ShoppingCart, Target, DollarSign, RefreshCw } from 'lucide-react';
+import { Calculator, TrendingUp, Users, ShoppingCart, Target, DollarSign, RefreshCw, AlertTriangle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 interface CalculatorResults {
@@ -48,19 +48,24 @@ export const FinancialCalculator = () => {
   const [recommendedMarketingBudget, setRecommendedMarketingBudget] = useState<number>(0);
   const [ltvMultiplier, setLtvMultiplier] = useState<number>(2.5);
   const [results, setResults] = useState<CalculatorResults | null>(null);
+  const [costError, setCostError] = useState<boolean>(false);
 
   const calculateResults = useCallback(() => {
     if (!wizardData || !wizardData.desiredProfit || !wizardData.aov || wizardData.cogs < 0) {
       setResults(null);
+      setCostError(false);
       return;
     }
 
     const { desiredProfit, isYearly, aov, cogs, extraCosts, conversionRate, marketingCosts } = wizardData;
 
-    if (cogs >= aov) {
+    if (cogs + extraCosts >= aov) {
       setResults(null);
+      setCostError(true);
       return;
     }
+
+    setCostError(false);
 
     try {
       const monthlyProfit = isYearly ? desiredProfit / 12 : desiredProfit;
@@ -109,6 +114,7 @@ export const FinancialCalculator = () => {
     setWizardData(null);
     setResults(null);
     setRequiredRevenue(0);
+    setCostError(false);
     setShowWizard(true);
   };
 
@@ -157,6 +163,23 @@ export const FinancialCalculator = () => {
       </div>
 
         <div className="max-w-6xl mx-auto space-y-8">
+          {/* Cost error: costs are higher than price */}
+          {costError && (
+            <Card className="shadow-soft border border-red-200">
+              <CardContent className="p-6 flex items-start gap-3 bg-red-50 rounded-lg">
+                <AlertTriangle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold text-red-700">
+                    Náklady jsou vyšší než cena
+                  </div>
+                  <div className="text-sm text-red-700/80">
+                    Náklady na zboží a ostatní náklady na objednávku dohromady převyšují prodejní cenu. Na každé objednávce bys prodělával. Uprav cenu nebo náklady, ať je z objednávky zisk.
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
           {/* Industry Benchmarks */}
           {wizardData && (
             <IndustryBenchmarks
@@ -338,7 +361,7 @@ export const FinancialCalculator = () => {
               cogs={wizardData.cogs}
               margin={results.grossMargin}
               conversionRate={wizardData.conversionRate}
-              cac={results ? wizardData.marketingCosts / results.requiredOrders : 0}
+              cac={results && results.requiredOrders > 0 ? wizardData.marketingCosts / results.requiredOrders : 0}
               marketingCosts={wizardData.marketingCosts}
             />
           )}

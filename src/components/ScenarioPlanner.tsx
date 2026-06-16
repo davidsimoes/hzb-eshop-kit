@@ -80,7 +80,8 @@ export const ScenarioPlanner = ({
   };
 
   const strategy = getBudgetStrategy(marketingBudget);
-  const currentPercentage = (marketingBudget / requiredRevenue) * 100;
+  const rawPercentage = (marketingBudget / requiredRevenue) * 100;
+  const currentPercentage = isFinite(rawPercentage) ? rawPercentage : 0;
   const maxBudget = requiredRevenue * 0.3;
 
   const getNextSteps = () => {
@@ -113,6 +114,25 @@ export const ScenarioPlanner = ({
       ];
     }
   };
+
+  if (!isFinite(requiredRevenue) || requiredRevenue <= 0) {
+    return (
+      <Card className="shadow-soft">
+        <CardHeader className="bg-brand-pink text-white rounded-t-lg">
+          <CardTitle className="flex items-center gap-2">
+            <Target className="w-5 h-5" />
+            Tvůj marketingový plán
+            <Tooltip content="Doporučený rozpočet a strategie na základě tvých cílů" />
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="p-6">
+          <div className="text-center p-6 bg-brand-light-pink rounded-lg text-brand-wine">
+            Doplň cílový zisk a marži, ať je z čeho počítat.
+          </div>
+        </CardContent>
+      </Card>
+    );
+  }
 
   return (
     <Card className="shadow-soft">

@@ -49,5 +49,62 @@ export const MarketingBudgetSlider = ({
   if (targetProfit === 0 || margin === 0) {
     return null;
   }
-  return;
+  return (
+    <Card className="shadow-soft">
+      <CardHeader className="bg-brand-wine text-white rounded-t-lg">
+        <CardTitle className="flex items-center gap-2">
+          <TrendingUp className="w-5 h-5" />
+          Doporučený marketingový rozpočet
+          <Tooltip content="Kolik měsíčně investovat do marketingu podle tvého cíle zisku a marže" />
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="p-6 space-y-6">
+
+        <div className="text-center p-6 bg-brand-light-pink rounded-lg">
+          <div className="text-sm text-brand-wine/70 mb-2">
+            {budgetPercentage[0]} % z potřebného obratu
+          </div>
+          <div className="text-3xl font-bold text-brand-wine">
+            {formatCurrency(budgetAmount)}
+          </div>
+          <div className="text-sm text-brand-wine/70 mt-1">měsíčně</div>
+        </div>
+
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <span className="text-sm font-medium text-brand-wine">
+              Podíl marketingu na obratu
+            </span>
+            <span className="text-sm font-bold text-brand-wine">
+              {budgetPercentage[0]} %
+            </span>
+          </div>
+          <div className="px-2">
+            <Slider
+              value={budgetPercentage}
+              onValueChange={setBudgetPercentage}
+              max={30}
+              min={5}
+              step={1}
+              className="w-full"
+            />
+          </div>
+          <div className="flex justify-between text-xs text-brand-wine/60">
+            <span>5 %</span>
+            <span>15 % (doporučeno)</span>
+            <span>30 %</span>
+          </div>
+        </div>
+
+        <div className="p-4 bg-brand-light-pink rounded-lg space-y-1">
+          <div className="font-semibold text-brand-wine">
+            {getBudgetDescription(budgetPercentage[0])}
+          </div>
+          <div className="text-sm text-brand-wine/70">
+            {getBudgetAdvice(budgetPercentage[0])}
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
 };

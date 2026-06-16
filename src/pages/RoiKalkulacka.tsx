@@ -205,7 +205,7 @@ const RoiKalkulacka = () => {
       ? `${input.monthlyBenefit} Kč/měs (čistý, po marži)`
       : `${input.hoursSavedPerMonth} h/měs × ${input.hourlyValue} Kč/h`;
 
-  const aiPrompt = `Zvažuju e-commerce výdaj a chci poradit, jestli se vyplatí.
+  const aiPrompt = `Zvažuju e-commerce výdaj a chci se poradit, jestli se vyplatí.
 
 Jednorázový náklad: ${input.oneTimeCost} Kč
 Měsíční náklad: ${input.monthlyCost} Kč

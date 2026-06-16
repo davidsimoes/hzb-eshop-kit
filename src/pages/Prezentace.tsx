@@ -68,7 +68,7 @@ const slides: Slide[] = [
     bullets: [
       '10+ let v e-commerce, stovky e-shopů od start-upů po firmy s obratem přes 3 mld. Kč.',
       'Zakladatel Sounds Good Agency, první Shopify agentury v ČR a na Slovensku.',
-      'Vím, jak vypadá start zevnitř, i ty pochybnosti. Dnes ti předám zkratky, co šetří peníze i nervy.'
+      'Vím, jak vypadá start zevnitř, a ty pochybnosti znám taky. Dnes ti předám zkratky, co šetří peníze i nervy.'
     ],
     logos: true,
     note: 'Kredibilita stručně. Nepřeprodávej se, buduj důvěru a vřelost. Loga = konkrétní důkaz.',
@@ -88,8 +88,8 @@ const slides: Slide[] = [
       'Když to neprodává'
     ],
     bullets: [
-      'Všech 6 oblastí máš v kitu, který si odneseš. Dnes jdeme do hloubky na 3: Validace, Platforma a Diagnostika, plus kamkoli mě zatáhnete.',
-      'Vím, co vás zajímá nejvíc: jak vybrat platformu, jak vůbec začít a jak se vyhnout nejčastějším chybám. Přesně to dnes projdeme.'
+      'Všech 6 oblastí máš v kitu, který si odneseš. Dnes jdeme do hloubky na 3: Validace, Platforma a Diagnostika, plus kamkoli mě zatáhneš.',
+      'Vím, co tě zajímá nejvíc: jak vybrat platformu, jak vůbec začít a jak se vyhnout nejčastějším chybám. Přesně to dnes projdeme.'
     ],
     note: 'Tohle je menu. Reflektuj jejich očekávání z HzB (platforma, jak začít, vyhnout se chybám). Řekni: vše je v kitu, dnes deep-dive na 3. Pojmenuj obě skupiny (začátečnice + už mám e-shop, pro ně je Diagnostika).',
     icon: Layers

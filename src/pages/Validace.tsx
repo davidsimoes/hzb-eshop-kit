@@ -277,12 +277,19 @@ Mluv ke mně lidsky a bez žargonu.`;
 
           {/* Cross-link */}
           <div className="max-w-5xl mx-auto mt-8 text-center">
-            <p className="text-brand-wine/70 mb-3">Nápad sedí? Pojď zjistit, jestli to vydělá.</p>
-            <Button asChild className="bg-brand-wine hover:bg-brand-wine/90">
-              <Link to="/kalkulacka">
-                Spočítej životaschopnost <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </Button>
+            <p className="text-brand-wine/70 mb-3">Nápad sedí? Pojď zjistit, jestli to vydělá, a vyber platformu.</p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Button asChild className="bg-brand-wine hover:bg-brand-wine/90">
+                <Link to="/kalkulacka">
+                  Spočítej životaschopnost <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="border-brand-wine text-brand-wine hover:bg-brand-wine hover:text-white">
+                <Link to="/vyber-platformy">
+                  Vyber platformu <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </main>

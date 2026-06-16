@@ -259,7 +259,33 @@ export function diagnose(input: DiagnosticInput): DiagnosticResult {
         fix: 'Funguje to, ale je to křehké. Zaměř se na opakované nákupy a postupné zvyšování AOV/marže, ať máš rezervu.',
         priority: 4
       });
+    } else if (monthlyNetProfit <= 0 && trueNetProfit <= 0) {
+      // Už po marketingu jsi v minusu, mzda a fixní náklady to jen prohloubí.
+      // Bez tohoto by seznam zůstal prázdný, i když headline hlásí minus.
+      issues.push({
+        id: 'true-net-negative-pre',
+        area: 'margin',
+        severity: 'critical',
+        title: 'Jsi v minusu už po marketingu, mzda a fixní náklady to zhorší',
+        finding: `Po marketingu jsi ${fmtCZK(monthlyNetProfit)} měsíčně. Když přičteš svoji mzdu (${fmtCZK(ownerSalary)}) a fixní náklady (${fmtCZK(fixedCosts)}), skutečný čistý zisk je ${fmtCZK(trueNetProfit)}. Provoz se zatím neuživí.`,
+        fix: 'Nejdřív musí být objednávka zisková a obrat musí pokrýt marketing. Potřebuješ víc objednávek (návštěvnost krát konverze) nebo vyšší zisk z objednávky (cena, marže, AOV). Mrkni níž, který článek je nejslabší.',
+        priority: 1
+      });
     }
+  }
+
+  // 6b) Čistý zisk na objednávku je tenký, i když hrubá marže vypadá zdravě.
+  // Hrubá marže nepočítá s ostatními náklady na objednávku (extra), čistý zisk na objednávku ano.
+  if (aov > 0 && profitPerOrder > 0 && profitPerOrder / aov < 0.15 && grossMargin >= 40) {
+    issues.push({
+      id: 'net-per-order-thin',
+      area: 'margin',
+      severity: 'warning',
+      title: 'Po všech nákladech zbývá z objednávky málo',
+      finding: `Hrubá marže (${grossMargin.toFixed(0)} %) vypadá dobře, ale po ostatních nákladech na objednávku (doprava, balení, poplatky) ti z objednávky čistě zbyde jen ${fmtCZK(profitPerOrder)}, to je ${((profitPerOrder / aov) * 100).toFixed(0)} % z její hodnoty. Tyhle náklady se do hrubé marže nepočítají.`,
+      fix: 'Podívej se na ostatní náklady na objednávku. Sniž dopravu (výdejní místa, vyjednání s dopravcem), levnější balení nebo zaveď limit pro dopravu zdarma. Případně zvyš AOV, ať fixní náklady na objednávku váží míň.',
+      priority: 5
+    });
   }
 
   // 7) Doprava ukrajuje marži

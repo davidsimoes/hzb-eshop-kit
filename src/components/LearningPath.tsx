@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Clock, Lightbulb, Calculator, Stethoscope, CheckSquare, Sparkles } from 'lucide-react';
+import { ArrowRight, Clock, Lightbulb, Calculator, Stethoscope, CheckSquare, Sparkles, Compass, Wallet } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const KIT_REPO = 'https://github.com/davidsimoes/hzb-eshop-kit';
@@ -30,12 +30,12 @@ const pathSteps = [
     buttonVariant: 'default' as const
   },
   {
-    icon: Stethoscope,
-    title: '3. Co když to neprodává',
-    description: 'Už prodáváš, ale vázne to? Diagnostika najde nejslabší článek a poradí, co řešit první.',
-    time: '10 min',
-    link: '/diagnostika',
-    cta: 'Diagnostikovat',
+    icon: Compass,
+    title: '3. Vyber platformu',
+    description: 'Pár otázek a víš, jestli ti sedne Shoptet, Shopify, nebo třeba platforma na kurzy.',
+    time: '5 min',
+    link: '/vyber-platformy',
+    cta: 'Vybrat platformu',
     color: 'bg-brand-pink/20 text-brand-wine',
     buttonVariant: 'outline' as const
   },
@@ -46,6 +46,26 @@ const pathSteps = [
     time: 'průběžně',
     link: '/checklist',
     cta: 'Otevřít checklist',
+    color: 'bg-brand-orange/20 text-brand-wine',
+    buttonVariant: 'outline' as const
+  },
+  {
+    icon: Stethoscope,
+    title: '5. Co když to neprodává',
+    description: 'Už prodáváš, ale vázne to? Diagnostika najde nejslabší článek a poradí, co řešit první.',
+    time: '10 min',
+    link: '/diagnostika',
+    cta: 'Diagnostikovat',
+    color: 'bg-brand-pink/20 text-brand-wine',
+    buttonVariant: 'outline' as const
+  },
+  {
+    icon: Wallet,
+    title: '6. Vyplatí se ten výdaj?',
+    description: 'Zvažuješ appku, fotografa nebo placenou šablonu? ROI kalkulačka řekne, jestli se to vrátí.',
+    time: '5 min',
+    link: '/roi-kalkulacka',
+    cta: 'Spočítat ROI',
     color: 'bg-brand-orange/20 text-brand-wine',
     buttonVariant: 'outline' as const
   }
@@ -60,7 +80,7 @@ export const LearningPath = () => {
             Tvoje cesta k e-shopu, který vydělává
           </h2>
           <p className="text-lg text-brand-wine/70">
-            Validace → Plán → Spuštění. Čtyři nástroje, které tě tím provedou. A celý kit
+            Validace → Plán → Spuštění. Nástroje, které tě tím krok za krokem provedou. A celý kit
             navíc můžeš dát své AI, aby ti radila na míru.
           </p>
         </div>

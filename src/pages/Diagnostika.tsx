@@ -77,7 +77,7 @@ const Diagnostika = () => {
     setInput((prev) => ({ ...prev, [key]: isNaN(num) ? fallback : num }));
   };
 
-  const aiPrompt = `Jsem začínající podnikatelka s e-shopem a potřebuju poradit, proč mi to dobře neprodává.
+  const aiPrompt = `Jsem začínající podnikatelka s e-shopem a potřebuju se poradit, proč se mi to dobře neprodává.
 
 Moje současná čísla za měsíc:
 - Návštěvnost: ${input.monthlyVisitors} lidí
@@ -412,6 +412,11 @@ Mluv ke mně lidsky, bez žargonu.`;
               <Button asChild variant="outline" className="border-brand-wine text-brand-wine hover:bg-brand-wine hover:text-white">
                 <Link to="/kalkulacka">
                   Spočítej životaschopnost <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="border-brand-wine text-brand-wine hover:bg-brand-wine hover:text-white">
+                <Link to="/roi-kalkulacka">
+                  Vyplatí se výdaj? <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>
             </div>

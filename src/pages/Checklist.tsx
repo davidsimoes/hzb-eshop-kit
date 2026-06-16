@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
@@ -288,11 +289,11 @@ export const Checklist = () => {
                 {t('checklist.guide.description')}
               </p>
               <Button asChild variant="outline" size="sm" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
-                <a href="https://docs.google.com/presentation/d/1dOode6pH8fAmR3dAh6XjxY9U8iNRlWp-9nBIznaEl_Y/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <Link to="/prezentace">
                   <BookOpen className="w-4 h-4 mr-2" />
                   {t('checklist.guide.button')}
                   <ExternalLink className="w-4 h-4 ml-2" />
-                </a>
+                </Link>
               </Button>
             </CardContent>
           </Card>
