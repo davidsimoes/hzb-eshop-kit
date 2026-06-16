@@ -317,6 +317,15 @@ export const checklistData: ChecklistItem[] = [
     priority: 'medium',
     estimatedTimeKey: 'checklist.tasks.day10.automation.time'
   },
+  {
+    id: 'day-10-heureka-feed',
+    titleKey: 'checklist.tasks.day10.heurekaFeed.title',
+    day: 10,
+    descriptionKey: 'checklist.tasks.day10.heurekaFeed.description',
+    priority: 'high',
+    estimatedTimeKey: 'checklist.tasks.day10.heurekaFeed.time',
+    tipsKey: 'checklist.tasks.day10.heurekaFeed.tips'
+  },
   // Day 11: Soft Launch
   {
     id: 'day-11-soft-launch',

@@ -15,27 +15,32 @@ const About = () => {
     title: "soundsgood.agency",
     description: "Zakladatel první Shopify agentury v ČR a na Slovensku",
     icon: Building,
-    highlight: "První Shopify agency v ČR/SK"
+    highlight: "První Shopify agency v ČR/SK",
+    why: "Vidím, co funguje i co nefunguje u desítek reálných e-shopů v ČR a SK, ne jen v teorii."
   }, {
     title: "Subscription commerce startup",
     description: "Jedna z prvních firem v Česku zaměřená na předplatné spotřebního zboží",
     icon: Users,
-    highlight: "Průkopník předplatných služeb"
+    highlight: "Průkopník předplatných služeb",
+    why: "Vím, jak postavit byznys na opakujících se příjmech a zákaznické věrnosti, protože jsem to sám zkoušel a přežil."
   }, {
     title: "TEPE USA (B2B dentální)",
     description: "KISS (Keep It Simple, Stupid!) - jednoduchý a efektivní přístup k e-commerce",
     icon: TrendingUp,
-    highlight: "Americký know-how"
+    highlight: "Americký know-how",
+    why: "Americký trh tě naučí jednoduchost a rychlost. Složitost zabíjí konverze, a to platí i pro český e-shop."
   }, {
     title: "Různé obchodní modely",
     description: "B2B, Omnichannel, DTC - různé cíle = různé strategie napříč segmenty",
     icon: Building,
-    highlight: "Praktické zkušenosti"
+    highlight: "Praktické zkušenosti",
+    why: "Nemám recept pro všechny. Mám zkušenosti z různých modelů, abych ti poradil to, co sedí tebě."
   }, {
     title: "Flexibilní startup projekty",
     description: "Pro startupy je klíčové umět včas změnit směr - flexibilita a adaptabilita",
     icon: TrendingUp,
-    highlight: "Startup mentalita"
+    highlight: "Startup mentalita",
+    why: "Pivot není selhání, je to strategie. Naučím tě rozpoznat, kdy změnit směr dřív, než dojdou peníze."
   }];
   const lessons = [{
     title: "Moje první e-shopy",
@@ -45,6 +50,19 @@ const About = () => {
     title: "Můj vlastní byznys",
     lesson: "Trpělivost + vášeň + riskování = úspěch. Není to o štěstí, ale o práci",
     type: "success"
+  }];
+  const credentials = [{
+    title: "Shopify Partner",
+    description: "Oficiální Shopify partner od roku 2014 - první v ČR/SK",
+    icon: Star,
+    link: "https://shopify.com/partners/directory/partner/soundsgood",
+    linkLabel: "Shopify Partner Profile"
+  }, {
+    title: "soundsgood.agency",
+    description: "Zakladatel agentury specializované výhradně na Shopify",
+    icon: Award,
+    link: "https://soundsgood.agency",
+    linkLabel: "soundsgood.agency"
   }];
   return <div className="min-h-screen bg-gradient-soft">
       <Header />
@@ -88,7 +106,35 @@ const About = () => {
         </div>
 
         {/* Verified Credentials */}
-        
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          {credentials.map((cred, index) => {
+            const Icon = cred.icon;
+            return (
+              <Card key={index} className="shadow-soft border-brand-orange/20">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-brand-orange/10 rounded-full p-3 shrink-0">
+                      <Icon className="w-6 h-6 text-brand-orange" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-brand-wine mb-1">{cred.title}</h3>
+                      <p className="text-brand-wine/70 text-sm mb-3">{cred.description}</p>
+                      <a
+                        href={cred.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-brand-orange text-sm font-medium hover:underline"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        {cred.linkLabel}
+                      </a>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
 
         {/* Introduction */}
         <Card className="shadow-soft mb-12">
@@ -116,10 +162,65 @@ const About = () => {
         </Card>
 
         {/* Experience */}
-        
+        <Card className="shadow-soft mb-8">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-3 text-brand-wine">
+              <TrendingUp className="w-6 h-6 text-brand-orange" />
+              Zkušenosti, ze kterých čerpám
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              {experiences.map((exp, index) => {
+                const Icon = exp.icon;
+                return (
+                  <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-brand-soft/40 hover:bg-brand-soft/70 transition-colors">
+                    <div className="bg-brand-wine/10 rounded-full p-2 shrink-0 mt-0.5">
+                      <Icon className="w-5 h-5 text-brand-wine" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex flex-wrap items-center gap-2 mb-1">
+                        <h4 className="font-semibold text-brand-wine">{exp.title}</h4>
+                        <Badge variant="outline" className="text-xs border-brand-orange/40 text-brand-orange">{exp.highlight}</Badge>
+                      </div>
+                      <p className="text-brand-wine/70 text-sm mb-2">{exp.description}</p>
+                      <p className="text-brand-wine/60 text-sm italic border-l-2 border-brand-orange/40 pl-3">
+                        {exp.why}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Lessons Learned */}
-        
+        <Card className="shadow-soft mb-12">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-3 text-brand-wine">
+              <Calendar className="w-6 h-6 text-brand-orange" />
+              Co mě to naučilo
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-2 gap-4">
+              {lessons.map((item, index) => (
+                <div
+                  key={index}
+                  className={`p-4 rounded-xl border-l-4 ${item.type === 'critical' ? 'bg-red-50 border-red-400' : 'bg-green-50 border-green-400'}`}
+                >
+                  <h4 className="font-semibold text-brand-wine mb-2">{item.title}</h4>
+                  <p className={`text-sm ${item.type === 'critical' ? 'text-red-700' : 'text-green-700'}`}>
+                    {item.lesson}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
+
 
         {/* Approach */}
         <Card className="shadow-soft mb-12 bg-gradient-to-r from-brand-wine to-brand-pink text-white">

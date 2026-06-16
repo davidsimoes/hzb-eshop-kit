@@ -315,7 +315,10 @@ export const Checklist = () => {
               </div>
               <Progress value={stats.completionRate} className="mb-4" />
               <div className="flex gap-2 justify-center">
-                
+                <Button onClick={exportToPDF} size="sm" variant="outline">
+                  <Download className="w-4 h-4 mr-2" />
+                  {t('checklist.actions.export', 'Stáhnout PDF')}
+                </Button>
                 <Button onClick={resetProgress} size="sm" variant="outline">
                   <RotateCcw className="w-4 h-4 mr-2" />
                   {t('checklist.actions.reset')}

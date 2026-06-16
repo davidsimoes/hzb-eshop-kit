@@ -11,6 +11,72 @@ import { Link } from 'react-router-dom';
 import { Stethoscope, AlertTriangle, CheckCircle2, ArrowRight, Sparkles, Copy, Check } from 'lucide-react';
 import { diagnose, DiagnosticInput } from '@/lib/diagnosticEngine';
 
+// ---------------------------------------------------------------------------
+// Prefill scenarios pro Diagnostiku — realisticke priklady ruznych nisnich
+// ---------------------------------------------------------------------------
+interface DiagPrefill {
+  label: string;
+  emoji: string;
+  data: DiagnosticInput;
+}
+
+const DIAG_PREFILL_SCENARIOS: DiagPrefill[] = [
+  {
+    label: 'Kosmetika (zdravy zaklad)',
+    emoji: '🌸',
+    data: {
+      monthlyVisitors: 3500,
+      conversionRate: 1.8,
+      aov: 700,
+      cogs: 280,
+      extraCosts: 70,
+      monthlyMarketing: 8000,
+      ownerSalary: 20000,
+      fixedCosts: 5000,
+    },
+  },
+  {
+    label: 'Moda (problem s konverzi)',
+    emoji: '👗',
+    data: {
+      monthlyVisitors: 4000,
+      conversionRate: 0.6,
+      aov: 1100,
+      cogs: 550,
+      extraCosts: 100,
+      monthlyMarketing: 15000,
+      ownerSalary: 25000,
+      fixedCosts: 8000,
+    },
+  },
+  {
+    label: 'Sperky (mala navstevnost)',
+    emoji: '💍',
+    data: {
+      monthlyVisitors: 280,
+      conversionRate: 1.5,
+      aov: 1100,
+      cogs: 418,
+      extraCosts: 80,
+      monthlyMarketing: 3000,
+    },
+  },
+  {
+    label: 'Mazlicci (ztraty na marketingu)',
+    emoji: '🐾',
+    data: {
+      monthlyVisitors: 2200,
+      conversionRate: 2.7,
+      aov: 850,
+      cogs: 493,
+      extraCosts: 60,
+      monthlyMarketing: 18000,
+      ownerSalary: 15000,
+      fixedCosts: 4000,
+    },
+  },
+];
+
 const fmtCZK = (n: number) =>
   new Intl.NumberFormat('cs-CZ', { style: 'currency', currency: 'CZK', maximumFractionDigits: 0 }).format(
     Math.round(n)
@@ -239,6 +305,31 @@ Mluv ke mně lidsky, bez žargonu.`;
                       <p className="text-xs text-brand-wine/60 mt-1">{f.hint}</p>
                     </div>
                   ))}
+                </div>
+
+                {/* Prefill tlacitka */}
+                <div className="pt-2 border-t border-brand-light-pink">
+                  <p className="text-xs font-semibold text-brand-wine/80 mb-2 flex items-center gap-1">
+                    <Sparkles className="w-3 h-3" />
+                    Vyzkoušej priklad:
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {DIAG_PREFILL_SCENARIOS.map((s) => (
+                      <Button
+                        key={s.label}
+                        type="button"
+                        variant="outline"
+                        size="sm"
+                        onClick={() => {
+                          setInput(s.data);
+                          setSubmitted(true);
+                        }}
+                        className="border-brand-wine/40 text-brand-wine hover:bg-brand-wine hover:text-white text-xs h-7"
+                      >
+                        {s.emoji} {s.label}
+                      </Button>
+                    ))}
+                  </div>
                 </div>
 
                 <Button

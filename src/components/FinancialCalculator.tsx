@@ -15,8 +15,81 @@ import { ExportData } from './ExportData';
 import { IndustryBenchmarks } from './Benchmarks/IndustryBenchmarks';
 import { LoadingSpinner, ResultsSkeleton } from './Loading/LoadingStates';
 import { useUnifiedCalculationEngine, BusinessMetrics } from './UnifiedCalculationEngine';
-import { Calculator, TrendingUp, Users, ShoppingCart, Target, DollarSign, RefreshCw, AlertTriangle } from 'lucide-react';
+import { Calculator, TrendingUp, Users, ShoppingCart, Target, DollarSign, RefreshCw, AlertTriangle, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+
+// ---------------------------------------------------------------------------
+// Prefill scenarios — realistické příklady pro různé niše, aby šlo demo hned.
+// Hodnoty vycházejí z benchmarks.ts (averageAOV / averageMargin / averageConversion).
+// ---------------------------------------------------------------------------
+interface PrefillScenario {
+  label: string;
+  emoji: string;
+  data: {
+    desiredProfit: number;
+    isYearly: boolean;
+    aov: number;
+    cogs: number;
+    extraCosts: number;
+    conversionRate: number;
+    marketingCosts: number;
+  };
+}
+
+const PREFILL_SCENARIOS: PrefillScenario[] = [
+  {
+    label: 'Sperky',
+    emoji: '💍',
+    data: {
+      desiredProfit: 25000,
+      isYearly: false,
+      aov: 1100,
+      cogs: 418,
+      extraCosts: 80,
+      conversionRate: 1.5,
+      marketingCosts: 8000,
+    },
+  },
+  {
+    label: 'Kosmetika',
+    emoji: '🌸',
+    data: {
+      desiredProfit: 20000,
+      isYearly: false,
+      aov: 700,
+      cogs: 280,
+      extraCosts: 70,
+      conversionRate: 1.8,
+      marketingCosts: 6000,
+    },
+  },
+  {
+    label: 'Moda',
+    emoji: '👗',
+    data: {
+      desiredProfit: 30000,
+      isYearly: false,
+      aov: 1100,
+      cogs: 550,
+      extraCosts: 100,
+      conversionRate: 1.4,
+      marketingCosts: 12000,
+    },
+  },
+  {
+    label: 'Mazlicci',
+    emoji: '🐾',
+    data: {
+      desiredProfit: 15000,
+      isYearly: false,
+      aov: 850,
+      cogs: 493,
+      extraCosts: 60,
+      conversionRate: 2.7,
+      marketingCosts: 5000,
+    },
+  },
+];
 
 interface CalculatorResults {
   monthlyProfit: number;
@@ -118,6 +191,14 @@ export const FinancialCalculator = () => {
     setShowWizard(true);
   };
 
+  const handlePrefill = async (scenario: PrefillScenario) => {
+    setIsLoading(true);
+    await new Promise((resolve) => setTimeout(resolve, 800));
+    setWizardData(scenario.data);
+    setShowWizard(false);
+    setIsLoading(false);
+  };
+
   const handleExportData = () => {
     // Export functionality will be handled by ExportData component
   };
@@ -137,13 +218,32 @@ export const FinancialCalculator = () => {
   };
 
   if (showWizard) {
+    if (isLoading) {
+      return <ResultsSkeleton />;
+    }
     return (
       <>
-        {isLoading ? (
-          <ResultsSkeleton />
-        ) : (
-          <CalculatorWizard onComplete={handleWizardComplete} />
-        )}
+        {/* Prefill scenario tlacitka */}
+        <div className="max-w-3xl mx-auto mb-6">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-sm text-brand-wine/70 font-medium flex items-center gap-1">
+              <Sparkles className="w-3.5 h-3.5" />
+              Vyzkoušej priklad:
+            </span>
+            {PREFILL_SCENARIOS.map((s) => (
+              <Button
+                key={s.label}
+                variant="outline"
+                size="sm"
+                onClick={() => handlePrefill(s)}
+                className="border-brand-wine/40 text-brand-wine hover:bg-brand-wine hover:text-white text-xs h-8"
+              >
+                {s.emoji} {s.label}
+              </Button>
+            ))}
+          </div>
+        </div>
+        <CalculatorWizard onComplete={handleWizardComplete} />
       </>
     );
   }
@@ -213,146 +313,150 @@ export const FinancialCalculator = () => {
 
           {/* Results Grid */}
           {results && wizardData && (
-            <div className="grid lg:grid-cols-2 gap-8">
-              {/* Basic Results */}
-              <div className="space-y-4">
-                <Card className="shadow-soft">
-                  <CardHeader className="bg-brand-wine text-white rounded-t-lg">
-                    <CardTitle className="flex items-center gap-2">
-                      <TrendingUp className="w-5 h-5" />
-                      {t('calculator.results.yourResults')}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-6 space-y-4">
-                    
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="text-center p-4 bg-brand-light-pink rounded-lg">
-                        <div className="text-2xl font-bold text-brand-wine">
-                          {formatCurrency(results.monthlyProfit)}
-                        </div>
-                        <div className="text-sm text-brand-wine/70">
-                          {t('calculator.results.monthlyProfit')}
-                        </div>
-                      </div>
-                      <div className="text-center p-4 bg-brand-light-pink rounded-lg">
-                        <div className="text-2xl font-bold text-brand-wine">
-                          {formatCurrency(results.yearlyProfit)}
-                        </div>
-                        <div className="text-sm text-brand-wine/70">
-                          {t('calculator.results.yearlyProfit')}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="text-center p-4 bg-gradient-brand text-white rounded-lg">
-                        <div className="text-2xl font-bold">
-                          {results.grossMargin.toFixed(1)}%
-                        </div>
-                        <div className="text-sm opacity-90">
-                          {t('calculator.results.grossMargin')}
-                        </div>
-                      </div>
-                      <div className="text-center p-4 bg-brand-pink text-white rounded-lg">
-                        <div className="text-2xl font-bold">
-                          {results.netMargin.toFixed(1)}%
-                        </div>
-                        <div className="text-sm opacity-90">
-                          {t('calculator.results.netMargin')}
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="shadow-soft">
-                  <CardHeader className="bg-brand-pink text-white rounded-t-lg">
-                    <CardTitle className="flex items-center gap-2">
-                      <Users className="w-5 h-5" />
-                      {t('calculator.results.requirements')}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-6 space-y-4">
-                    
-                    <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
-                      <div className="flex items-center gap-3">
-                        <ShoppingCart className="w-5 h-5 text-brand-wine" />
-                        <span className="text-brand-wine font-semibold">
-                          {t('calculator.results.ordersPerMonth')}
-                        </span>
-                      </div>
-                      <span className="text-2xl font-bold text-brand-wine">
-                        {formatNumber(results.requiredOrders)}
-                      </span>
-                    </div>
-
-                    <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
-                      <div className="flex items-center gap-3">
-                        <Users className="w-5 h-5 text-brand-wine" />
-                        <span className="text-brand-wine font-semibold">
-                          {t('calculator.results.visitorsPerMonth')}
-                        </span>
-                      </div>
-                      <span className="text-2xl font-bold text-brand-wine">
-                        {formatNumber(results.requiredVisitors)}
-                      </span>
-                    </div>
-
-                    {wizardData.marketingCosts > 0 && (
-                      <>
-                        <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
-                          <div className="flex items-center gap-3">
-                            <DollarSign className="w-5 h-5 text-brand-wine" />
-                            <span className="text-brand-wine font-semibold">
-                              {t('calculator.results.profitAfterMarketing')}
-                            </span>
+            <>
+              {/* Hlavni vysledky — vzdy 2 sloupce, obsah je vzdy pritomen */}
+              <div className="grid lg:grid-cols-2 gap-8">
+                {/* Levy sloupec: zisk + pozadavky */}
+                <div className="space-y-4">
+                  <Card className="shadow-soft">
+                    <CardHeader className="bg-brand-wine text-white rounded-t-lg">
+                      <CardTitle className="flex items-center gap-2">
+                        <TrendingUp className="w-5 h-5" />
+                        {t('calculator.results.yourResults')}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-6 space-y-4">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="text-center p-4 bg-brand-light-pink rounded-lg">
+                          <div className="text-2xl font-bold text-brand-wine">
+                            {formatCurrency(results.monthlyProfit)}
                           </div>
-                          <span className="text-2xl font-bold text-brand-wine">
-                            {formatCurrency(results.profitAfterMarketing)}
+                          <div className="text-sm text-brand-wine/70">
+                            {t('calculator.results.monthlyProfit')}
+                          </div>
+                        </div>
+                        <div className="text-center p-4 bg-brand-light-pink rounded-lg">
+                          <div className="text-2xl font-bold text-brand-wine">
+                            {formatCurrency(results.yearlyProfit)}
+                          </div>
+                          <div className="text-sm text-brand-wine/70">
+                            {t('calculator.results.yearlyProfit')}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="text-center p-4 bg-gradient-brand text-white rounded-lg">
+                          <div className="text-2xl font-bold">
+                            {results.grossMargin.toFixed(1)}%
+                          </div>
+                          <div className="text-sm opacity-90">
+                            {t('calculator.results.grossMargin')}
+                          </div>
+                        </div>
+                        <div className="text-center p-4 bg-brand-pink text-white rounded-lg">
+                          <div className="text-2xl font-bold">
+                            {results.netMargin.toFixed(1)}%
+                          </div>
+                          <div className="text-sm opacity-90">
+                            {t('calculator.results.netMargin')}
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="shadow-soft">
+                    <CardHeader className="bg-brand-pink text-white rounded-t-lg">
+                      <CardTitle className="flex items-center gap-2">
+                        <Users className="w-5 h-5" />
+                        {t('calculator.results.requirements')}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="p-6 space-y-4">
+                      <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
+                        <div className="flex items-center gap-3">
+                          <ShoppingCart className="w-5 h-5 text-brand-wine" />
+                          <span className="text-brand-wine font-semibold">
+                            {t('calculator.results.ordersPerMonth')}
                           </span>
                         </div>
+                        <span className="text-2xl font-bold text-brand-wine">
+                          {formatNumber(results.requiredOrders)}
+                        </span>
+                      </div>
 
-                        <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
-                          <div className="flex items-center gap-3">
-                            <Target className="w-5 h-5 text-brand-wine" />
-                            <span className="text-brand-wine font-semibold">
-                              {t('calculator.results.breakEven')}
-                            </span>
-                          </div>
-                          <span className="text-2xl font-bold text-brand-wine">
-                            {formatNumber(results.breakEvenPoint)}
+                      <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
+                        <div className="flex items-center gap-3">
+                          <Users className="w-5 h-5 text-brand-wine" />
+                          <span className="text-brand-wine font-semibold">
+                            {t('calculator.results.visitorsPerMonth')}
                           </span>
                         </div>
-                      </>
-                    )}
-                  </CardContent>
-                </Card>
+                        <span className="text-2xl font-bold text-brand-wine">
+                          {formatNumber(results.requiredVisitors)}
+                        </span>
+                      </div>
+
+                      {wizardData.marketingCosts > 0 && (
+                        <>
+                          <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
+                            <div className="flex items-center gap-3">
+                              <DollarSign className="w-5 h-5 text-brand-wine" />
+                              <span className="text-brand-wine font-semibold">
+                                {t('calculator.results.profitAfterMarketing')}
+                              </span>
+                            </div>
+                            <span className="text-2xl font-bold text-brand-wine">
+                              {formatCurrency(results.profitAfterMarketing)}
+                            </span>
+                          </div>
+
+                          <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
+                            <div className="flex items-center gap-3">
+                              <Target className="w-5 h-5 text-brand-wine" />
+                              <span className="text-brand-wine font-semibold">
+                                {t('calculator.results.breakEven')}
+                              </span>
+                            </div>
+                            <span className="text-2xl font-bold text-brand-wine">
+                              {formatNumber(results.breakEvenPoint)}
+                            </span>
+                          </div>
+                        </>
+                      )}
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Pravy sloupec: vzdy MetricExplainer + kondicionalni marketing/CAC */}
+                <div className="space-y-6">
+                  <MetricExplainer
+                    aov={wizardData.aov}
+                    cogs={wizardData.cogs}
+                    margin={results.grossMargin}
+                    conversionRate={wizardData.conversionRate}
+                  />
+
+                  <MarketingBudgetSlider
+                    targetProfit={wizardData.isYearly ? wizardData.desiredProfit / 12 : wizardData.desiredProfit}
+                    aov={wizardData.aov}
+                    margin={results.grossMargin}
+                    onBudgetChange={setRecommendedMarketingBudget}
+                  />
+
+                  {(wizardData.marketingCosts > 0 || recommendedMarketingBudget > 0) && (
+                    <CACCalculator
+                      marketingBudget={wizardData.marketingCosts || recommendedMarketingBudget}
+                      requiredOrders={results.requiredOrders}
+                      aov={wizardData.aov}
+                      customLTVMultiplier={ltvMultiplier}
+                      onLTVMultiplierChange={setLtvMultiplier}
+                    />
+                  )}
+                </div>
               </div>
-
-              <div className="space-y-6">
-                <MarketingBudgetSlider
-                  targetProfit={wizardData.isYearly ? wizardData.desiredProfit / 12 : wizardData.desiredProfit}
-                  aov={wizardData.aov}
-                  margin={results.grossMargin}
-                  onBudgetChange={setRecommendedMarketingBudget}
-                />
-
-                <CACCalculator
-                  marketingBudget={wizardData.marketingCosts || recommendedMarketingBudget}
-                  requiredOrders={results.requiredOrders}
-                  aov={wizardData.aov}
-                  customLTVMultiplier={ltvMultiplier}
-                  onLTVMultiplierChange={setLtvMultiplier}
-                />
-
-                <MetricExplainer
-                  aov={wizardData.aov}
-                  cogs={wizardData.cogs}
-                  margin={results.grossMargin}
-                  conversionRate={wizardData.conversionRate}
-                />
-              </div>
-            </div>
+            </>
           )}
 
           {/* Validation Alerts */}

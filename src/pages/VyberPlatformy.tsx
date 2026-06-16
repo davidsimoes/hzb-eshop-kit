@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Header } from '@/components/Header/Header';
 import { Breadcrumb } from '@/components/Navigation/Breadcrumb';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -14,327 +14,76 @@ import {
   CheckCircle2,
   Wallet,
   Store,
-  Sparkles
+  Sparkles,
+  Trophy,
+  Scale
 } from 'lucide-react';
+import {
+  ENGINE_QUESTIONS,
+  TOTAL_STEPS,
+  computeRecommendation,
+  type Answers,
+  type AnswerOption
+} from '@/data/platformEngine';
 
 /**
  * Průvodce výběrem platformy pro e-shop.
- * Položí 3 až 5 jednoduchých otázek a doporučí platformu.
- * Data (otázky i doporučení) jsou záměrně inline v tomto souboru,
- * aby byla stránka soběstačná (decision-framework ze spec).
+ *
+ * Místo jednoduchého stromu "odpověď -> štítek" sbírá odpovědi na 6 otázek,
+ * které spustí vážený rozhodovací engine (src/data/platformEngine.ts). Ten
+ * spočítá skóre pro všechny platformy a vrátí hlavní doporučení, druhou
+ * nejlepší variantu, transparentní pořadí a důvody navázané na konkrétní
+ * odpovědi. Cílem je, aby doporučení působilo věrohodně a nuancovaně, ne
+ * jako náhodný výsledek.
  */
 
-// Klíče jednotlivých doporučení
-type RecKey =
-  | 'shoptet'
-  | 'shopify'
-  | 'shoptet_or_shopify'
-  | 'webnode_or_shoptet_basic'
-  | 'fapi'
-  | 'podia_teachable'
-  | 'seduo'
-  | 'woocommerce';
-
-// Krok vede buď na další otázku, nebo rovnou na doporučení
-type Next = { type: 'question'; id: string } | { type: 'rec'; key: RecKey };
-
-interface Option {
-  label: string;
-  hint?: string;
-  next: Next;
-}
-
-interface Question {
-  id: string;
-  q: string;
-  intro?: string;
-  options: Option[];
-}
-
-interface Recommendation {
-  platform: string;
-  headline: string;
-  reason: string;
-  monthlyCost: string;
-  nextStep: string;
-  strengths: string[];
-  watchOut: string;
-}
-
-const QUESTIONS: Record<string, Question> = {
-  q1: {
-    id: 'q1',
-    q: 'Co chceš prodávat?',
-    intro: 'Začneme tím nejdůležitějším. Podle toho se rozhodne skoro všechno ostatní.',
-    options: [
-      {
-        label: 'Fyzické zboží',
-        hint: 'Oblečení, ruční výroba, kosmetika, jídlo, doplňky...',
-        next: { type: 'question', id: 'q2' }
-      },
-      {
-        label: 'Digitální produkty',
-        hint: 'Kurzy, e-booky, koučování, členství, šablony...',
-        next: { type: 'question', id: 'q2_digital' }
-      },
-      {
-        label: 'Obojí, fyzické i digitální',
-        hint: 'Hlavní je pro tebe zatím fyzické zboží.',
-        next: { type: 'question', id: 'q2' }
-      }
-    ]
-  },
-  q2: {
-    id: 'q2',
-    q: 'Jak jsi na tom s technikou?',
-    intro: 'Buď k sobě upřímná. Není ostuda chtít to jednoduché.',
-    options: [
-      {
-        label: 'Chci klikat, ne programovat',
-        hint: 'Potřebuju hotové řešení, kde si jen nastavím své věci.',
-        next: { type: 'question', id: 'q3' }
-      },
-      {
-        label: 'Zvládnu nastavení podle návodu',
-        hint: 'Trochu si pohraju, když je k tomu srozumitelný postup.',
-        next: { type: 'question', id: 'q3' }
-      },
-      {
-        label: 'Jsem pokročilá nebo mám vývojáře',
-        hint: 'Nebojím se kódu, serveru a vlastních úprav.',
-        next: { type: 'rec', key: 'woocommerce' }
-      }
-    ]
-  },
-  q2_digital: {
-    id: 'q2_digital',
-    q: 'Pro koho hlavně prodáváš?',
-    intro: 'U digitálních produktů rozhoduje jazyk a platby tvých zákazníků.',
-    options: [
-      {
-        label: 'České a slovenské zákaznice',
-        hint: 'Kurzy v češtině, platby v CZK, česká faktura.',
-        next: { type: 'rec', key: 'fapi' }
-      },
-      {
-        label: 'Mezinárodní publikum (anglicky)',
-        hint: 'Prodávám hlavně do zahraničí.',
-        next: { type: 'rec', key: 'podia_teachable' }
-      },
-      {
-        label: 'Chci zkusit český marketplace',
-        hint: 'Nechci řešit techniku, jen nahrát kurz.',
-        next: { type: 'rec', key: 'seduo' }
-      }
-    ]
-  },
-  q3: {
-    id: 'q3',
-    q: 'Kde chceš hlavně prodávat?',
-    intro: 'Tohle rozhodne, jestli vsadit na českou, nebo světovou platformu.',
-    options: [
-      {
-        label: 'Hlavně v Česku a na Slovensku',
-        hint: 'Moji zákazníci jsou tady doma.',
-        next: { type: 'question', id: 'q4' }
-      },
-      {
-        label: 'Chci expandovat do zahraničí',
-        hint: 'Plánuju prodávat i mimo CZ/SK, nebo už prodávám.',
-        next: { type: 'rec', key: 'shopify' }
-      }
-    ]
-  },
-  q4: {
-    id: 'q4',
-    q: 'Jaké čekáš tržby v prvním roce?',
-    intro: 'Klidně střel od boku. Jde o řádový odhad, ne přesné číslo.',
-    options: [
-      {
-        label: 'Zatím testuju nápad (pod 20 000 Kč / měsíc)',
-        hint: 'Chci začít s minimálními náklady.',
-        next: { type: 'rec', key: 'webnode_or_shoptet_basic' }
-      },
-      {
-        label: 'Pomalý rozjezd (20 000 až 200 000 Kč / měsíc)',
-        hint: 'Beru to vážně a chci stabilní základ.',
-        next: { type: 'rec', key: 'shoptet' }
-      },
-      {
-        label: 'Plánuju rychlý růst (nad 200 000 Kč / měsíc)',
-        hint: 'Mám ambice a chci platformu, která poroste se mnou.',
-        next: { type: 'rec', key: 'shoptet_or_shopify' }
-      }
-    ]
-  }
-};
-
-const RECOMMENDATIONS: Record<RecKey, Recommendation> = {
-  shoptet: {
-    platform: 'Shoptet',
-    headline: 'Shoptet je pro tebe nejlepší volba',
-    reason:
-      'Nejrozšířenější česká platforma (přes 45 000 obchodníků). Všechno důležité pro český trh má rovnou v sobě, takže nemusíš nic složitě dolepovat.',
-    monthlyCost: '400 až 2 000 Kč / měsíc',
-    nextStep: 'Založ si zkušební účet na shoptet.cz, 30 dní zdarma a bez závazku.',
-    strengths: [
-      'Nativní napojení na Heureku, Zboží.cz a Zásilkovnu',
-      'České platební brány (GoPay, Comgate) a česká faktura',
-      'Česká podpora i obrovská česká komunita'
-    ],
-    watchOut:
-      'Na prodej do zahraničí a velmi netradiční design je méně flexibilní než Shopify.'
-  },
-  shopify: {
-    platform: 'Shopify',
-    headline: 'Shopify je pro tebe nejlepší volba',
-    reason:
-      'Nejsilnější platforma pro růst a prodej za hranice. Roste i v Česku (kolem 4 500 obchodníků). Pro CZ doplníš pár aplikací, ale za expanzi to stojí.',
-    monthlyCost: '750 až 2 500 Kč / měsíc',
-    nextStep: 'Spusť si zkušební verzi na shopify.com, plány lze platit i v CZK.',
-    strengths: [
-      'Nejrychlejší vývoj a nejlepší nákupní košík na světě',
-      'Obrovský výběr aplikací a šablon',
-      'Poroste s tebou až do velkého obchodu bez nutnosti stěhování'
-    ],
-    watchOut:
-      'Zásilkovnu a GoPay je třeba přidat přes aplikace, podpora je hlavně anglicky.'
-  },
-  shoptet_or_shopify: {
-    platform: 'Shoptet nebo Shopify',
-    headline: 'Máš dvě skvělé možnosti',
-    reason:
-      'Při rychlém růstu dávají smysl obě. Záleží, kam míříš. Pokud zůstaneš v CZ a SK, vyhrává Shoptet lepší lokalizací. Pokud chceš brzy za hranice, vsaď na Shopify.',
-    monthlyCost: '400 až 2 500 Kč / měsíc',
-    nextStep:
-      'Vyzkoušej oba zkušební účty (nejdřív Shoptet) a porovnej, co ti sedne.',
-    strengths: [
-      'Shoptet: bezkonkurenční české integrace a podpora',
-      'Shopify: nejlepší základ pro expanzi a silnou značku',
-      'Obě zvládnou vyšší objem objednávek bez problémů'
-    ],
-    watchOut:
-      'Nerozhoduj podle ceny, ale podle toho, kam chceš obchod za dva roky dotáhnout.'
-  },
-  webnode_or_shoptet_basic: {
-    platform: 'Shoptet Start nebo Webnode',
-    headline: 'Začni s minimálními náklady',
-    reason:
-      'Když teprve testuješ, nemá smysl platit za velkou platformu. Shoptet Start má i v nejlevnějším plánu české integrace. Webnode je nejlevnější způsob, jak vůbec začít.',
-    monthlyCost: '300 až 500 Kč / měsíc',
-    nextStep:
-      'Zvol Shoptet plán Start, nebo Webnode plán Mini. Až prodej ověříš, klidně povýšíš.',
-    strengths: [
-      'Nejnižší možné měsíční náklady na rozjezd',
-      'Rychlé spuštění, nemusíš umět programovat',
-      'Snadno povýšíš, až budeš mít první prodeje'
-    ],
-    watchOut:
-      'Nezamykej se do nástroje bez českých integrací, pozdější stěhování bývá bolavé.'
-  },
-  fapi: {
-    platform: 'FAPI',
-    headline: 'FAPI je česká volba pro digitální podnikatelky',
-    reason:
-      'Jediná česká platforma šitá přímo na digitální produkty a kurzy. Zvládá české platby, českou DPH a faktury, členské sekce i opakované platby. To vše v češtině.',
-    monthlyCost: '500 až 2 500 Kč / měsíc',
-    nextStep: 'Zaregistruj se zdarma na fapi.cz, platíš až při prvních prodejích.',
-    strengths: [
-      'Postavené na míru českým digitálním produktům',
-      'Členské portály, e-booky, kurzy i opakované platby',
-      'Česká podpora a česká faktura v ceně'
-    ],
-    watchOut:
-      'Není určené pro fyzické zboží a design je trochu jednodušší než u velkých nástrojů.'
-  },
-  podia_teachable: {
-    platform: 'Podia nebo Teachable',
-    headline: 'Pro anglicky mluvící publikum',
-    reason:
-      'Když prodáváš do zahraničí, sáhni po světovém nástroji. Podia spojuje kurzy, soubory, komunitu i e-maily. Teachable je ověřená klasika na online kurzy.',
-    monthlyCost: '1 000 až 4 000 Kč / měsíc',
-    nextStep:
-      'Vyzkoušej Podia plán Starter, nebo Teachable Free pro úplný začátek.',
-    strengths: [
-      'Vše pro online kurzy na jednom místě',
-      'Čistý a profesionální vzhled pro studenty',
-      'Funguje globálně přes platby kartou (Stripe)'
-    ],
-    watchOut:
-      'Bez české lokalizace, faktur a českých plateb. Vhodné jen při prodeji v angličtině.'
-  },
-  seduo: {
-    platform: 'Seduo.cz',
-    headline: 'Nejrychlejší start bez techniky',
-    reason:
-      'Seduo je český vzdělávací marketplace. Nahraješ kurz a oni se postarají o platby, marketing i českou zákaznickou základnu. Nejrychlejší cesta k prvním prodejům.',
-    monthlyCost: '0 Kč (podíl z tržeb)',
-    nextStep: 'Zaregistruj se jako lektorka na seduo.cz, je to zdarma.',
-    strengths: [
-      'Žádná technika, jen nahraješ obsah',
-      'Okamžitý přístup k českým studentům',
-      'Marketing i platby řeší Seduo za tebe'
-    ],
-    watchOut:
-      'Nevlastníš zákaznická data a bereš jen podíl z prodeje. Skvělé jako doplněk vlastní platformy, ne jako jediný kanál.'
-  },
-  woocommerce: {
-    platform: 'WooCommerce',
-    headline: 'Jen pokud máš technické zázemí',
-    reason:
-      'WooCommerce je zdarma a neomezené, ale potřebuje WordPress, správu serveru a ruční nastavení všech českých integrací. Celkové náklady i čas bývají často vyšší, než to vypadá.',
-    monthlyCost: '200 až 600 Kč / měsíc (hosting) plus tvůj čas',
-    nextStep:
-      'Jdi do toho jen s vývojářem nebo zkušeností s WordPressem. Jinak zvol Shoptet nebo FAPI.',
-    strengths: [
-      'Zdarma a plně ve tvých rukou',
-      'Neomezené možnosti úprav',
-      'Obrovská knihovna pluginů'
-    ],
-    watchOut:
-      'Bezpečnost, aktualizace a rychlost si hlídáš sama. Bez technika to není pro začátečnice.'
-  }
-};
-
 const VyberPlatformy = () => {
-  // historie navštívených otázek (poslední je aktuální)
-  const [history, setHistory] = useState<string[]>(['q1']);
-  const [result, setResult] = useState<RecKey | null>(null);
+  // index aktuální otázky (0..TOTAL_STEPS-1)
+  const [stepIndex, setStepIndex] = useState(0);
+  // odpovědi { questionId: optionId }
+  const [answers, setAnswers] = useState<Answers>({});
+  // jakmile je hotovo, držíme zmrazené odpovědi pro výpočet
+  const [finished, setFinished] = useState(false);
 
-  const currentId = history[history.length - 1];
-  const currentQuestion = QUESTIONS[currentId];
-  const stepNumber = history.length;
-  const recommendation = result ? RECOMMENDATIONS[result] : null;
+  const currentQuestion = ENGINE_QUESTIONS[stepIndex];
+  const stepNumber = stepIndex + 1;
 
-  const choose = (option: Option) => {
-    if (option.next.type === 'rec') {
-      setResult(option.next.key);
+  const result = useMemo(
+    () => (finished ? computeRecommendation(answers) : null),
+    [finished, answers]
+  );
+
+  const choose = (option: AnswerOption) => {
+    const updated = { ...answers, [currentQuestion.id]: option.id };
+    setAnswers(updated);
+    if (stepIndex + 1 >= TOTAL_STEPS) {
+      setFinished(true);
     } else {
-      setHistory((prev) => [...prev, (option.next as { id: string }).id]);
+      setStepIndex((i) => i + 1);
     }
   };
 
   const goBack = () => {
-    if (result) {
-      // z výsledku zpět na poslední otázku
-      setResult(null);
+    if (finished) {
+      setFinished(false);
       return;
     }
-    if (history.length > 1) {
-      setHistory((prev) => prev.slice(0, -1));
+    if (stepIndex > 0) {
+      setStepIndex((i) => i - 1);
     }
   };
 
   const restart = () => {
-    setHistory(['q1']);
-    setResult(null);
+    setStepIndex(0);
+    setAnswers({});
+    setFinished(false);
   };
 
   return (
     <>
       <MetaTags
         title="Jakou platformu na e-shop? Průvodce výběrem"
-        description="Odpověz na pár jednoduchých otázek a zjisti, jestli je pro tvůj e-shop nejlepší Shopify, Shoptet, WooCommerce, FAPI nebo jiná platforma. Srozumitelně a pro začátečnice."
+        description="Odpověz na šest jednoduchých otázek a zjisti, jestli je pro tvůj e-shop nejlepší Shopify, Shoptet, Upgates, WooCommerce, jednoduchý web (Wix) nebo zatím tržiště. Srozumitelně a pro začátečnice."
       />
       <Header />
       <main id="main-content" className="min-h-screen bg-gradient-soft">
@@ -350,13 +99,14 @@ const VyberPlatformy = () => {
               Jakou platformu na e-shop?
             </h1>
             <p className="text-lg text-brand-wine/70">
-              Výběr platformy zní složitě, ale nemusí. Odpověz na pár jednoduchých otázek
-              a doporučíme ti řešení, které sedne přesně na to, co prodáváš a kam míříš.
+              Žádný univerzální vítěz neexistuje, vždycky jde o kompromis. Odpověz na šest
+              otázek a my podle nich porovnáme platformy mezi sebou a doporučíme ti tu, která
+              sedne na to, co prodáváš, kolik chceš investovat a kam míříš.
             </p>
           </div>
 
           {/* Průvodce: otázka */}
-          {!recommendation && currentQuestion && (
+          {!result && currentQuestion && (
             <div className="max-w-2xl mx-auto">
               <Card className="shadow-soft">
                 <CardHeader className="bg-brand-wine text-white rounded-t-lg">
@@ -365,7 +115,16 @@ const VyberPlatformy = () => {
                       <Compass className="w-5 h-5" />
                       Otázka {stepNumber}
                     </CardTitle>
-                    <Badge className="bg-white/20 text-white">Krok {stepNumber} z max. 4</Badge>
+                    <Badge className="bg-white/20 text-white">
+                      Krok {stepNumber} z {TOTAL_STEPS}
+                    </Badge>
+                  </div>
+                  {/* jemný progress proužek */}
+                  <div className="mt-3 h-1.5 w-full bg-white/20 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-brand-orange transition-all duration-300"
+                      style={{ width: `${(stepNumber / TOTAL_STEPS) * 100}%` }}
+                    />
                   </div>
                 </CardHeader>
                 <CardContent className="p-6">
@@ -375,27 +134,32 @@ const VyberPlatformy = () => {
                   )}
 
                   <div className="space-y-3">
-                    {currentQuestion.options.map((option) => (
-                      <button
-                        key={option.label}
-                        type="button"
-                        onClick={() => choose(option)}
-                        className="w-full text-left border border-brand-light-pink rounded-lg p-4 bg-white hover:bg-brand-light-pink/40 hover:border-brand-wine transition-colors group"
-                      >
-                        <div className="flex items-center justify-between gap-3">
-                          <div>
-                            <span className="block font-semibold text-brand-wine">{option.label}</span>
-                            {option.hint && (
-                              <span className="block text-sm text-brand-wine/60 mt-0.5">{option.hint}</span>
-                            )}
+                    {currentQuestion.options.map((option) => {
+                      const isSelected = answers[currentQuestion.id] === option.id;
+                      return (
+                        <button
+                          key={option.id}
+                          type="button"
+                          onClick={() => choose(option)}
+                          className={`w-full text-left border rounded-lg p-4 bg-white hover:bg-brand-light-pink/40 hover:border-brand-wine transition-colors group ${
+                            isSelected ? 'border-brand-wine ring-2 ring-brand-wine/30' : 'border-brand-light-pink'
+                          }`}
+                        >
+                          <div className="flex items-center justify-between gap-3">
+                            <div>
+                              <span className="block font-semibold text-brand-wine">{option.label}</span>
+                              {option.hint && (
+                                <span className="block text-sm text-brand-wine/60 mt-0.5">{option.hint}</span>
+                              )}
+                            </div>
+                            <ArrowRight className="w-5 h-5 text-brand-wine/40 group-hover:text-brand-wine flex-shrink-0" />
                           </div>
-                          <ArrowRight className="w-5 h-5 text-brand-wine/40 group-hover:text-brand-wine flex-shrink-0" />
-                        </div>
-                      </button>
-                    ))}
+                        </button>
+                      );
+                    })}
                   </div>
 
-                  {history.length > 1 && (
+                  {stepIndex > 0 && (
                     <div className="mt-6">
                       <Button
                         variant="outline"
@@ -411,39 +175,53 @@ const VyberPlatformy = () => {
               </Card>
 
               <p className="text-center text-xs text-brand-wine/50 mt-4">
-                Žádná odpověď není špatně. Doporučení můžeš kdykoliv změnit tím, že to projdeš znovu.
+                Žádná odpověď není špatně. Porovnáváme platformy podle všech tvých odpovědí
+                dohromady, ne podle jediné otázky.
               </p>
             </div>
           )}
 
           {/* Výsledek: doporučení */}
-          {recommendation && (
+          {result && (
             <div className="max-w-2xl mx-auto space-y-6">
               <Card className="shadow-soft">
                 <CardHeader className="bg-gradient-brand text-white rounded-t-lg">
                   <CardTitle className="flex items-center gap-2">
-                    <CheckCircle2 className="w-5 h-5" />
-                    Naše doporučení
+                    <Trophy className="w-5 h-5" />
+                    {result.isClose ? 'Tvoje volba (těsné rozhodnutí)' : 'Naše doporučení'}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-6 space-y-5">
                   <div>
                     <div className="flex items-center gap-2 mb-2 flex-wrap">
                       <Store className="w-5 h-5 text-brand-wine" />
-                      <span className="text-2xl font-bold text-brand-wine">{recommendation.platform}</span>
+                      <span className="text-2xl font-bold text-brand-wine">
+                        {result.primary.platform.name}
+                      </span>
+                      <Badge className="bg-brand-orange/20 text-brand-wine">
+                        {result.primary.matchPct}% shoda
+                      </Badge>
                     </div>
-                    <p className="text-lg font-semibold text-brand-pink">{recommendation.headline}</p>
+                    <p className="text-lg font-semibold text-brand-pink">
+                      {result.primary.platform.tagline}
+                    </p>
                   </div>
 
-                  <p className="text-brand-wine/80">{recommendation.reason}</p>
-
+                  {/* Proč právě tohle, navázané na ODPOVĚDI */}
                   <div className="bg-brand-light-pink/50 rounded-lg p-4">
                     <div className="flex items-center gap-2 mb-3">
                       <Sparkles className="w-4 h-4 text-brand-wine" />
-                      <span className="font-semibold text-brand-wine">Proč zrovna tohle</span>
+                      <span className="font-semibold text-brand-wine">
+                        Proč zrovna tohle (podle tvých odpovědí)
+                      </span>
                     </div>
+                    {result.reasons.length > 0 && (
+                      <p className="text-sm text-brand-wine/90 mb-3">
+                        Vybrali jsme to hlavně proto, že {joinReasons(result.reasons)}.
+                      </p>
+                    )}
                     <ul className="space-y-2">
-                      {recommendation.strengths.map((s) => (
+                      {result.primary.platform.strengths.map((s) => (
                         <li key={s} className="flex items-start gap-2 text-sm text-brand-wine/90">
                           <CheckCircle2 className="w-4 h-4 text-brand-wine flex-shrink-0 mt-0.5" />
                           <span>{s}</span>
@@ -452,36 +230,106 @@ const VyberPlatformy = () => {
                     </ul>
                   </div>
 
+                  {/* Poctivý caveat */}
                   <div className="flex items-start gap-2 text-sm text-brand-wine/80 bg-brand-orange/10 rounded-lg p-4">
                     <span aria-hidden="true">⚠️</span>
                     <span>
-                      <strong>Na co myslet:</strong> {recommendation.watchOut}
+                      <strong>Na co myslet:</strong> {result.primary.platform.watchOut}
                     </span>
                   </div>
 
+                  {/* Cena + první krok */}
                   <div className="grid sm:grid-cols-2 gap-3">
                     <div className="flex items-center gap-2 p-3 bg-brand-light-pink rounded-lg">
                       <Wallet className="w-5 h-5 text-brand-wine flex-shrink-0" />
                       <div>
                         <div className="text-xs text-brand-wine/70">Orientační cena</div>
-                        <div className="font-semibold text-brand-wine">{recommendation.monthlyCost}</div>
+                        <div className="font-semibold text-brand-wine">
+                          {result.primary.platform.monthlyCost}
+                        </div>
                       </div>
                     </div>
                     <div className="flex items-center gap-2 p-3 bg-brand-light-pink rounded-lg">
                       <ArrowRight className="w-5 h-5 text-brand-wine flex-shrink-0" />
                       <div>
                         <div className="text-xs text-brand-wine/70">První krok</div>
-                        <div className="font-semibold text-brand-wine text-sm">{recommendation.nextStep}</div>
+                        <div className="font-semibold text-brand-wine text-sm">
+                          {result.primary.platform.nextStep}
+                        </div>
                       </div>
                     </div>
                   </div>
+                </CardContent>
+              </Card>
 
-                  <p className="text-xs text-brand-wine/60 bg-white/60 rounded-lg p-3">
-                    Tohle je doporučení na základě tvých odpovědí, ne neměnný verdikt. Ceny jsou orientační
-                    a u poskytovatelů se mění. Než se rozhodneš, vyzkoušej si zkušební verzi.
+              {/* Druhá nejlepší varianta */}
+              {result.runnerUp && (
+                <Card className="shadow-soft border-brand-light-pink">
+                  <CardHeader className="bg-brand-light-pink/60 rounded-t-lg py-4">
+                    <CardTitle className="flex items-center gap-2 text-brand-wine text-base">
+                      <Scale className="w-4 h-4" />
+                      Druhá nejlepší varianta: {result.runnerUp.platform.name}
+                      <Badge className="bg-white/70 text-brand-wine ml-auto">
+                        {result.runnerUp.matchPct}% shoda
+                      </Badge>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-5 space-y-3">
+                    <p className="text-sm text-brand-wine/80">{result.runnerUp.platform.tagline}</p>
+                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+                      <span className="text-brand-wine/70">
+                        <strong className="text-brand-wine">Cena:</strong>{' '}
+                        {result.runnerUp.platform.monthlyCost}
+                      </span>
+                    </div>
+                    <p className="text-sm text-brand-wine/70">
+                      <strong className="text-brand-wine">Kdy ji zvolit:</strong>{' '}
+                      {result.runnerUp.platform.watchOut}
+                    </p>
+                  </CardContent>
+                </Card>
+              )}
+
+              {/* Transparentní pořadí, ať je vidět, že to není náhoda */}
+              <Card className="shadow-soft">
+                <CardContent className="p-5">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Scale className="w-4 h-4 text-brand-wine" />
+                    <span className="font-semibold text-brand-wine text-sm">
+                      Jak dopadly ostatní platformy
+                    </span>
+                  </div>
+                  <div className="space-y-2">
+                    {result.ranking.map((r, i) => (
+                      <div key={r.platform.key} className="flex items-center gap-3">
+                        <span className="text-xs text-brand-wine/50 w-4 flex-shrink-0">{i + 1}.</span>
+                        <span className="text-sm text-brand-wine w-44 flex-shrink-0 truncate">
+                          {r.platform.name}
+                        </span>
+                        <div className="flex-1 h-2 bg-brand-light-pink/60 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-brand-wine/70 rounded-full transition-all"
+                            style={{ width: `${Math.max(r.matchPct, 3)}%` }}
+                          />
+                        </div>
+                        <span className="text-xs text-brand-wine/60 w-10 text-right flex-shrink-0">
+                          {r.matchPct}%
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="text-xs text-brand-wine/50 mt-3">
+                    Procenta ukazují, jak moc každá platforma sedí na tvé odpovědi v porovnání
+                    s vítězem. Nejde o objektivní známku platformy, ale o shodu s tvojí situací.
                   </p>
                 </CardContent>
               </Card>
+
+              <p className="text-xs text-brand-wine/60 bg-white/60 rounded-lg p-3">
+                Tohle je doporučení na základě tvých odpovědí, ne neměnný verdikt. Ceny jsou
+                orientační a u poskytovatelů se mění. Než se rozhodneš, vyzkoušej si zkušební verzi,
+                skoro všechny platformy ji mají zdarma.
+              </p>
 
               <div className="flex flex-wrap gap-3 justify-center">
                 <Button
@@ -535,5 +383,12 @@ const VyberPlatformy = () => {
     </>
   );
 };
+
+/** Spojí 2-3 důvody do přirozené české věty. */
+function joinReasons(reasons: string[]): string {
+  if (reasons.length === 1) return reasons[0];
+  if (reasons.length === 2) return `${reasons[0]} a ${reasons[1]}`;
+  return `${reasons.slice(0, -1).join(', ')} a ${reasons[reasons.length - 1]}`;
+}
 
 export default VyberPlatformy;
