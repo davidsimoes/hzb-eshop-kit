@@ -8,7 +8,6 @@ import { CACCalculator } from './CACCalculator';
 import { MetricExplainer } from './MetricExplainer';
 import { ValidationAlerts } from './ValidationAlerts';
 import { RequiredRevenueCalculator } from './RequiredRevenueCalculator';
-import { ScenarioPlanner } from './ScenarioPlanner';
 import { CalculatorWizard } from './CalculatorWizard';
 import { ActionableResults } from './ActionableResults';
 import { ScenarioComparison } from './ScenarioComparison';
@@ -449,17 +448,6 @@ export const FinancialCalculator = () => {
 
             {/* ── TAB 2: Detail a scénáře ── */}
             <TabsContent value="detail" className="space-y-8">
-              {/* ScenarioPlanner — závisí na requiredRevenue z Tab 1 */}
-              {requiredRevenue > 0 && wizardData.aov > 0 && (
-                <ScenarioPlanner
-                  requiredRevenue={requiredRevenue}
-                  desiredProfit={wizardData.desiredProfit}
-                  fixedCosts={wizardData.cogs + wizardData.extraCosts}
-                  aov={wizardData.aov}
-                  isYearly={wizardData.isYearly}
-                />
-              )}
-
               {/* ScenarioComparison */}
               {results && (
                 <ScenarioComparison
