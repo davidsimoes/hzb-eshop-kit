@@ -196,6 +196,7 @@ export const FinancialCalculator = () => {
                 desiredProfit={wizardData.desiredProfit}
                 isYearly={wizardData.isYearly}
                 onRevenueChange={setRequiredRevenue}
+                initialNetMargin={results ? Math.round(results.netMargin) : 20}
               />
               
               {requiredRevenue > 0 && wizardData.aov > 0 && (

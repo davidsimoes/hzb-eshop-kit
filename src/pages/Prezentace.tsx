@@ -32,6 +32,7 @@ interface Slide {
   variant?: 'title' | 'menu' | 'block' | 'plain' | 'close';
   logos?: boolean;
   qr?: string;
+  qrLabel?: string;
   slidoCode?: string;
 }
 
@@ -56,7 +57,8 @@ const slides: Slide[] = [
     kicker: '#HolkyzByznysu · školení s Davidem',
     bullets: ['Praktické nástroje + kit, který ti zůstane.', 'Dnes spustíme nápad, ne jen prezentaci.'],
     slidoCode: '#2754067',
-    qr: '/images/qr-hzb.svg',
+    qr: '/images/qr-slido.svg',
+    qrLabel: 'Naskenuj a připoj se do sli.do (otázky)',
     note: 'Přivítání, energie. Kdo jsem, proč to dělám. Žádný stres, odcházíš s nástroji. Ukaž sli.do kód i QR na web.',
     icon: ShoppingBag
   },
@@ -202,6 +204,7 @@ const slides: Slide[] = [
       'Začni dnes jedním malým krokem. Hotovo je lepší než dokonalé.'
     ],
     qr: '/images/qr-hzb.svg',
+    qrLabel: 'Naskenuj a máš web i kit v kapse',
     note: 'Zopakuj 3 kroky. CTA na web + kit. Ukaž QR. Pozvi k otázkám přes sli.do. Poděkuj.',
     icon: Heart
   }
@@ -336,8 +339,8 @@ const Prezentace = () => {
               )}
               {s.qr && (
                 <div className="flex flex-col items-center gap-2">
-                  <img src={s.qr} alt="QR kód na hzb.davidjose.net" className="w-28 h-28 lg:w-32 lg:h-32 rounded-xl bg-white p-2 shadow-soft" />
-                  <span className="text-xs text-brand-wine/60">Naskenuj a máš web i kit v kapse</span>
+                  <img src={s.qr} alt={s.qrLabel || 'QR kód'} className="w-28 h-28 lg:w-32 lg:h-32 rounded-xl bg-white p-2 shadow-soft" />
+                  <span className="text-xs text-brand-wine/60">{s.qrLabel || 'Naskenuj a máš web i kit v kapse'}</span>
                 </div>
               )}
             </div>

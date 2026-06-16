@@ -2,6 +2,7 @@
 import { Header } from '@/components/Header/Header';
 import { Breadcrumb } from '@/components/Navigation/Breadcrumb';
 import { FinancialCalculator } from '@/components/FinancialCalculator';
+import { CurrencySelector } from '@/components/Currency/CurrencySelector';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useTranslation } from 'react-i18next';
@@ -62,8 +63,13 @@ const Calculator = () => {
           </CardContent>
         </Card>
 
+        <div className="max-w-6xl mx-auto mb-4 flex items-center justify-end gap-2">
+          <span className="text-sm text-brand-wine/70 font-medium">Měna:</span>
+          <CurrencySelector />
+        </div>
+
         <FinancialCalculator />
-        
+
         <div className="max-w-6xl mx-auto mt-12 mb-8">
           <Card className="border-brand-light-pink bg-gradient-to-br from-brand-light-pink/10 to-brand-light-pink/30">
             <CardContent className="p-8 text-center">

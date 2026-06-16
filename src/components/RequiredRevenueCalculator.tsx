@@ -11,17 +11,27 @@ interface RequiredRevenueCalculatorProps {
   desiredProfit: number;
   isYearly: boolean;
   onRevenueChange: (revenue: number) => void;
+  initialNetMargin?: number;
 }
 
-export const RequiredRevenueCalculator = ({ 
-  desiredProfit, 
-  isYearly, 
-  onRevenueChange 
+export const RequiredRevenueCalculator = ({
+  desiredProfit,
+  isYearly,
+  onRevenueChange,
+  initialNetMargin
 }: RequiredRevenueCalculatorProps) => {
   const [fixedCosts, setFixedCosts] = useState<number>(0);
-  const [netMargin, setNetMargin] = useState<number>(20);
+  const [netMargin, setNetMargin] = useState<number>(initialNetMargin ?? 20);
   const [requiredRevenue, setRequiredRevenue] = useState<number>(0);
   const [showAlert, setShowAlert] = useState<string>('');
+
+  // Keep the default margin in sync with the wizard's computed net margin
+  // so "Potřebný obrat" reconciles with "Tvoje výsledky" on load. Stays user-editable.
+  useEffect(() => {
+    if (initialNetMargin && initialNetMargin > 0) {
+      setNetMargin(initialNetMargin);
+    }
+  }, [initialNetMargin]);
 
   useEffect(() => {
     calculateRequiredRevenue();

@@ -1,4 +1,3 @@
-import { CurrencySelector } from "@/components/Currency/CurrencySelector";
 import { MainNav } from "@/components/Navigation/MainNav";
 import { ShoppingBag, Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -50,8 +49,6 @@ export const Header = () => {
             role="toolbar"
             aria-label={t('nav.utilities.label', 'Nastavení webu')}
           >
-            <CurrencySelector />
-            
             {/* Mobile/Tablet Menu Button */}
             <Button
               variant="ghost"
