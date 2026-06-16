@@ -118,6 +118,11 @@ export const CACCalculator = ({
             <div className="text-sm text-muted-foreground">
               {status.message}
             </div>
+            {isHealthy && (
+              <p className="text-sm text-muted-foreground">
+                Hlavní pravidlo: zisk z jedné objednávky musí být vyšší než CAC.
+              </p>
+            )}
           </div>
         </div>
 
@@ -127,7 +132,7 @@ export const CACCalculator = ({
           <ul className="text-sm space-y-1 opacity-90">
             <li>• CAC: {defaultCACRange} (průměr 400 Kč)</li>
             <li>• LTV: 2-3x AOV (průměr 2.5x)</li>
-            <li>• Ideální poměr: CAC &lt; 30% LTV</li>
+            <li>• Cíl 3× LTV:CAC je aspirace pro e-shopy s ověřenými opakovanými nákupy, ne pravidlo pro start.</li>
           </ul>
         </div>
       </CardContent>

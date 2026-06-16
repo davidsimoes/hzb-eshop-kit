@@ -89,7 +89,7 @@ const slides: Slide[] = [
     title: 'Špatná zpráva (a proč tě to nemělo odradit)',
     bullets: [
       'Česká e-commerce loni vyrostla o 6 %, ale TOP 100 e-shopů rostlo o 14 %. Velcí dál vytlačují malé a Češi utratili online přes 206 miliard Kč.',
-      'Sílí zahraniční konkurence: Temu je už čtvrtý největší hráč (14,2 mld.), k tomu Shein, AliExpress a Allegro, všichni tlačí ceny dolů.',
+      'Sílí zahraniční konkurence: Temu se probojovalo do TOP 10 a čínská tržiště už sebrala českým e-shopům kolem 15 % tržeb, k tomu Shein, AliExpress a Allegro, všichni tlačí ceny dolů.',
       'I bývalí velikáni zmizeli (Mall, CZC, Okay). Trh se konsoliduje a cenou ani sortimentem ho jako malá nikdy neporazíš.',
       'A teď to dobré: nemusíš. Vyhraješ zaměřením na úzkou niku, komunitu, příběh a osobní službu, tedy přesně tím, co velký hráč neumí.',
       'Právě proto je dnes důležitější než kdy dřív ověřit poptávku, najít svou niku a hlídat čísla. Ne prodávat všechno všem.'
@@ -99,7 +99,7 @@ const slides: Slide[] = [
   {
     id: 'menu',
     variant: 'menu',
-    kicker: 'Tvůj kit má 6 oblastí',
+    kicker: 'Tvůj kit má 6 hlavních oblastí (+ úvod a příběhy)',
     title: 'Dnešní menu',
     menuItems: [
       'Validace nápadu',
@@ -248,7 +248,7 @@ const slides: Slide[] = [
       'Pokročilé: stáhni si celý kit z GitHubu a „nakrm“ jím svou AI, radí pak přesně v duchu téhle metody.'
     ],
     demo: { label: 'Celý kit na GitHubu', to: 'https://github.com/davidsimoes/hzb-eshop-kit', external: true },
-    demoSecondary: { label: 'Kit a prompty na webu', to: '/' },
+    demoSecondary: { label: 'Kit a prompty na webu', to: '/pruvodce' },
     icon: Sparkles
   },
   {

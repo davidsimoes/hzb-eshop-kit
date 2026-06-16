@@ -130,8 +130,8 @@ export const LearningPath = () => {
                   Celý kit ke stažení, i pro tvou AI
                 </h3>
                 <p className="text-brand-wine/70">
-                  Průvodci a hotové prompty pro všech 6 oblastí (validace, platforma, spuštění,
-                  marketing, provoz, optimalizace). Přečti si je, nebo je dej ChatGPT, Claude či
+                  Průvodci a hotové prompty pro všech 6 hlavních oblastí (validace, platforma, spuštění,
+                  marketing, provoz, optimalizace když to neprodává). Přečti si je, nebo je dej ChatGPT, Claude či
                   Gemini a nech si poradit na míru. Zdarma, pod licencí CC BY 4.0.
                 </p>
                 <p className="mt-2 text-sm text-brand-wine/50">

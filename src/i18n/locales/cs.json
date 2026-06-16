@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "E-shop, který vydělává",
+    "title": "E-shop, který vydělává: kalkulačka, diagnostika a kit pro začínající podnikatelky",
     "description": "Praktické nástroje a otevřený kit pro spuštění e-shopu, který vydělává. Kalkulačka, diagnostika, persona a checklist pro začínající podnikatelky.",
     "home": {
       "label": "Přejít na domovskou stránku"
@@ -94,18 +94,18 @@
       "points": [
         "Každá úspěšná podnikatelka začínala s pochybnostmi úplně stejně.",
         "Strach znamená, že ti na tom záleží.",
-        "Nejdůležitější je začít, zbytek se naučíš cestou",
-        "Máš podporu a nejsi v tom sama"
+        "Nejdůležitější je začít, zbytek se naučíš cestou.",
+        "Máš podporu a nejsi v tom sama."
       ]
     },
     "reality": {
       "title": "Realita podnikání",
       "honest": "Nebude to snadné, ale rozhodně to zvládneš",
       "points": [
-        "První měsíce budou náročné, to je normální",
-        "Budou dny, kdy se nic neprodá, také normální",
-        "Chyby jsou součást učení, ne selhání",
-        "Každý den se něco nového naučíš"
+        "První měsíce budou náročné, to je normální.",
+        "Budou dny, kdy se nic neprodá, také normální.",
+        "Chyby jsou součástí učení, ne selháním.",
+        "Každý den se něco nového naučíš."
       ]
     }
   },
@@ -231,7 +231,7 @@
       "title": "Kontakt",
       "linkedin": "LinkedIn",
       "instagram": "Instagram",
-      "twitter": "Twitter"
+      "twitter": "X (Twitter)"
     },
     "agency": {
       "title": "Agentura",
@@ -859,7 +859,7 @@
   },
   "faq": {
     "title": "Časté otázky",
-    "subtitle": "Odpovědi na nejčastější otázky kolem spuštění e-shopu, srozumitelně a bez žargonu. Vše je napsané jednoduše, aby to pochopila i úplná začátečnice, a s přátelským tónem, protože vím, že start e-shopu může být trochu děsivý. 😊 Ke každé otázce přidávám odkazy na důvěryhodné české zdroje, kde si můžeš přečíst víc a naučit se, co potřebuješ.",
+    "subtitle": "Odpovědi na nejčastější otázky o e-shopech, platformách, marketingu a financích, srozumitelně a bez žargonu.",
     "sections": {
       "start": {
         "title": "Než začneš",

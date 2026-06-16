@@ -16,7 +16,7 @@ export const MetaTags = ({
   title, 
   description, 
   image = `${BASE_URL}/og-image.jpg`,
-  url = window.location.href,
+  url = (window.location.origin + window.location.pathname),
   type = 'website',
   structuredData
 }: MetaTagsProps) => {
@@ -103,7 +103,7 @@ export const MetaTags = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={fullDescription} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:creator" content="@davidlsimoes" />
+      <meta name="twitter:creator" content="@davidsimoes_" />
       
       {/* Enhanced Czech keywords */}
       <meta name="keywords" content="e-shop checklist, spuštění e-shopu, finanční kalkulačka, online byznys, podnikání, e-commerce, internetový obchod, webshop, dropshipping, marketingový rozpočet, ROI kalkulačka, zisk z e-shopu, jak začít prodávat online, shopify, shoptet, david simões, e-shop poradenství, online prodej, digitální marketing, konverzní poměr, průměrná objednávka, náklady na získání zákazníka" />

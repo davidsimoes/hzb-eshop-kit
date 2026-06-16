@@ -14,7 +14,7 @@ const About = () => {
   } = useTranslation();
   const lessons = [{
     title: "Moje první e-shopy",
-    lesson: "Čísla jsou základ! - bez správné kalkulace nemůžeš dlouhodobě vydělávat",
+    lesson: "Čísla jsou základ! – bez správné kalkulace nemůžeš dlouhodobě vydělávat",
     type: "critical"
   }, {
     title: "Můj vlastní byznys",
@@ -23,7 +23,7 @@ const About = () => {
   }];
   const credentials = [{
     title: "Shopify Partner",
-    description: "Oficiální Shopify partner od roku 2014 - první v ČR/SK",
+    description: "Oficiální Shopify partner od roku 2014 – první v ČR/SK",
     icon: Star,
     link: "https://shopify.com/partners/directory/partner/soundsgood",
     linkLabel: "Shopify Partner Profile"
@@ -37,7 +37,7 @@ const About = () => {
   return <div className="min-h-screen bg-gradient-soft">
       <MetaTags
         title="O mně | E-shop, který vydělává"
-        description="David Simões - Shopify partner od 2014, zakladatel soundsgood.agency. Pomáhám e-shopum vydělávat víc s menším rozpočtem. Zjisti, kdo tě školí a proč na to mám."
+        description="David Simões – Shopify partner od 2014, zakladatel soundsgood.agency. Pomáhám e-shopům vydělávat víc s menším rozpočtem. Zjisti, kdo tě školí a proč na to mám."
       />
       <Header />
       <main className="container mx-auto px-4 py-8">
@@ -149,13 +149,13 @@ const About = () => {
           <CardContent>
             <div className="space-y-6">
               <p className="text-brand-wine/80 leading-relaxed">
-                Za víc než 10 let mi rukama prošly stovky e-shopů, od úplných začátků až po značky s obratem přes 3 miliardy korun. Vlastní startupy, předplatné, B2B i prodej do zahraničí, a k tomu Sounds Good Agency, první Shopify agentura v ČR a na Slovensku.
+                Za víc než 10 let mi rukama prošly stovky e-shopů, od úplných začátků až po značky s obratem přes 3 miliardy korun. Vlastní start-upy, předplatné, B2B i prodej do zahraničí, a k tomu Sounds Good Agency, první Shopify agentura v ČR a na Slovensku.
               </p>
               <p className="text-brand-wine/80 leading-relaxed">
-                Každý projekt mě něco naučil. S <strong>Manou</strong> jsme budovali jedno z prvních předplatných na spotřební zboží v Česku a zjistili, jak moc záleží na logistice a retenci. U <strong>Tepe USA</strong> platilo jediné pravidlo: drž to jednoduché. Radikálně jiné světy jsou <strong>ETA</strong> (čisté B2B bez impulzivních nákupů), <strong>Erotic City</strong> s omnichannel provozem přes desítky kamenných prodejen, nebo <strong>Galleria Armadoro</strong> s DTC strategií pro zahraničí. Různé cíle si žádají různé přístupy a naučily mě nepřenášet recepty z jednoho světa do druhého.
+                Každý projekt mě něco naučil. S <strong>Manou</strong> jsme budovali jedno z prvních předplatných na spotřební zboží v Česku a zjistili, jak moc záleží na logistice a retenci. U <strong>TePe USA</strong> platilo jediné pravidlo: drž to jednoduché. Radikálně jiné světy jsou <strong>ETA</strong> (čisté B2B bez impulzivních nákupů), <strong>Erotic City</strong> s omnichannel provozem přes desítky kamenných prodejen, nebo <strong>Galleria Armadoro</strong> s DTC strategií pro zahraničí. Různé cíle si žádají různé přístupy a naučily mě nepřenášet recepty z jednoho světa do druhého.
               </p>
               <p className="text-brand-wine/80 leading-relaxed">
-                Nebylo to vždy hladké. <strong>Okay Elektro</strong> mi ukázal, že v e-commerce nikdo není "too big to fail", a u vlastního startupu <strong>Fabini</strong> jsem se naučil, že pro startup je klíčové umět včas změnit směr. Chyby, které jsem zažil nebo viděl u jiných, jsou dnes součástí každého mého školení.
+                Nebylo to vždy hladké. <strong>Okay Elektro</strong> mi ukázal, že v e-commerce nikdo není „too big to fail“, a u vlastního start-upu <strong>Fabini</strong> jsem se naučil, že pro start-up je klíčové umět včas změnit směr. Chyby, které jsem zažil nebo viděl u jiných, jsou dnes součástí každého mého školení.
               </p>
               <p className="text-brand-wine/80 leading-relaxed">
                 Nejlíp mě poznáš v akci. Na LinkedInu pravidelně sdílím, co v e-commerce funguje i co ne, reálné příklady a chyby, kterým se vyhnout.

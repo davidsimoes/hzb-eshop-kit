@@ -48,7 +48,7 @@ Nesnaž se chytit každý trend, většina přijde a odejde dřív, než vyděla
 
 - **Zjisti, co hledají tvoji zákazníci.** Google Trends ukáže, jestli zájem o téma roste nebo klesá. Zkus varianty klíčových slov a sezónnost.
 - **Použij jednoduché nástroje.** Googleovský našeptávač, Heureka kategorie, diskuzní skupiny na Facebooku nebo Reddit CZ/SK ti dají reálné dotazy reálných lidí.
-- **Ptej se své cílovky přímo.** Anketa v Stories, otázka v FB skupině nebo jednoduchý formulář přináší konkrétní odpovědi, které žádný nástroj nenahradí.
+- **Ptej se své cílovky přímo.** Anketa ve Stories, otázka v FB skupině nebo jednoduchý formulář přináší konkrétní odpovědi, které žádný nástroj nenahradí.
 - **Hledej opakující se frustraci.** Když vidíš, že lidé na různých místech řeší stejný problém, je to silný signál.
 
 ### 3. Zpětná vazba
@@ -56,9 +56,9 @@ Nesnaž se chytit každý trend, většina přijde a odejde dřív, než vyděla
 Rodina ti řekne, že je to skvělé. Zákaznice ti řekne pravdu.
 
 - **Testuj v blízkém okolí, ale jdi i za svůj okruh.** Kamarádky a rodina ti (neúmyslně) zalžou. Hledej lidi z cílovky, které osobně neznáš, například v komunitních skupinách nebo na trhu.
-- **Ptej se na konkrétní zkušenost, ne na názor.** „Jak teď řešíš X?" je lepší otázka než „Koupila bys Y?" Lidi ti popsají reálný problém, ne vysněný produkt.
+- **Ptej se na konkrétní zkušenost, ne na názor.** „Jak teď řešíš X?" je lepší otázka než „Koupila bys Y?" Lidé ti popíšou reálný problém, ne vysněný produkt.
 - **Z odpovědí vytvoř konkrétní personu.** Kdo je, co řeší, čeho se bojí, kde nakupuje, co ji přesvědčí. Čím konkrétnější, tím lepší texty i marketing.
-- **Testuj malé množství.** Prodej 10 kusů na trhu, přes bazarový group nebo přes Instagram Stories, než objednáš sklad. Reakce ti řeknou víc než jakýkoli průzkum.
+- **Testuj malé množství.** Prodej 10 kusů na trhu, přes bazarovou skupinu nebo přes Instagram Stories, než objednáš sklad. Reakce ti řeknou víc než jakýkoli průzkum.
 
 ### 4. MVP: minimum viable product
 
