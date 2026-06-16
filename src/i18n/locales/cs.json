@@ -50,7 +50,7 @@
   "mission": {
     "hero": {
       "title": "Spusť e-shop, který vydělává",
-      "subtitle": "Zdarma nástroje, které ti spočítají, jestli tvůj nápad dává smysl, pomohou vybrat platformu a provedou tě spuštěním, plus celý kit, který si můžeš dát své AI.",
+      "subtitle": "Zdarma nástroje, které ti spočítají, jestli tvůj nápad dává smysl, pomohou vybrat platformu a provedou tě spuštěním, plus celý kit, který si můžeš dát do své AI.",
       "description": "Neboj se, každá úspěšná podnikatelka začínala stejně jako ty, s nápadem a spoustou otázek. Najdeš tu vše podstatné na jednom místě.",
       "cta": "Začni svou cestu",
       "ctaSecondary": "Nejsem si jistá, kde začít",
@@ -103,7 +103,7 @@
       "honest": "Nebude to snadné, ale rozhodně to zvládneš",
       "points": [
         "První měsíce budou náročné, to je normální",
-        "Bude dní, kdy se nic neprodá, také normální",
+        "Budou dny, kdy se nic neprodá, také normální",
         "Chyby jsou součást učení, ne selhání",
         "Každý den se něco nového naučíš"
       ]
@@ -145,7 +145,7 @@
       "honest": "Nebude to snadné, ale rozhodně to zvládneš",
       "points": [
         "První měsíce nebudeš vydělávat tisíce, to je normální",
-        "Bude dní, kdy se nic neprodá, také normální",
+        "Budou dny, kdy se nic neprodá, také normální",
         "Naučíš se spoustu nových věcí, od marketingu po logistiku",
         "Postupně si postavíš stabilní byznys, který ti dá svobodu"
       ]
@@ -191,7 +191,7 @@
       "finalTitle": "Připravená začít svou cestu?",
       "guide": {
         "title": "Kompletní průvodce",
-        "description": "Podrobný materiál s všemi kroky, tipy a strategiemi pro spuštění úspěšného e-shopu.",
+        "description": "Podrobný materiál se všemi kroky, tipy a strategiemi pro spuštění úspěšného e-shopu.",
         "button": "Otevřít prezentaci"
       }
     }
@@ -278,7 +278,7 @@
       "low": "Nízká"
     },
     "notes": {
-      "placeholder": "Přidejte své poznámky..."
+      "placeholder": "Přidej své poznámky..."
     },
     "tip": "Tip:",
     "legalResources": {
@@ -349,7 +349,7 @@
       "day4": {
         "logo": {
           "title": "Vytvořit logo",
-          "description": "Navrhni si logo sám nebo zadej designérovi",
+          "description": "Navrhni si logo sama nebo zadej designérovi",
           "time": "2 hodiny",
           "tips": "Canva má skvělé šablony zdarma"
         },
@@ -657,7 +657,7 @@
     },
     "insights": {
       "title": "Tvoje pokroky a tipy",
-      "description": "Na základě tvého pokroku máme pro tebe tyto pozorování:",
+      "description": "Na základě tvého pokroku máme pro tebe tato pozorování:",
       "difficulty": {
         "title": "Hodnocení obtížnosti",
         "description": "Jak obtížný byl tento úkol?",
@@ -1207,7 +1207,7 @@
           },
           {
             "q": "Co nejčastěji brání zákazníkům dokončit nákup?",
-            "a": "Co nejčastěji zabije nákup (podle zahraničních výzkumů, např. Baymard):\n\n- Obavy o bezpečnost platby: odradí velkou část lidí. Řešení: viditelný kontakt, recenze, jasné podmínky.\n- Složitá nebo zdlouhavá pokladna: spousta lidí to vzdá. Řešení: co nejkratší checkout, žádná povinná registrace.\n- Chybějící oblíbená platební metoda: část lidí odejde. Řešení: nabídni víc způsobů platby.\n\nSkryté poplatky (nečekané poštovné v košíku) a málo informací o produktu (chybí fotky, popisky, recenze) jsou dalšími časté příčiny. Dobrou zprávou je, že všechny se dají odstranit bez velkých investic.",
+            "a": "Co nejčastěji zabije nákup (podle zahraničních výzkumů, např. Baymard):\n\n- Obavy o bezpečnost platby: odradí velkou část lidí. Řešení: viditelný kontakt, recenze, jasné podmínky.\n- Složitá nebo zdlouhavá pokladna: spousta lidí to vzdá. Řešení: co nejkratší checkout, žádná povinná registrace.\n- Chybějící oblíbená platební metoda: část lidí odejde. Řešení: nabídni víc způsobů platby.\n\nSkryté poplatky (nečekané poštovné v košíku) a málo informací o produktu (chybí fotky, popisky, recenze) jsou další časté příčiny. Dobrou zprávou je, že všechny se dají odstranit bez velkých investic.",
             "links": [
               {
                 "text": "Příčiny opuštění e-shopu – studie Baymard Institute",

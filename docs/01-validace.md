@@ -39,7 +39,7 @@ Tři a víc konkurentů neznamená problém, znamená to, že trh existuje. Hled
 
 - **Projdi si přímé konkurenty důkladně.** Zapiš si, co se ti na jejich e-shopech líbí a co ti vadí, kde vidíš slabá místa, kde naopak obdivuješ zpracování.
 - **Podívej se na jejich finanční údaje.** Veřejné rejstříky (justice.cz) nebo nástroje jako [Merk.cz](https://www.merk.cz) ti prozradí obrat, zisk i jak rychle firma roste.
-- **Sleduj jejich sociální sítě a recenze.** Čtěte komentáře a hodnocení na Heurece nebo Zboží.cz. Co zákazníci chválí? Co opakovaně vytýkají? Tam je tvoje příležitost.
+- **Sleduj jejich sociální sítě a recenze.** Čti komentáře a hodnocení na Heurece nebo Zboží.cz. Co zákazníci chválí? Co opakovaně vytýkají? Tam je tvoje příležitost.
 - **Zjisti, jak inzerují.** Podívej se do Meta Ad Library nebo Sklik statistik. Jaké produkty propagují, na koho cílí, jaká sdělení používají.
 
 ### 2. Analýza trendů
@@ -108,7 +108,7 @@ zákaznici**, jako bys ji znala:
 2. **Zjisti poptávku.** Hledají to lidé? Sklik / Google Keyword Planner, počty
    hledání, skupiny na FB, dotazy na Heurece.
 3. **Mrkni na konkurenci.** 3+ konkurenti = trh existuje. Hledej mezeru, ne prázdno.
-   (Hodně konkurentů = poptávka existuje, ale musíš se odlišit. Úplně prázdný trh = buď jsi brzy, nebo o to nikdo nestojí. Zjisti které, neber to jako automatický stopku.)
+   (Hodně konkurentů = poptávka existuje, ale musíš se odlišit. Úplně prázdný trh = buď jsi brzy, nebo o to nikdo nestojí. Zjisti které, neber to jako automatickou stopku.)
 4. **Získej signál, že zaplatí.** Předobjednávka, čekací listina, prodej na trhu,
    nebo prosté „kde to koupím?" pod fotkou.
 5. **Spočítej čísla.** Pokryje marže náklady i tvůj čas? → [Kalkulačka](https://hzb.davidjose.net/kalkulacka).

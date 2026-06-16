@@ -51,7 +51,7 @@ neplacených kanálů.
 
 ## AI v tomhle kroku
 
-AI je nejsilnější právě tady, psaní textů, nápady na obsah, popisky:
+AI je nejsilnější právě tady: psaní textů, nápady na obsah, popisky:
 
 > 💬 **Prompty:**
 > - [`prompts/popisky-produktu.md`](../prompts/popisky-produktu.md): popisky, které prodávají

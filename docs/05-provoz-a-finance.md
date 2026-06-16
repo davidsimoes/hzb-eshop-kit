@@ -11,7 +11,7 @@ rozpočet) · [Diagnostika](https://hzb.davidjose.net/diagnostika) (kde se ztrá
 - **Marže** = (cena − náklady na zboží) / cena. Pod ~25 % se těžko vydělává. (Sleduj hlavně **příspěvkovou marži**, tedy po odečtení dopravy, balného, poplatků a vratek; ta tě může živit i při nižší hrubé marži, pokud máš objem.)
 - **Zisk z objednávky** = cena − zboží − doprava − balné − poplatky brány. **Musí být
   kladný**, jinak čím víc prodáš, tím víc proděláš.
-- **Náklad na zákaznici (CAC)** = marketing / počet objednávek. Primární pravidlo: **zisk z jedné objednávky musí být vyšší než CAC**. Dokud tohle neplatí, marketing tě ztrácí peníze bez ohledu na cokoliv jiného. Pokud navíc vidíš, že se zákaznice opakovaně vracejí, může být cílem celková hodnota zákaznice 3× vyšší než CAC, ale to je aspirace pro e-shopy s prokázanými opakovanými nákupy, ne univerzální pravidlo pro startu.
+- **Náklad na zákaznici (CAC)** = marketing / počet objednávek. Primární pravidlo: **zisk z jedné objednávky musí být vyšší než CAC**. Dokud tohle neplatí, marketing tě stojí peníze bez ohledu na cokoliv jiného. Pokud navíc vidíš, že se zákaznice opakovaně vracejí, může být cílem celková hodnota zákaznice 3× vyšší než CAC, ale to je aspirace pro e-shopy s prokázanými opakovanými nákupy, ne univerzální pravidlo pro start.
 - **AOV** (průměrná objednávka): zvedneš ho bundly a limitem pro dopravu zdarma.
 - **Cashflow** ≠ zisk. Můžeš být „v zisku“ a přitom bez peněz, protože ti leží
   v zásobách. Sleduj **peníze na účtu**, ne jen tabulku.
