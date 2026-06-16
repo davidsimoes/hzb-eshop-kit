@@ -313,22 +313,21 @@ export const FinancialCalculator = () => {
             </div>
           )}
 
-          {/* Results — sparovane bloky podobne vysky, aby nevznikal prazdny sloupec.
-              Rada 1: dva kratke souhrnne bloky vedle sebe (podobna vyska).
-              Rada 2: dva obsahove bloky vedle sebe (podobna vyska).
-              Rada 3: CAC na celou sirku (zadny osamocenu sloupec). */}
+          {/* Results — vse na celou sirku, stackovane pod sebou.
+              Zadny dvousloupcovy parovani, kde by jeden blok byl vyssi nez druhy
+              a vedle kratsiho zbyla prazdna plocha (presne to, co David reklamoval).
+              Vnitrni grid statistickych karet uvnitr jednotlivych sekci zustava. */}
           {results && wizardData && (
             <>
-              {/* Rada 1: Tvoje vysledky + Pozadavky (oba kratke souhrny) */}
-              <div className="grid lg:grid-cols-2 gap-8 items-stretch">
-                <Card className="shadow-soft h-full">
-                  <CardHeader className="bg-brand-wine text-white rounded-t-lg">
-                    <CardTitle className="flex items-center gap-2">
-                      <TrendingUp className="w-5 h-5" />
-                      {t('calculator.results.yourResults')}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-6 space-y-4">
+              {/* Tvoje vysledky na celou sirku (vnitrni 2x2 grid statistik) */}
+              <Card className="shadow-soft">
+                <CardHeader className="bg-brand-wine text-white rounded-t-lg">
+                  <CardTitle className="flex items-center gap-2">
+                    <TrendingUp className="w-5 h-5" />
+                    {t('calculator.results.yourResults')}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="text-center p-4 bg-brand-light-pink rounded-lg">
                         <div className="text-2xl font-bold text-brand-wine">
@@ -366,17 +365,18 @@ export const FinancialCalculator = () => {
                         </div>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
+                </CardContent>
+              </Card>
 
-                <Card className="shadow-soft h-full">
-                  <CardHeader className="bg-brand-pink text-white rounded-t-lg">
-                    <CardTitle className="flex items-center gap-2">
-                      <Users className="w-5 h-5" />
-                      {t('calculator.results.requirements')}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-6 space-y-4">
+              {/* Pozadavky na dosazeni cile na celou sirku */}
+              <Card className="shadow-soft">
+                <CardHeader className="bg-brand-pink text-white rounded-t-lg">
+                  <CardTitle className="flex items-center gap-2">
+                    <Users className="w-5 h-5" />
+                    {t('calculator.results.requirements')}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 space-y-4">
                     <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
                       <div className="flex items-center gap-3">
                         <ShoppingCart className="w-5 h-5 text-brand-wine" />
@@ -428,31 +428,26 @@ export const FinancialCalculator = () => {
                         </div>
                       </>
                     )}
-                  </CardContent>
-                </Card>
-              </div>
+                </CardContent>
+              </Card>
 
-              {/* Rada 2: MetricExplainer + MarketingBudgetSlider (oba obsahove bloky) */}
-              <div className="grid lg:grid-cols-2 gap-8 items-stretch">
-                <div className="h-full [&>*]:h-full">
-                  <MetricExplainer
-                    aov={wizardData.aov}
-                    cogs={wizardData.cogs}
-                    margin={results.grossMargin}
-                    conversionRate={wizardData.conversionRate}
-                  />
-                </div>
-                <div className="h-full [&>*]:h-full">
-                  <MarketingBudgetSlider
-                    targetProfit={wizardData.isYearly ? wizardData.desiredProfit / 12 : wizardData.desiredProfit}
-                    aov={wizardData.aov}
-                    margin={results.grossMargin}
-                    onBudgetChange={setRecommendedMarketingBudget}
-                  />
-                </div>
-              </div>
+              {/* MetricExplainer na celou sirku (delsi blok: metriky + priklad + tipy) */}
+              <MetricExplainer
+                aov={wizardData.aov}
+                cogs={wizardData.cogs}
+                margin={results.grossMargin}
+                conversionRate={wizardData.conversionRate}
+              />
 
-              {/* Rada 3: CAC na celou sirku (zadny osamoceny sloupec) */}
+              {/* MarketingBudgetSlider na celou sirku */}
+              <MarketingBudgetSlider
+                targetProfit={wizardData.isYearly ? wizardData.desiredProfit / 12 : wizardData.desiredProfit}
+                aov={wizardData.aov}
+                margin={results.grossMargin}
+                onBudgetChange={setRecommendedMarketingBudget}
+              />
+
+              {/* CAC na celou sirku */}
               {(wizardData.marketingCosts > 0 || recommendedMarketingBudget > 0) && (
                 <CACCalculator
                   marketingBudget={wizardData.marketingCosts || recommendedMarketingBudget}
