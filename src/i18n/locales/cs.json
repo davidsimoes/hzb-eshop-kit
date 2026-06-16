@@ -253,7 +253,7 @@
       "button": "Otevřít prezentaci"
     },
     "progress": {
-      "completed": "{{completed}} z {{total}} úkolů dokončeno",
+      "completed": "z {{total}} úkolů dokončeno",
       "done": "hotovo"
     },
     "actions": {

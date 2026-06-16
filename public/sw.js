@@ -1,43 +1,17 @@
-const CACHE_NAME = 'nove-eshop-v1';
-const urlsToCache = [
-  '/',
-  '/calculator',
-  '/checklist',
-  '/before-start',
-  '/about',
-  '/faq',
-  '/static/js/bundle.js',
-  '/static/css/main.css'
-];
-
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
-  );
-});
-
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Return cached version or fetch from network
-        return response || fetch(event.request);
-      }
-    )
-  );
-});
-
+// Service worker disabled. Previously this was a cache-first SW that served a stale
+// app shell pointing at deleted hashed bundles after each deploy, so returning
+// visitors got broken/blank pages. This version self-unregisters and clears all
+// caches so any client still controlled by the old SW recovers immediately.
+self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
+  event.waitUntil((async () => {
+    try {
+      const keys = await caches.keys();
+      await Promise.all(keys.map((k) => caches.delete(k)));
+    } catch (e) { /* noop */ }
+    try { await self.registration.unregister(); } catch (e) { /* noop */ }
+    const clients = await self.clients.matchAll();
+    clients.forEach((client) => client.navigate(client.url));
+  })());
 });
+// No fetch handler: requests go straight to the network.

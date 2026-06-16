@@ -2,17 +2,16 @@ import { useEffect } from 'react';
 
 export const usePerformance = () => {
   useEffect(() => {
-    // Register service worker for PWA functionality
+    // Service worker disabled: it cached stale assets and broke pages for returning
+    // visitors. Actively unregister any previously-installed SW and purge its caches
+    // so existing clients recover on next load.
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then((registration) => {
-            console.log('SW registered: ', registration);
-          })
-          .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
-          });
-      });
+      navigator.serviceWorker.getRegistrations()
+        .then((registrations) => registrations.forEach((r) => r.unregister()))
+        .catch(() => {});
+      if ('caches' in window) {
+        caches.keys().then((keys) => keys.forEach((k) => caches.delete(k))).catch(() => {});
+      }
     }
 
     // Basic performance monitoring

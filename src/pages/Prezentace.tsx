@@ -12,27 +12,30 @@ import {
   Sparkles,
   Layers,
   Heart,
+  AlertTriangle,
   Presentation
 } from 'lucide-react';
 
-// Slim demo-led deck: open + menu -> 3 hloubkové bloky -> kit + AI -> close.
-// Ovládání: šipky / mezerník. Demo cue = kdy přepnout na živý nástroj.
+// Slim demo-led deck: open + menu -> 3 deep blocks -> kit + AI -> close.
+// Controls: arrows / space. Demo cue = when to switch to the live tool.
+// Deep-link a slide with ?s=4. Presenter notes only show with ?notes=1 (private).
 
 interface Slide {
   id: string;
   kicker?: string;
   title: string;
   bullets?: string[];
+  menuItems?: string[];   // rendered as a numbered grid (menu variant)
   demo?: { label: string; to: string };
-  note?: string; // poznámka pro lektora (jen v presenter liště)
+  note?: string;          // presenter note (only visible with ?notes=1)
   icon?: typeof Lightbulb;
   variant?: 'title' | 'menu' | 'block' | 'plain' | 'close';
-  logos?: boolean;     // zobrazit pruh log klientů (stejná sada jako web)
-  qr?: string;         // QR kód (cesta k obrázku)
-  slidoCode?: string;  // kód do sli.do
+  logos?: boolean;
+  qr?: string;
+  slidoCode?: string;
 }
 
-// Stejná sada log jako na webu (ClientLogos)
+// Same logo set as the site (ClientLogos)
 const DECK_LOGOS = [
   ['/images/clients/yoggies.svg', 'Yoggies'],
   ['/images/clients/mana.svg', 'MANA'],
@@ -53,7 +56,8 @@ const slides: Slide[] = [
     kicker: '#HolkyzByznysu · školení s Davidem',
     bullets: ['Praktické nástroje + kit, který ti zůstane.', 'Dnes spustíme nápad, ne jen prezentaci.'],
     slidoCode: '#2754067',
-    note: 'Přivítání, energie. Kdo jsem, proč tohle dělám. Žádný stres — odcházíš s nástroji. Ukaž sli.do kód.',
+    qr: '/images/qr-hzb.svg',
+    note: 'Přivítání, energie. Kdo jsem, proč to dělám. Žádný stres, odcházíš s nástroji. Ukaž sli.do kód i QR na web.',
     icon: ShoppingBag
   },
   {
@@ -62,12 +66,12 @@ const slides: Slide[] = [
     kicker: 'Krátce o mně',
     title: 'Proč mě poslouchat',
     bullets: [
-      '10+ let v e-commerce, stovky e-shopů.',
-      'Vím, jak vypadá start zevnitř — i ty pochybnosti.',
-      'Dnes ti předám zkratky, které šetří peníze i nervy.'
+      '10+ let v e-commerce, stovky e-shopů od start-upů po firmy s obratem přes 3 mld. Kč.',
+      'Zakladatel Sounds Good Agency, první Shopify agentury v ČR a na Slovensku.',
+      'Vím, jak vypadá start zevnitř, i ty pochybnosti. Dnes ti předám zkratky, co šetří peníze i nervy.'
     ],
     logos: true,
-    note: 'Kredibilita stručně. Nepřeprodávej se — buduj důvěru a vřelost. Loga = konkrétní důkaz.',
+    note: 'Kredibilita stručně. Nepřeprodávej se, buduj důvěru a vřelost. Loga = konkrétní důkaz.',
     icon: Heart
   },
   {
@@ -75,26 +79,46 @@ const slides: Slide[] = [
     variant: 'menu',
     kicker: 'Tvůj kit má 6 oblastí',
     title: 'Dnešní menu',
-    bullets: [
-      '1 · Validace nápadu   ·   2 · Výběr platformy   ·   3 · Spuštění a právo',
-      '4 · Marketing a značka   ·   5 · Provoz a finance   ·   6 · Když to neprodává',
-      'Všech 6 máš v kitu. Dnes jdeme do hloubky na 3: Validace, Platforma, Diagnostika — a kam mě zatáhneš.'
+    menuItems: [
+      'Validace nápadu',
+      'Výběr platformy',
+      'Spuštění a právo',
+      'Marketing a značka',
+      'Provoz a finance',
+      'Když to neprodává'
     ],
-    note: 'Tohle je „menu“. Řekni: všechno je v kitu, dnes deep-dive na 3 oblasti (Validace má 2 nástroje — persona + kalkulačka). Steering rukama / sli.do.',
+    bullets: [
+      'Všech 6 oblastí máš v kitu, který si odneseš. Dnes jdeme do hloubky na 3: Validace, Platforma a Diagnostika, plus kamkoli mě zatáhnete.',
+      'Vím, co vás zajímá nejvíc: jak vybrat platformu, jak vůbec začít a jak se vyhnout nejčastějším chybám. Přesně to dnes projdeme.'
+    ],
+    note: 'Tohle je menu. Reflektuj jejich očekávání z HzB (platforma, jak začít, vyhnout se chybám). Řekni: vše je v kitu, dnes deep-dive na 3. Pojmenuj obě skupiny (začátečnice + už mám e-shop, pro ně je Diagnostika).',
     icon: Layers
+  },
+  {
+    id: 'chyby',
+    variant: 'block',
+    kicker: 'Než se vrhneme do toho',
+    title: '3 nejdražší chyby začátečnic',
+    bullets: [
+      'Špatná platforma „protože ji má kamarádka", místo té, co sedí tvému byznysu.',
+      'Produkt bez ověření, že o něj někdo cizí (ne rodina) opravdu stojí a zaplatí.',
+      'Žádná čísla. Marže, doprava a marketing se nesečtou, takže čím víc prodáš, tím víc proděláš.'
+    ],
+    note: 'Krátce, jako háček. Tyhle 3 chyby se táhnou všemi 9 lety. Dnešní 3 bloky přesně tyhle chyby řeší.',
+    icon: AlertTriangle
   },
   {
     id: 'block1',
     variant: 'block',
-    kicker: 'Blok 1',
-    title: 'Validace: ověř, než utratíš',
+    kicker: 'Blok 1 · Validace',
+    title: 'Ověř, než utratíš',
     bullets: [
-      'Komu prodávám? (persona) · Proč ode mě? · Vydělá to?',
-      'Persona = jedna konkrétní zákaznice, ne „ženy 25–45“.',
-      'Ověř levně: 5 rozhovorů, poptávka, konkurence, 1 signál, že zaplatí.'
+      'Tři otázky: Komu prodávám? Proč ode mě? Vydělá to?',
+      'Persona = jedna konkrétní zákaznice, ne „ženy 25 až 45".',
+      'Ověř levně: 5 rozhovorů (ne s rodinou), poptávka, konkurence, 1 signál, že zaplatí cizí člověk.'
     ],
     demo: { label: 'Živě: Ověř nápad', to: '/validace' },
-    note: 'Demo /validace — vyplň personu naživo. Pak /kalkulacka na životaschopnost. AI prompt ukázat.',
+    note: 'Demo /validace, vyplň personu naživo. Zdůrazni: validace nápadu = první krok, ne spuštění byznysu. Pak kalkulačka. Ukaž AI prompt.',
     icon: Lightbulb
   },
   {
@@ -104,38 +128,39 @@ const slides: Slide[] = [
     title: 'Spočítej, jestli to vydělá',
     bullets: [
       'Kolik objednávek a návštěv potřebuješ na svůj cíl.',
-      'Počítá i tvůj příjem — kolik si chceš vydělat ty, ne jen pokrýt zboží.',
+      'Počítá i tvůj příjem, kolik si chceš vydělat ty, ne jen pokrýt zboží.',
       '2026 benchmarky podle oboru = realita check tvých čísel.'
     ],
     demo: { label: 'Živě: Kalkulačka', to: '/kalkulacka' },
-    note: 'Demo /kalkulacka. Ukázat benchmarky. Zdůraznit: čísla na papíře jsou nejlevnější chyba.',
+    note: 'Demo /kalkulacka. Ukaž benchmarky. Zdůrazni: čísla na papíře jsou nejlevnější chyba.',
     icon: Calculator
   },
   {
     id: 'block2',
     variant: 'block',
-    kicker: 'Blok 2',
+    kicker: 'Blok 2 · Platforma',
     title: 'Výběr platformy',
     bullets: [
-      'Vyber nejjednodušší, co tě nezabrzdí, a začni prodávat.',
-      'Shopify (růst, zahraničí) · Shoptet (ČR, integrace) · začni i bez e-shopu.',
-      'Hned: doména, platba, 1 doprava, pár produktů. Zbytek počká.'
+      'Špatná první otázka je „jaká platforma". Správná: „co nejjednodušší, co mě nezabrzdí, a začni prodávat".',
+      'Shopify (růst, zahraničí) · Shoptet (ČR, integrace, podpora) · kurzy a digitál (Teachable, Seduo, Podia) · můžeš začít i bez e-shopu.',
+      'Volba platformy je 20 % rozhodnutí. 80 % je byznys model a značka. Hned řeš: doménu, platbu, 1 dopravu, pár produktů.'
     ],
-    note: 'Tady neděláme demo nástroje — rozhodovací obsah. Odkázat na docs/02-vyber-platformy.md + AI prompt.',
+    demo: { label: 'Rozhodovací průvodce platformou', to: '/vyber-platformy' },
+    note: 'Nejvíc žádané téma. Dej tomu plných 20 min. Rozhodovací obsah, ukaž průvodce výběrem. Odkaž na FAQ + AI prompt.',
     icon: Layers
   },
   {
     id: 'block3',
     variant: 'block',
-    kicker: 'Blok 3',
+    kicker: 'Blok 3 · Diagnostika',
     title: 'Co když to neprodává',
     bullets: [
-      'Prodej je řetěz: návštěvnost → konverze → AOV → marže → CAC.',
+      'Prodej je řetěz: návštěvnost → konverze → hodnota objednávky → marže → náklad na zákaznici.',
       'Najdi nejslabší článek a oprav JEN ten. Neměň všechno najednou.',
-      'Diagnostika ti ho najde z tvých čísel a seřadí, co řešit první.'
+      'Diagnostika ti ho najde z tvých čísel a seřadí, co řešit první. Počítá i tvůj čas a fixní náklady.'
     ],
     demo: { label: 'Živě: Diagnostika', to: '/diagnostika' },
-    note: 'Demo /diagnostika s reálnými čísly. Ukázat ranking fixů + AI prompt. To je nový trumf 2026.',
+    note: 'Demo /diagnostika s připravenými čísly (2000 návštěv, 0,8 %, 750 Kč AOV, 400 Kč zboží, 5000 Kč marketing). Ukaž ranking fixů + mzdu/fixní náklady. Trumf 2026.',
     icon: Stethoscope
   },
   {
@@ -144,11 +169,12 @@ const slides: Slide[] = [
     kicker: 'Zbytek kitu (rychlý tour)',
     title: 'Co ještě v kitu najdeš',
     bullets: [
-      'Spuštění + právní minimum (živnost, VOP, GDPR, 14 dní).',
-      'Marketing a značka · Provoz, finance, dodavatelé.',
-      'Strach ze startu, příběhy, hotové AI prompty ke všemu.'
+      'Spuštění + právní minimum (živnost/osvč, VOP, GDPR, 14 dní na vrácení).',
+      'Marketing a značka · Provoz, finance, dodavatelé, doprava.',
+      'Strach ze startu, reálné příběhy a hotové AI prompty ke každé kapitole.'
     ],
-    note: 'Lehký průlet. „Tohle nestihneme naživo, ale máš to celé v kitu.“ Kit = safety net.',
+    demo: { label: 'Spouštěcí checklist', to: '/checklist' },
+    note: 'Lehký průlet. „Tohle nestihneme naživo, ale máš to celé v kitu." Ukaž checklist. Kit = záchranná síť.',
     icon: ShoppingBag
   },
   {
@@ -157,12 +183,12 @@ const slides: Slide[] = [
     kicker: 'Napříč vším',
     title: 'AI jako tvůj asistent',
     bullets: [
-      'Každý nástroj i kapitola má hotový prompt — zkopíruj a vlož.',
-      'Funguje v ChatGPT, Claude i Gemini. Žádné speciální nástroje.',
-      'Pokročilé: stáhni kit a „nakrm“ jím svou AI — radí pak v duchu téhle metody.'
+      'Každý nástroj i kapitola má hotový prompt, zkopíruj a vlož do ChatGPT, Claude i Gemini.',
+      'Prompty na sebe navazují, takže ti AI postupně sestaví celý plán na rozjezd byznysu.',
+      'Pokročilé: stáhni si celý kit z GitHubu a „nakrm" jím svou AI, radí pak přesně v duchu téhle metody.'
     ],
     demo: { label: 'Kit a prompty na webu', to: '/' },
-    note: 'Tohle je odlišovač. Ukázat kopírování promptu. Odkázat github.com/davidsimoes/hzb-eshop-kit.',
+    note: 'Tohle je odlišovač. Ukaž kopírování promptu + že prompty spolupracují. Odkaž github.com/davidsimoes/hzb-eshop-kit.',
     icon: Sparkles
   },
   {
@@ -171,24 +197,38 @@ const slides: Slide[] = [
     kicker: 'Jak to použít',
     title: 'Odcházíš s nástroji, ne jen poznámkami',
     bullets: [
-      '1 · Ověř nápad   2 · Spočítej   3 · Spusť podle checklistu',
-      'Web: hzb.davidjose.net · Kit zdarma pod CC BY 4.0.',
-      'Začni dnes jedním malým krokem. Hotovo > dokonalé.'
+      '1. Ověř nápad. 2. Spočítej čísla. 3. Spusť podle checklistu.',
+      'Web: hzb.davidjose.net · Celý kit zdarma k použití i sdílení, stačí uvést autora.',
+      'Začni dnes jedním malým krokem. Hotovo je lepší než dokonalé.'
     ],
     qr: '/images/qr-hzb.svg',
-    note: 'Zopakovat 3 kroky. CTA na web + kit. Ukaž QR. Pozvat k otázkám. Poděkovat.',
+    note: 'Zopakuj 3 kroky. CTA na web + kit. Ukaž QR. Pozvi k otázkám přes sli.do. Poděkuj.',
     icon: Heart
   }
 ];
 
 const Prezentace = () => {
-  const [i, setI] = useState(0);
+  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
+  const notesEnabled = params.has('notes');
+  const initial = (() => {
+    const s = parseInt(params.get('s') || '1', 10);
+    return Number.isFinite(s) && s >= 1 && s <= slides.length ? s - 1 : 0;
+  })();
+
+  const [i, setI] = useState(initial);
   const [showNotes, setShowNotes] = useState(false);
 
   const go = useCallback(
     (dir: number) => setI((prev) => Math.min(slides.length - 1, Math.max(0, prev + dir))),
     []
   );
+
+  // Keep the URL in sync so each slide is deep-linkable (?s=N), preserving ?notes=1.
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search);
+    p.set('s', String(i + 1));
+    window.history.replaceState(null, '', `${window.location.pathname}?${p.toString()}`);
+  }, [i]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -198,13 +238,13 @@ const Prezentace = () => {
       } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
         e.preventDefault();
         go(-1);
-      } else if (e.key.toLowerCase() === 'n') {
+      } else if (e.key.toLowerCase() === 'n' && notesEnabled) {
         setShowNotes((s) => !s);
       }
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [go]);
+  }, [go, notesEnabled]);
 
   const s = slides[i];
   const Icon = s.icon ?? Presentation;
@@ -240,6 +280,18 @@ const Prezentace = () => {
             {s.title}
           </h1>
 
+          {/* numbered grid for the menu slide */}
+          {s.menuItems && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
+              {s.menuItems.map((item, idx) => (
+                <div key={idx} className="flex items-center gap-3 bg-white/70 rounded-xl px-4 py-3 shadow-soft">
+                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-wine text-white font-bold flex items-center justify-center">{idx + 1}</span>
+                  <span className="text-base lg:text-lg text-brand-wine font-medium">{item}</span>
+                </div>
+              ))}
+            </div>
+          )}
+
           {s.bullets && (
             <ul className={`space-y-4 ${isTitle ? 'inline-block text-left' : ''}`}>
               {s.bullets.map((b, idx) => (
@@ -252,12 +304,13 @@ const Prezentace = () => {
           )}
 
           {s.demo && (
-            <div className={`mt-10 ${isTitle ? '' : ''}`}>
+            <div className="mt-10">
               <Button asChild size="lg" className="bg-brand-wine hover:bg-brand-wine/90 text-base">
-                <Link to={s.demo.to}>
+                {/* open the live tool in a NEW TAB so the deck keeps its place */}
+                <a href={s.demo.to} target="_blank" rel="noopener noreferrer">
                   <Sparkles className="w-5 h-5 mr-2" />
                   {s.demo.label}
-                </Link>
+                </a>
               </Button>
             </div>
           )}
@@ -265,29 +318,32 @@ const Prezentace = () => {
           {s.logos && (
             <div className="mt-10">
               <p className="text-xs uppercase tracking-wide text-brand-wine/50 mb-5">Značky, se kterými jsem pracoval</p>
-              <div className="flex flex-wrap items-center gap-x-8 gap-y-5">
+              <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-5">
                 {DECK_LOGOS.map(([src, alt]) => (
-                  <img key={alt} src={src} alt={alt} className="h-6 lg:h-7 w-auto object-contain opacity-70" />
+                  <img key={alt} src={src} alt={alt} className="h-7 lg:h-8 w-auto object-contain opacity-70" />
                 ))}
               </div>
             </div>
           )}
 
-          {s.slidoCode && (
-            <div className="mt-10 inline-flex items-center gap-3 bg-white/70 rounded-full px-5 py-2 shadow-soft">
-              <span className="text-sm text-brand-wine/70">Připoj se do sli.do:</span>
-              <span className="text-lg font-bold text-brand-wine tracking-wider">{s.slidoCode}</span>
+          {(s.slidoCode || s.qr) && (
+            <div className={`mt-10 flex flex-wrap items-center gap-5 ${isTitle ? 'justify-center' : ''}`}>
+              {s.slidoCode && (
+                <div className="inline-flex items-center gap-3 bg-white/70 rounded-full px-5 py-2 shadow-soft">
+                  <span className="text-sm text-brand-wine/70">Otázky přes sli.do:</span>
+                  <span className="text-lg font-bold text-brand-wine tracking-wider">{s.slidoCode}</span>
+                </div>
+              )}
+              {s.qr && (
+                <div className="flex flex-col items-center gap-2">
+                  <img src={s.qr} alt="QR kód na hzb.davidjose.net" className="w-28 h-28 lg:w-32 lg:h-32 rounded-xl bg-white p-2 shadow-soft" />
+                  <span className="text-xs text-brand-wine/60">Naskenuj a máš web i kit v kapse</span>
+                </div>
+              )}
             </div>
           )}
 
-          {s.qr && (
-            <div className="mt-10 flex flex-col items-center gap-3">
-              <img src={s.qr} alt="QR kód na hzb.davidjose.net" className="w-36 h-36 lg:w-44 lg:h-44 rounded-xl bg-white p-2 shadow-soft" />
-              <span className="text-sm text-brand-wine/60">Naskenuj a máš web v kapse</span>
-            </div>
-          )}
-
-          {showNotes && s.note && (
+          {notesEnabled && showNotes && s.note && (
             <div className="mt-10 p-4 rounded-lg bg-brand-wine/90 text-white text-sm max-w-2xl">
               <strong className="block mb-1 opacity-80">Poznámka lektora</strong>
               {s.note}
@@ -298,39 +354,25 @@ const Prezentace = () => {
 
       {/* controls */}
       <div className="flex items-center justify-between px-6 py-4 border-t border-brand-light-pink bg-white/60 backdrop-blur">
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={() => go(-1)}
-          disabled={i === 0}
-          className="text-brand-wine"
-        >
+        <Button variant="ghost" size="sm" onClick={() => go(-1)} disabled={i === 0} className="text-brand-wine">
           <ChevronLeft className="w-5 h-5 mr-1" /> Zpět
         </Button>
 
         <div className="flex items-center gap-3">
-          <span className="text-sm text-brand-wine/60">
-            {i + 1} / {slides.length}
-          </span>
-          <button
-            onClick={() => setShowNotes((s) => !s)}
-            className="text-xs text-brand-wine/50 hover:text-brand-wine underline"
-            title="Přepnout poznámky lektora (N)"
-          >
-            {showNotes ? 'skrýt poznámky' : 'poznámky (N)'}
-          </button>
-          <Link to="/" className="text-xs text-brand-wine/50 hover:text-brand-wine underline">
-            zpět na web
-          </Link>
+          <span className="text-sm text-brand-wine/60">{i + 1} / {slides.length}</span>
+          {notesEnabled && (
+            <button
+              onClick={() => setShowNotes((v) => !v)}
+              className="text-xs text-brand-wine/50 hover:text-brand-wine underline"
+              title="Přepnout poznámky lektora (N)"
+            >
+              {showNotes ? 'skrýt poznámky' : 'poznámky (N)'}
+            </button>
+          )}
+          <Link to="/" className="text-xs text-brand-wine/50 hover:text-brand-wine underline">zpět na web</Link>
         </div>
 
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={() => go(1)}
-          disabled={i === slides.length - 1}
-          className="text-brand-wine"
-        >
+        <Button variant="ghost" size="sm" onClick={() => go(1)} disabled={i === slides.length - 1} className="text-brand-wine">
           Dál <ChevronRight className="w-5 h-5 ml-1" />
         </Button>
       </div>

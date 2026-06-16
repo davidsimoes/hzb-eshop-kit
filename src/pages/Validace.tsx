@@ -77,16 +77,17 @@ const Validace = () => {
   const readiness = Math.round(personaScore + validationScore);
 
   // HARD GATE: bez reálného signálu, že lidé zaplatí (předobjednávka / prodej cizímu),
-  // nemůžeš být „připravená spustit" — i kdyby skóre bylo vysoké. Persona se nedá „uskákat".
+  // nemáš nápad ověřený, i kdyby skóre bylo vysoké. Persona se nedá „uskákat".
+  // Pozn.: tohle je validace nápadu (první krok), ne spuštění byznysu.
   const hasPaidSignal = !!checked['presell'];
   const readinessLabel = !hasPaidSignal
     ? readiness >= 50
-      ? 'Skoro — chybí důkaz, že lidé zaplatí'
+      ? 'Skoro, chybí důkaz, že lidé zaplatí'
       : readiness >= 25
         ? 'Začátek'
         : 'Pojďme na to'
     : readiness >= 80
-      ? 'Připravená spustit'
+      ? 'Nápad ověřený, můžeš začít stavět'
       : readiness >= 50
         ? 'Na dobré cestě'
         : readiness >= 25
