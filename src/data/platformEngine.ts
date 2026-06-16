@@ -84,7 +84,8 @@ export const PLATFORMS: Record<PlatformKey, Platform> = {
     monthlyCost: '500 až 3 000 Kč / měsíc',
     strengths: [
       'České integrace (Heureka, Zboží.cz, Zásilkovna, účetnictví) v základu',
-      'Více prostoru na úpravy a B2B funkce než nejlevnější řešení',
+      'Nativní vícejazyčnost a více měn — skvělé pro expanzi do zahraničí',
+      'Solidní B2B funkce: velkoobchodní ceny, ceníky pro různé skupiny zákazníků',
       'Česká podpora a slušný poměr cena / výkon pro rostoucí obchod'
     ],
     watchOut:

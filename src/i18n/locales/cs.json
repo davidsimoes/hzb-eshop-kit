@@ -910,7 +910,7 @@
           },
           {
             "q": "Co potřebuju po právní stránce na úplný start? Od živnosti po VOP",
-            "a": "Žádné drama, ale pár věcí mít musíš. (Tohle není právní poradenství, jen praktický přehled. U konkrétní situace se opři o oficiální zdroje nebo o účetní/právničku.)\n\n1. Podnikatelské oprávnění: pro začátečnici je nejjednodušší OSVČ, tedy živnost. Ohlásíš ji na živnostenském úřadě nebo online, zaplatíš správní poplatek a můžeš podnikat. Po ohlášení dostaneš IČO.\n\n2. Daně a pojištění: daň z příjmů a sociální/zdravotní pojištění řeš s účetní. Pro malý start často stačí paušální daň (jedna platba měsíčně) nebo paušální výdaje procentem.\n\n3. DPH: plátkyní DPH se nemusíš stát hned. Povinná registrace přichází až při překročení obratu, ověř si aktuální výši.\n\n4. Obchodní podmínky a GDPR: viz otázka o minimálních právních požadavcích níže, nebo si přečti celý průvodce.",
+            "a": "Žádné drama, ale pár věcí mít musíš. (Tohle není právní poradenství, jen praktický přehled. U konkrétní situace se opři o oficiální zdroje nebo o účetní/právničku.)\n\n1. Podnikatelské oprávnění: pro začátečnici je nejjednodušší OSVČ, tedy živnost. Ohlásíš ji na živnostenském úřadě nebo online, zaplatíš správní poplatek a můžeš podnikat. Po ohlášení dostaneš IČO.\n\n2. Daně a pojištění: daň z příjmů a sociální/zdravotní pojištění řeš s účetní. Pro malý start často stačí paušální daň (jedna platba měsíčně, jde využít jen do 2 milionů Kč příjmů a dokud nejsi plátkyní DPH) nebo paušální výdaje procentem.\n\n3. DPH: plátkyní DPH se nemusíš stát hned. Povinná registrace přichází až při překročení obratu, ověř si aktuální výši.\n\n4. Obchodní podmínky a GDPR: viz otázka o minimálních právních požadavcích níže, nebo si přečti celý průvodce.",
             "links": [
               {
                 "text": "Jak získat živnostenský list (Jak podnikat)",
@@ -954,7 +954,7 @@
           },
           {
             "q": "Kde najdu spolehlivé šablony pro právní dokumenty, jako jsou obchodní podmínky nebo GDPR?",
-            "a": "Šablony najdeš u APEK, Asociace pro elektronickou komerci, která má vzory připravené pro e-shopy. Na GDPR je skvělá příručka od Úřadu pro ochranu osobních údajů, která ti vše vysvětlí polopatě. Pokud chceš jistotu, konzultuj s právníkem.",
+            "a": "Šablony najdeš u APEK, Asociace pro elektronickou komerci, která má vzory připravené pro e-shopy. Na GDPR je skvělá příručka od Úřadu pro ochranu osobních údajů, která ti vše vysvětlí srozumitelně. Pokud chceš jistotu, konzultuj s právníkem.",
             "links": [
               {
                 "text": "APEK – Vzorové obchodní podmínky",

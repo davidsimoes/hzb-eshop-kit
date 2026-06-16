@@ -144,7 +144,7 @@ Mluv ke mně lidsky a bez žargonu.`;
             </h1>
             <p className="text-lg text-brand-wine/70">
               Nejdřív si ujasni, <strong>komu</strong> a <strong>proč</strong> prodáváš. Pak ověř, že o to
-              opravdu někdo stojí. Tahle dvě „ano” ti ušetří spoustu peněz i nervů.
+              opravdu někdo stojí. Tahle dvě „ano“ ti ušetří spoustu peněz i nervů.
             </p>
           </div>
 

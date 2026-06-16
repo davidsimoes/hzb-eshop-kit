@@ -75,7 +75,7 @@ const slides: Slide[] = [
       '10+ let v e-commerce, stovky e-shopů od start-upů po firmy s obratem přes 3 mld. Kč.',
       'Zakladatel Sounds Good Agency, první Shopify agentury v ČR a na Slovensku.',
       'Viděl jsem fungovat různé cesty: Mana (jedna z prvních firem v ČR s předplatným na spotřební zboží), TePe USA (přístup KISS, drž to jednoduché), ETA (čisté B2B), Erotic City (omnichannel), Galleria Armadoro (DTC) i Fabini (pro start-up je klíčové umět včas změnit směr).',
-      'A poučil jsem se i z chyb: Okay Elektro (nikdo není „too big to fail"), Sofsy (perfekcionismus je nepřítel dokončené práce) a moje první e-shopy (čísla jsou základ).',
+      'A poučil jsem se i z chyb: Okay Elektro (nikdo není „too big to fail“), Sofsy (perfekcionismus je nepřítel dokončené práce) a moje první e-shopy (čísla jsou základ).',
       'Vím, jak vypadá start zevnitř, a ty pochybnosti znám taky. Dnes ti předám zkratky, co šetří peníze i nervy.'
     ],
     logos: true,
@@ -128,7 +128,7 @@ const slides: Slide[] = [
     kicker: 'Než se vrhneme do toho',
     title: '3 nejdražší chyby začátečnic',
     bullets: [
-      'Špatná platforma „protože ji má kamarádka", místo té, co sedí tvému byznysu.',
+      'Špatná platforma „protože ji má kamarádka“, místo té, co sedí tvému byznysu.',
       'Produkt bez ověření, že o něj někdo cizí (ne rodina) opravdu stojí a zaplatí.',
       'Žádná čísla. Marže, doprava a marketing nevyjdou dohromady, takže čím víc prodáš, tím víc proděláš.'
     ],
@@ -141,7 +141,7 @@ const slides: Slide[] = [
     title: 'Ověř, než utratíš',
     bullets: [
       'Tři otázky: Komu prodávám? Proč ode mě? Vydělá to?',
-      'Persona = jedna konkrétní zákaznice, ne „ženy 25 až 45".',
+      'Persona = jedna konkrétní zákaznice, ne „ženy 25 až 45“.',
       'Ověř levně: 5 rozhovorů (ne s rodinou), poptávka, konkurence, 1 signál, že zaplatí cizí člověk.'
     ],
     demo: { label: 'Živě: Ověř nápad', to: '/validace' },
@@ -179,7 +179,7 @@ const slides: Slide[] = [
     kicker: 'Blok 2 · Platforma',
     title: 'Výběr platformy',
     bullets: [
-      'Špatná první otázka je „jaká platforma". Správná: „co nejjednodušší, co mě nezabrzdí, a začni prodávat".',
+      'Špatná první otázka je „jaká platforma“. Správná: „co nejjednodušší, co mě nezabrzdí, a začni prodávat“.',
       'Shopify (růst, zahraničí) · Shoptet (ČR, integrace, podpora) · kurzy a digitál (Teachable, Seduo, Podia) · můžeš začít i bez e-shopu.',
       'Volba platformy je 20 % rozhodnutí. 80 % je byznys model a značka. Hned řeš: doménu, platbu, 1 dopravu, pár produktů.'
     ],
@@ -244,7 +244,7 @@ const slides: Slide[] = [
     bullets: [
       'Každý nástroj i kapitola má hotový prompt, zkopíruj a vlož do ChatGPT, Claude i Gemini.',
       'Prompty na sebe navazují, takže ti AI postupně sestaví celý plán na rozjezd byznysu.',
-      'Pokročilé: stáhni si celý kit z GitHubu a „nakrm" jím svou AI, radí pak přesně v duchu téhle metody.'
+      'Pokročilé: stáhni si celý kit z GitHubu a „nakrm“ jím svou AI, radí pak přesně v duchu téhle metody.'
     ],
     demo: { label: 'Celý kit na GitHubu', to: 'https://github.com/davidsimoes/hzb-eshop-kit', external: true },
     demoSecondary: { label: 'Kit a prompty na webu', to: '/' },

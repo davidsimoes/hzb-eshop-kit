@@ -22,6 +22,7 @@ Měsíční předplatné, vše hotové, žádný vývojář. Pro 95 % začáteč
 |---|---|---|
 | **Shopify** | Chceš růst, prodávat i do zahraničí, hodně appek | Světová jednička, skvělá na škálování. V češtině přes appky/šablony. |
 | **Shoptet** | Chceš český e-shop, českou podporu, napojení na české služby | Nejrozšířenější v ČR, integrace s Heurekou, Zásilkovnou, fakturací. |
+| **Upgates** | Česká alternativa mid-market, silné CZ integrace, B2B nebo export | Nativní vícejazyčnost, ceníky pro B2B, dobré CZ integrace. Méně komunit než Shoptet, víc flexibility. |
 | **Webnode / Wix / Squarespace** | Velmi malý sortiment, jednoduchost | Spíš web s prodejem než plnohodnotný e-shop. |
 
 ### 3. Vlastní řešení
