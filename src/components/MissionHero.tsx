@@ -77,7 +77,7 @@ export const MissionHero = () => {
               
               <Card className="p-6 max-w-md bg-white/90 backdrop-blur border-brand-light-pink">
                 <p className="text-brand-wine font-medium text-center italic">
-                  "{t('mission.hero.story')}"
+                  „{t('mission.hero.story')}“
                 </p>
               </Card>
             </div>

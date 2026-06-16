@@ -211,7 +211,7 @@ const BeforeStart = () => {
                 to="/pruvodce"
                 className="inline-flex items-center gap-1 text-sm font-semibold text-brand-wine hover:text-brand-orange transition-colors"
               >
-                Všechny průvodce
+                Všichni průvodci
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <span className="text-brand-wine/30 hidden sm:inline">|</span>
