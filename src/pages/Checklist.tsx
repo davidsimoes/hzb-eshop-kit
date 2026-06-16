@@ -12,6 +12,7 @@ import { useChecklist } from '@/hooks/useChecklist';
 import { checklistData, ChecklistItem } from '@/data/checklistData';
 import { CheckSquare, Square, Clock, RotateCcw, ExternalLink, ChevronDown, ChevronUp, BookOpen } from 'lucide-react';
 import { ToolFlowStrip } from '@/components/ToolFlowStrip';
+import { MetaTags } from '@/components/SEO/MetaTags';
 export const Checklist = () => {
   const { t, i18n } = useTranslation();
   const {
@@ -151,6 +152,10 @@ export const Checklist = () => {
   // Get sorted days
   const sortedDays = Object.keys(tasksByDay).map(Number).sort((a, b) => a - b);
   return <div className="min-h-screen bg-gray-50">
+      <MetaTags
+        title="15denní checklist pro spuštění e-shopu"
+        description="Odškrtávej krok po kroku vše, co potřebuješ před spuštěním e-shopu: právo, platby, dopravu, GDPR, obsah i technické nastavení."
+      />
       <Header />
       <main className="container mx-auto px-4 py-8">
         <Breadcrumb />

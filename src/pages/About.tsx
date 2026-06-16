@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/Header/Header';
 import { Breadcrumb } from '@/components/Navigation/Breadcrumb';
+import { MetaTags } from '@/components/SEO/MetaTags';
 import { TrendingUp, Heart, MessageCircle, ExternalLink, Star, Award, Calendar, Phone, Mail, Users, Linkedin } from 'lucide-react';
 import davidHeadshot from '/images/f2474b23-8549-4599-8f5a-5ee1f6ad1022.png';
 import techWorkspace from '/images/f608b034-7b19-4647-91f2-cf62814783e3.png';
@@ -34,6 +35,10 @@ const About = () => {
     linkLabel: "soundsgood.agency"
   }];
   return <div className="min-h-screen bg-gradient-soft">
+      <MetaTags
+        title="O mně | E-shop, který vydělává"
+        description="David Simões - Shopify partner od 2014, zakladatel soundsgood.agency. Pomáhám e-shopum vydělávat víc s menším rozpočtem. Zjisti, kdo tě školí a proč na to mám."
+      />
       <Header />
       <main className="container mx-auto px-4 py-8">
         <Breadcrumb />
@@ -66,7 +71,10 @@ const About = () => {
                       <Users className="w-3 h-3 mr-1" />
                       Zakladatel SGA
                     </Badge>
-                    
+                    <Badge variant="outline" className="border-brand-orange text-brand-orange">
+                      <ExternalLink className="w-3 h-3 mr-1" />
+                      soundsgood.agency
+                    </Badge>
                   </div>
                 </div>
               </div>
@@ -155,7 +163,7 @@ const About = () => {
               <Button className="flex items-center gap-2 bg-brand-wine hover:bg-brand-wine/90 text-white" asChild>
                 <a href="https://www.linkedin.com/in/davidjsimoes/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-4 h-4" />
-                  Sleduj mě na LinkedInu
+                  Sleduj e-commerce tipy na LinkedInu
                 </a>
               </Button>
             </div>

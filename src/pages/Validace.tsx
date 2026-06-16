@@ -137,7 +137,7 @@ Mluv ke mně lidsky a bez žargonu.`;
           <div className="max-w-3xl mx-auto text-center mb-8">
             <Badge className="bg-brand-orange/20 text-brand-wine mb-4 text-base px-4 py-2">
               <Lightbulb className="w-4 h-4 mr-2" />
-              Validace nápadu
+              Ověření nápadu
             </Badge>
             <h1 className="text-3xl lg:text-4xl font-bold text-brand-wine mb-4">
               Ověř si nápad, než do něj dáš peníze
@@ -304,7 +304,7 @@ Mluv ke mně lidsky a bez žargonu.`;
                 to="/pruvodce/validace"
                 className="inline-flex items-center gap-1 text-sm font-semibold text-brand-wine hover:text-brand-orange transition-colors"
               >
-                Validace nápadu
+                Ověření nápadu
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

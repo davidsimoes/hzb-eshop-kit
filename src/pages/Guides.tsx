@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Header } from '@/components/Header/Header';
 import { Breadcrumb } from '@/components/Navigation/Breadcrumb';
+import { MetaTags } from '@/components/SEO/MetaTags';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { BookOpen, ArrowRight, Github } from 'lucide-react';
@@ -9,6 +10,10 @@ import { GUIDES, GITHUB_REPO } from '@/data/guides';
 const Guides = () => {
   return (
     <>
+      <MetaTags
+        title="Průvodci ke každé oblasti e-shopu"
+        description="Podrobné průvodce ke každému kroku rozjezdu e-shopu: validace nápadu, výběr platformy, marketing, právo, finance i diagnostika. Ke každému tématu jeden ucelený text."
+      />
       <Header />
       <main className="min-h-screen bg-gradient-soft">
         <div className="container mx-auto px-4 py-8 max-w-4xl">

@@ -110,7 +110,7 @@ export function diagnose(input: DiagnosticInput): DiagnosticResult {
       area: 'margin',
       severity: 'critical',
       title: 'Příliš tenká marže',
-      finding: `Hrubá marže je ${grossMargin.toFixed(0)} %. Pod ~25 % je málo prostoru zaplatit marketing, dopravu a něco si vydělat. Trh: ${avg.averageMargin} %.`,
+      finding: `Hrubá marže je ${grossMargin.toFixed(0)} %. Pod ~25 % je málo prostoru zaplatit marketing, dopravu a něco si vydělat. Průměr napříč obory: ${avg.averageMargin} %.`,
       fix: 'Zvyš cenu o 10–20 % a sleduj, jestli to ovlivní prodej (často ne). Vyjednej lepší nákup. Zaměř se na produkty s vyšší marží.',
       priority: 2
     });
@@ -120,7 +120,7 @@ export function diagnose(input: DiagnosticInput): DiagnosticResult {
       area: 'margin',
       severity: 'warning',
       title: 'Marže je spíš nižší',
-      finding: `Hrubá marže ${grossMargin.toFixed(0)} % je pod průměrem trhu (${avg.averageMargin} %). Funguje to, ale na marketing zbývá málo.`,
+      finding: `Hrubá marže ${grossMargin.toFixed(0)} % je pod průměrem napříč obory (${avg.averageMargin} %). Funguje to, ale na marketing zbývá málo.`,
       fix: 'Postupně testuj vyšší ceny a bundly (víc produktů v jedné objednávce zvedne marži i AOV).',
       priority: 5
     });
@@ -171,7 +171,7 @@ export function diagnose(input: DiagnosticInput): DiagnosticResult {
       area: 'conversion',
       severity: 'critical',
       title: 'Lidé chodí, ale nekupují',
-      finding: `Konverze je ${conv.toFixed(1)} %. Z ${visitors.toLocaleString('cs-CZ')} návštěv vznikne jen ${monthlyOrders} objednávek. Trh: ${avg.averageConversion} %.`,
+      finding: `Konverze je ${conv.toFixed(1)} %. Z ${visitors.toLocaleString('cs-CZ')} návštěv vznikne jen ${monthlyOrders} objednávek. Průměr napříč obory: ${avg.averageConversion} %.`,
       fix: 'Zaměř se na: jasné fotky a popisy, důvěru (recenze, kontakt, doprava/vrácení), jednoduchou objednávku bez registrace, rychlost na mobilu. Často je problém v jednom kroku košíku.',
       priority: 2
     });
@@ -191,7 +191,7 @@ export function diagnose(input: DiagnosticInput): DiagnosticResult {
       area: 'conversion',
       severity: 'warning',
       title: 'Konverze pod průměrem',
-      finding: `Konverze ${conv.toFixed(1)} % je znatelně pod průměrem (${avg.averageConversion} %). Je tu prostor získat víc objednávek beze změny návštěvnosti.`,
+      finding: `Konverze ${conv.toFixed(1)} % je znatelně pod průměrem napříč obory (${avg.averageConversion} %). Je tu prostor získat víc objednávek beze změny návštěvnosti.`,
       fix: 'Projdi objednávkový proces na mobilu jako zákaznice. Přidej recenze a trust prvky. Zjednoduš košík.',
       priority: 6
     });
@@ -230,7 +230,7 @@ export function diagnose(input: DiagnosticInput): DiagnosticResult {
       area: 'aov',
       severity: 'warning',
       title: 'Nízká hodnota objednávky',
-      finding: `Průměrná objednávka je ${fmtCZK(aov)}, hodně pod průměrem (${fmtCZK(avg.averageAOV)}). Při nízkém AOV je těžké zaplatit dopravu i marketing.`,
+      finding: `Průměrná objednávka je ${fmtCZK(aov)}, hodně pod průměrem napříč obory (${fmtCZK(avg.averageAOV)}). Při nízkém AOV je těžké zaplatit dopravu i marketing.`,
       fix: 'Přidej bundly a sady, „k tomu se hodí“ doporučení, limit pro dopravu zdarma (např. nad 1 500 Kč). Zvedne to tržby beze změny návštěvnosti.',
       priority: 7
     });

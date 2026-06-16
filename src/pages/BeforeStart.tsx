@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/Header/Header';
 import { Breadcrumb } from '@/components/Navigation/Breadcrumb';
+import { MetaTags } from '@/components/SEO/MetaTags';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -29,6 +30,10 @@ const BeforeStart = () => {
     link: string;
   }>;
   return <>
+      <MetaTags
+        title="Ještě nejsi připravena? Začni tady"
+        description="Obavy ze spuštění e-shopu jsou normální. Projdi si nejčastější pochybnosti začínajících podnikatelek a zjisti, co tě čeká jako první krok."
+      />
       <Header />
       <main className="min-h-screen bg-gradient-soft">
         <div className="container mx-auto px-4 py-8">

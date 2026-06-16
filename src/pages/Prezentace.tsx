@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { MetaTags } from '@/components/SEO/MetaTags';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
@@ -310,6 +311,10 @@ const Prezentace = () => {
 
   return (
     <div className="fixed inset-0 bg-gradient-soft flex flex-col">
+      <MetaTags
+        title="Prezentace: E-shop, který vydělává"
+        description="Interaktivní prezentace ze školení #HolkyzByznysu s praktickými nástroji pro rozjezd e-shopu."
+      />
       {/* progress */}
       <div className="h-1.5 bg-brand-light-pink">
         <div

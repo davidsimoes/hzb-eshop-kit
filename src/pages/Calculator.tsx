@@ -6,16 +6,22 @@ import { CurrencySelector } from '@/components/Currency/CurrencySelector';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useTranslation } from 'react-i18next';
-import { Heart, ArrowLeft, BookOpen, ArrowRight } from 'lucide-react';
+import { Heart, ArrowLeft, BookOpen, ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ToolFlowStrip } from '@/components/ToolFlowStrip';
+import { MetaTags } from '@/components/SEO/MetaTags';
 
 const Calculator = () => {
   const { t } = useTranslation();
 
   return (
     <>
+      <MetaTags
+        title="Finanční kalkulačka e-shopu"
+        description="Spočítej si, jestli se ti e-shop vyplatí. Zadej cíl, marži produktu a konverzní poměr - kalkulačka ti ukáže, kolik objednávek potřebuješ a co tě bude stát marketing."
+      />
+
       <Header />
       <main className="min-h-screen bg-gradient-soft">
         <div className="container mx-auto px-4 py-8">
@@ -90,8 +96,8 @@ const Calculator = () => {
                 className="bg-brand-wine hover:bg-brand-wine/90"
               >
                 <Link to="/prezentace">
-                  <BookOpen className="w-4 h-4 mr-2" />
-                  {t('calculator.openGuide')}
+                  <Play className="w-4 h-4 mr-2" />
+                  Spustit prezentaci
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </Button>

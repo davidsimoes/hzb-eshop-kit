@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Heart, ArrowRight, Lightbulb, Calculator } from 'lucide-react';
+import { Heart, Lightbulb, Calculator } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import davidHeadshot from '/images/f2474b23-8549-4599-8f5a-5ee1f6ad1022.png';
 
@@ -28,9 +28,9 @@ export const MissionHero = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button 
-                  asChild 
-                  size="lg" 
+                <Button
+                  asChild
+                  size="lg"
                   className="bg-gradient-orange text-white hover:scale-105 transition-all duration-200 shadow-brand text-base px-8 py-3"
                 >
                   <Link to="/validace">
@@ -43,13 +43,22 @@ export const MissionHero = () => {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-brand-wine text-brand-wine hover:bg-brand-wine hover:text-white transition-all duration-200 text-base px-8 py-3"
+                  className="border-brand-wine/50 text-brand-wine/70 hover:border-brand-wine hover:text-brand-wine hover:bg-brand-wine/5 transition-all duration-200 text-base px-8 py-3"
                 >
                   <Link to="/kalkulacka">
-                    <Calculator className="w-5 h-5 mr-2" />
+                    <Calculator className="w-4 h-4 mr-2" />
                     Spočítej, jestli to vydělá
                   </Link>
                 </Button>
+              </div>
+
+              <div className="mt-4 text-center lg:text-left">
+                <Link
+                  to="/pred-zacatkem"
+                  className="text-sm text-brand-wine/50 hover:text-brand-wine/80 underline underline-offset-2 transition-colors"
+                >
+                  Nejsem si jistá, kde začít
+                </Link>
               </div>
             </div>
             

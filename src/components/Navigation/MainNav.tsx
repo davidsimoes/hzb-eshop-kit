@@ -286,7 +286,7 @@ export const MainNav = ({ onItemClick }: MainNavProps) => {
         Průvodce
       </p>
 
-      {/* Průvodce index */}
+      {/* Průvodce — pouze odkaz na přehled */}
       <NavLink
         to="/pruvodce"
         end
@@ -296,21 +296,6 @@ export const MainNav = ({ onItemClick }: MainNavProps) => {
         <BookOpen className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
         <span className="flex-1">Všichni průvodci</span>
       </NavLink>
-
-      {/* Individual guides */}
-      {GUIDES.map((g) => (
-        <NavLink
-          key={g.slug}
-          to={`/pruvodce/${g.slug}`}
-          onClick={onItemClick}
-          className={mobileLinkClass}
-        >
-          <span className="w-4 h-4 flex-shrink-0 text-center text-xs font-bold tabular-nums" aria-hidden="true">
-            {g.order}
-          </span>
-          <span className="flex-1">{g.title}</span>
-        </NavLink>
-      ))}
 
       {/* Divider */}
       <div className="my-1 border-t border-border" role="separator" />

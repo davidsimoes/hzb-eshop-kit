@@ -102,7 +102,7 @@ const VyberPlatformy = () => {
             <p className="text-lg text-brand-wine/70">
               Žádný univerzální vítěz neexistuje, vždycky jde o kompromis. Odpověz na šest
               otázek a my podle nich porovnáme platformy mezi sebou a doporučíme ti tu, která
-              sedne na to, co prodáváš, kolik chceš investovat a kam míříš.
+              nejlépe odpovídá tomu, co prodáváš, kolik chceš investovat a kam míříš.
             </p>
           </div>
 
@@ -322,7 +322,7 @@ const VyberPlatformy = () => {
                     ))}
                   </div>
                   <p className="text-xs text-brand-wine/50 mt-3">
-                    Procenta ukazují, jak moc každá platforma sedí na tvé odpovědi v porovnání
+                    Procenta ukazují, jak moc každá platforma odpovídá tvým odpovědím v porovnání
                     s vítězem. Nejde o objektivní známku platformy, ale o shodu s tvojí situací.
                   </p>
                 </CardContent>

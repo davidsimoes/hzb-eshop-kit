@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Header } from '@/components/Header/Header';
+import { MetaTags } from '@/components/SEO/MetaTags';
 import { cn } from '@/lib/utils';
 import {
   HelpCircle,
@@ -57,7 +58,7 @@ const AnswerRenderer = ({ text }: { text: string }) => {
   const blocks = text.split(/\n\n+/);
 
   return (
-    <div className="space-y-3 text-[15px] sm:text-base leading-7 text-muted-foreground">
+    <div className="space-y-3 text-[15px] sm:text-base leading-7 text-foreground/70">
       {blocks.map((block, bi) => {
         const lines = block.split('\n');
 
@@ -141,7 +142,11 @@ const FAQ = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-brand-light-pink/10">
+      <MetaTags
+        title="Časté otázky"
+        description="Odpovědi na nejčastější otázky o e-shopech, platformách, marketingu a financích. Získej jasno dřív, než začneš."
+      />
       <Header />
       <main className="container mx-auto px-4 py-10 sm:py-14">
         <div className="max-w-3xl mx-auto">
@@ -178,7 +183,7 @@ const FAQ = () => {
                     'inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors',
                     isActive
                       ? 'bg-brand-wine text-white shadow-sm'
-                      : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                      : 'text-brand-wine/70 hover:bg-brand-light-pink/50 hover:text-brand-wine'
                   )}
                 >
                   <Icon className="h-4 w-4" />
@@ -200,8 +205,8 @@ const FAQ = () => {
                   id={`faq-${key}`}
                   className="scroll-mt-24"
                 >
-                  <div className="mb-5 flex items-center gap-3 border-b pb-4">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-muted">
+                  <div className="mb-5 flex items-center gap-3 border-b border-brand-light-pink/60 pb-4">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-light-pink/30">
                       <Icon className={cn('h-5 w-5', section.color)} />
                     </span>
                     <h2 className="text-xl sm:text-2xl font-bold text-foreground">
@@ -295,7 +300,7 @@ const FaqLinks = ({ links }: { links: FaqLink[] }) => {
 
       {external.length > 0 && (
         <div className="border-t pt-4">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-brand-wine/60">
             Užitečné odkazy
           </p>
           <ul className="space-y-1.5">

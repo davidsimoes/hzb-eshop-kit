@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
+import { MetaTags } from '@/components/SEO/MetaTags';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Header } from '@/components/Header/Header';
@@ -34,6 +35,11 @@ const GuidePage = () => {
 
   return (
     <>
+      <MetaTags
+        title={guide.title}
+        description={guide.summary ?? `Průvodce tématem ${guide.title} pro začínající i rozvíjející se e-shopy.`}
+        type="article"
+      />
       <Header />
       <main className="min-h-screen bg-gradient-soft">
         <div className="container mx-auto px-4 py-8 max-w-3xl">
@@ -187,6 +193,14 @@ const GuidePage = () => {
                   <Wrench className="w-4 h-4" /> {t.label}
                 </Link>
               ))}
+              {integration.tools.length === 0 && (
+                <Link
+                  to="/pruvodce"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-brand-wine hover:text-brand-orange transition-colors"
+                >
+                  <BookOpen className="w-4 h-4" /> Všichni průvodci
+                </Link>
+              )}
               <Link
                 to="/faq"
                 className="inline-flex items-center gap-1 text-sm font-semibold text-brand-wine hover:text-brand-orange transition-colors"

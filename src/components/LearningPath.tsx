@@ -165,7 +165,7 @@ export const LearningPath = () => {
                   className="inline-flex items-center justify-center gap-2 text-sm text-brand-wine/70 hover:text-brand-wine transition-colors"
                 >
                   <Linkedin className="w-4 h-4 flex-shrink-0" />
-                  Sleduj Davida na LinkedInu
+                  Sleduj e-commerce tipy na LinkedInu
                 </a>
               </div>
             </CardContent>

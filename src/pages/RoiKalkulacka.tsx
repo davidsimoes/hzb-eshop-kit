@@ -268,6 +268,7 @@ Mluv ke mně lidsky, bez žargonu.`;
                 <CardTitle>Tvoje čísla</CardTitle>
               </CardHeader>
               <CardContent className="p-6 space-y-5">
+                <p className="text-xs text-brand-wine/60">Peněžní hodnoty jsou v Kč.</p>
                 {/* Náklady */}
                 {(
                   [

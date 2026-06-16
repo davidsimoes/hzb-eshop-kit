@@ -7,6 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { useTranslation } from 'react-i18next';
 import { Badge } from '@/components/ui/badge';
 import { Shield, Clock, Users } from 'lucide-react';
+import { MetaTags } from '@/components/SEO/MetaTags';
 
 const Index = () => {
   const { t } = useTranslation();
@@ -16,6 +17,10 @@ const Index = () => {
 
   return (
     <>
+      <MetaTags
+        title="Zdarma: e-shop kit pro začátečnice"
+        description="Bezplatné nástroje pro začínající e-shopistky: ověř svůj nápad, spočítej, jestli to vydělá, a spusť e-shop krok za krokem. Žádná technická znalost není potřeba."
+      />
       <Header />
       <main id="main-content" role="main" aria-label={t('site.description')}>
         {/* Mission Hero */}
@@ -23,6 +28,9 @@ const Index = () => {
 
         {/* Client logos — light credibility strip */}
         <ClientLogos />
+
+        {/* Learning Path — value-proof first */}
+        <LearningPath />
 
         {/* Fear Reduction Section */}
         <section className="py-16 bg-white">
@@ -82,9 +90,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-        {/* Learning Path */}
-        <LearningPath />
 
         {/* Organization Partnership */}
         <OrganizationPartnership />
