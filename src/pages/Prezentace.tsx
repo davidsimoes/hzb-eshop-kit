@@ -74,10 +74,26 @@ const slides: Slide[] = [
     bullets: [
       '10+ let v e-commerce, stovky e-shopů od start-upů po firmy s obratem přes 3 mld. Kč.',
       'Zakladatel Sounds Good Agency, první Shopify agentury v ČR a na Slovensku.',
+      'Viděl jsem fungovat různé cesty: Mana (jedna z prvních firem v ČR s předplatným na spotřební zboží), TePe USA (přístup KISS, drž to jednoduché), ETA (čisté B2B), Erotic City (omnichannel), Galleria Armadoro (DTC) i Fabini (pro start-up je klíčové umět včas změnit směr).',
+      'A poučil jsem se i z chyb: Okay Elektro (nikdo není „too big to fail"), Sofsy (perfekcionismus je nepřítel dokončené práce) a moje první e-shopy (čísla jsou základ).',
       'Vím, jak vypadá start zevnitř, a ty pochybnosti znám taky. Dnes ti předám zkratky, co šetří peníze i nervy.'
     ],
     logos: true,
     icon: Heart
+  },
+  {
+    id: 'realita',
+    variant: 'block',
+    kicker: 'Realita trhu 2026',
+    title: 'Špatná zpráva (a proč tě to nemělo odradit)',
+    bullets: [
+      'Česká e-commerce loni vyrostla o 6 %, ale TOP 100 e-shopů rostlo o 14 %. Velcí dál vytlačují malé a Češi utratili online přes 206 miliard Kč.',
+      'Sílí zahraniční konkurence: Temu je už čtvrtý největší hráč (14,2 mld.), k tomu Shein, AliExpress a Allegro, všichni tlačí ceny dolů.',
+      'I bývalí velikáni zmizeli (Mall, CZC, Okay). Trh se konsoliduje a cenou ani sortimentem ho jako malá nikdy neporazíš.',
+      'A teď to dobré: nemusíš. Vyhraješ zaměřením na úzkou niku, komunitu, příběh a osobní službu, tedy přesně tím, co velký hráč neumí.',
+      'Právě proto je dnes důležitější než kdy dřív ověřit poptávku, najít svou niku a hlídat čísla. Ne prodávat všechno všem.'
+    ],
+    icon: TrendingUp
   },
   {
     id: 'menu',
