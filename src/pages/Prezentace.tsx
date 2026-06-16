@@ -66,7 +66,7 @@ const slides: Slide[] = [
     id: 'kdo',
     variant: 'plain',
     kicker: 'Krátce o mně',
-    title: 'Proč mě poslouchat',
+    title: 'Z čeho čerpám',
     bullets: [
       '10+ let v e-commerce, stovky e-shopů od start-upů po firmy s obratem přes 3 mld. Kč.',
       'Zakladatel Sounds Good Agency, první Shopify agentury v ČR a na Slovensku.',
@@ -227,7 +227,7 @@ const slides: Slide[] = [
     kicker: 'Jak to použít',
     title: 'Odcházíš s nástroji, ne jen poznámkami',
     bullets: [
-      '1. Ověř nápad. 2. Spočítej čísla. 3. Spusť podle checklistu.',
+      'Tři kroky, ať to není složité: ověř nápad, spočítej čísla, spusť podle checklistu.',
       'Web: hzb.davidjose.net · Celý kit zdarma k použití i sdílení, stačí uvést autora.',
       'Začni dnes jedním malým krokem. Hotovo je lepší než dokonalé.'
     ],

@@ -261,8 +261,7 @@
       "done": "hotovo"
     },
     "actions": {
-      "reset": "Resetovat postup",
-      "export": "Stáhnout PDF"
+      "reset": "Resetovat postup"
     },
     "day": {
       "title": "Den {{day}}",
@@ -275,17 +274,6 @@
     },
     "notes": {
       "placeholder": "Přidejte své poznámky..."
-    },
-    "pdf": {
-      "title": "Checklist spuštění e-shopu - Postup",
-      "subtitle": "Vytvořeno pomocí E-shop Financial Calculator od Davida Simõese",
-      "progress": "Postup: {{completed}}/{{total}} úkolů dokončeno ({{rate}}%)",
-      "completedTasks": "Dokončené úkoly:",
-      "dayTask": "Den {{day}}: {{title}}",
-      "notes": "Poznámky:",
-      "dayNotes": "Den {{day}} - {{title}}:",
-      "contact": "Kontakt na autora:",
-      "exportInfo": "Exportováno dne {{date}} z eshopcalculator.cz"
     },
     "tip": "Tip:",
     "legalResources": {
@@ -526,6 +514,12 @@
           "title": "Konkrétní otázky",
           "description": "Bylo něco nejasného? Co by se dalo zlepšit?",
           "time": "1 hodina"
+        },
+        "reviews": {
+          "title": "Nastavit sběr recenzí",
+          "description": "Aktivuj Ověřeno zákazníky na Heurece a/nebo jiný systém recenzí - důvěra zákazníků se buduje od první objednávky",
+          "time": "30 minut",
+          "tips": "Heureka Ověřeno zákazníky rozesílá dotazník automaticky po doručení. Prvních pár recenzí dramaticky zvyšuje konverzi u nových návštěvníků."
         }
       },
       "day12": {
@@ -567,9 +561,9 @@
       "day14": {
         "ads": {
           "title": "Příprava reklam",
-          "description": "Facebook/Instagram Ads nebo Google Ads - začni malým rozpočtem",
+          "description": "Facebook/Instagram Ads, Google Ads nebo Sklik (Seznam) - začni malým rozpočtem",
           "time": "3 hodiny",
-          "tips": "Začni s 20-50 Kč denně"
+          "tips": "Začni s 20-50 Kč denně. Sklik osloví uživatele Seznamu, který má v ČR stále silnou pozici."
         },
         "socialPromotion": {
           "title": "Propagace na sítích",

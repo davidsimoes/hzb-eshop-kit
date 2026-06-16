@@ -10,8 +10,7 @@ import { Header } from '@/components/Header/Header';
 import { Breadcrumb } from '@/components/Navigation/Breadcrumb';
 import { useChecklist } from '@/hooks/useChecklist';
 import { checklistData, ChecklistItem } from '@/data/checklistData';
-import jsPDF from 'jspdf';
-import { CheckSquare, Square, Clock, Download, RotateCcw, ExternalLink, ChevronDown, ChevronUp, BookOpen } from 'lucide-react';
+import { CheckSquare, Square, Clock, RotateCcw, ExternalLink, ChevronDown, ChevronUp, BookOpen } from 'lucide-react';
 export const Checklist = () => {
   const { t, i18n } = useTranslation();
   const {
@@ -47,119 +46,6 @@ export const Checklist = () => {
   // Simple task toggle without celebrations for now
   const handleTaskToggle = (itemId: string) => {
     toggleItem(itemId);
-  };
-  const exportToPDF = () => {
-    const completedItems = checklistData.filter(item => progress[item.id]?.completed);
-    const pdf = new jsPDF();
-
-    // Set up fonts and colors
-    pdf.setFont('helvetica', 'bold');
-    pdf.setFontSize(20);
-    pdf.setTextColor(108, 73, 91); // brand-wine color
-
-    // Header with branding
-    pdf.text(t('checklist.pdf.title'), 20, 25);
-    pdf.setFontSize(12);
-    pdf.setFont('helvetica', 'normal');
-    pdf.setTextColor(100, 100, 100);
-    pdf.text(t('checklist.pdf.subtitle'), 20, 35);
-
-    // Progress stats
-    pdf.setFontSize(14);
-    pdf.setTextColor(108, 73, 91);
-    pdf.setFont('helvetica', 'bold');
-    pdf.text(t('checklist.pdf.progress', { completed: stats.completed, total: stats.total, rate: stats.completionRate.toFixed(1) }), 20, 50);
-
-    // Completed tasks section
-    let yPosition = 65;
-    pdf.setFontSize(16);
-    pdf.setFont('helvetica', 'bold');
-    pdf.text(t('checklist.pdf.completedTasks'), 20, yPosition);
-    yPosition += 15;
-    pdf.setFontSize(11);
-    pdf.setFont('helvetica', 'normal');
-    pdf.setTextColor(50, 50, 50);
-    completedItems.forEach(item => {
-      if (yPosition > 270) {
-        pdf.addPage();
-        yPosition = 20;
-      }
-      pdf.text(t('checklist.pdf.dayTask', { day: item.day, title: t(item.titleKey) }), 25, yPosition);
-      yPosition += 8;
-    });
-
-    // Notes section
-    const itemsWithNotes = checklistData.filter(item => progress[item.id]?.notes);
-    if (itemsWithNotes.length > 0) {
-      yPosition += 10;
-      if (yPosition > 260) {
-        pdf.addPage();
-        yPosition = 20;
-      }
-      pdf.setFontSize(16);
-      pdf.setFont('helvetica', 'bold');
-      pdf.setTextColor(108, 73, 91);
-      pdf.text(t('checklist.pdf.notes'), 20, yPosition);
-      yPosition += 15;
-      pdf.setFontSize(11);
-      pdf.setFont('helvetica', 'normal');
-      pdf.setTextColor(50, 50, 50);
-      itemsWithNotes.forEach(item => {
-        if (yPosition > 260) {
-          pdf.addPage();
-          yPosition = 20;
-        }
-        pdf.setFont('helvetica', 'bold');
-        pdf.text(t('checklist.pdf.dayNotes', { day: item.day, title: t(item.titleKey) }), 25, yPosition);
-        yPosition += 8;
-        pdf.setFont('helvetica', 'normal');
-
-        // Split long notes into multiple lines
-        const notes = progress[item.id]?.notes || '';
-        const lines = pdf.splitTextToSize(notes, 170);
-        lines.forEach((line: string) => {
-          if (yPosition > 270) {
-            pdf.addPage();
-            yPosition = 20;
-          }
-          pdf.text(line, 30, yPosition);
-          yPosition += 6;
-        });
-        yPosition += 5;
-      });
-    }
-
-    // Footer with social media and branding
-    if (yPosition > 240) {
-      pdf.addPage();
-      yPosition = 20;
-    } else {
-      yPosition = Math.max(yPosition + 20, 250);
-    }
-
-    // Social media section
-    pdf.setFontSize(12);
-    pdf.setFont('helvetica', 'bold');
-    pdf.setTextColor(108, 73, 91);
-    pdf.text(t('checklist.pdf.contact'), 20, yPosition);
-    yPosition += 12;
-    pdf.setFontSize(10);
-    pdf.setFont('helvetica', 'normal');
-    pdf.setTextColor(50, 50, 50);
-    pdf.text('LinkedIn: https://www.linkedin.com/in/davidjsimoes/', 25, yPosition);
-    yPosition += 8;
-    pdf.text('Instagram: https://www.instagram.com/davidsimoes_/', 25, yPosition);
-    yPosition += 8;
-    pdf.text('X (Twitter): https://x.com/davidsimoes_', 25, yPosition);
-
-    // Export info
-    yPosition += 15;
-    pdf.setFontSize(10);
-    pdf.setTextColor(150, 150, 150);
-    pdf.text(t('checklist.pdf.exportInfo', { date: new Date().toLocaleDateString(i18n.language === 'cs' ? 'cs-CZ' : i18n.language === 'sk' ? 'sk-SK' : i18n.language === 'pl' ? 'pl-PL' : 'en-US') }), 20, yPosition);
-
-    // Download the PDF
-    pdf.save('launch-checklist-progress.pdf');
   };
   const ChecklistItemComponent = ({
     item
@@ -315,10 +201,6 @@ export const Checklist = () => {
               </div>
               <Progress value={stats.completionRate} className="mb-4" />
               <div className="flex gap-2 justify-center">
-                <Button onClick={exportToPDF} size="sm" variant="outline">
-                  <Download className="w-4 h-4 mr-2" />
-                  {t('checklist.actions.export', 'Stáhnout PDF')}
-                </Button>
                 <Button onClick={resetProgress} size="sm" variant="outline">
                   <RotateCcw className="w-4 h-4 mr-2" />
                   {t('checklist.actions.reset')}

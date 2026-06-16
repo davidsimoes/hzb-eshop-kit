@@ -352,6 +352,15 @@ export const checklistData: ChecklistItem[] = [
     priority: 'medium',
     estimatedTimeKey: 'checklist.tasks.day11.specificQuestions.time'
   },
+  {
+    id: 'day-11-reviews',
+    titleKey: 'checklist.tasks.day11.reviews.title',
+    day: 11,
+    descriptionKey: 'checklist.tasks.day11.reviews.description',
+    priority: 'high',
+    estimatedTimeKey: 'checklist.tasks.day11.reviews.time',
+    tipsKey: 'checklist.tasks.day11.reviews.tips'
+  },
   // Day 12: Marketing and Content
   {
     id: 'day-12-brand-story',
