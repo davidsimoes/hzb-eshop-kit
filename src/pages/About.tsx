@@ -15,17 +15,17 @@ const About = () => {
     title: "soundsgood.agency",
     description: "Zakladatel první Shopify agentury v ČR a na Slovensku",
     icon: Building,
-    highlight: "První Shopify agency v ČR/SK",
+    highlight: "První Shopify agentura v ČR/SK",
     why: "Vidím, co funguje i co nefunguje u desítek reálných e-shopů v ČR a SK, ne jen v teorii."
   }, {
-    title: "Subscription commerce startup",
+    title: "Startup s předplatným zboží",
     description: "Jedna z prvních firem v Česku zaměřená na předplatné spotřebního zboží",
     icon: Users,
     highlight: "Průkopník předplatných služeb",
     why: "Vím, jak postavit byznys na opakujících se příjmech a zákaznické věrnosti, protože jsem to sám zkoušel a přežil."
   }, {
     title: "TEPE USA (B2B dentální)",
-    description: "KISS (Keep It Simple, Stupid!) - jednoduchý a efektivní přístup k e-commerce",
+    description: "Princip KISS (drž to jednoduché) - jednoduchý a efektivní přístup k e-commerce",
     icon: TrendingUp,
     highlight: "Americký know-how",
     why: "Americký trh tě naučí jednoduchost a rychlost. Složitost zabíjí konverze, a to platí i pro český e-shop."
@@ -44,7 +44,7 @@ const About = () => {
   }];
   const lessons = [{
     title: "Moje první e-shopy",
-    lesson: "Financials are key! - bez správné kalkulace nemůžeš dlouhodobě vydělávat",
+    lesson: "Čísla jsou základ! - bez správné kalkulace nemůžeš dlouhodobě vydělávat",
     type: "critical"
   }, {
     title: "Můj vlastní byznys",

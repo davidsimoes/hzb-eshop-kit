@@ -46,6 +46,36 @@ export const MarketingBudgetSlider = ({
     if (percentage <= 15) return 'Doporučeno pro většinu e-shopů v ČR';
     return 'Pro rychlé škálování s vyšším rizikem';
   };
+  const channels = [
+    {
+      name: 'Srovnávače zboží',
+      detail: 'Heureka + Zboží.cz',
+      share: 0.3,
+      note: 'V ČR často nejlepší ROI, lidé jsou připravení koupit.'
+    },
+    {
+      name: 'Vyhledávání',
+      detail: 'Google Ads + Sklik (Seznam)',
+      share: 0.35,
+      note: 'Rozděl zhruba 70 / 30 Google a Sklik. Sklik bývá levnější za proklik.',
+      subChannels: [
+        { name: 'Google Ads', share: 0.35 * 0.7 },
+        { name: 'Sklik (Seznam)', share: 0.35 * 0.3 }
+      ]
+    },
+    {
+      name: 'Sociální sítě',
+      detail: 'Facebook + Instagram',
+      share: 0.25,
+      note: 'Budování povědomí a remarketing.'
+    },
+    {
+      name: 'E-mail / remarketing',
+      detail: '',
+      share: 0.1,
+      note: 'Nejlevnější kanál, drží ti zákazníky.'
+    }
+  ];
   if (targetProfit === 0 || margin === 0) {
     return null;
   }
@@ -102,6 +132,80 @@ export const MarketingBudgetSlider = ({
           </div>
           <div className="text-sm text-brand-wine/70">
             {getBudgetAdvice(budgetPercentage[0])}
+          </div>
+        </div>
+
+        <div className="space-y-3">
+          <div className="font-semibold text-brand-wine">
+            Rozděl rozpočet takto
+          </div>
+          {channels.map((channel) => (
+            <div
+              key={channel.name}
+              className="p-3 bg-brand-light-pink/60 rounded-lg space-y-1"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <span className="font-medium text-brand-wine">
+                    {channel.name}
+                  </span>
+                  {channel.detail && (
+                    <span className="text-sm text-brand-wine/60">
+                      {' '}({channel.detail})
+                    </span>
+                  )}
+                </div>
+                <div className="text-right">
+                  <span className="font-bold text-brand-wine">
+                    {formatCurrency(budgetAmount * channel.share)}
+                  </span>
+                  <span className="text-sm text-brand-wine/60">
+                    {' '}({Math.round(channel.share * 100)} %)
+                  </span>
+                </div>
+              </div>
+              <div className="text-sm text-brand-wine/70">{channel.note}</div>
+              {channel.subChannels && (
+                <div className="pl-3 pt-1 space-y-0.5 border-l-2 border-brand-wine/15">
+                  {channel.subChannels.map((sub) => (
+                    <div
+                      key={sub.name}
+                      className="flex items-center justify-between text-sm text-brand-wine/70"
+                    >
+                      <span>{sub.name}</span>
+                      <span>
+                        {formatCurrency(budgetAmount * sub.share)}
+                        {' '}({Math.round(sub.share * 100)} %)
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className="p-4 bg-brand-light-pink rounded-lg space-y-1">
+          <div className="font-semibold text-brand-wine">
+            Jak rozdělit rozpočet?
+          </div>
+          <div className="text-sm text-brand-wine/70">
+            Tohle je výchozí rozdělení, ne dogma. Začni u srovnávačů a vyhledávání,
+            tam jsou lidé připravení koupit. Testuj v malém a postupně přesouvej peníze
+            tam, kde ti vychází nejlevnější objednávka. Sleduj cenu za objednávku
+            (ne za proklik) v každém kanálu, to je tvoje hlavní čísla.
+          </div>
+        </div>
+
+        <div className="p-4 bg-brand-light-pink/50 rounded-lg space-y-1">
+          <div className="font-semibold text-brand-wine">
+            A co marketplaces?
+          </div>
+          <div className="text-sm text-brand-wine/70">
+            Marketplaces jako Aukro nebo Allegro jsou volitelný kanál navíc. Hodí se
+            na rozjezd, ověření poptávky a rychlý dosah. Počítej ale s tím, že platíš
+            provizi a nevlastníš zákaznická data, takže to neber jako součást základního
+            rozpočtu na reklamu, spíš jako doplněk.
           </div>
         </div>
       </CardContent>

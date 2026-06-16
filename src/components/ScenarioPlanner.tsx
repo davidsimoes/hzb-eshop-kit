@@ -51,7 +51,7 @@ export const ScenarioPlanner = ({
         borderColor: 'border-blue-200',
         description: 'Testuj opatrně, učí se',
         icon: '🐌',
-        channels: ['Google Ads (60%)', 'Facebook (30%)', 'Email (10%)'],
+        channels: ['Vyhledávání Google+Sklik (60%)', 'Srovnávače Heureka/Zboží (30%)', 'E-mail (10%)'],
         timeframe: '3-6 měsíců na testování'
       };
     } else if (percentage > 20) {
@@ -62,7 +62,7 @@ export const ScenarioPlanner = ({
         borderColor: 'border-red-200',
         description: 'Rychle škáluj, ale riskuj',
         icon: '🚀',
-        channels: ['Google Ads (50%)', 'Facebook (30%)', 'TikTok (20%)'],
+        channels: ['Vyhledávání Google+Sklik (40%)', 'Facebook/Instagram (35%)', 'Srovnávače Heureka/Zboží (25%)'],
         timeframe: '1-2 měsíce na škálování'
       };
     } else {
@@ -73,7 +73,7 @@ export const ScenarioPlanner = ({
         borderColor: 'border-green-200',
         description: 'Stabilní růst s kontrolou',
         icon: '⚖️',
-        channels: ['Google Ads (50%)', 'Facebook (30%)', 'Email (20%)'],
+        channels: ['Vyhledávání Google+Sklik (50%)', 'Srovnávače Heureka/Zboží (30%)', 'E-mail (20%)'],
         timeframe: '2-3 měsíce na optimalizaci'
       };
     }
@@ -85,32 +85,26 @@ export const ScenarioPlanner = ({
   const maxBudget = requiredRevenue * 0.3;
 
   const getNextSteps = () => {
-    const baseSteps = [
-      'Nastav konverze v Google Analytics',
-      'Vytvoř základní kampaně podle rozpočtu',
-      'Sleduj CAC první 2 týdny'
-    ];
-
     if (currentPercentage < 10) {
       return [
-        'Začni s Google Ads (60% rozpočtu)',
-        'Testuj 3-5 klíčových slov',
-        'Sleduj ROAS každý den',
-        'Po 2 týdnech zvyš úspěšné kampaně'
+        'Zaregistruj se na Heureku a Zboží.cz a nahraj produktový feed',
+        'Spusť vyhledávací reklamu (Google + Sklik) na 3 až 5 klíčových slov',
+        'Sleduj výsledky každý den a po dvou týdnech posilni to, co funguje',
+        'Nastav cíle v Google Analytics, abys věděla, co se vyplácí'
       ];
     } else if (currentPercentage > 20) {
       return [
-        'Rozděl rozpočet na víc kanálů',
-        'Testuj nové cílové skupiny',
-        'Sleduj CAC velmi pečlivě',
-        'Měj připravený plán na snížení'
+        'Rozděl rozpočet mezi vyhledávání, srovnávače a sociální sítě',
+        'Testuj různé cílové skupiny na Facebooku a Instagramu',
+        'Sleduj náklady na zákazníka každý týden a reaguj rychle',
+        'Připrav plán, jak rychle snížit výdaje, pokud kampaně nevyjdou'
       ];
     } else {
       return [
-        'Začni s Google a Facebook 50:50',
-        'Testuj různé kreativy',
-        'Optimalizuj týdně',
-        'Postupně navyšuj úspěšné kampaně'
+        'Zaregistruj se na srovnávače (Heureka, Zboží.cz) a nahraj feed produktů',
+        'Spusť vyhledávací reklamu (Google + Sklik) a souběžně Facebook a Instagram',
+        'Testuj různé obrázky a texty reklam a vyhodnocuj každý týden',
+        'Postupně navyšuj rozpočet tomu, co přináší objednávky'
       ];
     }
   };

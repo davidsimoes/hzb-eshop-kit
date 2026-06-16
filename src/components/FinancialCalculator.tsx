@@ -15,7 +15,7 @@ import { ExportData } from './ExportData';
 import { IndustryBenchmarks } from './Benchmarks/IndustryBenchmarks';
 import { LoadingSpinner, ResultsSkeleton } from './Loading/LoadingStates';
 import { useUnifiedCalculationEngine, BusinessMetrics } from './UnifiedCalculationEngine';
-import { Calculator, TrendingUp, Users, ShoppingCart, Target, DollarSign, RefreshCw, AlertTriangle, Sparkles } from 'lucide-react';
+import { Calculator, TrendingUp, Users, ShoppingCart, Target, DollarSign, RefreshCw, AlertTriangle, Sparkles, UserPlus, Percent } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 // ---------------------------------------------------------------------------
@@ -539,6 +539,54 @@ export const FinancialCalculator = () => {
                       </h3>
                       <p className="text-brand-wine/80">
                         {t('calculator.results.terminology.margin.description')}
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="shadow-soft">
+                    <CardContent className="p-6">
+                      <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
+                        <UserPlus className="w-5 h-5" />
+                        {t('calculator.results.terminology.cac.title')}
+                      </h3>
+                      <p className="text-brand-wine/80">
+                        {t('calculator.results.terminology.cac.description')}
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="shadow-soft">
+                    <CardContent className="p-6">
+                      <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
+                        <Users className="w-5 h-5" />
+                        {t('calculator.results.terminology.ltv.title')}
+                      </h3>
+                      <p className="text-brand-wine/80">
+                        {t('calculator.results.terminology.ltv.description')}
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="shadow-soft">
+                    <CardContent className="p-6">
+                      <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
+                        <Percent className="w-5 h-5" />
+                        {t('calculator.results.terminology.conversion.title')}
+                      </h3>
+                      <p className="text-brand-wine/80">
+                        {t('calculator.results.terminology.conversion.description')}
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="shadow-soft">
+                    <CardContent className="p-6">
+                      <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
+                        <TrendingUp className="w-5 h-5" />
+                        {t('calculator.results.terminology.roi.title')}
+                      </h3>
+                      <p className="text-brand-wine/80">
+                        {t('calculator.results.terminology.roi.description')}
                       </p>
                     </CardContent>
                   </Card>

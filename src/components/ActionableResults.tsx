@@ -78,7 +78,7 @@ export const ActionableResults = ({
       priority: 'medium',
       category: 'Marketing',
       action: 'Spusť systematické kampaně',
-      description: 'Začni s Google Ads (search), pak Facebook/Instagram, měř CAC týdně.',
+      description: 'Začni s vyhledáváním (Google + Sklik), přidej srovnávače (Heureka, Zboží.cz), sleduj náklady na zákazníka každý týden.',
       timeframe: 'průběžně',
       impact: 'Systematický marketing = předvídatelný růst'
     });
@@ -92,22 +92,22 @@ export const ActionableResults = ({
       period: 'Týden 1-2',
       target: `${dailyOrders * 7} objednávek`,
       focus: 'Testování a optimalizace',
-      tasks: ['Spusti první kampaně', 'Sleduj konverze denně', 'Testuj landing pages']
+      tasks: ['Spusť první kampaně', 'Sleduj objednávky každý den', 'Testuj vstupní stránky']
     }, {
       period: 'Měsíc 1',
       target: `${Math.round(results.requiredOrders * 0.3)} objednávek`,
       focus: 'Stabilizace procesů',
-      tasks: ['Vylaď nejlepší kampaně', 'Automatizuj email marketing', 'Zlepši customer service']
+      tasks: ['Vylaď nejlepší kampaně', 'Nastav automatické e-maily', 'Zlepši péči o zákazníky']
     }, {
       period: 'Měsíc 2-3',
       target: `${Math.round(results.requiredOrders * 0.7)} objednávek`,
       focus: 'Škálování úspěšných kanálů',
-      tasks: ['Navyš rozpočet úspěšných kampaní', 'Testuj nové kanály', 'Implementuj remarketing']
+      tasks: ['Navyš rozpočet úspěšných kampaní', 'Testuj nové kanály', 'Přidej remarketingové kampaně']
     }, {
       period: 'Měsíc 4+',
       target: `${results.requiredOrders}+ objednávek`,
       focus: 'Dosažení a překročení cíle',
-      tasks: ['Udržuj CAC pod kontrolou', 'Diverzifikuj traffic zdroje', 'Plánuj další růst']
+      tasks: ['Udržuj náklady na zákazníka pod kontrolou', 'Diverzifikuj zdroje návštěvnosti', 'Plánuj další růst']
     }];
   };
   const milestones = getMilestones();
@@ -229,19 +229,19 @@ export const ActionableResults = ({
             <div className="space-y-2">
               <h4 className="font-semibold text-brand-wine text-sm">Na webu:</h4>
               <ul className="text-sm text-brand-wine/80 space-y-1">
-                <li>• Přidej trust signály (certifikáty, recenze)</li>
-                <li>• Zjednodušš checkout proces</li>
-                <li>• Nastav Google Analytics goals</li>
-                <li>• Přidej live chat nebo FAQ</li>
+                <li>• Přidej prvky důvěry (certifikáty, recenze zákazníků)</li>
+                <li>• Zjednodušš proces objednávky a košík</li>
+                <li>• Nastav cíle v Google Analytics</li>
+                <li>• Přidej live chat nebo sekci otázek a odpovědí</li>
               </ul>
             </div>
             <div className="space-y-2">
               <h4 className="font-semibold text-brand-wine text-sm">Marketing:</h4>
               <ul className="text-sm text-brand-wine/80 space-y-1">
-                <li>• Spusť Google Ads pro branded terms</li>
-                <li>• Nastav Facebook pixel</li>
-                <li>• Vytvoř email welcome sérii</li>
-                <li>• Optimalizuj product pages pro SEO</li>
+                <li>• Zaregistruj se na srovnávače (Heureka, Zboží.cz) a nahraj feed</li>
+                <li>• Spusť vyhledávací reklamu (Google + Sklik) na svou značku</li>
+                <li>• Nastav měření na Facebooku a Instagramu</li>
+                <li>• Vytvoř uvítací sérii e-mailů a optimalizuj popisy produktů</li>
               </ul>
             </div>
           </div>

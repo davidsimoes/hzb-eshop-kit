@@ -127,7 +127,7 @@ const slides: Slide[] = [
     bullets: [
       'Kolik objednávek a návštěv potřebuješ, aby sis splnila svůj příjmový cíl.',
       'Počítá tvůj čas a výdělek, nejen pokrytí nákladů na zboží.',
-      'Realita check tvých čísel oproti 2026 benchmarkům podle oboru.'
+      'Porovnání tvých čísel s benchmarky oboru pro rok 2026.'
     ],
     demo: { label: 'Otevřít kalkulačku', to: '/kalkulacka' },
     icon: Calculator

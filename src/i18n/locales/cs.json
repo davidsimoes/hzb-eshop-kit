@@ -768,12 +768,20 @@
           "description": "Rozdíl mezi prodejní cenou a náklady, vyjádřený v procentech"
         },
         "conversion": {
-          "title": "Konverzní poměr",
-          "description": "Procento návštěvníků, kteří se stanou zákazníky"
+          "title": "Konverze",
+          "description": "Kolik procent návštěvníků tvého webu nakonec opravdu nakoupí."
         },
         "cac": {
-          "title": "Náklady na získání zákazníka (CAC)",
-          "description": "Kolik stojí získat jednoho nového zákazníka"
+          "title": "CAC (Náklady na získání zákazníka)",
+          "description": "Kolik tě v průměru stojí získat jednoho nového zákazníka. Spočítáš to jako výdaje na reklamu děleno počtem nových zákazníků."
+        },
+        "ltv": {
+          "title": "LTV (Hodnota zákazníka)",
+          "description": "Kolik ti jeden zákazník vydělá za celou dobu, co u tebe nakupuje, ne jen z první objednávky."
+        },
+        "roi": {
+          "title": "ROI (Návratnost investice)",
+          "description": "Kolik ti vydělá každá investovaná koruna, vyjádřeno v procentech."
         }
       }
     },

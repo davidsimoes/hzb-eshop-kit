@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { Heart, ArrowLeft, BookOpen, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { ToolFlowStrip } from '@/components/ToolFlowStrip';
 
 const Calculator = () => {
   const { t } = useTranslation();
@@ -67,6 +68,8 @@ const Calculator = () => {
           <span className="text-sm text-brand-wine/70 font-medium">Měna:</span>
           <CurrencySelector />
         </div>
+
+        <ToolFlowStrip current="kalkulacka" />
 
         <FinancialCalculator />
 
