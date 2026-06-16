@@ -512,6 +512,29 @@ Mluv ke mně lidsky, bez žargonu.`;
               </Button>
             </div>
           </div>
+
+          {/* Související průvodce */}
+          <div className="max-w-5xl mx-auto mt-6 mb-4">
+            <div className="flex flex-wrap items-center gap-3 p-4 bg-white/80 border border-brand-light-pink rounded-xl">
+              <Stethoscope className="w-5 h-5 text-brand-orange flex-shrink-0" />
+              <span className="text-sm font-semibold text-brand-wine/80">Související průvodce:</span>
+              <Link
+                to="/pruvodce/kdyz-to-neprodava"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-brand-wine hover:text-brand-orange transition-colors"
+              >
+                Když to neprodává
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <span className="text-brand-wine/30 hidden sm:inline">|</span>
+              <Link
+                to="/pruvodce/marketing-a-znacka"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-brand-wine hover:text-brand-orange transition-colors"
+              >
+                Marketing a značka
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
         </div>
       </main>
     </>

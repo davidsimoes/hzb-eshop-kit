@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from '@/components/ui/card';
-import { Users, Target, TrendingUp } from 'lucide-react';
+import { Users, Target, TrendingUp, Github } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
@@ -40,9 +40,9 @@ export const Footer = () => {
                   </svg>
                   <span>{t('footer.contact.instagram')}</span>
                 </a>
-                <a 
-                  href="https://x.com/davidsimoes_" 
-                  target="_blank" 
+                <a
+                  href="https://x.com/davidsimoes_"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center text-muted-foreground hover:text-brand-orange transition-colors text-sm"
                 >
@@ -50,6 +50,15 @@ export const Footer = () => {
                     <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
                   </svg>
                   <span>{t('footer.contact.twitter')}</span>
+                </a>
+                <a
+                  href="https://github.com/davidsimoes/hzb-eshop-kit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center text-muted-foreground hover:text-brand-orange transition-colors text-sm"
+                >
+                  <Github className="w-4 h-4 mr-2 flex-shrink-0" />
+                  <span>Kit na GitHubu</span>
                 </a>
               </div>
             </div>

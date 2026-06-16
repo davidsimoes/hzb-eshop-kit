@@ -28,7 +28,9 @@ interface Slide {
   title: string;
   bullets?: string[];
   menuItems?: string[];   // rendered as a numbered grid (menu variant)
-  demo?: { label: string; to: string };
+  menuSlugs?: string[];   // optional per-item guide slugs (parallel to menuItems)
+  demo?: { label: string; to: string; external?: boolean };
+  demoSecondary?: { label: string; to: string; external?: boolean };
   icon?: typeof Lightbulb;
   variant?: 'title' | 'menu' | 'block' | 'plain' | 'tool' | 'close';
   logos?: boolean;
@@ -87,6 +89,14 @@ const slides: Slide[] = [
       'Marketing a značka',
       'Provoz a finance',
       'Když to neprodává'
+    ],
+    menuSlugs: [
+      '/pruvodce/validace',
+      '/pruvodce/vyber-platformy',
+      '/pruvodce/spusteni-a-pravo',
+      '/pruvodce/marketing-a-znacka',
+      '/pruvodce/provoz-a-finance',
+      '/pruvodce/kdyz-to-neprodava'
     ],
     bullets: [
       'Všech 6 oblastí máš v kitu, který si odneseš. Dnes jdeme do hloubky na 3: Validace, Platforma a Diagnostika, plus kamkoli mě zatáhneš.',
@@ -218,7 +228,8 @@ const slides: Slide[] = [
       'Prompty na sebe navazují, takže ti AI postupně sestaví celý plán na rozjezd byznysu.',
       'Pokročilé: stáhni si celý kit z GitHubu a „nakrm" jím svou AI, radí pak přesně v duchu téhle metody.'
     ],
-    demo: { label: 'Kit a prompty na webu', to: '/' },
+    demo: { label: 'Celý kit na GitHubu', to: 'https://github.com/davidsimoes/hzb-eshop-kit', external: true },
+    demoSecondary: { label: 'Kit a prompty na webu', to: '/' },
     icon: Sparkles
   },
   {
@@ -310,12 +321,30 @@ const Prezentace = () => {
           {/* numbered grid for the menu slide */}
           {s.menuItems && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
-              {s.menuItems.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-3 bg-white/70 rounded-xl px-4 py-3 shadow-soft">
-                  <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-wine text-white font-bold flex items-center justify-center">{idx + 1}</span>
-                  <span className="text-base lg:text-lg text-brand-wine font-medium">{item}</span>
-                </div>
-              ))}
+              {s.menuItems.map((item, idx) => {
+                const slug = s.menuSlugs?.[idx];
+                const inner = (
+                  <>
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-brand-wine text-white font-bold flex items-center justify-center">{idx + 1}</span>
+                    <span className="text-base lg:text-lg text-brand-wine font-medium">{item}</span>
+                  </>
+                );
+                return slug ? (
+                  <a
+                    key={idx}
+                    href={slug}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 bg-white/70 rounded-xl px-4 py-3 shadow-soft hover:bg-white/90 transition-colors"
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <div key={idx} className="flex items-center gap-3 bg-white/70 rounded-xl px-4 py-3 shadow-soft">
+                    {inner}
+                  </div>
+                );
+              })}
             </div>
           )}
 
@@ -330,15 +359,24 @@ const Prezentace = () => {
             </ul>
           )}
 
-          {s.demo && (
-            <div className="mt-10">
-              <Button asChild size="lg" className="bg-brand-wine hover:bg-brand-wine/90 text-base">
-                {/* open the live tool in a NEW TAB so the deck keeps its place */}
-                <a href={s.demo.to} target="_blank" rel="noopener noreferrer">
-                  <Sparkles className="w-5 h-5 mr-2" />
-                  {s.demo.label}
-                </a>
-              </Button>
+          {(s.demo || s.demoSecondary) && (
+            <div className="mt-10 flex flex-wrap gap-3">
+              {s.demo && (
+                <Button asChild size="lg" className="bg-brand-wine hover:bg-brand-wine/90 text-base">
+                  {/* open in a new tab — keeps the deck in place */}
+                  <a href={s.demo.to} target="_blank" rel="noopener noreferrer">
+                    <Sparkles className="w-5 h-5 mr-2" />
+                    {s.demo.label}
+                  </a>
+                </Button>
+              )}
+              {s.demoSecondary && (
+                <Button asChild size="lg" variant="outline" className="border-brand-wine text-brand-wine hover:bg-brand-wine/10 text-base">
+                  <a href={s.demoSecondary.to} target="_blank" rel="noopener noreferrer">
+                    {s.demoSecondary.label}
+                  </a>
+                </Button>
+              )}
             </div>
           )}
 

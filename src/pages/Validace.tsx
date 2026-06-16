@@ -291,6 +291,21 @@ Mluv ke mně lidsky a bez žargonu.`;
               </Button>
             </div>
           </div>
+
+          {/* Související průvodce */}
+          <div className="max-w-5xl mx-auto mt-6 mb-4">
+            <div className="flex items-center gap-3 p-4 bg-white/80 border border-brand-light-pink rounded-xl">
+              <Lightbulb className="w-5 h-5 text-brand-orange flex-shrink-0" />
+              <span className="text-sm font-semibold text-brand-wine/80">Související průvodce:</span>
+              <Link
+                to="/pruvodce/validace"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-brand-wine hover:text-brand-orange transition-colors"
+              >
+                Validace nápadu
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
         </div>
       </main>
     </>

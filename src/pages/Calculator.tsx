@@ -83,10 +83,10 @@ const Calculator = () => {
               <p className="text-brand-wine/70 mb-6 max-w-2xl mx-auto">
                 {t('calculator.learnMoreDesc')}
               </p>
-              <Button 
-                asChild 
-                variant="default" 
-                size="lg" 
+              <Button
+                asChild
+                variant="default"
+                size="lg"
                 className="bg-brand-wine hover:bg-brand-wine/90"
               >
                 <Link to="/prezentace">
@@ -97,6 +97,21 @@ const Calculator = () => {
               </Button>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Související průvodce */}
+        <div className="max-w-6xl mx-auto mb-8">
+          <div className="flex items-center gap-3 p-4 bg-white/80 border border-brand-light-pink rounded-xl">
+            <BookOpen className="w-5 h-5 text-brand-orange flex-shrink-0" />
+            <span className="text-sm font-semibold text-brand-wine/80">Související průvodce:</span>
+            <Link
+              to="/pruvodce/provoz-a-finance"
+              className="inline-flex items-center gap-1 text-sm font-semibold text-brand-wine hover:text-brand-orange transition-colors"
+            >
+              Provoz, finance a dodavatelé
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
         </div>
       </main>

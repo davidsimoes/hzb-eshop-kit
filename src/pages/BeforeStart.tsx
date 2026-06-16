@@ -167,7 +167,7 @@ const BeforeStart = () => {
             <Card className="bg-gradient-orange text-white border-none">
               <CardContent className="p-8">
                 <h2 className="text-2xl font-bold mb-6">{t('beforeStart.cta.finalTitle')}</h2>
-                
+
                 <div className="mb-6 bg-white/10 p-4 rounded-lg border border-white/20">
                   <h4 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
                     <BookOpen className="w-5 h-5" />
@@ -176,9 +176,9 @@ const BeforeStart = () => {
                   <p className="text-white/80 text-sm mb-3">
                     {t('beforeStart.cta.guide.description')}
                   </p>
-                  <Button 
-                    asChild 
-                    variant="secondary" 
+                  <Button
+                    asChild
+                    variant="secondary"
                     size="sm"
                     className="bg-white/20 text-white border border-white/30 hover:bg-white/30"
                   >
@@ -189,7 +189,7 @@ const BeforeStart = () => {
                     </Link>
                   </Button>
                 </div>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg" className="bg-white text-brand-wine hover:bg-white/90 font-semibold">
                     <Link to={t('beforeStart.cta.readyLink')}>
@@ -197,7 +197,7 @@ const BeforeStart = () => {
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Link>
                   </Button>
-                  
+
                   <Button asChild size="lg" variant="secondary" className="bg-white/20 text-white border border-white/30 hover:bg-white/30">
                     <Link to={t('beforeStart.cta.needMoreLink')}>
                       {t('beforeStart.cta.needMore')}
@@ -207,6 +207,29 @@ const BeforeStart = () => {
               </CardContent>
             </Card>
           </section>
+
+          {/* Související průvodce */}
+          <div className="max-w-3xl mx-auto mt-8">
+            <div className="flex flex-wrap items-center gap-3 p-4 bg-white/80 border border-brand-light-pink rounded-xl">
+              <BookOpen className="w-5 h-5 text-brand-orange flex-shrink-0" />
+              <span className="text-sm font-semibold text-brand-wine/80">Související průvodce:</span>
+              <Link
+                to="/pruvodce"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-brand-wine hover:text-brand-orange transition-colors"
+              >
+                Všechny průvodce
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <span className="text-brand-wine/30 hidden sm:inline">|</span>
+              <Link
+                to="/pruvodce/spusteni-a-pravo"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-brand-wine hover:text-brand-orange transition-colors"
+              >
+                Spuštění a právo
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
         </div>
       </main>
     </>;

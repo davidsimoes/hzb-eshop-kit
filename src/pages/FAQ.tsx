@@ -17,6 +17,7 @@ import {
   Lightbulb,
   ArrowRight,
   ExternalLink,
+  BookOpen,
 } from 'lucide-react';
 
 const iconMap = {
@@ -30,6 +31,7 @@ interface FaqLink {
   text: string;
   url: string;
   internal?: boolean;
+  guideLink?: boolean;
 }
 
 interface FaqQuestion {
@@ -44,6 +46,83 @@ interface FaqSection {
   color: string;
   questions: FaqQuestion[];
 }
+
+/**
+ * Renders an answer string with support for:
+ * - Double newline -> paragraph break
+ * - Lines starting with "- " -> bullet list items (bold the text before the first colon)
+ * - Lines starting with a digit and dot (e.g. "1.") -> numbered list items
+ */
+const AnswerRenderer = ({ text }: { text: string }) => {
+  const blocks = text.split(/\n\n+/);
+
+  return (
+    <div className="space-y-3 text-[15px] sm:text-base leading-7 text-muted-foreground">
+      {blocks.map((block, bi) => {
+        const lines = block.split('\n');
+
+        // Detect bullet list block: majority of lines start with "- "
+        const bulletLines = lines.filter((l) => l.match(/^-\s/));
+        const numberedLines = lines.filter((l) => l.match(/^\d+\.\s/));
+
+        if (bulletLines.length > 0 && bulletLines.length >= lines.length - 1) {
+          return (
+            <ul key={bi} className="space-y-1.5 pl-1">
+              {lines.map((line, li) => {
+                if (!line.match(/^-\s/)) return null;
+                const content = line.replace(/^-\s/, '');
+                return (
+                  <li key={li} className="flex gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-wine/60" />
+                    <BoldLeadText text={content} />
+                  </li>
+                );
+              })}
+            </ul>
+          );
+        }
+
+        if (numberedLines.length > 0 && numberedLines.length >= lines.length - 1) {
+          return (
+            <ol key={bi} className="space-y-2 list-none pl-0">
+              {lines.map((line, li) => {
+                const m = line.match(/^(\d+)\.\s+(.*)/s);
+                if (!m) return null;
+                return (
+                  <li key={li} className="flex gap-3">
+                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-wine/10 text-xs font-bold text-brand-wine">
+                      {m[1]}
+                    </span>
+                    <BoldLeadText text={m[2]} />
+                  </li>
+                );
+              })}
+            </ol>
+          );
+        }
+
+        // Plain paragraph (may still have inline single newlines -> render as-is)
+        return (
+          <p key={bi} className="whitespace-pre-line">
+            {block}
+          </p>
+        );
+      })}
+    </div>
+  );
+};
+
+/** Bolds text up to the first colon, if present. */
+const BoldLeadText = ({ text }: { text: string }) => {
+  const colonIdx = text.indexOf(':');
+  if (colonIdx === -1 || colonIdx > 60) return <span>{text}</span>;
+  return (
+    <span>
+      <strong className="font-semibold text-foreground">{text.slice(0, colonIdx + 1)}</strong>
+      {text.slice(colonIdx + 1)}
+    </span>
+  );
+};
 
 const FAQ = () => {
   const { t } = useTranslation();
@@ -143,9 +222,7 @@ const FAQ = () => {
                           </span>
                         </AccordionTrigger>
                         <AccordionContent className="px-4 pb-5">
-                          <p className="whitespace-pre-line text-[15px] sm:text-base leading-7 text-muted-foreground">
-                            {question.a}
-                          </p>
+                          <AnswerRenderer text={question.a} />
 
                           {question.links && question.links.length > 0 && (
                             <FaqLinks links={question.links} />
@@ -177,14 +254,33 @@ const FAQ = () => {
 };
 
 const FaqLinks = ({ links }: { links: FaqLink[] }) => {
-  const internal = links.filter((l) => l.internal);
+  const guideLinks = links.filter((l) => l.guideLink);
+  const toolLinks = links.filter((l) => l.internal && !l.guideLink);
   const external = links.filter((l) => !l.internal);
 
   return (
     <div className="mt-5 space-y-4">
-      {internal.length > 0 && (
+      {/* "Číst víc v průvodci" guide deep-links */}
+      {guideLinks.length > 0 && (
         <div className="flex flex-wrap gap-2">
-          {internal.map((link, i) => (
+          {guideLinks.map((link, i) => (
+            <Link
+              key={i}
+              to={link.url}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-brand-wine/30 bg-brand-wine/5 px-3.5 py-2 text-sm font-medium text-brand-wine transition-colors hover:bg-brand-wine hover:text-white"
+            >
+              <BookOpen className="h-3.5 w-3.5 shrink-0" />
+              {link.text}
+              <ArrowRight className="h-3.5 w-3.5 shrink-0" />
+            </Link>
+          ))}
+        </div>
+      )}
+
+      {/* Internal tool links */}
+      {toolLinks.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          {toolLinks.map((link, i) => (
             <Link
               key={i}
               to={link.url}

@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
   HelpCircle,
@@ -11,6 +11,7 @@ import {
   Compass,
   Wallet,
   ChevronDown,
+  BookOpen,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import {
@@ -19,6 +20,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { GUIDES } from '@/data/guides';
 
 interface MainNavProps {
   /** Called after a nav link is clicked (used by mobile menu to close itself). */
@@ -86,6 +88,7 @@ const navLinkClass = (isActive: boolean) =>
 export const DesktopNav = () => {
   const location = useLocation();
   const isToolActive = toolItems.some((t) => t.to === location.pathname);
+  const isGuideActive = location.pathname.startsWith('/pruvodce');
 
   return (
     <nav
@@ -143,6 +146,80 @@ export const DesktopNav = () => {
         </DropdownMenuContent>
       </DropdownMenu>
 
+      {/* Průvodce dropdown */}
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <button
+            className={cn(
+              navLinkClass(isGuideActive),
+              'after:hidden',
+              'focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-wine focus-visible:ring-offset-2',
+            )}
+            aria-label="Průvodce — otevřít nabídku"
+          >
+            <span>Průvodce</span>
+            <ChevronDown
+              className="w-3.5 h-3.5 flex-shrink-0 transition-transform duration-200 ui-open:rotate-180"
+              aria-hidden="true"
+            />
+          </button>
+        </DropdownMenuTrigger>
+
+        <DropdownMenuContent
+          align="start"
+          sideOffset={8}
+          className="w-72 p-2 rounded-xl shadow-lg border border-border bg-background"
+        >
+          {/* Index link */}
+          <DropdownMenuItem asChild>
+            <Link
+              to="/pruvodce"
+              className={cn(
+                'flex items-start gap-3 px-3 py-2.5 rounded-lg cursor-pointer transition-colors duration-150',
+                'hover:bg-brand-light-pink focus:bg-brand-light-pink focus:outline-none',
+                location.pathname === '/pruvodce'
+                  ? 'bg-brand-wine/10 text-brand-wine font-semibold'
+                  : 'text-foreground',
+              )}
+            >
+              <BookOpen className="w-4 h-4 mt-0.5 flex-shrink-0 text-brand-orange" aria-hidden="true" />
+              <span className="flex flex-col">
+                <span className="text-sm font-medium leading-snug">Všichni průvodci</span>
+                <span className="text-xs text-muted-foreground leading-snug">Přehled všech průvodců</span>
+              </span>
+            </Link>
+          </DropdownMenuItem>
+
+          {/* Individual guides */}
+          {GUIDES.map((g) => (
+            <DropdownMenuItem key={g.slug} asChild>
+              <NavLink
+                to={`/pruvodce/${g.slug}`}
+                className={({ isActive }) =>
+                  cn(
+                    'flex items-start gap-3 px-3 py-2.5 rounded-lg cursor-pointer transition-colors duration-150',
+                    'hover:bg-brand-light-pink focus:bg-brand-light-pink focus:outline-none',
+                    isActive
+                      ? 'bg-brand-wine/10 text-brand-wine font-semibold'
+                      : 'text-foreground',
+                  )
+                }
+              >
+                <span className="w-4 h-4 mt-0.5 flex-shrink-0 text-center text-xs font-bold text-brand-orange tabular-nums">
+                  {g.order}
+                </span>
+                <span className="flex flex-col">
+                  <span className="text-sm font-medium leading-snug">{g.title}</span>
+                  {g.summary && (
+                    <span className="text-xs text-muted-foreground leading-snug line-clamp-1">{g.summary}</span>
+                  )}
+                </span>
+              </NavLink>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
+
       {/* Top-level links */}
       {topItems.map((item) => (
         <NavLink
@@ -164,6 +241,13 @@ export const MainNav = ({ onItemClick }: MainNavProps) => {
   const { t } = useTranslation();
   // t() calls kept so i18n keys still resolve; labels below use literal Czech
   void t;
+
+  const mobileLinkClass = ({ isActive }: { isActive: boolean }) =>
+    cn(
+      'flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150',
+      'hover:bg-brand-light-pink hover:text-brand-wine',
+      isActive ? 'bg-brand-wine text-white' : 'text-brand-wine/70',
+    );
 
   return (
     <nav
@@ -197,18 +281,46 @@ export const MainNav = ({ onItemClick }: MainNavProps) => {
       {/* Divider */}
       <div className="my-1 border-t border-border" role="separator" />
 
+      {/* Průvodce subheading */}
+      <p className="px-3 pt-1 pb-0.5 text-xs font-semibold uppercase tracking-wider text-brand-wine/50 select-none">
+        Průvodce
+      </p>
+
+      {/* Průvodce index */}
+      <NavLink
+        to="/pruvodce"
+        end
+        onClick={onItemClick}
+        className={mobileLinkClass}
+      >
+        <BookOpen className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+        <span className="flex-1">Všichni průvodci</span>
+      </NavLink>
+
+      {/* Individual guides */}
+      {GUIDES.map((g) => (
+        <NavLink
+          key={g.slug}
+          to={`/pruvodce/${g.slug}`}
+          onClick={onItemClick}
+          className={mobileLinkClass}
+        >
+          <span className="w-4 h-4 flex-shrink-0 text-center text-xs font-bold tabular-nums" aria-hidden="true">
+            {g.order}
+          </span>
+          <span className="flex-1">{g.title}</span>
+        </NavLink>
+      ))}
+
+      {/* Divider */}
+      <div className="my-1 border-t border-border" role="separator" />
+
       {topItems.map((item) => (
         <NavLink
           key={item.to}
           to={item.to}
           onClick={onItemClick}
-          className={({ isActive }) =>
-            cn(
-              'flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-150',
-              'hover:bg-brand-light-pink hover:text-brand-wine',
-              isActive ? 'bg-brand-wine text-white' : 'text-brand-wine/70',
-            )
-          }
+          className={mobileLinkClass}
         >
           <item.icon className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
           <span>{item.label}</span>

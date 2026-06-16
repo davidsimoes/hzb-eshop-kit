@@ -22,6 +22,8 @@ import Prezentace from "./pages/Prezentace";
 import Checklist from "./pages/Checklist";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
+import Guides from "./pages/Guides";
+import GuidePage from "./pages/GuidePage";
 import NotFound from "./pages/NotFound";
 import './i18n';
 
@@ -63,6 +65,8 @@ const App = () => {
                   <Route path="/checklist" element={<Checklist />} />
                   <Route path="/o-mne" element={<About />} />
                   <Route path="/faq" element={<FAQ />} />
+                  <Route path="/pruvodce" element={<Guides />} />
+                  <Route path="/pruvodce/:slug" element={<GuidePage />} />
                   
                   {/* Legacy routes for backward compatibility */}
                   <Route path="/calculator" element={<Calculator />} />
