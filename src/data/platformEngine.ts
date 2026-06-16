@@ -173,7 +173,7 @@ export const ENGINE_QUESTIONS: EngineQuestion[] = [
         id: 'idea',
         label: 'Mám nápad, ale ještě nevím, jestli o to bude zájem',
         hint: 'Chci to nejdřív levně vyzkoušet.',
-        weights: { marketplace: 5, builder: 2, shoptet: 1 },
+        weights: { marketplace: 5, builder: 3, shoptet: 1 },
         rationale: 'chceš nejdřív ověřit poptávku, ne hned stavět velký obchod'
       },
       {
@@ -187,7 +187,7 @@ export const ENGINE_QUESTIONS: EngineQuestion[] = [
         id: 'running',
         label: 'Už prodávám a chci to posunout výš',
         hint: 'Mám první prodeje a řeším růst nebo přechod jinam.',
-        weights: { shopify: 3, shoptet: 2, upgates: 2 },
+        weights: { shopify: 3, upgates: 2, shoptet: 1 },
         rationale: 'už prodáváš a jdeš po růstu'
       }
     ]
@@ -208,14 +208,14 @@ export const ENGINE_QUESTIONS: EngineQuestion[] = [
         id: 'guided',
         label: 'Zvládnu nastavení podle srozumitelného návodu',
         hint: 'Trochu si pohraju, když je k tomu jasný postup.',
-        weights: { shopify: 2, shoptet: 2, upgates: 2, builder: 1 },
+        weights: { shopify: 2, upgates: 3, shoptet: 2, builder: 1 },
         rationale: 'zvládneš nastavení podle návodu'
       },
       {
         id: 'techy',
         label: 'Nebojím se techniky nebo mám vývojáře',
         hint: 'Server, kód a vlastní úpravy mě neodradí.',
-        weights: { woocommerce: 4, shopify: 2, upgates: 1 },
+        weights: { woocommerce: 5, shopify: 2, upgates: 1 },
         rationale: 'technika ti nedělá problém'
       }
     ]
@@ -229,7 +229,7 @@ export const ENGINE_QUESTIONS: EngineQuestion[] = [
         id: 'minimal',
         label: 'Co nejmíň, ideálně skoro nic',
         hint: 'Začínám a každá koruna se počítá.',
-        weights: { marketplace: 4, woocommerce: 2, builder: 2, shoptet: 1 },
+        weights: { marketplace: 4, woocommerce: 3, builder: 3, shoptet: 1 },
         rationale: 'chceš začít s minimálními náklady'
       },
       {
@@ -243,7 +243,7 @@ export const ENGINE_QUESTIONS: EngineQuestion[] = [
         id: 'invest',
         label: 'Klidně víc, hlavně ať to roste a vypadá skvěle',
         hint: 'Cena není hlavní, hraje roli kvalita a růst.',
-        weights: { shopify: 4, upgates: 2, shoptet: 1 },
+        weights: { shopify: 4, upgates: 3, shoptet: 1 },
         rationale: 'cena pro tebe není hlavní, jde ti o kvalitu a růst'
       }
     ]
@@ -264,7 +264,7 @@ export const ENGINE_QUESTIONS: EngineQuestion[] = [
         id: 'cz_plus',
         label: 'Začínám v Česku, ale chci časem za hranice',
         hint: 'Teď CZ a SK, výhled je širší.',
-        weights: { shopify: 3, shoptet: 1, upgates: 1 },
+        weights: { shopify: 3, upgates: 2, shoptet: 1 },
         rationale: 'začínáš v Česku, ale myslíš i na zahraničí'
       },
       {
@@ -292,14 +292,14 @@ export const ENGINE_QUESTIONS: EngineQuestion[] = [
         id: 'nice',
         label: 'Hodily by se, ale nejsou podmínka',
         hint: 'Časem ano, na startu to přežiju.',
-        weights: { shoptet: 2, upgates: 2, shopify: 1 },
+        weights: { upgates: 3, shoptet: 2, shopify: 1 },
         rationale: 'české integrace bereš jako příjemné plus, ne podmínku'
       },
       {
         id: 'no',
         label: 'Moc je řešit nemusím',
         hint: 'Buď je nepotřebuju, nebo prodávám do zahraničí.',
-        weights: { shopify: 2, builder: 1, marketplace: 1 },
+        weights: { shopify: 2, builder: 2, marketplace: 1, woocommerce: 1 },
         rationale: 'české integrace pro tebe nejsou klíčové'
       }
     ]
@@ -320,14 +320,14 @@ export const ENGINE_QUESTIONS: EngineQuestion[] = [
         id: 'catalog',
         label: 'Větší sortiment fyzického zboží pro koncové zákazníky',
         hint: 'Klasický e-shop s víc produkty.',
-        weights: { shoptet: 3, upgates: 2, shopify: 2 },
+        weights: { shoptet: 2, upgates: 2, shopify: 2 },
         rationale: 'plánuješ klasický e-shop s větším sortimentem'
       },
       {
         id: 'scale_b2b',
         label: 'Velké ambice nebo prodej i firmám (B2B)',
         hint: 'Chci růst, expandovat nebo prodávat i velkoodběratelům.',
-        weights: { shopify: 3, upgates: 3, shoptet: 1 },
+        weights: { shopify: 3, upgates: 3, shoptet: 1, woocommerce: 1 },
         rationale: 'máš velké ambice nebo prodej i firmám (B2B)'
       }
     ]

@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Tooltip } from './Tooltip';
 import { MarketingBudgetSlider } from './MarketingBudgetSlider';
 import { CACCalculator } from './CACCalculator';
@@ -250,7 +251,7 @@ export const FinancialCalculator = () => {
 
   return (
     <>
-      {/* Header with restart option */}
+      {/* Vždy viditelné: tlačítko změnit data + chybová hláška */}
       <div className="text-center mb-8">
         <Button
           variant="outline"
@@ -262,38 +263,58 @@ export const FinancialCalculator = () => {
         </Button>
       </div>
 
-        <div className="max-w-6xl mx-auto space-y-8">
-          {/* Cost error: costs are higher than price */}
-          {costError && (
-            <Card className="shadow-soft border border-red-200">
-              <CardContent className="p-6 flex items-start gap-3 bg-red-50 rounded-lg">
-                <AlertTriangle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-                <div>
-                  <div className="font-semibold text-red-700">
-                    Náklady jsou vyšší než cena
-                  </div>
-                  <div className="text-sm text-red-700/80">
-                    Náklady na zboží a ostatní náklady na objednávku dohromady převyšují prodejní cenu. Na každé objednávce bys prodělával. Uprav cenu nebo náklady, ať je z objednávky zisk.
-                  </div>
+      <div className="max-w-6xl mx-auto">
+        {/* Cost error: náklady jsou vyšší než cena */}
+        {costError && (
+          <Card className="shadow-soft border border-red-200 mb-8">
+            <CardContent className="p-6 flex items-start gap-3 bg-red-50 rounded-lg">
+              <AlertTriangle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="font-semibold text-red-700">
+                  Náklady jsou vyšší než cena
                 </div>
-              </CardContent>
-            </Card>
-          )}
+                <div className="text-sm text-red-700/80">
+                  Náklady na zboží a ostatní náklady na objednávku dohromady převyšují prodejní cenu. Na každé objednávce bys prodělával. Uprav cenu nebo náklady, ať je z objednávky zisk.
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
-          {/* Industry Benchmarks */}
-          {wizardData && (
-            <IndustryBenchmarks
-              currentAOV={wizardData.aov}
-              currentConversion={wizardData.conversionRate}
-              currentMargin={results?.grossMargin || 0}
-            />
-          )}
+        {/* Taby — zobrazí se jen pokud máme data */}
+        {wizardData && (
+          <Tabs defaultValue="answer" className="w-full">
+            <TabsList className="flex flex-wrap h-auto gap-1 mb-8 bg-brand-light-pink/50 p-1 rounded-lg">
+              <TabsTrigger
+                value="answer"
+                className="flex-1 min-w-[140px] data-[state=active]:bg-brand-wine data-[state=active]:text-white"
+              >
+                Vyjde mi to?
+              </TabsTrigger>
+              <TabsTrigger
+                value="detail"
+                className="flex-1 min-w-[140px] data-[state=active]:bg-brand-wine data-[state=active]:text-white"
+              >
+                Detail a scénáře
+              </TabsTrigger>
+              <TabsTrigger
+                value="marketing"
+                className="flex-1 min-w-[140px] data-[state=active]:bg-brand-wine data-[state=active]:text-white"
+              >
+                Marketing a další kroky
+              </TabsTrigger>
+            </TabsList>
 
-          {/* Forward-Looking Features — na celou sirku stackovane,
-              RequiredRevenueCalculator je vyrazne kratsi nez ScenarioPlanner,
-              takze vedle sebe by vznikla velka prazdna mezera pod levym sloupcem. */}
-          {wizardData && (
-            <div className="space-y-8">
+            {/* ── TAB 1: Vyjde mi to? ── */}
+            <TabsContent value="answer" className="space-y-8">
+              {/* Industry Benchmarks */}
+              <IndustryBenchmarks
+                currentAOV={wizardData.aov}
+                currentConversion={wizardData.conversionRate}
+                currentMargin={results?.grossMargin || 0}
+              />
+
+              {/* RequiredRevenueCalculator */}
               <RequiredRevenueCalculator
                 desiredProfit={wizardData.desiredProfit}
                 isYearly={wizardData.isYearly}
@@ -301,33 +322,16 @@ export const FinancialCalculator = () => {
                 initialNetMargin={results ? Math.round(results.netMargin) : 20}
               />
 
-              {requiredRevenue > 0 && wizardData.aov > 0 && (
-                <ScenarioPlanner
-                  requiredRevenue={requiredRevenue}
-                  desiredProfit={wizardData.desiredProfit}
-                  fixedCosts={wizardData.cogs + wizardData.extraCosts}
-                  aov={wizardData.aov}
-                  isYearly={wizardData.isYearly}
-                />
-              )}
-            </div>
-          )}
-
-          {/* Results — vse na celou sirku, stackovane pod sebou.
-              Zadny dvousloupcovy parovani, kde by jeden blok byl vyssi nez druhy
-              a vedle kratsiho zbyla prazdna plocha (presne to, co David reklamoval).
-              Vnitrni grid statistickych karet uvnitr jednotlivych sekci zustava. */}
-          {results && wizardData && (
-            <>
-              {/* Tvoje vysledky na celou sirku (vnitrni 2x2 grid statistik) */}
-              <Card className="shadow-soft">
-                <CardHeader className="bg-brand-wine text-white rounded-t-lg">
-                  <CardTitle className="flex items-center gap-2">
-                    <TrendingUp className="w-5 h-5" />
-                    {t('calculator.results.yourResults')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-6 space-y-4">
+              {/* Tvoje výsledky */}
+              {results && (
+                <Card className="shadow-soft">
+                  <CardHeader className="bg-brand-wine text-white rounded-t-lg">
+                    <CardTitle className="flex items-center gap-2">
+                      <TrendingUp className="w-5 h-5" />
+                      {t('calculator.results.yourResults')}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-6 space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="text-center p-4 bg-brand-light-pink rounded-lg">
                         <div className="text-2xl font-bold text-brand-wine">
@@ -346,7 +350,6 @@ export const FinancialCalculator = () => {
                         </div>
                       </div>
                     </div>
-
                     <div className="grid grid-cols-2 gap-4">
                       <div className="text-center p-4 bg-gradient-brand text-white rounded-lg">
                         <div className="text-2xl font-bold">
@@ -365,18 +368,20 @@ export const FinancialCalculator = () => {
                         </div>
                       </div>
                     </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              )}
 
-              {/* Pozadavky na dosazeni cile na celou sirku */}
-              <Card className="shadow-soft">
-                <CardHeader className="bg-brand-pink text-white rounded-t-lg">
-                  <CardTitle className="flex items-center gap-2">
-                    <Users className="w-5 h-5" />
-                    {t('calculator.results.requirements')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-6 space-y-4">
+              {/* Požadavky na dosažení cíle */}
+              {results && (
+                <Card className="shadow-soft">
+                  <CardHeader className="bg-brand-pink text-white rounded-t-lg">
+                    <CardTitle className="flex items-center gap-2">
+                      <Users className="w-5 h-5" />
+                      {t('calculator.results.requirements')}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-6 space-y-4">
                     <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
                       <div className="flex items-center gap-3">
                         <ShoppingCart className="w-5 h-5 text-brand-wine" />
@@ -388,7 +393,6 @@ export const FinancialCalculator = () => {
                         {formatNumber(results.requiredOrders)}
                       </span>
                     </div>
-
                     <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
                       <div className="flex items-center gap-3">
                         <Users className="w-5 h-5 text-brand-wine" />
@@ -400,7 +404,6 @@ export const FinancialCalculator = () => {
                         {formatNumber(results.requiredVisitors)}
                       </span>
                     </div>
-
                     {wizardData.marketingCosts > 0 && (
                       <>
                         <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
@@ -414,7 +417,6 @@ export const FinancialCalculator = () => {
                             {formatCurrency(results.profitAfterMarketing)}
                           </span>
                         </div>
-
                         <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
                           <div className="flex items-center gap-3">
                             <Target className="w-5 h-5 text-brand-wine" />
@@ -428,27 +430,55 @@ export const FinancialCalculator = () => {
                         </div>
                       </>
                     )}
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              )}
 
-              {/* MetricExplainer na celou sirku (delsi blok: metriky + priklad + tipy) */}
-              <MetricExplainer
-                aov={wizardData.aov}
-                cogs={wizardData.cogs}
-                margin={results.grossMargin}
-                conversionRate={wizardData.conversionRate}
-              />
+              {/* Validation Alerts */}
+              {results && (
+                <ValidationAlerts
+                  aov={wizardData.aov}
+                  cogs={wizardData.cogs}
+                  margin={results.grossMargin}
+                  conversionRate={wizardData.conversionRate}
+                  cac={results.requiredOrders > 0 ? wizardData.marketingCosts / results.requiredOrders : 0}
+                  marketingCosts={wizardData.marketingCosts}
+                />
+              )}
+            </TabsContent>
 
-              {/* MarketingBudgetSlider na celou sirku */}
-              <MarketingBudgetSlider
-                targetProfit={wizardData.isYearly ? wizardData.desiredProfit / 12 : wizardData.desiredProfit}
-                aov={wizardData.aov}
-                margin={results.grossMargin}
-                onBudgetChange={setRecommendedMarketingBudget}
-              />
+            {/* ── TAB 2: Detail a scénáře ── */}
+            <TabsContent value="detail" className="space-y-8">
+              {/* ScenarioPlanner — závisí na requiredRevenue z Tab 1 */}
+              {requiredRevenue > 0 && wizardData.aov > 0 && (
+                <ScenarioPlanner
+                  requiredRevenue={requiredRevenue}
+                  desiredProfit={wizardData.desiredProfit}
+                  fixedCosts={wizardData.cogs + wizardData.extraCosts}
+                  aov={wizardData.aov}
+                  isYearly={wizardData.isYearly}
+                />
+              )}
 
-              {/* CAC na celou sirku */}
-              {(wizardData.marketingCosts > 0 || recommendedMarketingBudget > 0) && (
+              {/* ScenarioComparison */}
+              {results && (
+                <ScenarioComparison
+                  baseMetrics={wizardData}
+                />
+              )}
+
+              {/* MetricExplainer */}
+              {results && (
+                <MetricExplainer
+                  aov={wizardData.aov}
+                  cogs={wizardData.cogs}
+                  margin={results.grossMargin}
+                  conversionRate={wizardData.conversionRate}
+                />
+              )}
+
+              {/* CACCalculator */}
+              {results && (wizardData.marketingCosts > 0 || recommendedMarketingBudget > 0) && (
                 <CACCalculator
                   marketingBudget={wizardData.marketingCosts || recommendedMarketingBudget}
                   requiredOrders={results.requiredOrders}
@@ -457,144 +487,131 @@ export const FinancialCalculator = () => {
                   onLTVMultiplierChange={setLtvMultiplier}
                 />
               )}
-            </>
-          )}
 
-          {/* Validation Alerts */}
-          {results && wizardData && (
-            <ValidationAlerts
-              aov={wizardData.aov}
-              cogs={wizardData.cogs}
-              margin={results.grossMargin}
-              conversionRate={wizardData.conversionRate}
-              cac={results && results.requiredOrders > 0 ? wizardData.marketingCosts / results.requiredOrders : 0}
-              marketingCosts={wizardData.marketingCosts}
-            />
-          )}
-
-          {/* Enhanced Results Section */}
-          {results && wizardData && (
-            <div className="space-y-8">
-              {/* Actionable Results */}
-              <ActionableResults 
-                results={results}
-                wizardData={wizardData}
-                onExportData={handleExportData}
-              />
-
-              {/* Scenario Comparison */}
-              <ScenarioComparison 
-                baseMetrics={wizardData}
-              />
-
-
-              {/* Terminology Section */}
-              <div className="mt-16 max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold text-brand-wine text-center mb-8">
-                  {t('calculator.results.terminology.title')}
-                </h2>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  <Card className="shadow-soft">
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
-                        <TrendingUp className="w-5 h-5" />
-                        {t('calculator.results.terminology.profit.title')}
-                      </h3>
-                      <p className="text-brand-wine/80">
-                        {t('calculator.results.terminology.profit.description')}
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-soft">
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
-                        <ShoppingCart className="w-5 h-5" />
-                        {t('calculator.results.terminology.aov.title')}
-                      </h3>
-                      <p className="text-brand-wine/80">
-                        {t('calculator.results.terminology.aov.description')}
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-soft">
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
-                        <DollarSign className="w-5 h-5" />
-                        {t('calculator.results.terminology.cogs.title')}
-                      </h3>
-                      <p className="text-brand-wine/80">
-                        {t('calculator.results.terminology.cogs.description')}
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-soft">
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
-                        <Target className="w-5 h-5" />
-                        {t('calculator.results.terminology.margin.title')}
-                      </h3>
-                      <p className="text-brand-wine/80">
-                        {t('calculator.results.terminology.margin.description')}
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-soft">
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
-                        <UserPlus className="w-5 h-5" />
-                        {t('calculator.results.terminology.cac.title')}
-                      </h3>
-                      <p className="text-brand-wine/80">
-                        {t('calculator.results.terminology.cac.description')}
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-soft">
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
-                        <Users className="w-5 h-5" />
-                        {t('calculator.results.terminology.ltv.title')}
-                      </h3>
-                      <p className="text-brand-wine/80">
-                        {t('calculator.results.terminology.ltv.description')}
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-soft">
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
-                        <Percent className="w-5 h-5" />
-                        {t('calculator.results.terminology.conversion.title')}
-                      </h3>
-                      <p className="text-brand-wine/80">
-                        {t('calculator.results.terminology.conversion.description')}
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="shadow-soft">
-                    <CardContent className="p-6">
-                      <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
-                        <TrendingUp className="w-5 h-5" />
-                        {t('calculator.results.terminology.roi.title')}
-                      </h3>
-                      <p className="text-brand-wine/80">
-                        {t('calculator.results.terminology.roi.description')}
-                      </p>
-                    </CardContent>
-                  </Card>
+              {/* Terminology / Vysvětlení pojmů */}
+              {results && (
+                <div className="max-w-4xl mx-auto">
+                  <h2 className="text-3xl font-bold text-brand-wine text-center mb-8">
+                    {t('calculator.results.terminology.title')}
+                  </h2>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <Card className="shadow-soft">
+                      <CardContent className="p-6">
+                        <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
+                          <TrendingUp className="w-5 h-5" />
+                          {t('calculator.results.terminology.profit.title')}
+                        </h3>
+                        <p className="text-brand-wine/80">
+                          {t('calculator.results.terminology.profit.description')}
+                        </p>
+                      </CardContent>
+                    </Card>
+                    <Card className="shadow-soft">
+                      <CardContent className="p-6">
+                        <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
+                          <ShoppingCart className="w-5 h-5" />
+                          {t('calculator.results.terminology.aov.title')}
+                        </h3>
+                        <p className="text-brand-wine/80">
+                          {t('calculator.results.terminology.aov.description')}
+                        </p>
+                      </CardContent>
+                    </Card>
+                    <Card className="shadow-soft">
+                      <CardContent className="p-6">
+                        <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
+                          <DollarSign className="w-5 h-5" />
+                          {t('calculator.results.terminology.cogs.title')}
+                        </h3>
+                        <p className="text-brand-wine/80">
+                          {t('calculator.results.terminology.cogs.description')}
+                        </p>
+                      </CardContent>
+                    </Card>
+                    <Card className="shadow-soft">
+                      <CardContent className="p-6">
+                        <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
+                          <Target className="w-5 h-5" />
+                          {t('calculator.results.terminology.margin.title')}
+                        </h3>
+                        <p className="text-brand-wine/80">
+                          {t('calculator.results.terminology.margin.description')}
+                        </p>
+                      </CardContent>
+                    </Card>
+                    <Card className="shadow-soft">
+                      <CardContent className="p-6">
+                        <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
+                          <UserPlus className="w-5 h-5" />
+                          {t('calculator.results.terminology.cac.title')}
+                        </h3>
+                        <p className="text-brand-wine/80">
+                          {t('calculator.results.terminology.cac.description')}
+                        </p>
+                      </CardContent>
+                    </Card>
+                    <Card className="shadow-soft">
+                      <CardContent className="p-6">
+                        <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
+                          <Users className="w-5 h-5" />
+                          {t('calculator.results.terminology.ltv.title')}
+                        </h3>
+                        <p className="text-brand-wine/80">
+                          {t('calculator.results.terminology.ltv.description')}
+                        </p>
+                      </CardContent>
+                    </Card>
+                    <Card className="shadow-soft">
+                      <CardContent className="p-6">
+                        <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
+                          <Percent className="w-5 h-5" />
+                          {t('calculator.results.terminology.conversion.title')}
+                        </h3>
+                        <p className="text-brand-wine/80">
+                          {t('calculator.results.terminology.conversion.description')}
+                        </p>
+                      </CardContent>
+                    </Card>
+                    <Card className="shadow-soft">
+                      <CardContent className="p-6">
+                        <h3 className="text-lg font-bold text-brand-wine mb-3 flex items-center gap-2">
+                          <TrendingUp className="w-5 h-5" />
+                          {t('calculator.results.terminology.roi.title')}
+                        </h3>
+                        <p className="text-brand-wine/80">
+                          {t('calculator.results.terminology.roi.description')}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
                 </div>
-              </div>
-            </div>
-          )}
-        </div>
+              )}
+            </TabsContent>
+
+            {/* ── TAB 3: Marketing a další kroky ── */}
+            <TabsContent value="marketing" className="space-y-8">
+              {/* MarketingBudgetSlider */}
+              {results && (
+                <MarketingBudgetSlider
+                  targetProfit={wizardData.isYearly ? wizardData.desiredProfit / 12 : wizardData.desiredProfit}
+                  aov={wizardData.aov}
+                  margin={results.grossMargin}
+                  onBudgetChange={setRecommendedMarketingBudget}
+                />
+              )}
+
+              {/* ActionableResults */}
+              {results && (
+                <ActionableResults
+                  results={results}
+                  wizardData={wizardData}
+                  onExportData={handleExportData}
+                />
+              )}
+            </TabsContent>
+          </Tabs>
+        )}
+      </div>
     </>
   );
 };
