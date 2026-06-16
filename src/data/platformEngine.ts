@@ -107,8 +107,8 @@ export const PLATFORMS: Record<PlatformKey, Platform> = {
   },
   builder: {
     key: 'builder',
-    name: 'Webové stavebnice (Wix, Squarespace)',
-    tagline: 'Nejjednodušší cesta k hezkému malému obchodu nebo portfoliu.',
+    name: 'Wix a Squarespace',
+    tagline: 'Uděláš si hezký web a malý obchod sama, klikáním a bez programátora.',
     monthlyCost: '300 až 700 Kč / měsíc',
     strengths: [
       'Postavíš si web i obchod klikáním, opravdu během odpoledne',

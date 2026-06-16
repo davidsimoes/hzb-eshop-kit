@@ -4,44 +4,13 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Header } from '@/components/Header/Header';
 import { Breadcrumb } from '@/components/Navigation/Breadcrumb';
-import { User, Building, TrendingUp, Heart, MessageCircle, ExternalLink, Star, Award, Calendar, Phone, Mail, Users } from 'lucide-react';
+import { TrendingUp, Heart, MessageCircle, ExternalLink, Star, Award, Calendar, Phone, Mail, Users, Linkedin } from 'lucide-react';
 import davidHeadshot from '/images/f2474b23-8549-4599-8f5a-5ee1f6ad1022.png';
 import techWorkspace from '/images/f608b034-7b19-4647-91f2-cf62814783e3.png';
 const About = () => {
   const {
     t
   } = useTranslation();
-  const experiences = [{
-    title: "soundsgood.agency",
-    description: "Zakladatel první Shopify agentury v ČR a na Slovensku",
-    icon: Building,
-    highlight: "První Shopify agentura v ČR/SK",
-    why: "Vidím, co funguje i co nefunguje u desítek reálných e-shopů v ČR a SK, ne jen v teorii."
-  }, {
-    title: "Startup s předplatným zboží",
-    description: "Jedna z prvních firem v Česku zaměřená na předplatné spotřebního zboží",
-    icon: Users,
-    highlight: "Průkopník předplatných služeb",
-    why: "Vím, jak postavit byznys na opakujících se příjmech a zákaznické věrnosti, protože jsem to sám zkoušel a přežil."
-  }, {
-    title: "TEPE USA (B2B dentální)",
-    description: "Princip KISS (drž to jednoduché) - jednoduchý a efektivní přístup k e-commerce",
-    icon: TrendingUp,
-    highlight: "Americký know-how",
-    why: "Americký trh tě naučí jednoduchost a rychlost. Složitost zabíjí konverze, a to platí i pro český e-shop."
-  }, {
-    title: "Různé obchodní modely",
-    description: "B2B, Omnichannel, DTC - různé cíle = různé strategie napříč segmenty",
-    icon: Building,
-    highlight: "Praktické zkušenosti",
-    why: "Nemám recept pro všechny. Mám zkušenosti z různých modelů, abych ti poradil to, co sedí tebě."
-  }, {
-    title: "Flexibilní startup projekty",
-    description: "Pro startupy je klíčové umět včas změnit směr - flexibilita a adaptabilita",
-    icon: TrendingUp,
-    highlight: "Startup mentalita",
-    why: "Pivot není selhání, je to strategie. Naučím tě rozpoznat, kdy změnit směr dřív, než dojdou peníze."
-  }];
   const lessons = [{
     title: "Moje první e-shopy",
     lesson: "Čísla jsou základ! - bez správné kalkulace nemůžeš dlouhodobě vydělávat",
@@ -170,27 +139,19 @@ const About = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
-              {experiences.map((exp, index) => {
-                const Icon = exp.icon;
-                return (
-                  <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-brand-soft/40 hover:bg-brand-soft/70 transition-colors">
-                    <div className="bg-brand-wine/10 rounded-full p-2 shrink-0 mt-0.5">
-                      <Icon className="w-5 h-5 text-brand-wine" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex flex-wrap items-center gap-2 mb-1">
-                        <h4 className="font-semibold text-brand-wine">{exp.title}</h4>
-                        <Badge variant="outline" className="text-xs border-brand-orange/40 text-brand-orange">{exp.highlight}</Badge>
-                      </div>
-                      <p className="text-brand-wine/70 text-sm mb-2">{exp.description}</p>
-                      <p className="text-brand-wine/60 text-sm italic border-l-2 border-brand-orange/40 pl-3">
-                        {exp.why}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
+            <div className="space-y-6">
+              <p className="text-brand-wine/80 leading-relaxed">
+                Za víc než 10 let mi rukama prošly stovky e-shopů, od úplných začátků až po značky s obratem přes 3 miliardy korun. Vlastní startupy, předplatné, B2B i prodej do zahraničí, a k tomu Sounds Good Agency, první Shopify agentura v ČR a na Slovensku. Pět odrážek by to nikdy neobsáhlo.
+              </p>
+              <p className="text-brand-wine/80 leading-relaxed">
+                Nejlíp mě poznáš v akci. Na LinkedInu pravidelně sdílím, co v e-commerce funguje i co ne, reálné příklady a chyby, kterým se vyhnout.
+              </p>
+              <Button className="flex items-center gap-2 bg-brand-wine hover:bg-brand-wine/90 text-white" asChild>
+                <a href="https://www.linkedin.com/in/davidjsimoes/" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="w-4 h-4" />
+                  Sleduj mě na LinkedInu
+                </a>
+              </Button>
             </div>
           </CardContent>
         </Card>
