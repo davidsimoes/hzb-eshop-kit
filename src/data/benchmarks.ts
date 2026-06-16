@@ -57,7 +57,7 @@ export const industryBenchmarks: IndustryBenchmark[] = [
     averageAOV: 650,
     averageConversion: 1.8,
     averageMargin: 65,
-    averageCOGS: 228,
+    averageCOGS: 227,
     marketingBudgetPercent: 15,
     description: 'Ručně vyráběné zboží a malé série. Vysoká marže (ale nezahrnuje tvůj čas!), omezená kapacita.'
   },

@@ -95,7 +95,7 @@
         "phase": "provoz",
         "prompt": "prompts/chain/06-diagnostika.md",
         "output": "06-diagnostika.md",
-        "inputs": ["01-persona.md", "02-validace.md", "03-platforma.md", "04-launch-plan.md", "05-marketing-plan.md"],
+        "inputs": ["01-persona.md", "02-validace.md", "03-platforma.md", "05-marketing-plan.md"],
         "optional_data": "prompts/connect-data.md",
         "produces": "Nejslabší článek + akční plán na 2 týdny + zpětná smyčka",
         "loop_back_to": [1, 5],

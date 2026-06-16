@@ -50,6 +50,18 @@ const Calculator = () => {
             </Button>
           </div>
           
+        <Card className="max-w-3xl mx-auto mb-8 border-brand-light-pink bg-white/80">
+          <CardContent className="p-6">
+            <h3 className="font-bold text-brand-wine mb-3">Jak to funguje (ve 3 krocích)</h3>
+            <ol className="space-y-2 text-sm text-brand-wine/80">
+              <li><strong>1. Tvůj cíl.</strong> Kolik si chceš měsíčně vydělat ty (ne obrat, ale čistý příjem pro tebe).</li>
+              <li><strong>2. Tvůj e-shop.</strong> Cena a marže produktu určí, kolik ti zbyde z jedné objednávky. Z toho spočítáme, kolik objednávek na tvůj cíl potřebuješ.</li>
+              <li><strong>3. Marketing.</strong> Konverze a cena za návštěvu řeknou, kolik lidí musíš přivést a kolik to bude stát. Tím se ukáže, jestli čísla reálně vyjdou.</li>
+            </ol>
+            <p className="text-xs text-brand-wine/60 mt-3">Každý krok staví na předchozím. Měň jedno číslo a hned uvidíš, jak se výsledek změní.</p>
+          </CardContent>
+        </Card>
+
         <FinancialCalculator />
         
         <div className="max-w-6xl mx-auto mt-12 mb-8">
@@ -68,15 +80,11 @@ const Calculator = () => {
                 size="lg" 
                 className="bg-brand-wine hover:bg-brand-wine/90"
               >
-                <a 
-                  href="https://docs.google.com/presentation/d/1dOode6pH8fAmR3dAh6XjxY9U8iNRlWp-9nBIznaEl_Y/edit?usp=sharing" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
+                <Link to="/prezentace">
                   <BookOpen className="w-4 h-4 mr-2" />
                   {t('calculator.openGuide')}
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
+                </Link>
               </Button>
             </CardContent>
           </Card>

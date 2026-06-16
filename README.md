@@ -36,14 +36,6 @@ Celý kit je napsaný tak, aby ho zvládla jakákoli AI — žádné speciální
 2. Zkopíruj obsah souboru z `prompts/` (např. `prompts/validace-persony.md`) a vlož ho.
 3. Doplň svoje informace a nech si poradit.
 
-**Pro pokročilé (nakrm AI celým kitem):**
-1. Stáhni si tenhle repozitář (zelené tlačítko **Code → Download ZIP**, nebo `git clone`).
-2. Nahraj složku `docs/` do AI, která umí číst soubory (Claude Projects, ChatGPT
-   s nahráním souborů, NotebookLM…).
-3. Ptej se: *„Podle tohohle kitu mi poraď, jak…“* — AI bude radit v duchu téhle metody.
-
-> Prompty v `prompts/` jsou napsané v běžné češtině. Klidně si je uprav.
-
 <!-- AGENTNÍ VRSTVA, přidáno při restrukturalizaci „GitHub = agentní vrstva“ -->
 ## 🤖 Naval na to celou AI (klonování a krmení), pro netechnické
 

@@ -102,7 +102,7 @@ const slides: Slide[] = [
     bullets: [
       'Špatná platforma „protože ji má kamarádka", místo té, co sedí tvému byznysu.',
       'Produkt bez ověření, že o něj někdo cizí (ne rodina) opravdu stojí a zaplatí.',
-      'Žádná čísla. Marže, doprava a marketing se nesečtou, takže čím víc prodáš, tím víc proděláš.'
+      'Žádná čísla. Marže, doprava a marketing nevyjdou dohromady, takže čím víc prodáš, tím víc proděláš.'
     ],
     note: 'Krátce, jako háček. Tyhle 3 chyby se táhnou všemi 9 lety. Dnešní 3 bloky přesně tyhle chyby řeší.',
     icon: AlertTriangle

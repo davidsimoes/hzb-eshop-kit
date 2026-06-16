@@ -64,7 +64,7 @@ interface Recommendation {
 const QUESTIONS: Record<string, Question> = {
   q1: {
     id: 'q1',
-    q: 'Co chcete prodávat?',
+    q: 'Co chceš prodávat?',
     intro: 'Začneme tím nejdůležitějším. Podle toho se rozhodne skoro všechno ostatní.',
     options: [
       {
@@ -79,15 +79,15 @@ const QUESTIONS: Record<string, Question> = {
       },
       {
         label: 'Obojí, fyzické i digitální',
-        hint: 'Hlavní je pro vás zatím fyzické zboží.',
+        hint: 'Hlavní je pro tebe zatím fyzické zboží.',
         next: { type: 'question', id: 'q2' }
       }
     ]
   },
   q2: {
     id: 'q2',
-    q: 'Jak jste na tom s technikou?',
-    intro: 'Buďte k sobě upřímná. Není ostuda chtít to jednoduché.',
+    q: 'Jak jsi na tom s technikou?',
+    intro: 'Buď k sobě upřímná. Není ostuda chtít to jednoduché.',
     options: [
       {
         label: 'Chci klikat, ne programovat',
@@ -108,8 +108,8 @@ const QUESTIONS: Record<string, Question> = {
   },
   q2_digital: {
     id: 'q2_digital',
-    q: 'Pro koho hlavně prodáváte?',
-    intro: 'U digitálních produktů rozhoduje jazyk a platby vašich zákazníků.',
+    q: 'Pro koho hlavně prodáváš?',
+    intro: 'U digitálních produktů rozhoduje jazyk a platby tvých zákazníků.',
     options: [
       {
         label: 'České a slovenské zákaznice',
@@ -130,7 +130,7 @@ const QUESTIONS: Record<string, Question> = {
   },
   q3: {
     id: 'q3',
-    q: 'Kde chcete hlavně prodávat?',
+    q: 'Kde chceš hlavně prodávat?',
     intro: 'Tohle rozhodne, jestli vsadit na českou, nebo světovou platformu.',
     options: [
       {
@@ -147,8 +147,8 @@ const QUESTIONS: Record<string, Question> = {
   },
   q4: {
     id: 'q4',
-    q: 'Jaké čekáte tržby v prvním roce?',
-    intro: 'Klidně střelte od boku. Jde o řádový odhad, ne přesné číslo.',
+    q: 'Jaké čekáš tržby v prvním roce?',
+    intro: 'Klidně střel od boku. Jde o řádový odhad, ne přesné číslo.',
     options: [
       {
         label: 'Zatím testuju nápad (pod 20 000 Kč / měsíc)',
@@ -172,65 +172,65 @@ const QUESTIONS: Record<string, Question> = {
 const RECOMMENDATIONS: Record<RecKey, Recommendation> = {
   shoptet: {
     platform: 'Shoptet',
-    headline: 'Shoptet je pro vás nejlepší volba',
+    headline: 'Shoptet je pro tebe nejlepší volba',
     reason:
-      'Nejrozšířenější česká platforma (přes 45 000 obchodníků). Všechno důležité pro český trh má rovnou v sobě, takže nemusíte nic složitě dolepovat.',
+      'Nejrozšířenější česká platforma (přes 45 000 obchodníků). Všechno důležité pro český trh má rovnou v sobě, takže nemusíš nic složitě dolepovat.',
     monthlyCost: '400 až 2 000 Kč / měsíc',
-    nextStep: 'Založte si zkušební účet na shoptet.cz, 30 dní zdarma a bez závazku.',
+    nextStep: 'Založ si zkušební účet na shoptet.cz, 30 dní zdarma a bez závazku.',
     strengths: [
       'Nativní napojení na Heureku, Zboží.cz a Zásilkovnu',
       'České platební brány (GoPay, Comgate) a česká faktura',
       'Česká podpora i obrovská česká komunita'
     ],
     watchOut:
-      'Pro prodej do zahraničí a hodně netradiční design je méně ohebný než Shopify.'
+      'Na prodej do zahraničí a velmi netradiční design je méně flexibilní než Shopify.'
   },
   shopify: {
     platform: 'Shopify',
-    headline: 'Shopify je pro vás nejlepší volba',
+    headline: 'Shopify je pro tebe nejlepší volba',
     reason:
-      'Nejsilnější platforma pro růst a prodej za hranice. Roste i v Česku (kolem 4 500 obchodníků). Pro CZ doplníte pár aplikací, ale za expanzi to stojí.',
+      'Nejsilnější platforma pro růst a prodej za hranice. Roste i v Česku (kolem 4 500 obchodníků). Pro CZ doplníš pár aplikací, ale za expanzi to stojí.',
     monthlyCost: '750 až 2 500 Kč / měsíc',
-    nextStep: 'Spusťte si zkušební verzi na shopify.com, plány lze platit i v CZK.',
+    nextStep: 'Spusť si zkušební verzi na shopify.com, plány lze platit i v CZK.',
     strengths: [
       'Nejrychlejší vývoj a nejlepší nákupní košík na světě',
       'Obrovský výběr aplikací a šablon',
-      'Poroste s vámi až do velkého obchodu bez nutnosti stěhování'
+      'Poroste s tebou až do velkého obchodu bez nutnosti stěhování'
     ],
     watchOut:
       'Zásilkovnu a GoPay je třeba přidat přes aplikace, podpora je hlavně anglicky.'
   },
   shoptet_or_shopify: {
     platform: 'Shoptet nebo Shopify',
-    headline: 'Máte dvě skvělé možnosti',
+    headline: 'Máš dvě skvělé možnosti',
     reason:
-      'Při rychlém růstu dávají smysl obě. Záleží, kam míříte. Pokud zůstanete v CZ a SK, vyhrává Shoptet lepší lokalizací. Pokud chcete brzy za hranice, vsaďte na Shopify.',
+      'Při rychlém růstu dávají smysl obě. Záleží, kam míříš. Pokud zůstaneš v CZ a SK, vyhrává Shoptet lepší lokalizací. Pokud chceš brzy za hranice, vsaď na Shopify.',
     monthlyCost: '400 až 2 500 Kč / měsíc',
     nextStep:
-      'Vyzkoušejte oba zkušební účty (nejdřív Shoptet) a porovnejte, co vám sedne.',
+      'Vyzkoušej oba zkušební účty (nejdřív Shoptet) a porovnej, co ti sedne.',
     strengths: [
       'Shoptet: bezkonkurenční české integrace a podpora',
       'Shopify: nejlepší základ pro expanzi a silnou značku',
       'Obě zvládnou vyšší objem objednávek bez problémů'
     ],
     watchOut:
-      'Nerozhodujte podle ceny, ale podle toho, kam chcete obchod za dva roky dotáhnout.'
+      'Nerozhoduj podle ceny, ale podle toho, kam chceš obchod za dva roky dotáhnout.'
   },
   webnode_or_shoptet_basic: {
     platform: 'Shoptet Start nebo Webnode',
-    headline: 'Začněte s minimálními náklady',
+    headline: 'Začni s minimálními náklady',
     reason:
-      'Když teprve testujete, nemá smysl platit za velkou platformu. Shoptet Start má i v nejlevnějším plánu české integrace. Webnode je nejlevnější způsob, jak vůbec začít.',
+      'Když teprve testuješ, nemá smysl platit za velkou platformu. Shoptet Start má i v nejlevnějším plánu české integrace. Webnode je nejlevnější způsob, jak vůbec začít.',
     monthlyCost: '300 až 500 Kč / měsíc',
     nextStep:
-      'Zvolte Shoptet plán Start, nebo Webnode plán Mini. Až prodej ověříte, klidně povýšíte.',
+      'Zvol Shoptet plán Start, nebo Webnode plán Mini. Až prodej ověříš, klidně povýšíš.',
     strengths: [
       'Nejnižší možné měsíční náklady na rozjezd',
-      'Rychlé spuštění, nemusíte umět programovat',
-      'Snadno povýšíte, až budete mít první prodeje'
+      'Rychlé spuštění, nemusíš umět programovat',
+      'Snadno povýšíš, až budeš mít první prodeje'
     ],
     watchOut:
-      'Nezamykejte se do nástroje bez českých integrací, pozdější stěhování bývá bolavé.'
+      'Nezamykej se do nástroje bez českých integrací, pozdější stěhování bývá bolavé.'
   },
   fapi: {
     platform: 'FAPI',
@@ -238,7 +238,7 @@ const RECOMMENDATIONS: Record<RecKey, Recommendation> = {
     reason:
       'Jediná česká platforma šitá přímo na digitální produkty a kurzy. Zvládá české platby, českou DPH a faktury, členské sekce i opakované platby. To vše v češtině.',
     monthlyCost: '500 až 2 500 Kč / měsíc',
-    nextStep: 'Zaregistrujte se zdarma na fapi.cz, platíte až při prvních prodejích.',
+    nextStep: 'Zaregistruj se zdarma na fapi.cz, platíš až při prvních prodejích.',
     strengths: [
       'Postavené na míru českým digitálním produktům',
       'Členské portály, e-booky, kurzy i opakované platby',
@@ -251,10 +251,10 @@ const RECOMMENDATIONS: Record<RecKey, Recommendation> = {
     platform: 'Podia nebo Teachable',
     headline: 'Pro anglicky mluvící publikum',
     reason:
-      'Když prodáváte do zahraničí, sáhněte po světovém nástroji. Podia spojuje kurzy, soubory, komunitu i e-maily. Teachable je ověřená klasika na online kurzy.',
+      'Když prodáváš do zahraničí, sáhni po světovém nástroji. Podia spojuje kurzy, soubory, komunitu i e-maily. Teachable je ověřená klasika na online kurzy.',
     monthlyCost: '1 000 až 4 000 Kč / měsíc',
     nextStep:
-      'Vyzkoušejte Podia plán Starter, nebo Teachable Free pro úplný začátek.',
+      'Vyzkoušej Podia plán Starter, nebo Teachable Free pro úplný začátek.',
     strengths: [
       'Vše pro online kurzy na jednom místě',
       'Čistý a profesionální vzhled pro studenty',
@@ -267,32 +267,32 @@ const RECOMMENDATIONS: Record<RecKey, Recommendation> = {
     platform: 'Seduo.cz',
     headline: 'Nejrychlejší start bez techniky',
     reason:
-      'Seduo je český vzdělávací marketplace. Nahrajete kurz a oni se postarají o platby, marketing i českou zákaznickou základnu. Nejrychlejší cesta k prvním prodejům.',
+      'Seduo je český vzdělávací marketplace. Nahraješ kurz a oni se postarají o platby, marketing i českou zákaznickou základnu. Nejrychlejší cesta k prvním prodejům.',
     monthlyCost: '0 Kč (podíl z tržeb)',
-    nextStep: 'Zaregistrujte se jako lektorka na seduo.cz, je to zdarma.',
+    nextStep: 'Zaregistruj se jako lektorka na seduo.cz, je to zdarma.',
     strengths: [
-      'Žádná technika, jen nahrajete obsah',
+      'Žádná technika, jen nahraješ obsah',
       'Okamžitý přístup k českým studentům',
-      'Marketing i platby řeší Seduo za vás'
+      'Marketing i platby řeší Seduo za tebe'
     ],
     watchOut:
-      'Nevlastníte zákaznická data a berete jen podíl z prodeje. Skvělé jako doplněk vlastní platformy, ne jako jediný kanál.'
+      'Nevlastníš zákaznická data a bereš jen podíl z prodeje. Skvělé jako doplněk vlastní platformy, ne jako jediný kanál.'
   },
   woocommerce: {
     platform: 'WooCommerce',
-    headline: 'Jen pokud máte technické zázemí',
+    headline: 'Jen pokud máš technické zázemí',
     reason:
       'WooCommerce je zdarma a neomezené, ale potřebuje WordPress, správu serveru a ruční nastavení všech českých integrací. Celkové náklady i čas bývají často vyšší, než to vypadá.',
-    monthlyCost: '200 až 600 Kč / měsíc (hosting) plus váš čas',
+    monthlyCost: '200 až 600 Kč / měsíc (hosting) plus tvůj čas',
     nextStep:
-      'Jděte do toho jen s vývojářem nebo zkušeností s WordPressem. Jinak zvolte Shoptet nebo FAPI.',
+      'Jdi do toho jen s vývojářem nebo zkušeností s WordPressem. Jinak zvol Shoptet nebo FAPI.',
     strengths: [
-      'Zdarma a plně ve vašich rukou',
+      'Zdarma a plně ve tvých rukou',
       'Neomezené možnosti úprav',
       'Obrovská knihovna pluginů'
     ],
     watchOut:
-      'Bezpečnost, aktualizace a rychlost si hlídáte sama. Bez technika to není pro začátečnice.'
+      'Bezpečnost, aktualizace a rychlost si hlídáš sama. Bez technika to není pro začátečnice.'
   }
 };
 
@@ -334,7 +334,7 @@ const VyberPlatformy = () => {
     <>
       <MetaTags
         title="Jakou platformu na e-shop? Průvodce výběrem"
-        description="Odpovězte na pár jednoduchých otázek a zjistěte, jestli je pro váš e-shop nejlepší Shopify, Shoptet, WooCommerce, FAPI nebo jiná platforma. Srozumitelně a pro začátečnice."
+        description="Odpověz na pár jednoduchých otázek a zjisti, jestli je pro tvůj e-shop nejlepší Shopify, Shoptet, WooCommerce, FAPI nebo jiná platforma. Srozumitelně a pro začátečnice."
       />
       <Header />
       <main id="main-content" className="min-h-screen bg-gradient-soft">
@@ -350,8 +350,8 @@ const VyberPlatformy = () => {
               Jakou platformu na e-shop?
             </h1>
             <p className="text-lg text-brand-wine/70">
-              Výběr platformy zní složitě, ale nemusí. Odpovězte na pár jednoduchých otázek
-              a doporučíme vám řešení, které sedne přesně na to, co prodáváte a kam míříte.
+              Výběr platformy zní složitě, ale nemusí. Odpověz na pár jednoduchých otázek
+              a doporučíme ti řešení, které sedne přesně na to, co prodáváš a kam míříš.
             </p>
           </div>
 
@@ -365,7 +365,7 @@ const VyberPlatformy = () => {
                       <Compass className="w-5 h-5" />
                       Otázka {stepNumber}
                     </CardTitle>
-                    <Badge className="bg-white/20 text-white">Krok {stepNumber} z max. 5</Badge>
+                    <Badge className="bg-white/20 text-white">Krok {stepNumber} z max. 4</Badge>
                   </div>
                 </CardHeader>
                 <CardContent className="p-6">
@@ -411,7 +411,7 @@ const VyberPlatformy = () => {
               </Card>
 
               <p className="text-center text-xs text-brand-wine/50 mt-4">
-                Žádná odpověď není špatně. Doporučení můžete kdykoliv změnit tím, že to projdete znovu.
+                Žádná odpověď není špatně. Doporučení můžeš kdykoliv změnit tím, že to projdeš znovu.
               </p>
             </div>
           )}
@@ -477,8 +477,8 @@ const VyberPlatformy = () => {
                   </div>
 
                   <p className="text-xs text-brand-wine/60 bg-white/60 rounded-lg p-3">
-                    Tohle je doporučení na základě vašich odpovědí, ne neměnný verdikt. Ceny jsou orientační
-                    a u poskytovatelů se mění. Než se rozhodnete, vyzkoušejte si zkušební verzi.
+                    Tohle je doporučení na základě tvých odpovědí, ne neměnný verdikt. Ceny jsou orientační
+                    a u poskytovatelů se mění. Než se rozhodneš, vyzkoušej si zkušební verzi.
                   </p>
                 </CardContent>
               </Card>
@@ -507,7 +507,7 @@ const VyberPlatformy = () => {
           {/* Cross-link */}
           <div className="max-w-2xl mx-auto mt-10 text-center">
             <p className="text-brand-wine/70 mb-3">
-              Ještě si nejste jistá nápadem nebo čísly? Začněte tady.
+              Ještě si nejsi jistá nápadem nebo čísly? Začni tady.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Button

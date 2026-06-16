@@ -78,7 +78,7 @@ function computeRoi(input: RoiInput): RoiResult {
     totalCost > 0 ? (netOverHorizon / totalCost) * 100 : totalBenefit > 0 ? Infinity : 0;
 
   // Verdikt (jen z tvrdých čísel)
-  const hasInput = oneTime + monthly > 0 && monthlyBenefitValue > 0;
+  const hasInput = oneTime + monthly > 0 || monthlyBenefitValue > 0;
   let verdict: Verdict;
   if (!hasInput) {
     verdict = 'unknown';
@@ -211,7 +211,7 @@ Jednorázový náklad: ${input.oneTimeCost} Kč
 Měsíční náklad: ${input.monthlyCost} Kč
 Očekávaný přínos: ${benefitLine}
 Horizont: ${input.horizonMonths} měsíců
-Měkké přínosy: ${input.softFactors.length ? input.softFactors.join(', ') : 'žádné'}
+Měkké přínosy: ${input.softFactors.length ? input.softFactors.map((id) => SOFT_FACTORS.find((s) => s.id === id)?.label ?? id).join(', ') : 'žádné'}
 
 Spočítané: doba návratnosti ${
     r.paybackMonths === null ? 'se nevrátí' : r.paybackMonths.toFixed(1) + ' měs'

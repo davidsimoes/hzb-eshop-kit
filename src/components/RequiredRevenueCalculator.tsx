@@ -61,9 +61,9 @@ export const RequiredRevenueCalculator = ({
       const avgBenchmark = 500000; // Average Czech e-shop yearly revenue
       
       if (yearlyRevenue > avgBenchmark * 1.5) {
-        setShowAlert('Tvůj cíl je ambiciózní – většina e-shopů dosahuje méně');
+        setShowAlert('Tvůj cíl je ambiciózní, většina e-shopů dosahuje méně');
       } else if (yearlyRevenue < avgBenchmark * 0.5) {
-        setShowAlert('Tvůj cíl je konzervativní – mohl bys zvážit růst');
+        setShowAlert('Tvůj cíl je konzervativní, mohl bys zvážit růst');
       } else {
         setShowAlert('');
       }

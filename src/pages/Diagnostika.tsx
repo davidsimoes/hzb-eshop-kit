@@ -53,7 +53,9 @@ const optionalFields = [...trueNetFields, ...deeperFields];
 
 const Diagnostika = () => {
   const [input, setInput] = useState<DiagnosticInput>(defaultInput);
-  const [submitted, setSubmitted] = useState(false);
+  // Default open so the ranked issue list is consistent with the always-live "Rychlý přehled".
+  // The Diagnostikovat button re-affirms / is a no-op affordance.
+  const [submitted, setSubmitted] = useState(true);
   const [copied, setCopied] = useState(false);
 
   const result = diagnose(input);
