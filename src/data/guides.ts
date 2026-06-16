@@ -7,6 +7,13 @@ const files = import.meta.glob('/docs/*.md', {
   eager: true,
 }) as Record<string, string>;
 
+// AI prompty (/prompts/*.md) nahrané stejnou technikou jako docs, aby web a repo nedrift­ovaly.
+const promptFiles = import.meta.glob('/prompts/*.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>;
+
 export interface Guide {
   slug: string;        // URL slug, e.g. "spusteni-a-pravo"
   order: number;       // numeric prefix from the filename
@@ -42,6 +49,68 @@ export const GUIDES: Guide[] = Object.entries(files)
 
 export function getGuide(slug?: string): Guide | undefined {
   return GUIDES.find((g) => g.slug === slug);
+}
+
+// ---------------------------------------------------------------------------
+// Propojení průvodců s nástroji webu a hotovými AI prompty.
+// ---------------------------------------------------------------------------
+
+export interface ToolLink {
+  label: string; // text tlačítka
+  to: string;    // interní route v aplikaci
+}
+
+export interface GuideIntegration {
+  tools: ToolLink[];   // navazující nástroje (CTA)
+  prompt?: string;     // soubor v /prompts (např. "validace-persony.md")
+}
+
+// Mapa slug -> navazující nástroje + AI prompt. Routes ověřeny proti App.tsx.
+export const GUIDE_INTEGRATIONS: Record<string, GuideIntegration> = {
+  'zacni-tady': {
+    tools: [{ label: 'Ověř svůj nápad', to: '/validace' }],
+  },
+  validace: {
+    tools: [{ label: 'Otevři nástroj: Ověř nápad', to: '/validace' }],
+    prompt: 'validace-persony.md',
+  },
+  'vyber-platformy': {
+    tools: [{ label: 'Průvodce výběrem platformy', to: '/vyber-platformy' }],
+    prompt: 'vyber-platformy.md',
+  },
+  'spusteni-a-pravo': {
+    tools: [{ label: 'Spouštěcí checklist', to: '/checklist' }],
+    prompt: 'spusteni-checklist.md',
+  },
+  'marketing-a-znacka': {
+    tools: [{ label: 'Diagnostika e-shopu', to: '/diagnostika' }],
+    prompt: 'marketing-plan.md',
+  },
+  'provoz-a-finance': {
+    tools: [
+      { label: 'Finanční kalkulačka', to: '/kalkulacka' },
+      { label: 'ROI kalkulačka', to: '/roi-kalkulacka' },
+    ],
+    prompt: 'connect-data.md',
+  },
+  'kdyz-to-neprodava': {
+    tools: [{ label: 'Diagnostika e-shopu', to: '/diagnostika' }],
+    prompt: 'diagnostika-prodeje.md',
+  },
+  pribehy: {
+    tools: [],
+  },
+};
+
+export function getIntegration(slug?: string): GuideIntegration {
+  return (slug && GUIDE_INTEGRATIONS[slug]) || { tools: [] };
+}
+
+// Vrátí surový text AI promptu (k zkopírování do ChatGPT), nebo undefined.
+export function getPromptRaw(file?: string): string | undefined {
+  if (!file) return undefined;
+  const key = Object.keys(promptFiles).find((p) => p.endsWith('/' + file) || p.endsWith(file));
+  return key ? promptFiles[key] : undefined;
 }
 
 export function adjacentGuides(slug?: string): { prev?: Guide; next?: Guide } {
