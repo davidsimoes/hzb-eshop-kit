@@ -38,7 +38,7 @@ interface PrefillScenario {
 
 const PREFILL_SCENARIOS: PrefillScenario[] = [
   {
-    label: 'Sperky',
+    label: 'Šperky',
     emoji: '💍',
     data: {
       desiredProfit: 25000,
@@ -64,7 +64,7 @@ const PREFILL_SCENARIOS: PrefillScenario[] = [
     },
   },
   {
-    label: 'Moda',
+    label: 'Móda',
     emoji: '👗',
     data: {
       desiredProfit: 30000,
@@ -77,7 +77,7 @@ const PREFILL_SCENARIOS: PrefillScenario[] = [
     },
   },
   {
-    label: 'Mazlicci',
+    label: 'Mazlíčci',
     emoji: '🐾',
     data: {
       desiredProfit: 15000,
@@ -228,7 +228,7 @@ export const FinancialCalculator = () => {
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-sm text-brand-wine/70 font-medium flex items-center gap-1">
               <Sparkles className="w-3.5 h-3.5" />
-              Vyzkoušej priklad:
+              Vyzkoušej příklad:
             </span>
             {PREFILL_SCENARIOS.map((s) => (
               <Button
@@ -289,16 +289,18 @@ export const FinancialCalculator = () => {
             />
           )}
 
-          {/* Forward-Looking Features */}
+          {/* Forward-Looking Features — na celou sirku stackovane,
+              RequiredRevenueCalculator je vyrazne kratsi nez ScenarioPlanner,
+              takze vedle sebe by vznikla velka prazdna mezera pod levym sloupcem. */}
           {wizardData && (
-            <div className="grid lg:grid-cols-2 gap-8">
+            <div className="space-y-8">
               <RequiredRevenueCalculator
                 desiredProfit={wizardData.desiredProfit}
                 isYearly={wizardData.isYearly}
                 onRevenueChange={setRequiredRevenue}
                 initialNetMargin={results ? Math.round(results.netMargin) : 20}
               />
-              
+
               {requiredRevenue > 0 && wizardData.aov > 0 && (
                 <ScenarioPlanner
                   requiredRevenue={requiredRevenue}
@@ -311,151 +313,155 @@ export const FinancialCalculator = () => {
             </div>
           )}
 
-          {/* Results Grid */}
+          {/* Results — sparovane bloky podobne vysky, aby nevznikal prazdny sloupec.
+              Rada 1: dva kratke souhrnne bloky vedle sebe (podobna vyska).
+              Rada 2: dva obsahove bloky vedle sebe (podobna vyska).
+              Rada 3: CAC na celou sirku (zadny osamocenu sloupec). */}
           {results && wizardData && (
             <>
-              {/* Hlavni vysledky — vzdy 2 sloupce, obsah je vzdy pritomen */}
-              <div className="grid lg:grid-cols-2 gap-8">
-                {/* Levy sloupec: zisk + pozadavky */}
-                <div className="space-y-4">
-                  <Card className="shadow-soft">
-                    <CardHeader className="bg-brand-wine text-white rounded-t-lg">
-                      <CardTitle className="flex items-center gap-2">
-                        <TrendingUp className="w-5 h-5" />
-                        {t('calculator.results.yourResults')}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-6 space-y-4">
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="text-center p-4 bg-brand-light-pink rounded-lg">
-                          <div className="text-2xl font-bold text-brand-wine">
-                            {formatCurrency(results.monthlyProfit)}
-                          </div>
-                          <div className="text-sm text-brand-wine/70">
-                            {t('calculator.results.monthlyProfit')}
-                          </div>
+              {/* Rada 1: Tvoje vysledky + Pozadavky (oba kratke souhrny) */}
+              <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+                <Card className="shadow-soft h-full">
+                  <CardHeader className="bg-brand-wine text-white rounded-t-lg">
+                    <CardTitle className="flex items-center gap-2">
+                      <TrendingUp className="w-5 h-5" />
+                      {t('calculator.results.yourResults')}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-6 space-y-4">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="text-center p-4 bg-brand-light-pink rounded-lg">
+                        <div className="text-2xl font-bold text-brand-wine">
+                          {formatCurrency(results.monthlyProfit)}
                         </div>
-                        <div className="text-center p-4 bg-brand-light-pink rounded-lg">
-                          <div className="text-2xl font-bold text-brand-wine">
-                            {formatCurrency(results.yearlyProfit)}
-                          </div>
-                          <div className="text-sm text-brand-wine/70">
-                            {t('calculator.results.yearlyProfit')}
-                          </div>
+                        <div className="text-sm text-brand-wine/70">
+                          {t('calculator.results.monthlyProfit')}
                         </div>
                       </div>
-
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="text-center p-4 bg-gradient-brand text-white rounded-lg">
-                          <div className="text-2xl font-bold">
-                            {results.grossMargin.toFixed(1)}%
-                          </div>
-                          <div className="text-sm opacity-90">
-                            {t('calculator.results.grossMargin')}
-                          </div>
+                      <div className="text-center p-4 bg-brand-light-pink rounded-lg">
+                        <div className="text-2xl font-bold text-brand-wine">
+                          {formatCurrency(results.yearlyProfit)}
                         </div>
-                        <div className="text-center p-4 bg-brand-pink text-white rounded-lg">
-                          <div className="text-2xl font-bold">
-                            {results.netMargin.toFixed(1)}%
-                          </div>
-                          <div className="text-sm opacity-90">
-                            {t('calculator.results.netMargin')}
-                          </div>
+                        <div className="text-sm text-brand-wine/70">
+                          {t('calculator.results.yearlyProfit')}
                         </div>
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
 
-                  <Card className="shadow-soft">
-                    <CardHeader className="bg-brand-pink text-white rounded-t-lg">
-                      <CardTitle className="flex items-center gap-2">
-                        <Users className="w-5 h-5" />
-                        {t('calculator.results.requirements')}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-6 space-y-4">
-                      <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
-                        <div className="flex items-center gap-3">
-                          <ShoppingCart className="w-5 h-5 text-brand-wine" />
-                          <span className="text-brand-wine font-semibold">
-                            {t('calculator.results.ordersPerMonth')}
-                          </span>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="text-center p-4 bg-gradient-brand text-white rounded-lg">
+                        <div className="text-2xl font-bold">
+                          {results.grossMargin.toFixed(1)}%
                         </div>
-                        <span className="text-2xl font-bold text-brand-wine">
-                          {formatNumber(results.requiredOrders)}
+                        <div className="text-sm opacity-90">
+                          {t('calculator.results.grossMargin')}
+                        </div>
+                      </div>
+                      <div className="text-center p-4 bg-brand-pink text-white rounded-lg">
+                        <div className="text-2xl font-bold">
+                          {results.netMargin.toFixed(1)}%
+                        </div>
+                        <div className="text-sm opacity-90">
+                          {t('calculator.results.netMargin')}
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="shadow-soft h-full">
+                  <CardHeader className="bg-brand-pink text-white rounded-t-lg">
+                    <CardTitle className="flex items-center gap-2">
+                      <Users className="w-5 h-5" />
+                      {t('calculator.results.requirements')}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-6 space-y-4">
+                    <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
+                      <div className="flex items-center gap-3">
+                        <ShoppingCart className="w-5 h-5 text-brand-wine" />
+                        <span className="text-brand-wine font-semibold">
+                          {t('calculator.results.ordersPerMonth')}
                         </span>
                       </div>
+                      <span className="text-2xl font-bold text-brand-wine">
+                        {formatNumber(results.requiredOrders)}
+                      </span>
+                    </div>
 
-                      <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
-                        <div className="flex items-center gap-3">
-                          <Users className="w-5 h-5 text-brand-wine" />
-                          <span className="text-brand-wine font-semibold">
-                            {t('calculator.results.visitorsPerMonth')}
-                          </span>
-                        </div>
-                        <span className="text-2xl font-bold text-brand-wine">
-                          {formatNumber(results.requiredVisitors)}
+                    <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
+                      <div className="flex items-center gap-3">
+                        <Users className="w-5 h-5 text-brand-wine" />
+                        <span className="text-brand-wine font-semibold">
+                          {t('calculator.results.visitorsPerMonth')}
                         </span>
                       </div>
+                      <span className="text-2xl font-bold text-brand-wine">
+                        {formatNumber(results.requiredVisitors)}
+                      </span>
+                    </div>
 
-                      {wizardData.marketingCosts > 0 && (
-                        <>
-                          <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
-                            <div className="flex items-center gap-3">
-                              <DollarSign className="w-5 h-5 text-brand-wine" />
-                              <span className="text-brand-wine font-semibold">
-                                {t('calculator.results.profitAfterMarketing')}
-                              </span>
-                            </div>
-                            <span className="text-2xl font-bold text-brand-wine">
-                              {formatCurrency(results.profitAfterMarketing)}
+                    {wizardData.marketingCosts > 0 && (
+                      <>
+                        <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
+                          <div className="flex items-center gap-3">
+                            <DollarSign className="w-5 h-5 text-brand-wine" />
+                            <span className="text-brand-wine font-semibold">
+                              {t('calculator.results.profitAfterMarketing')}
                             </span>
                           </div>
+                          <span className="text-2xl font-bold text-brand-wine">
+                            {formatCurrency(results.profitAfterMarketing)}
+                          </span>
+                        </div>
 
-                          <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
-                            <div className="flex items-center gap-3">
-                              <Target className="w-5 h-5 text-brand-wine" />
-                              <span className="text-brand-wine font-semibold">
-                                {t('calculator.results.breakEven')}
-                              </span>
-                            </div>
-                            <span className="text-2xl font-bold text-brand-wine">
-                              {formatNumber(results.breakEvenPoint)}
+                        <div className="flex items-center justify-between p-4 bg-brand-light-pink rounded-lg">
+                          <div className="flex items-center gap-3">
+                            <Target className="w-5 h-5 text-brand-wine" />
+                            <span className="text-brand-wine font-semibold">
+                              {t('calculator.results.breakEven')}
                             </span>
                           </div>
-                        </>
-                      )}
-                    </CardContent>
-                  </Card>
-                </div>
+                          <span className="text-2xl font-bold text-brand-wine">
+                            {formatNumber(results.breakEvenPoint)}
+                          </span>
+                        </div>
+                      </>
+                    )}
+                  </CardContent>
+                </Card>
+              </div>
 
-                {/* Pravy sloupec: vzdy MetricExplainer + kondicionalni marketing/CAC */}
-                <div className="space-y-6">
+              {/* Rada 2: MetricExplainer + MarketingBudgetSlider (oba obsahove bloky) */}
+              <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+                <div className="h-full [&>*]:h-full">
                   <MetricExplainer
                     aov={wizardData.aov}
                     cogs={wizardData.cogs}
                     margin={results.grossMargin}
                     conversionRate={wizardData.conversionRate}
                   />
-
+                </div>
+                <div className="h-full [&>*]:h-full">
                   <MarketingBudgetSlider
                     targetProfit={wizardData.isYearly ? wizardData.desiredProfit / 12 : wizardData.desiredProfit}
                     aov={wizardData.aov}
                     margin={results.grossMargin}
                     onBudgetChange={setRecommendedMarketingBudget}
                   />
-
-                  {(wizardData.marketingCosts > 0 || recommendedMarketingBudget > 0) && (
-                    <CACCalculator
-                      marketingBudget={wizardData.marketingCosts || recommendedMarketingBudget}
-                      requiredOrders={results.requiredOrders}
-                      aov={wizardData.aov}
-                      customLTVMultiplier={ltvMultiplier}
-                      onLTVMultiplierChange={setLtvMultiplier}
-                    />
-                  )}
                 </div>
               </div>
+
+              {/* Rada 3: CAC na celou sirku (zadny osamoceny sloupec) */}
+              {(wizardData.marketingCosts > 0 || recommendedMarketingBudget > 0) && (
+                <CACCalculator
+                  marketingBudget={wizardData.marketingCosts || recommendedMarketingBudget}
+                  requiredOrders={results.requiredOrders}
+                  aov={wizardData.aov}
+                  customLTVMultiplier={ltvMultiplier}
+                  onLTVMultiplierChange={setLtvMultiplier}
+                />
+              )}
             </>
           )}
 

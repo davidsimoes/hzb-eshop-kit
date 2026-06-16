@@ -22,7 +22,7 @@ interface DiagPrefill {
 
 const DIAG_PREFILL_SCENARIOS: DiagPrefill[] = [
   {
-    label: 'Kosmetika (zdravy zaklad)',
+    label: 'Kosmetika (zdravý základ)',
     emoji: '🌸',
     data: {
       monthlyVisitors: 3500,
@@ -36,7 +36,7 @@ const DIAG_PREFILL_SCENARIOS: DiagPrefill[] = [
     },
   },
   {
-    label: 'Moda (problem s konverzi)',
+    label: 'Móda (problém s konverzí)',
     emoji: '👗',
     data: {
       monthlyVisitors: 4000,
@@ -50,7 +50,7 @@ const DIAG_PREFILL_SCENARIOS: DiagPrefill[] = [
     },
   },
   {
-    label: 'Sperky (mala navstevnost)',
+    label: 'Šperky (malá návštěvnost)',
     emoji: '💍',
     data: {
       monthlyVisitors: 280,
@@ -62,7 +62,7 @@ const DIAG_PREFILL_SCENARIOS: DiagPrefill[] = [
     },
   },
   {
-    label: 'Mazlicci (ztraty na marketingu)',
+    label: 'Mazlíčci (ztráty na marketingu)',
     emoji: '🐾',
     data: {
       monthlyVisitors: 2200,
@@ -311,7 +311,7 @@ Mluv ke mně lidsky, bez žargonu.`;
                 <div className="pt-2 border-t border-brand-light-pink">
                   <p className="text-xs font-semibold text-brand-wine/80 mb-2 flex items-center gap-1">
                     <Sparkles className="w-3 h-3" />
-                    Vyzkoušej priklad:
+                    Vyzkoušej příklad:
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {DIAG_PREFILL_SCENARIOS.map((s) => (
