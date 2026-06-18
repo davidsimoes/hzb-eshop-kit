@@ -16,7 +16,7 @@ const NotFound = () => {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gradient-soft flex items-center justify-center px-4">
+      <main id="main-content" className="min-h-screen bg-gradient-soft flex items-center justify-center px-4">
         <div className="text-center max-w-md">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand-light-pink mb-6">
             <MapPin className="w-8 h-8 text-brand-wine" />

@@ -11,11 +11,11 @@
  * technická náročnost vs. cena, marketplace jako validace poptávky atd.).
  *
  * Datové ukotvení (2026):
- *  - Shoptet: dominantní CZ SaaS (~30 000+ aktivních e-shopů, pod skupinou Team.blue),
+ *  - Shoptet: dominantní CZ SaaS (~43 000+ aktivních e-shopů, pod skupinou Team.blue),
  *    nativní Heureka/Zboží.cz/Balíkovna/Zásilkovna/účetnictví, česká podpora,
  *    free trial; slabší na expanzi a hodně atypický design.
- *  - Shopify: nejlepší na růst/design/expanzi; v CZ/SK NENÍ Shopify Payments
- *    (řeší se přes Comgate/GoPay), část CZ integrací přes aplikace; dražší.
+ *  - Shopify: nejlepší na růst/design/expanzi; v ČR Shopify Payments funguje
+ *    (karty, Apple/Google Pay); na SK zatím ne, část CZ integrací přes aplikace; dražší.
  *  - Upgates: česká alternativa, dobré CZ integrace, mid-market.
  *  - WooCommerce: levná licence, ale vlastní hosting/bezpečnost/aktualizace
  *    (skrytý náklad + nutná technická pohoda).
@@ -57,7 +57,7 @@ export const PLATFORMS: Record<PlatformKey, Platform> = {
     strengths: [
       'Nativní napojení na Heureku, Zboží.cz, Zásilkovnu i Balíkovnu',
       'České platební brány (Comgate, GoPay), dobírka i česká faktura v základu',
-      'Česká podpora, čeština všude a obrovská česká komunita (přes 30 000 aktivních e-shopů)'
+      'Česká podpora, čeština všude a obrovská česká komunita (přes 43 000 aktivních e-shopů)'
     ],
     watchOut:
       'Na prodej za hranice a hodně atypický design je méně ohebný než Shopify. Hodí se hlavně, dokud zůstáváš na českém a slovenském trhu.',
@@ -74,7 +74,7 @@ export const PLATFORMS: Record<PlatformKey, Platform> = {
       'Poroste s tebou až do velkého obchodu, nemusíš se nikam stěhovat'
     ],
     watchOut:
-      'V Česku zatím není Shopify Payments, platby se řeší přes Comgate nebo GoPay a část českých věcí (třeba Zásilkovnu) přidáš přes aplikace. Podpora je hlavně anglicky a měsíčně vyjde dráž.',
+      'Shopify Payments v ČR funguje. České brány jako Comgate nebo GoPay přidáš pro dobírku, převod nebo lokální metody. Na Slovensku Shopify Payments zatím není. Část českých věcí (třeba Zásilkovnu) přidáš přes aplikace. Podpora je hlavně anglicky a měsíčně vyjde dráž.',
     nextStep: 'Spusť si zkušební verzi na shopify.com, plány jdou platit i v CZK.'
   },
   upgates: {

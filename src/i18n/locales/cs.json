@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "E-shop, který vydělává: kalkulačka, diagnostika a kit pro začínající podnikatelky",
+    "title": "E-shop, který vydělává",
     "description": "Praktické nástroje a otevřený kit pro spuštění e-shopu, který vydělává. Kalkulačka, diagnostika, persona a checklist pro začínající podnikatelky.",
     "home": {
       "label": "Přejít na domovskou stránku"
@@ -50,7 +50,7 @@
   "mission": {
     "hero": {
       "title": "Spusť e-shop, který vydělává",
-      "subtitle": "Zdarma nástroje, které ti spočítají, jestli tvůj nápad dává smysl, pomohou vybrat platformu a provedou tě spuštěním, plus celý kit, který si můžeš dát do své AI.",
+      "subtitle": "Zdarma nástroje, které ti spočítají, jestli tvůj nápad dává smysl, pomohou vybrat platformu a provedou tě spuštěním, a celý kit si můžeš stáhnout, klidně i pro svou AI.",
       "description": "Neboj se, každá úspěšná podnikatelka začínala stejně jako ty, s nápadem a spoustou otázek. Najdeš tu vše podstatné na jednom místě.",
       "cta": "Začni svou cestu",
       "ctaSecondary": "Nejsem si jistá, kde začít",
@@ -132,7 +132,7 @@
         },
         {
           "fear": "„Co když se nic neprodá?“",
-          "reality": "Právě proto máme kalkulačku, abys věděla, jestli tvůj nápad má potenciál. A pokud se zpočátku neprodává, je to o ladění, ne o selhání."
+          "reality": "Právě proto máme kalkulačku, abys věděla, jestli tvůj nápad má potenciál. A pokud se zpočátku neprodává, je to hlavně o postupném ladění, ne o selhání."
         },
         {
           "fear": "„Konkurence je všude“",
@@ -152,13 +152,13 @@
     },
     "firstSteps": {
       "title": "Kde konkrétně začít?",
-      "intro": "Rozdělili jsme to na tři jednoduché kroky:",
+      "intro": "Rozdělil jsem to do tří jednoduchých kroků:",
       "steps": [
         {
           "title": "Ověř si svůj nápad",
-          "description": "Pomocí naší kalkulačky za 3 minuty zjistíš, jestli tvůj nápad může vydělávat peníze",
-          "action": "Spustit kalkulačku",
-          "link": "/kalkulacka"
+          "description": "Za pár minut si ověříš, jestli tvůj nápad dává smysl, ještě než do něj dáš peníze",
+          "action": "Ověř nápad",
+          "link": "/validace"
         },
         {
           "title": "Naplánuj si spuštění",
@@ -170,7 +170,7 @@
           "title": "Začni jednoduše",
           "description": "Zvol platformu, nahraj pár produktů a začni. Zbytek si doladíš za pochodu.",
           "action": "Více o platformách",
-          "link": "/o-mne"
+          "link": "/vyber-platformy"
         }
       ]
     },
@@ -190,8 +190,8 @@
       "needMoreLink": "/o-mne",
       "finalTitle": "Připravená začít svou cestu?",
       "guide": {
-        "title": "Kompletní průvodce",
-        "description": "Podrobný materiál se všemi kroky, tipy a strategiemi pro spuštění úspěšného e-shopu.",
+        "title": "Prezentace ze školení",
+        "description": "Záznam prezentace ze školení se všemi kroky, tipy a strategiemi pro spuštění úspěšného e-shopu.",
         "button": "Otevřít prezentaci"
       }
     }
@@ -257,8 +257,8 @@
     "title": "15denní akční checklist pro spuštění e-shopu v ČR",
     "subtitle": "Jednoduchý, praktický plán, který funguje na jakékoli platformě",
     "guide": {
-      "title": "Podrobný průvodce",
-      "description": "Detailní materiály a postupy pro každý krok v prezentaci",
+      "title": "Prezentace ze školení",
+      "description": "Záznam prezentace ze školení s detailními postupy pro každý krok",
       "button": "Otevřít prezentaci"
     },
     "progress": {
@@ -492,8 +492,8 @@
           "time": "30 minut"
         },
         "automation": {
-          "title": "Email automaty",
-          "description": "Uvítací email, potvrzení objednávky, tracking",
+          "title": "E-mailové automatizace",
+          "description": "Uvítací e-mail, potvrzení objednávky, měření",
           "time": "2 hodiny"
         },
         "heurekaFeed": {
@@ -608,7 +608,7 @@
     "celebration": {
       "task": "Úkol splněn! 🎉",
       "day": "Den dokončen! Skvělá práce! ⭐",
-      "milestone": "Milestone dosažen! 🏆",
+      "milestone": "Splněno! 🏆",
       "completion": "Checklist dokončen! Jsi úžasná! 🎊"
     },
     "onboarding": {
@@ -685,7 +685,7 @@
           "Stripe - 1,4% + 5 Kč za transakci",
           "PayPal - 3,4% + 10 Kč za transakci",
           "ČSOB Gateway - 1,5% za transakci + měsíční poplatek",
-          "GoPay - 1,9% za transakci (slovenská alternativa)"
+          "GoPay - 1,9% za transakci (oblíbená v ČR)"
         ]
       },
       "shipping": {
@@ -979,7 +979,7 @@
         "questions": [
           {
             "q": "Shopify, Shoptet, WooCommerce, nebo něco jiného? Jak vybrat platformu",
-            "a": "Nehledej nejlepší e-shop na světě. Hledej ten, na kterém prodáš první kus tenhle měsíc a u kterého ti bude příjemně dělat každodenní práci. Platformu jde změnit, ale je to reálná práce (ztráta SEO, re-import produktů, nový vzhled), takže vyber uvážlivě.\n\nPět skupin pro českou začátečnici:\n\n- Shoptet (česká pronajatá platforma): nejrozšířenější řešení v ČR. Vše je hotové a v češtině, podpora mluví česky, napojení na Zásilkovnu, Heureku, GoPay a ComGate je samozřejmost. Skvělá volba, když prodáváš hlavně do Česka a chceš co nejmíň starostí.\n- Shopify (světová pronajatá platforma): světová jednička. Nejlepší pro růst, prodej do zahraničí a tisíce aplikací. Do češtiny se dostane přes šablony a appky. Háček pro ČR: Shopify Payments tu zatím nefunguje, platby řešíš přes ComGate nebo GoPay.\n- WooCommerce (na WordPressu): open-source, levný na licencích, hodně flexibilní, ale ty se staráš o hosting, aktualizace a bezpečnost. Dává smysl, když už WordPress máš.\n- Web-buildery (Wix, Squarespace, Webnode): spíš web s možností prodeje. Hodí se na velmi malý sortiment nebo služby. Jakmile budeš chtít české dopravce a Heureku, narazíš na limity.\n- Kurzové platformy (Seduo, Teachable, FAPI): pokud neprodáváš krabice, ale know-how (kurzy, webináře, e-booky, členství), klasický košík nepotřebuješ vůbec.\n\nRychlá zkratka:\n\n- Fyzické zboží, hlavně ČR, chceš klid: vyber Shoptet.\n- Chceš růst a jít do zahraničí: vyber Shopify.\n- Pár produktů nebo služby: vyber Webnode nebo Wix.\n- Prodáváš znalosti: vyber kurzovou platformu.\n\nNechceš v tom rozhodovat sama? Projdi si průvodce výběrem platformy.",
+            "a": "Nehledej nejlepší e-shop na světě. Hledej ten, na kterém prodáš první kus tenhle měsíc a u kterého ti bude příjemně dělat každodenní práci. Platformu jde změnit, ale je to reálná práce (ztráta SEO, re-import produktů, nový vzhled), takže vyber uvážlivě.\n\nPět skupin pro českou začátečnici:\n\n- Shoptet (česká pronajatá platforma): nejrozšířenější řešení v ČR. Vše je hotové a v češtině, podpora mluví česky, napojení na Zásilkovnu, Heureku, GoPay a ComGate je samozřejmost. Skvělá volba, když prodáváš hlavně do Česka a chceš co nejmíň starostí.\n- Shopify (světová pronajatá platforma): světová jednička. Nejlepší pro růst, prodej do zahraničí a tisíce aplikací. Do češtiny se dostane přes šablony a appky. K platbám: Shopify Payments v ČR funguje (karty, Apple/Google Pay). Na Slovensku zatím ne, tam použiješ českou bránu jako ComGate nebo GoPay.\n- WooCommerce (na WordPressu): open-source, levný na licencích, hodně flexibilní, ale ty se staráš o hosting, aktualizace a bezpečnost. Dává smysl, když už WordPress máš.\n- Web-buildery (Wix, Squarespace, Webnode): spíš web s možností prodeje. Hodí se na velmi malý sortiment nebo služby. Jakmile budeš chtít české dopravce a Heureku, narazíš na limity.\n- Kurzové platformy (Seduo, Teachable, FAPI): pokud neprodáváš krabice, ale know-how (kurzy, webináře, e-booky, členství), klasický košík nepotřebuješ vůbec.\n\nRychlá zkratka:\n\n- Fyzické zboží, hlavně ČR, chceš klid: vyber Shoptet.\n- Chceš růst a jít do zahraničí: vyber Shopify.\n- Pár produktů nebo služby: vyber Webnode nebo Wix.\n- Prodáváš znalosti: vyber kurzovou platformu.\n\nNechceš v tom rozhodovat sama? Projdi si průvodce výběrem platformy.",
             "links": [
               {
                 "text": "Průvodce výběrem platformy",
@@ -1084,7 +1084,7 @@
           },
           {
             "q": "Jak přidám platební brány do e-shopu?",
-            "a": "Většina platforem (Shoptet, Shopify, WooCommerce, Upgates) má hotové moduly pro české brány jako GoPay, ComGate nebo Shoptet Pay. Stačí se zaregistrovat u poskytovatele, dostaneš přístupové klíče a vložíš je do nastavení e-shopu. Návody najdeš přímo u bran.\n\nDůležité pro Shopify: v Česku zatím nefunguje Shopify Payments, takže platby u nás vyřešíš právě přes ComGate nebo GoPay.\n\nA proč na platbách záleží víc, než to vypadá: platební metoda přímo ovlivňuje, kolik nákupů se dokončí. Rychlé metody jako Apple Pay a Google Pay nebo uložená karta u přihlášeného zákazníka dotáhnou nákup výrazně častěji než ruční přepisování čísla karty. Když e-shop nenabízí metodu, na kterou je zákaznice zvyklá, část lidí nákup vzdá. Nabídni proto víc možností, ať si každý vybere.",
+            "a": "Většina platforem (Shoptet, Shopify, WooCommerce, Upgates) má hotové moduly pro české brány jako GoPay, ComGate nebo Shoptet Pay. Stačí se zaregistrovat u poskytovatele, dostaneš přístupové klíče a vložíš je do nastavení e-shopu. Návody najdeš přímo u bran.\n\nDůležité pro Shopify: Shopify Payments v ČR funguje (karty, Apple/Google Pay). Na Slovensku zatím ne, tam použiješ českou bránu jako ComGate nebo GoPay.\n\nA proč na platbách záleží víc, než to vypadá: platební metoda přímo ovlivňuje, kolik nákupů se dokončí. Rychlé metody jako Apple Pay a Google Pay nebo uložená karta u přihlášeného zákazníka dotáhnou nákup výrazně častěji než ruční přepisování čísla karty. Když e-shop nenabízí metodu, na kterou je zákaznice zvyklá, část lidí nákup vzdá. Nabídni proto víc možností, ať si každý vybere.",
             "links": [
               {
                 "text": "GoPay, integrace",
@@ -1168,8 +1168,8 @@
                 "url": "https://www.szpi.gov.cz/clanek/oznacovani-potravin.aspx"
               },
               {
-                "text": "Úřad pro technickou normalizaci – CE značení",
-                "url": "https://www.unmz.cz/urad/ce-znaceni"
+                "text": "Úřad pro technickou normalizaci (ÚNMZ)",
+                "url": "https://www.unmz.gov.cz"
               }
             ]
           }

@@ -35,7 +35,7 @@ const BeforeStart = () => {
         description="Obavy ze spuštění e-shopu jsou normální. Projdi si nejčastější pochybnosti začínajících podnikatelek a zjisti, co tě čeká jako první krok."
       />
       <Header />
-      <main className="min-h-screen bg-gradient-soft">
+      <main id="main-content" className="min-h-screen bg-gradient-soft">
         <div className="container mx-auto px-4 py-8">
           <Breadcrumb />
           

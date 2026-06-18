@@ -32,7 +32,7 @@ interface MainNavProps {
 const toolItems = [
   {
     to: '/validace',
-    label: 'Ověř nápad',
+    label: 'Validace nápadu',
     description: 'Ověř poptávku, než utratíš',
     icon: Lightbulb,
   },
@@ -43,16 +43,16 @@ const toolItems = [
     icon: Calculator,
   },
   {
-    to: '/roi-kalkulacka',
-    label: 'ROI kalkulačka',
-    description: 'Vyplatí se ten výdaj?',
-    icon: Wallet,
-  },
-  {
     to: '/vyber-platformy',
     label: 'Výběr platformy',
     description: 'Najdi svou platformu',
     icon: Compass,
+  },
+  {
+    to: '/checklist',
+    label: 'Checklist spuštění',
+    description: 'Co mít hotové před startem',
+    icon: CheckSquare,
   },
   {
     to: '/diagnostika',
@@ -61,10 +61,10 @@ const toolItems = [
     icon: Stethoscope,
   },
   {
-    to: '/checklist',
-    label: 'Spouštěcí checklist',
-    description: 'Co mít hotové před startem',
-    icon: CheckSquare,
+    to: '/roi-kalkulacka',
+    label: 'ROI kalkulačka',
+    description: 'Vyplatí se ten výdaj?',
+    icon: Wallet,
   },
 ];
 

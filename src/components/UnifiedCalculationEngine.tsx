@@ -121,7 +121,9 @@ export const useUnifiedCalculationEngine = (metrics: BusinessMetrics): Calculate
     const breakEvenPoint = marketingCosts > 0 && profitPerOrder > 0 ? Math.ceil(marketingCosts / profitPerOrder) : 0;
     
     // Health indicators
-    const isViable = profitPerOrder > 0 && requiredOrders > 0 && (cac === 0 || cac < ltv * 0.3);
+    // Primary profitability gate: profit from a single order must exceed CAC.
+    // The LTV:CAC ratio is retained below as a secondary/aspirational signal only.
+    const isViable = profitPerOrder > 0 && requiredOrders > 0 && (cac === 0 || profitPerOrder > cac);
     
     const getProfitability = (): CalculatedResults['profitability'] => {
       if (calculatedNetMargin >= 25) return 'excellent';

@@ -109,7 +109,6 @@ const trueNetFields: { key: keyof DiagnosticInput; label: string; hint: string; 
 
 // Volitelná pole pro hlubší diagnostiku.
 const deeperFields: { key: keyof DiagnosticInput; label: string; hint: string; suffix?: string }[] = [
-  { key: 'shippingCost', label: 'Doprava / objednávku (volitelné)', hint: 'Kolik tě stojí doprava u jedné objednávky. Nech prázdné, pokud nevíš.', suffix: 'Kč' },
   { key: 'returnRate', label: 'Vratkovost (volitelné)', hint: 'Kolik % objednávek se ti vrací.', suffix: '%' },
   { key: 'repeatRate', label: 'Opakované nákupy (volitelné)', hint: 'Kolik % zákaznic u tebe nakoupí víc než jednou.', suffix: '%' },
   { key: 'mobileShare', label: 'Podíl mobilu (volitelné)', hint: 'Kolik % návštěv chodí z mobilu (z Google Analytics).', suffix: '%' },
@@ -425,7 +424,7 @@ Mluv ke mně lidsky, bez žargonu.`;
                   ) : (
                     <p className="text-xs text-brand-wine/70 bg-brand-orange/10 p-3 rounded-lg">
                       ⚠️ Tohle <strong>nezapočítává tvůj čas ani fixní náklady</strong> (nájem, software, předplatné).
-                      I „kladné" číslo tady tě nemusí uživit, doplň si výše vlastní mzdu a fixní náklady a uvidíš
+                      I „kladné“ číslo tady tě nemusí uživit, doplň si výše vlastní mzdu a fixní náklady a uvidíš
                       <strong> skutečný čistý zisk</strong>.
                     </p>
                   )}

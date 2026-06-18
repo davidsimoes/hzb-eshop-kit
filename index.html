@@ -11,7 +11,18 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-TL47034KBM');
+      // Consent Mode v2 defaults: deny everything until the user opts in
+      // (CookieConsent.tsx flips analytics/ad storage to 'granted' on consent).
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500
+      });
+      // send_page_view: false - the SPA's ScrollToTop sends page_view on every
+      // route (including the first), so the config must not auto-send one too.
+      gtag('config', 'G-TL47034KBM', { send_page_view: false });
     </script>
 
     <title>E-shop, který vydělává: kalkulačka, diagnostika a kit pro začínající podnikatelky</title>
@@ -21,6 +32,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <meta name="description" content="Otevřený nástroj a referenční kit pro spuštění e-shopu, který vydělává. Kalkulačka životaschopnosti, diagnostika 'neprodává', persona nástroj a checklist. Od Davida Simõese pro #HolkyzByznysu." />
+
+    <!-- Static social/OG fallback for non-JS scrapers (LinkedIn/Facebook/Slack bots).
+         React Helmet (MetaTags.tsx) overrides these per-page for JS clients. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="E-shop, který vydělává" />
+    <meta property="og:title" content="E-shop, který vydělává: kalkulačka, diagnostika a kit pro začínající podnikatelky" />
+    <meta property="og:description" content="Praktické nástroje a kit pro spuštění e-shopu, který vydělává. Od Davida Simõese pro #HolkyzByznysu." />
+    <meta property="og:image" content="https://hzb.davidjose.net/og-image.jpg" />
+    <meta property="og:url" content="https://hzb.davidjose.net/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="E-shop, který vydělává" />
+    <meta name="twitter:description" content="Praktické nástroje a kit pro spuštění e-shopu, který vydělává." />
+    <meta name="twitter:image" content="https://hzb.davidjose.net/og-image.jpg" />
     <!-- Dynamic meta tags managed by React Helmet (MetaTags.tsx) -->
 
     <!-- Favicon -->

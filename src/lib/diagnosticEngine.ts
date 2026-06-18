@@ -21,7 +21,6 @@ export interface DiagnosticInput {
   ownerSalary?: number;    // tvoje měsíční mzda / odměna, kterou si chceš vyplatit (Kč)
   fixedCosts?: number;     // měsíční fixní náklady mimo objednávky (nájem, software, předplatné) (Kč)
   // VOLITELNÉ. Pro hlubší diagnostiku (každé pole zachovává chování "prázdné = jako dosud").
-  shippingCost?: number;          // doprava na 1 objednávku (Kč)
   returnRate?: number;            // % vrácených objednávek
   repeatRate?: number;            // % opakovaných zákazníků
   mobileShare?: number;           // % návštěv z mobilu
@@ -288,16 +287,17 @@ export function diagnose(input: DiagnosticInput): DiagnosticResult {
     });
   }
 
-  // 7) Doprava ukrajuje marži
-  const shippingCost = Math.max(0, input.shippingCost ?? 0);
-  if (shippingCost > 0 && aov > 0 && shippingCost / aov > 0.15) {
+  // 7) Ostatní náklady na objednávku (doprava, balné, poplatky) ukrajují moc z objednávky.
+  // Pozn.: vychází z už zadaných "ostatních nákladů na objednávku" (extra), aby se uživatel
+  // neptal na dopravu dvakrát. Tato hodnota je zároveň odečtená v zisku na objednávku výše.
+  if (extra > 0 && aov > 0 && extra / aov > 0.15) {
     issues.push({
       id: 'shipping-heavy',
       area: 'margin',
-      severity: shippingCost / aov > 0.25 ? 'critical' : 'warning',
-      title: 'Doprava sní moc z objednávky',
-      finding: `Doprava tě stojí ${fmtCZK(shippingCost)} na objednávku, to je ${((shippingCost / aov) * 100).toFixed(0)} % z průměrné objednávky (${fmtCZK(aov)}). Při nízké hodnotě objednávky to ukousne velkou část zisku.`,
-      fix: 'Zaveď limit pro dopravu zdarma (medián trhu ~1 500 Kč) a komunikuj ho v košíku, ať zákaznice dokoupí. Vyjednej levnějšího dopravce nebo nabídni výdejní místa (Zásilkovna), která bývají levnější než kurýr.',
+      severity: extra / aov > 0.25 ? 'critical' : 'warning',
+      title: 'Náklady na objednávku sní moc z objednávky',
+      finding: `Ostatní náklady na objednávku (doprava, balné, poplatky) tě stojí ${fmtCZK(extra)}, to je ${((extra / aov) * 100).toFixed(0)} % z průměrné objednávky (${fmtCZK(aov)}). Při nízké hodnotě objednávky to ukousne velkou část zisku.`,
+      fix: 'Zaveď limit pro dopravu zdarma (medián trhu ~1 500 Kč) a komunikuj ho v košíku, ať zákaznice dokoupí. Vyjednej levnějšího dopravce nebo nabídni výdejní místa (Zásilkovna), která bývají levnější než kurýr. Mrkni i na balné a poplatky platební brány.',
       priority: 5
     });
   }

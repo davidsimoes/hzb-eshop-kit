@@ -7,6 +7,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { Footer } from "@/components/Footer";
 import { ErrorBoundary } from "@/components/ErrorBoundary/ErrorBoundary";
 import { OfflineIndicator } from "@/components/Offline/OfflineIndicator";
+import { CookieConsent } from "@/components/CookieConsent";
 import { MetaTags } from "@/components/SEO/MetaTags";
 import { ScrollToTop } from "@/components/Navigation/ScrollToTop";
 import { CurrencyProvider } from "@/contexts/CurrencyContext";
@@ -49,6 +50,7 @@ const App = () => {
             <Toaster />
             <Sonner />
             <OfflineIndicator />
+            <CookieConsent />
             <div className="min-h-screen flex flex-col">
             <div className="flex-1">
               <BrowserRouter>

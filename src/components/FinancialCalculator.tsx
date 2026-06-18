@@ -100,6 +100,7 @@ interface CalculatorResults {
   requiredVisitors: number;
   profitAfterMarketing: number;
   breakEvenPoint: number;
+  profitPerOrder: number;
 }
 
 interface WizardData {
@@ -162,7 +163,8 @@ export const FinancialCalculator = () => {
         requiredOrders,
         requiredVisitors,
         profitAfterMarketing,
-        breakEvenPoint
+        breakEvenPoint,
+        profitPerOrder
       });
     } catch (error) {
       console.error('Calculation error:', error);
@@ -471,6 +473,7 @@ export const FinancialCalculator = () => {
                   marketingBudget={wizardData.marketingCosts || recommendedMarketingBudget}
                   requiredOrders={results.requiredOrders}
                   aov={wizardData.aov}
+                  profitPerOrder={results.profitPerOrder}
                   customLTVMultiplier={ltvMultiplier}
                   onLTVMultiplierChange={setLtvMultiplier}
                 />

@@ -15,7 +15,7 @@ const Guides = () => {
         description="Podrobné průvodce ke každému kroku rozjezdu e-shopu: validace nápadu, výběr platformy, marketing, právo, finance i diagnostika. Ke každému tématu jeden ucelený text."
       />
       <Header />
-      <main className="min-h-screen bg-gradient-soft">
+      <main id="main-content" className="min-h-screen bg-gradient-soft">
         <div className="container mx-auto px-4 py-8 max-w-4xl">
           <Breadcrumb />
 

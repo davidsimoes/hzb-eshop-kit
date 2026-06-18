@@ -8,14 +8,16 @@ interface CACCalculatorProps {
   marketingBudget: number;
   requiredOrders: number;
   aov: number;
+  profitPerOrder?: number;
   customLTVMultiplier?: number;
   onLTVMultiplierChange?: (multiplier: number) => void;
 }
 
-export const CACCalculator = ({ 
-  marketingBudget, 
-  requiredOrders, 
+export const CACCalculator = ({
+  marketingBudget,
+  requiredOrders,
   aov,
+  profitPerOrder,
   customLTVMultiplier = 2.5,
   onLTVMultiplierChange
 }: CACCalculatorProps) => {
@@ -30,16 +32,18 @@ export const CACCalculator = ({
 
   const cac = requiredOrders > 0 && marketingBudget > 0 ? marketingBudget / requiredOrders : 0;
   const ltv = aov * customLTVMultiplier;
-  const isHealthy = cac > 0 && cac < ltv * 0.33;
+  // Primary profitability gate: profit from a single order must exceed CAC.
+  // Fall back to a conservative AOV proxy only when per-order profit isn't supplied.
+  const perOrderProfit = profitPerOrder != null && profitPerOrder > 0 ? profitPerOrder : aov;
+  const isHealthy = cac > 0 && perOrderProfit > cac;
+  // Aspirational LTV:CAC ratio, shown as a secondary indicator only.
+  const ltvCacRatio = cac > 0 ? ltv / cac : 0;
   const defaultCACRange = "200-600 Kč";
 
   const getCACStatus = () => {
     if (cac === 0) return { color: 'text-muted-foreground', message: 'Zadej marketingový rozpočet' };
-    if (cac < 100) return { color: 'text-yellow-600', message: 'CAC pod 100 Kč je v ČR nepravděpodobné' };
-    if (cac > 600) return { color: 'text-red-600', message: 'CAC nad 600 Kč je v ČR nadprůměrné' };
-    if (isHealthy) return { color: 'text-green-600', message: 'CAC je v pořádku pro český trh' };
-    if (cac >= ltv) return { color: 'text-red-600', message: 'CAC převyšuje LTV, zvaž optimalizaci' };
-    return { color: 'text-yellow-600', message: 'CAC je vysoký, ideál je pod 30 % LTV' };
+    if (isHealthy) return { color: 'text-green-600', message: 'Zisk z jedné objednávky převyšuje CAC, plán je ziskový' };
+    return { color: 'text-red-600', message: 'CAC převyšuje zisk z jedné objednávky, zvaž optimalizaci' };
   };
 
   const status = getCACStatus();
@@ -79,7 +83,17 @@ export const CACCalculator = ({
             <div className="text-2xl font-bold text-brand-wine">
               {formatCurrency(ltv)}
             </div>
-            <div className="text-sm text-brand-wine/70">životní hodnota</div>
+            <div className="text-sm text-brand-wine/70">životní hodnota (odhad)</div>
+          </div>
+        </div>
+
+        {/* Secondary, aspirational indicator: LTV:CAC ratio */}
+        <div className="text-center p-3 bg-brand-light-pink/50 rounded-lg">
+          <div className="text-sm text-brand-wine/70">
+            LTV:CAC poměr{ltvCacRatio > 0 ? `: ${ltvCacRatio.toFixed(1)}x` : ''}
+          </div>
+          <div className="text-xs text-brand-wine/60 mt-1">
+            Cíl 3x je aspirace pro e-shopy s ověřenými opakovanými nákupy, ne pravidlo pro start.
           </div>
         </div>
 
@@ -98,6 +112,7 @@ export const CACCalculator = ({
             onChange={(e) => onLTVMultiplierChange?.(Number(e.target.value) || 2.5)}
             className="text-lg"
             placeholder="2.5"
+            aria-label="LTV násobitel (kolikrát zákazník průměrně nakoupí)"
           />
           <p className="text-sm text-muted-foreground">
             💡 Výchozí 2.5x je průměr pro české e-shopy

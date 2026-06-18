@@ -35,9 +35,9 @@ export const Header = () => {
               className="w-6 h-6 lg:w-7 lg:h-7 text-brand-orange animate-float"
               aria-hidden="true"
             />
-            <h1 className="text-sm sm:text-base lg:text-xl font-bold text-brand-wine whitespace-nowrap">
+            <span className="text-sm sm:text-base lg:text-xl font-bold text-brand-wine whitespace-nowrap">
               {t('site.title')}
-            </h1>
+            </span>
           </Link>
 
           {/* Desktop nav — grouped mega menu */}

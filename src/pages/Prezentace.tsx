@@ -75,8 +75,8 @@ const slides: Slide[] = [
     bullets: [
       '10+ let v e-commerce, stovky e-shopů od start-upů po firmy s obratem přes 3 mld. Kč.',
       'Zakladatel Sounds Good Agency, první Shopify agentury v ČR a na Slovensku.',
-      'Viděl jsem fungovat různé cesty: Mana (jedna z prvních firem v ČR s předplatným na spotřební zboží), TePe USA (přístup KISS, drž to jednoduché), ETA (čisté B2B), Erotic City (omnichannel), Galleria Armadoro (DTC) i Fabini (pro start-up je klíčové umět včas změnit směr).',
-      'A poučil jsem se i z chyb: Okay Elektro (nikdo není „too big to fail“), Sofsy (perfekcionismus je nepřítel dokončené práce) a moje první e-shopy (čísla jsou základ).',
+      'U klientů jsem viděl fungovat různé cesty: Mana (jedna z prvních firem v ČR s předplatným na spotřební zboží), TePe USA (přístup KISS, drž to jednoduché), ETA (čisté B2B), Erotic City (omnichannel), Galleria Armadoro (DTC) i Fabini (pro start-up je klíčové umět včas změnit směr).',
+      'A poučil jsem se i z chyb, svých i klientských: u klienta Okay Elektro (nikdo není „too big to fail“), u klienta Sofsy (perfekcionismus je nepřítel dokončené práce) a u prvních e-shopů, na kterých jsem dělal (čísla jsou základ).',
       'Vím, jak vypadá start zevnitř, a ty pochybnosti znám taky. Dnes ti předám zkratky, co šetří peníze i nervy.'
     ],
     logos: true,

@@ -33,12 +33,12 @@ export const ValidationAlerts = ({
       message: 'Marže je 0% nebo záporná, zkus zvýšit cenu nebo snížit náklady',
       suggestion: 'Zvýš prodejní cenu nebo vyjednávej lepší nákupní ceny.'
     });
-  } else if (margin > 40) {
+  } else if (margin > 80) {
     alerts.push({
       type: 'warning' as const,
       title: 'Velmi vysoká marže',
-      message: 'Marže nad 40% je v ČR vzácná, zkontroluj AOV nebo COGS',
-      suggestion: 'Ověř si, že máš správně zadané náklady.'
+      message: 'Hrubá marže nad 80 % je výjimečná, zkontroluj AOV nebo COGS',
+      suggestion: 'Ověř, že do nákladů na zboží počítáš úplně všechno (výroba, doprava, poplatky).'
     });
   }
 
@@ -47,7 +47,7 @@ export const ValidationAlerts = ({
     alerts.push({
       type: 'info' as const,
       title: 'Vysoká konverze',
-      message: 'Konverze nad 3% přesahuje český průměr 1-2%',
+      message: 'Konverze nad 3% přesahuje český průměr ~2 %',
       suggestion: 'Skvělá práce! Tvůj e-shop konvertuje nadprůměrně.'
     });
   }

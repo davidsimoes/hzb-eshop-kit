@@ -1,6 +1,11 @@
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 interface MetaTagsProps {
   title?: string;
   description?: string;
@@ -8,6 +13,8 @@ interface MetaTagsProps {
   url?: string;
   type?: 'website' | 'article';
   structuredData?: object;
+  /** When provided, emits FAQPage JSON-LD in addition to the page structured data. */
+  faqItems?: FaqItem[];
 }
 
 const BASE_URL = 'https://hzb.davidjose.net';
@@ -18,7 +25,8 @@ export const MetaTags = ({
   image = `${BASE_URL}/og-image.jpg`,
   url = (window.location.origin + window.location.pathname),
   type = 'website',
-  structuredData
+  structuredData,
+  faqItems
 }: MetaTagsProps) => {
   const { t } = useTranslation();
   
@@ -31,7 +39,7 @@ export const MetaTags = ({
   const baseStructuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": siteTitle,
+    "name": fullTitle,
     "description": fullDescription,
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
@@ -72,7 +80,50 @@ export const MetaTags = ({
     }
   };
 
-  const finalStructuredData = structuredData || baseStructuredData;
+  // Article variant for guide/article pages — gives those pages page-specific
+  // Article structured data instead of the generic SoftwareApplication.
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": fullTitle,
+    "description": fullDescription,
+    "image": image,
+    "url": url,
+    "inLanguage": "cs",
+    "author": {
+      "@type": "Person",
+      "name": "David Simões",
+      "jobTitle": "E-commerce Consultant",
+      "url": `${BASE_URL}/o-mne`
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "David Simões",
+      "url": `${BASE_URL}/o-mne`
+    }
+  };
+
+  // Explicit structuredData prop wins; otherwise pick Article for article pages,
+  // SoftwareApplication for everything else.
+  const finalStructuredData =
+    structuredData || (type === 'article' ? articleStructuredData : baseStructuredData);
+
+  // Optional FAQPage JSON-LD, emitted alongside the page structured data.
+  const faqStructuredData =
+    faqItems && faqItems.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqItems.map((item) => ({
+            "@type": "Question",
+            "name": item.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": item.answer
+            }
+          }))
+        }
+      : null;
 
   return (
     <Helmet>
@@ -103,6 +154,7 @@ export const MetaTags = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={fullDescription} />
       <meta name="twitter:image" content={image} />
+      <meta name="twitter:site" content="@davidsimoes_" />
       <meta name="twitter:creator" content="@davidsimoes_" />
       
       {/* Enhanced Czech keywords */}
@@ -112,6 +164,13 @@ export const MetaTags = ({
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
+
+      {/* FAQPage Structured Data (only when faqItems provided) */}
+      {faqStructuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(faqStructuredData)}
+        </script>
+      )}
     </Helmet>
   );
 };

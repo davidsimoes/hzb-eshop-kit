@@ -29,8 +29,8 @@
 5. **Ochrana osobních údajů (GDPR):** zásady zpracování osobních údajů + souhlas
    s cookies, pokud měříš návštěvnost/reklamu.
 6. **Informační povinnosti:** viditelně kontakt, dodací podmínky a informace o právech z vadného plnění (často součástí obchodních podmínek).
-7. **Tlačítko „Odstoupit od smlouvy":** novější požadavek EU (směrnice 2023/2673,
-   účinnost se zavádí postupně) na snadné online odstoupení, tedy viditelné, vždy dostupné
+7. **Tlačítko „Odstoupit od smlouvy":** novější evropský požadavek (postupně se zavádí;
+   reference: směrnice 2023/2673) na snadné online odstoupení, tedy viditelné, vždy dostupné
    tlačítko pro odstoupení od smlouvy. Nelekej se toho: většina platforem (Shoptet, Shopify přes aplikace)
    už na to řešení má nebo ho chystá, takže to za tebe většinou vyřeší platforma.
    Stačí ověřit, jak to tvoje platforma řeší.

@@ -128,7 +128,7 @@ export const CalculatorWizard = ({
                 amount: formatCurrency(data.isYearly ? 240000 : 20000)
               })} value={data.desiredProfit || ''} onChange={e => updateData({
                 desiredProfit: Number(e.target.value)
-              })} className="text-lg text-center" aria-describedby="profit-hint" />
+              })} className="text-lg text-center" aria-describedby="profit-hint" aria-label="Požadovaný zisk pro tebe v Kč" />
               </div>
 
               
@@ -157,7 +157,7 @@ export const CalculatorWizard = ({
                 amount: '900'
               })} value={data.aov || ''} onChange={e => updateData({
                 aov: Number(e.target.value)
-              })} className="text-lg" />
+              })} className="text-lg" aria-label="Průměrná hodnota objednávky v Kč" />
                 <p className="text-xs text-brand-wine/60">
                   💡 {t('calculator.wizard.step2.aovHint')}
                 </p>
@@ -174,7 +174,7 @@ export const CalculatorWizard = ({
                 amount: '450'
               })} value={data.cogs || ''} onChange={e => updateData({
                 cogs: Number(e.target.value)
-              })} className="text-lg" />
+              })} className="text-lg" aria-label="Náklady na zboží (COGS) v Kč" />
                 <p className="text-xs text-brand-wine/60">
                   💡 {t('calculator.wizard.step2.cogsHint')}
                 </p>
@@ -191,7 +191,7 @@ export const CalculatorWizard = ({
                 amount: '50'
               })} value={data.extraCosts || ''} onChange={e => updateData({
                 extraCosts: Number(e.target.value)
-              })} className="text-lg" />
+              })} className="text-lg" aria-label="Ostatní náklady na objednávku v Kč" />
                 <p className="text-xs text-brand-wine/60">
                   💡 {t('calculator.wizard.step2.extraHint')}
                 </p>
@@ -229,7 +229,7 @@ export const CalculatorWizard = ({
                 amount: '2'
               })} value={data.conversionRate || ''} onChange={e => updateData({
                 conversionRate: Number(e.target.value)
-              })} className="text-lg" />
+              })} className="text-lg" aria-label="Konverzní poměr v procentech" />
                 <p className="text-xs text-brand-wine/60">
                   💡 {t('calculator.wizard.step3.conversionHint')}
                 </p>
@@ -246,7 +246,7 @@ export const CalculatorWizard = ({
                 amount: '5000'
               })} value={data.marketingCosts || ''} onChange={e => updateData({
                 marketingCosts: Number(e.target.value)
-              })} className="text-lg" />
+              })} className="text-lg" aria-label="Měsíční marketingový rozpočet v Kč" />
                 <p className="text-xs text-brand-wine/60">
                   💡 {t('calculator.wizard.step3.budgetHint')}
                 </p>

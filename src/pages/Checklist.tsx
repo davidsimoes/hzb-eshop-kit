@@ -157,7 +157,7 @@ export const Checklist = () => {
         description="Odškrtávej krok po kroku vše, co potřebuješ před spuštěním e-shopu: právo, platby, dopravu, GDPR, obsah i technické nastavení."
       />
       <Header />
-      <main className="container mx-auto px-4 py-8">
+      <main id="main-content" className="container mx-auto px-4 py-8">
         <Breadcrumb />
         
         <div className="text-center mb-8">

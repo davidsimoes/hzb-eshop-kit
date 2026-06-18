@@ -132,6 +132,18 @@ const FAQ = () => {
   const sectionKeys = Object.keys(sections);
   const [active, setActive] = useState<string>(sectionKeys[0]);
 
+  // Flatten all Q&A into plain-text pairs for FAQPage structured data.
+  // Strip list markers and collapse whitespace so the JSON-LD answer text is clean.
+  const faqItems = sectionKeys.flatMap((key) =>
+    sections[key].questions.map((question) => ({
+      question: question.q,
+      answer: question.a
+        .replace(/^[-\d]+\.?\s/gm, '')
+        .replace(/\s+/g, ' ')
+        .trim(),
+    }))
+  );
+
   const scrollToSection = (key: string) => {
     setActive(key);
     const el = document.getElementById(`faq-${key}`);
@@ -146,9 +158,10 @@ const FAQ = () => {
       <MetaTags
         title="Časté otázky"
         description="Odpovědi na nejčastější otázky o e-shopech, platformách, marketingu a financích. Získej jasno dřív, než začneš."
+        faqItems={faqItems}
       />
       <Header />
-      <main className="container mx-auto px-4 py-10 sm:py-14">
+      <main id="main-content" className="container mx-auto px-4 py-10 sm:py-14">
         <div className="max-w-3xl mx-auto">
           {/* Hero */}
           <header className="text-center mb-10">

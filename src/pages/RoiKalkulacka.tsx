@@ -111,7 +111,7 @@ function computeRoi(input: RoiInput): RoiResult {
   } else if (verdict === 'loss') {
     confidenceNote =
       softCount >= 3
-        ? `Podle čísel se to finančně nevyplatí. Označila jsi ale ${softCount} měkkých přínosů. Pokud jsou pro tebe opravdu důležité (a ne jen "bylo by hezké"), může to dávat smysl jako vědomá investice do kvality, ne do návratnosti.`
+        ? `Podle čísel se to finančně nevyplatí. Označila jsi ale ${softCount} měkkých přínosů. Pokud jsou pro tebe opravdu důležité (a ne jen „bylo by hezké“), může to dávat smysl jako vědomá investice do kvality, ne do návratnosti.`
         : 'Podle čísel se to nevyplatí a měkké přínosy to nevyváží. Buď sniž náklad, zvyš přínos, nebo to odlož.';
   } else {
     confidenceNote = 'Doplň náklady i očekávaný přínos, ať je co počítat.';

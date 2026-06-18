@@ -9,12 +9,12 @@ interface Step {
 }
 
 const STEPS: Step[] = [
-  { key: 'validace', label: 'Ověř nápad', path: '/validace', hint: 'Ujasni si, komu a proč prodáváš, a ověř, že o to někdo stojí.' },
-  { key: 'kalkulacka', label: 'Kalkulačka', path: '/kalkulacka', hint: 'Spočítej, jestli tvůj e-shop může být finančně životaschopný.' },
+  { key: 'validace', label: 'Validace nápadu', path: '/validace', hint: 'Ujasni si, komu a proč prodáváš, a ověř, že o to někdo stojí.' },
+  { key: 'kalkulacka', label: 'Finanční kalkulačka', path: '/kalkulacka', hint: 'Spočítej, jestli tvůj e-shop může být finančně životaschopný.' },
   { key: 'vyber-platformy', label: 'Výběr platformy', path: '/vyber-platformy', hint: 'Odpověz na šest otázek a zjisti, která platforma sedí na tvoji situaci.' },
+  { key: 'checklist', label: 'Checklist spuštění', path: '/checklist', hint: 'Projdi si, co všechno potřebuješ před spuštěním zařídit.' },
   { key: 'diagnostika', label: 'Diagnostika', path: '/diagnostika', hint: 'Zadej svá čísla a najdi nejslabší článek, kde se ztrácí peníze.' },
-  { key: 'roi-kalkulacka', label: 'ROI', path: '/roi-kalkulacka', hint: 'Ověř, jestli se ti konkrétní výdaj nebo investice vyplatí.' },
-  { key: 'checklist', label: 'Checklist', path: '/checklist', hint: 'Projdi si, co všechno potřebuješ před spuštěním zařídit.' },
+  { key: 'roi-kalkulacka', label: 'ROI kalkulačka', path: '/roi-kalkulacka', hint: 'Ověř, jestli se ti konkrétní výdaj nebo investice vyplatí.' },
 ];
 
 const STEP_HINTS: Record<string, string> = Object.fromEntries(STEPS.map((s) => [s.key, s.hint]));
