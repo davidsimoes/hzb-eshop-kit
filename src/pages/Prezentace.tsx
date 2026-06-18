@@ -88,8 +88,8 @@ const slides: Slide[] = [
     kicker: 'Realita trhu 2026',
     title: 'Špatná zpráva (a proč tě to nemělo odradit)',
     bullets: [
-      'Česká e-commerce loni vyrostla o 6 %, ale TOP 100 e-shopů rostlo o 14 %. Velcí dál vytlačují malé a Češi utratili online přes 206 miliard Kč.',
-      'Sílí zahraniční konkurence: Temu se probojovalo do TOP 10 a čínská tržiště už sebrala českým e-shopům kolem 15 % tržeb, k tomu Shein, AliExpress a Allegro, všichni tlačí ceny dolů.',
+      'Česká e-commerce loni vyrostla o 6 %, ale TOP 100 e-shopů rostlo o 14 %. Velcí dál vytlačují malé a Češi utratili online přes 206 miliard Kč (zdroj: APEK / Heureka 2025).',
+      'Sílí zahraniční konkurence: Temu se probojovalo do TOP 10 a u čínských tržišť odhady mluví o ~15 % tržeb českých e-shopů, k tomu Shein, AliExpress a Allegro, všichni tlačí ceny dolů.',
       'I bývalí velikáni zmizeli (Mall, CZC, Okay). Trh se konsoliduje a cenou ani sortimentem ho jako malá nikdy neporazíš.',
       'A teď to dobré: nemusíš. Vyhraješ zaměřením na úzkou niku, komunitu, příběh a osobní službu, tedy přesně tím, co velký hráč neumí.',
       'Právě proto je dnes důležitější než kdy dřív ověřit poptávku, najít svou niku a hlídat čísla. Ne prodávat všechno všem.'
@@ -324,7 +324,7 @@ const Prezentace = () => {
       </div>
 
       {/* slide */}
-      <div className="flex-1 flex items-center justify-center px-6 py-10 overflow-y-auto">
+      <div id="main-content" className="flex-1 flex items-center justify-center px-6 py-10 overflow-y-auto">
         <div className={`max-w-4xl w-full ${isTitle ? 'text-center' : ''}`}>
           <div className={`flex items-center gap-3 mb-6 ${isTitle ? 'justify-center' : ''}`}>
             <div className={`p-3 rounded-2xl shadow-soft ${isTool ? 'bg-brand-wine/10' : 'bg-white/70'}`}>

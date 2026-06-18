@@ -149,7 +149,7 @@ const About = () => {
           <CardContent>
             <div className="space-y-6">
               <p className="text-brand-wine/80 leading-relaxed">
-                Za víc než 10 let mi rukama prošly stovky e-shopů, od úplných začátků až po zavedené značky. Dohromady jsem pomohl e-shopům k obratům v řádu miliard korun, ale nejde o čísla na efekt, jde o to, co za nimi stojí. Start-upy, předplatné, B2B i prodej do zahraničí, a k tomu Sounds Good Agency, první Shopify agentura v ČR a na Slovensku.
+                Za víc než 10 let mi rukama prošly stovky e-shopů, od úplných začátků až po zavedené značky. Nejde o čísla na efekt, jde o to, co za nimi stojí. Start-upy, předplatné, B2B i prodej do zahraničí, a k tomu Sounds Good Agency, první Shopify agentura v ČR a na Slovensku.
               </p>
               <p className="text-brand-wine/80 leading-relaxed">
                 Každý klient mě něco naučil. U <strong>Many</strong>, se kterou jsem pracoval, jsme budovali jedno z prvních předplatných na spotřební zboží v Česku a viděl jsem, jak moc záleží na logistice a retenci. U <strong>TePe USA</strong> platilo jediné pravidlo: drž to jednoduché. Radikálně jiné světy jsou <strong>ETA</strong> (čisté B2B bez impulzivních nákupů), <strong>Erotic City</strong> s omnichannel provozem přes desítky kamenných prodejen, nebo <strong>Galleria Armadoro</strong> s DTC strategií pro zahraničí. U značek, se kterými jsem pracoval, jsem se naučil nepřenášet recepty z jednoho světa do druhého.

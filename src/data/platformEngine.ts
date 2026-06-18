@@ -53,7 +53,7 @@ export const PLATFORMS: Record<PlatformKey, Platform> = {
     key: 'shoptet',
     name: 'Shoptet',
     tagline: 'Nejrozšířenější česká platforma. Všechno pro český trh máš rovnou v sobě.',
-    monthlyCost: '400 až 2 500 Kč / měsíc',
+    monthlyCost: '440 až 2 500 Kč / měsíc (+ Free verze)',
     strengths: [
       'Nativní napojení na Heureku, Zboží.cz, Zásilkovnu i Balíkovnu',
       'České platební brány (Comgate, GoPay), dobírka i česká faktura v základu',
@@ -81,7 +81,7 @@ export const PLATFORMS: Record<PlatformKey, Platform> = {
     key: 'upgates',
     name: 'Upgates',
     tagline: 'Česká alternativa k Shoptetu. Silné lokální integrace, prostor pro úpravy.',
-    monthlyCost: '500 až 3 000 Kč / měsíc',
+    monthlyCost: '450 až 3 250 Kč / měsíc',
     strengths: [
       'České integrace (Heureka, Zboží.cz, Zásilkovna, účetnictví) v základu',
       'Nativní vícejazyčnost a více měn — skvělé pro expanzi do zahraničí',

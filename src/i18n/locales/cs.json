@@ -26,6 +26,14 @@
       "prezentace": "Prezentace"
     }
   },
+  "loading": {
+    "loading": "Načítání…",
+    "calculating": "Počítám…"
+  },
+  "offline": {
+    "title": "Jsi offline",
+    "description": "Některé funkce nemusí být dostupné. Připoj se k internetu."
+  },
   "nav": {
     "home": "Začít",
     "beforeStart": "Před začátkem",
@@ -86,7 +94,8 @@
   },
   "organizations": {
     "title": "Součást komunity, která tě podporuje",
-    "subtitle": "Spolupracuji s organizacemi, které věří v sílu ženského podnikání a vzdělávání mladých"
+    "subtitle": "Spolupracuji s organizacemi, které věří v sílu ženského podnikání a vzdělávání mladých",
+    "supportCommunity": []
   },
   "encouragement": {
     "fear": {
@@ -333,7 +342,7 @@
           "title": "Připravit právní dokumenty",
           "description": "VOP (vč. 14denního práva na odstoupení od smlouvy), zásady ochrany osobních údajů (GDPR), reklamační řád",
           "time": "2 hodiny",
-          "tips": "Použij generátor VOP online nebo se poraď s právníkem. Reklamační řád nemusí být samostatný dokument, informace o právech z vadného plnění bývají součástí VOP. Nově je potřeba i snadné online odstoupení od smlouvy, ale neboj, většina platforem (Shoptet, Shopify přes aplikace) na to už má hotové řešení nebo ho brzy spustí, takže to za tebe nejčastěji vyřeší platforma."
+          "tips": "Použij generátor VOP online nebo se poraď s právníkem. Reklamační řád nemusí být samostatný dokument, informace o právech z vadného plnění bývají součástí VOP. Nově je potřeba i snadné online odstoupení od smlouvy, ale neboj, většina platforem (Shoptet, Shopify přes aplikace) na to už má hotové řešení nebo ho brzy spustí, takže to za tebe nejčastěji vyřeší platforma. Pravidla se mění, ověř si aktuální stav k datu spuštění (nebo se poraď s odborníkem). Tohle není právní poradenství."
         },
         "moodboard": {
           "title": "Vytvořit moodboard značky",
@@ -342,7 +351,7 @@
         },
         "legalRequirements": {
           "title": "Prověřit legislativní požadavky",
-          "description": "GDPR, cookie lišta se souhlasem, DPH (limit 2 mil. Kč obratu), 14denní odstoupení bez udání důvodu, informace o právech z vadného plnění, snadné online odstoupení od smlouvy (řeší většinou platforma) - co se tě týká?",
+          "description": "GDPR, cookie lišta se souhlasem, DPH (limit 2 mil. Kč obratu), 14denní odstoupení bez udání důvodu, informace o právech z vadného plnění, snadné online odstoupení od smlouvy (řeší většinou platforma) - co se tě týká? Pravidla se mění, ověř si aktuální stav k datu spuštění (nebo se poraď s odborníkem). Tohle není právní poradenství.",
           "time": "1 hodina"
         }
       },
@@ -701,8 +710,8 @@
       "platforms": {
         "title": "E-shop platformy",
         "items": [
-          "Shoptet - od 499 Kč/měsíc (český)",
-          "Upgates - od 290 Kč/měsíc (český)",
+          "Shoptet - Free zdarma, placené tarify od 440 Kč/měsíc (český)",
+          "Upgates - od 450 Kč/měsíc (český)",
           "Shopify - od $29/měsíc (~700 Kč)",
           "WooCommerce - zdarma + hosting od 200 Kč/měsíc"
         ]
@@ -893,10 +902,6 @@
             "a": "Dá se, dělá to tak většina holek, co začínají. E-shop vedle hlavní práce ale není pasivní příjem, je to druhá (menší) směna. S realistickým plánem to jde zvládnout bez vyhoření.\n\nKolik hodin reálně počítat:\n\n- Rozjezd (první 1 až 2 měsíce): nejnáročnější fáze, počítej s 5 až 10 hodinami týdně. Stavíš web, fotíš, píšeš popisky, řešíš dopravu a právní minimum.\n- Běžný provoz: když e-shop běží, často stačí 3 až 6 hodin týdně na vyřizování objednávek, balení, komunikaci a marketing.\n\nJak to skloubit s prací (klíč je dávkování, ne každodenní drobení):\n\n- Batchuj podobné úkoly: nevyřizuj objednávku po objednávce, vyhraď si pevné okno (třeba obden večer) a zabal a odešli vše najednou.\n- Nastav si rytmus: všední dny 30 až 45 minut večer na objednávky a zprávy, přes víkend 2 až 3 hodiny na obsah a fotky.\n- Automatizuj a předpřipravuj: šablony e-mailů, automatické potvrzení objednávky, výdejní místa místo osobních předávek.\n- Měj výdejní okno: jasně komunikuj zákaznicím, že balíš třeba 2x týdně.\n\nRealistická časová osa: první prodej můžeš mít za pár dní až týdnů. Stabilnější příjem přichází po 3 až 6 měsících soustavné práce. Než e-shop uživí přechod z hlavní práce, počítej spíš 6 až 18 měsíců. Není to závod, je to maraton.",
             "links": [
               {
-                "text": "Minimální náklady a rozjezd e-shopu jako vedlejší činnost",
-                "url": "https://www.nastrojeproweb.cz/clanky/eshop-cena"
-              },
-              {
                 "text": "Ecommerce blog – Shoptet (provoz a tipy)",
                 "url": "https://blog.shoptet.cz/"
               },
@@ -1049,10 +1054,6 @@
                 "internal": true
               },
               {
-                "text": "Nástroje pro web – Cena e-shopu",
-                "url": "https://www.nastrojeproweb.cz/clanky/eshop-cena"
-              },
-              {
                 "text": "Shoptet – ceník",
                 "url": "https://www.shoptet.cz/cenik/"
               },
@@ -1161,7 +1162,7 @@
           },
           {
             "q": "Mají některé produkty (např. hračky, potraviny, elektronika) extra pravidla?",
-            "a": "Ano, každý typ produktu má své specifické požadavky. Hračky potřebují CE značku, potraviny musí splňovat hygienické normy a mít označení alergenů, a u elektroniky je třeba řešit recyklaci (např. přes ASEKOL, baterie přes ECOBAT).\n\nDvě věci pro rok 2026, na které se často zapomíná a týkají se skoro každého e-shopu:\n\n- GPSR (nařízení o obecné bezpečnosti výrobků, platí od 13. 12. 2024): u každého produktu musíš uvést bezpečnostní a identifikační údaje a mít v EU odpovědnou osobu (výrobce, dovozce nebo zplnomocněného zástupce se sídlem v EU).\n- Obalová EPR, registrace přes EKO-KOM: jakmile uvádíš na trh zboží v obalech (krabice, výplň, fólie), týká se tě poplatek za obaly. Platí prakticky pro každý e-shop, který něco posílá.\n\nMrkni na weby příslušných úřadů nebo se poraď s odborníkem.",
+            "a": "Ano, každý typ produktu má své specifické požadavky. Hračky potřebují CE značku, potraviny musí splňovat hygienické normy a mít označení alergenů, a u elektroniky je třeba řešit recyklaci (např. přes ASEKOL, baterie přes ECOBAT).\n\nDvě věci pro rok 2026, na které se často zapomíná a týkají se skoro každého e-shopu:\n\n- GPSR (nařízení o obecné bezpečnosti výrobků, platí od 13. 12. 2024): u každého produktu musíš uvést bezpečnostní a identifikační údaje a mít v EU odpovědnou osobu (výrobce, dovozce nebo zplnomocněného zástupce se sídlem v EU).\n- Obalová EPR, registrace přes EKO-KOM: jakmile uvádíš na trh zboží v obalech (krabice, výplň, fólie), týká se tě poplatek za obaly. Platí prakticky pro každý e-shop, který něco posílá.\n\nMrkni na weby příslušných úřadů nebo se poraď s odborníkem. Pravidla se mění, tak si ověř aktuální stav k datu spuštění. Tohle není právní poradenství.",
             "links": [
               {
                 "text": "SZPI – Značení potravin a legislativa",
@@ -1262,10 +1263,6 @@
               {
                 "text": "Včelište – 7 zásadních tipů SEO pro e-shop",
                 "url": "https://vceliste.cz/blog/7-zasadnich-tipu-jak-na-seo-pro-e-shop-co-nedelat-aby-byla-optimalizace-uspesna/"
-              },
-              {
-                "text": "Optimalizace e-shopu pro vyhledávače",
-                "url": "https://www.h1.cz/seo/e-shop"
               }
             ]
           },
