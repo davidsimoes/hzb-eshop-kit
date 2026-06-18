@@ -398,7 +398,7 @@ export function computeRecommendation(answers: Answers): EngineResult {
   const topScore = ranking[0].score;
   // matchPct: relativní shoda vůči vítězi (jen pro vizuál, ne věda)
   for (const r of ranking) {
-    r.matchPct = topScore > 0 ? Math.round((r.score / topScore) * 100) : 0;
+    r.matchPct = topScore > 0 ? Math.max(0, Math.round((r.score / topScore) * 100)) : 0;
   }
 
   const primary = ranking[0];
