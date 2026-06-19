@@ -211,10 +211,10 @@ const About = () => {
                 <strong>{t('about.approach.honest.title', 'Nejsem perfektní')}</strong> {t('about.approach.honest.content', 'a ani se za to nevydávám. Jsem Portugalec, takže občas můžu mluvit trochu divně, klidně mi řekni, když mi nerozumíš!')}
               </p>
               <p className="text-white/90 leading-relaxed">
-                <strong>{t('about.approach.questions.title', 'Ptej se na cokoli')}</strong> - {t('about.approach.questions.content', 'není cílem jen projít materiály, ale skutečně ti pomoct s tvými konkrétními výzvami. Každý e-shop je jiný a každý má jiné problémy.')}
+                <strong>{t('about.approach.questions.title', 'Ptej se na cokoli')}</strong>: {t('about.approach.questions.content', 'není cílem jen projít materiály, ale skutečně ti pomoct s tvými konkrétními výzvami. Každý e-shop je jiný a každý má jiné problémy.')}
               </p>
               <p className="text-white/90 leading-relaxed">
-                <strong>{t('about.approach.contact.title', 'Zůstanu s tebou v kontaktu')}</strong> - {t('about.approach.contact.content', 'i po školení se můžeš ozvat, když budeš potřebovat radu. Tvůj úspěch je můj úspěch.')}
+                <strong>{t('about.approach.contact.title', 'Zůstanu s tebou v kontaktu')}</strong>: {t('about.approach.contact.content', 'i po školení se můžeš ozvat, když budeš potřebovat radu. Tvůj úspěch je můj úspěch.')}
               </p>
             </div>
           </CardContent>

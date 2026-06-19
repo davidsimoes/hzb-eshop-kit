@@ -30,14 +30,14 @@ export const ValidationAlerts = ({
     alerts.push({
       type: 'error' as const,
       title: 'Záporná marže',
-      message: 'Marže je 0% nebo záporná, zkus zvýšit cenu nebo snížit náklady',
+      message: 'Marže je 0 % nebo záporná. Zkus zvýšit cenu nebo snížit náklady.',
       suggestion: 'Zvýš prodejní cenu nebo vyjednávej lepší nákupní ceny.'
     });
   } else if (margin > 80) {
     alerts.push({
       type: 'warning' as const,
       title: 'Velmi vysoká marže',
-      message: 'Hrubá marže nad 80 % je výjimečná, zkontroluj AOV nebo COGS',
+      message: 'Hrubá marže nad 80 % je výjimečná. Zkontroluj AOV nebo COGS.',
       suggestion: 'Ověř, že do nákladů na zboží počítáš úplně všechno (výroba, doprava, poplatky).'
     });
   }

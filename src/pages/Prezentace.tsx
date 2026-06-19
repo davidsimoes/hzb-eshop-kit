@@ -88,7 +88,7 @@ const slides: Slide[] = [
     kicker: 'Realita trhu 2026',
     title: 'Špatná zpráva (a proč tě to nemělo odradit)',
     bullets: [
-      'Česká e-commerce loni vyrostla o 6 %, ale TOP 100 e-shopů rostlo o 14 %. Velcí dál vytlačují malé a Češi utratili online přes 206 miliard Kč (zdroj: APEK / Heureka 2025).',
+      'Česká e-commerce v roce 2024 vzrostla o 5 % na 194 miliard Kč (APEK / Heureka). A velcí hráči rostou rychleji než malé e-shopy, takže tlak na malé sílí.',
       'Sílí zahraniční konkurence: Temu se probojovalo do TOP 10 a u čínských tržišť odhady mluví o ~15 % tržeb českých e-shopů, k tomu Shein, AliExpress a Allegro, všichni tlačí ceny dolů.',
       'I bývalí velikáni zmizeli (Mall, CZC, Okay). Trh se konsoliduje a cenou ani sortimentem ho jako malá nikdy neporazíš.',
       'A teď to dobré: nemusíš. Vyhraješ zaměřením na úzkou niku, komunitu, příběh a osobní službu, tedy přesně tím, co velký hráč neumí.',

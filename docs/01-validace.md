@@ -65,7 +65,7 @@ Rodina ti řekne, že je to skvělé. Zákaznice ti řekne pravdu.
 Nejdřív ověř, pak buduj. Dokonalý e-shop s prázdnou pokladnou k ničemu není.
 
 - **Spusť e-shop s minimem funkcí.** Pár produktů, jednoduché platby, funkční doprava. Nemusíš mít dokonalé fotky, blog ani věrnostní program.
-- **Soustřeď se na klíčové prvky.** Co zákaznici skutečně potřebuje, aby nakoupila? Jen to musí fungovat bezchybně od prvního dne.
+- **Soustřeď se na klíčové prvky.** Co zákaznice skutečně potřebuje, aby nakoupila? Jen to musí fungovat bezchybně od prvního dne.
 - **Testuj hned na reálných zákaznících.** Neposílej odkaz jen kamarádkám. Pusť malou reklamu nebo sdílej v relevantní komunitě a sleduj, co se děje.
 - **Vylepšuj postupně podle dat, ne podle dojmů.** Co zákazníci nekupují, kam klikají a kde odcházejí, ti ukáže, co opravit jako první.
 - **Stanov si časový limit.** Dej si například 3 měsíce na první prodeje. Bez termínu testování nikdy neskončí.
