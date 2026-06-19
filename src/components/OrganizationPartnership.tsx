@@ -9,6 +9,9 @@ export const OrganizationPartnership = () => {
   const organizationsData = t('organizations.supportCommunity', { returnObjects: true }) as any;
   const organizations = Array.isArray(organizationsData) ? organizationsData : [];
 
+  // Don't render a "partner organizations" claim with nothing behind it.
+  if (organizations.length === 0) return null;
+
   return (
     <section className="max-w-6xl mx-auto mb-16">
       <div className="text-center mb-8">

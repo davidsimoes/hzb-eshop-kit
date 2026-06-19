@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import * as safeStorage from '@/lib/safeStorage';
 
 export type Currency = 'CZK' | 'EUR' | 'USD' | 'PLN';
 
@@ -37,7 +38,7 @@ export const CurrencyProvider = ({ children }: { children: ReactNode }) => {
   // Update currency when language changes (if not manually overridden)
   useEffect(() => {
     if (i18n.isInitialized) {
-      const storedCurrency = localStorage.getItem('selectedCurrency');
+      const storedCurrency = safeStorage.getItem('selectedCurrency');
       if (!storedCurrency) {
         const defaultCurrency = getDefaultCurrencyForLanguage(i18n.language);
         setCurrency(defaultCurrency);
@@ -47,7 +48,7 @@ export const CurrencyProvider = ({ children }: { children: ReactNode }) => {
 
   const handleSetCurrency = (newCurrency: Currency) => {
     setCurrency(newCurrency);
-    localStorage.setItem('selectedCurrency', newCurrency);
+    safeStorage.setItem('selectedCurrency', newCurrency);
   };
 
   const formatCurrency = (amount: number): string => {

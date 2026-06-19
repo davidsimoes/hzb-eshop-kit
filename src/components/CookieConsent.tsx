@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import * as safeStorage from '@/lib/safeStorage';
 
 const STORAGE_KEY = 'hzb_consent';
 
@@ -11,7 +12,7 @@ export const CookieConsent = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY) as Consent | null;
+    const stored = safeStorage.getItem(STORAGE_KEY) as Consent | null;
 
     if (stored === 'granted') {
       // Returning visitor who already opted in: re-grant so analytics keeps working.
@@ -35,7 +36,7 @@ export const CookieConsent = () => {
   }, []);
 
   const accept = () => {
-    localStorage.setItem(STORAGE_KEY, 'granted');
+    safeStorage.setItem(STORAGE_KEY, 'granted');
     const gtag = getGtag();
     if (typeof gtag === 'function') {
       gtag('consent', 'update', {
@@ -49,7 +50,7 @@ export const CookieConsent = () => {
   };
 
   const reject = () => {
-    localStorage.setItem(STORAGE_KEY, 'denied');
+    safeStorage.setItem(STORAGE_KEY, 'denied');
     setVisible(false);
   };
 

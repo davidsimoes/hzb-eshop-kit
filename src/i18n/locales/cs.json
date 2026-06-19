@@ -805,19 +805,6 @@
       "sendEmail": "Poslat emailem",
       "addCalendar": "Přidat do kalendáře"
     },
-    "success": {
-      "title": "Úspěšné příběhy",
-      "subtitle": "Reálné výsledky českých e-shopů podle kalkulačky",
-      "monthlyOrders": "Objednávky/měsíc",
-      "monthlyRevenue": "Tržby/měsíc",
-      "monthlyProfit": "Zisk/měsíc",
-      "growthTime": "Doba růstu",
-      "category": {
-        "sport": "Sport",
-        "kids": "Děti",
-        "beauty": "Beauty"
-      }
-    },
     "wizard": {
       "title": "Průvodce výpočtem",
       "step1": {

@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { checklistData, ChecklistItem } from '@/data/checklistData';
+import * as safeStorage from '@/lib/safeStorage';
 
 export interface ChecklistProgress {
   [itemId: string]: {
@@ -16,7 +17,7 @@ export const useChecklist = () => {
 
   // Load progress from localStorage
   useEffect(() => {
-    const savedProgress = localStorage.getItem('checklist-progress');
+    const savedProgress = safeStorage.getItem('checklist-progress');
     if (savedProgress) {
       try {
         const parsed = JSON.parse(savedProgress);
@@ -36,7 +37,7 @@ export const useChecklist = () => {
 
   // Save progress to localStorage
   const saveProgress = (newProgress: ChecklistProgress) => {
-    localStorage.setItem('checklist-progress', JSON.stringify(newProgress));
+    safeStorage.setItem('checklist-progress', JSON.stringify(newProgress));
     setProgress(newProgress);
   };
 
@@ -64,7 +65,7 @@ export const useChecklist = () => {
   };
 
   const resetProgress = () => {
-    localStorage.removeItem('checklist-progress');
+    safeStorage.removeItem('checklist-progress');
     setProgress({});
   };
 

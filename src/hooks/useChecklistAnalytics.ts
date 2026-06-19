@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { checklistData } from '@/data/checklistData';
 import { ChecklistProgress } from '@/hooks/useChecklist';
+import * as safeStorage from '@/lib/safeStorage';
 
 interface TaskAnalytics {
   taskId: string;
@@ -29,7 +30,7 @@ interface ChecklistAnalytics {
 
 export const useChecklistAnalytics = (progress: ChecklistProgress) => {
   const [analytics, setAnalytics] = useState<ChecklistAnalytics>(() => {
-    const saved = localStorage.getItem('checklist-analytics');
+    const saved = safeStorage.getItem('checklist-analytics');
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -57,7 +58,7 @@ export const useChecklistAnalytics = (progress: ChecklistProgress) => {
 
   // Save analytics to localStorage
   useEffect(() => {
-    localStorage.setItem('checklist-analytics', JSON.stringify(analytics));
+    safeStorage.setItem('checklist-analytics', JSON.stringify(analytics));
   }, [analytics]);
 
   // Update analytics when progress changes
@@ -175,7 +176,7 @@ export const useChecklistAnalytics = (progress: ChecklistProgress) => {
 
   const resetAnalytics = () => {
     setAnalytics(getInitialAnalytics());
-    localStorage.removeItem('checklist-analytics');
+    safeStorage.removeItem('checklist-analytics');
   };
 
   return {
