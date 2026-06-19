@@ -26,9 +26,9 @@ export const MetricExplainer = ({ aov, cogs, margin, conversionRate }: MetricExp
         return 'V českém průměru (800-1200 Kč)';
       
       case 'margin':
-        if (value < 20) return 'Pod českým průměrem (20-40%)';
-        if (value > 40) return 'Nad českým průměrem (20-40%)';
-        return 'V českém průměru (20-40%)';
+        if (value < 40) return 'Pod českým průměrem (40-60%)';
+        if (value > 60) return 'Nad českým průměrem (40-60%)';
+        return 'V českém průměru (40-60%)';
       
       case 'conversion':
         if (value < 1) return 'Pod českým průměrem (1-2%)';

@@ -58,7 +58,7 @@
   "mission": {
     "hero": {
       "title": "Spusť e-shop, který vydělává",
-      "subtitle": "Zdarma nástroje, které ti spočítají, jestli tvůj nápad dává smysl, pomohou vybrat platformu a provedou tě spuštěním, a celý kit si můžeš stáhnout, klidně i pro svou AI.",
+      "subtitle": "Zdarma nástroje, které ti spočítají, jestli tvůj nápad dává smysl, pomohou vybrat platformu a provedou tě spuštěním. A celý kit si můžeš stáhnout, klidně i pro svou AI.",
       "description": "Neboj se, každá úspěšná podnikatelka začínala stejně jako ty, s nápadem a spoustou otázek. Najdeš tu vše podstatné na jednom místě.",
       "cta": "Začni svou cestu",
       "ctaSecondary": "Nejsem si jistá, kde začít",
@@ -141,7 +141,7 @@
         },
         {
           "fear": "„Co když se nic neprodá?“",
-          "reality": "Právě proto máme kalkulačku, abys věděla, jestli tvůj nápad má potenciál. A pokud se zpočátku neprodává, je to hlavně o postupném ladění, ne o selhání."
+          "reality": "Právě proto máme kalkulačku, abys věděla, jestli tvůj nápad má potenciál. A pokud se zpočátku neprodává, jde hlavně o postupné ladění, ne o selhání."
         },
         {
           "fear": "„Konkurence je všude“",
@@ -886,7 +886,7 @@
           },
           {
             "q": "Kolik času e-shop zabere a dá se to dělat vedle práce?",
-            "a": "Dá se, dělá to tak většina holek, co začínají. E-shop vedle hlavní práce ale není pasivní příjem, je to druhá (menší) směna. S realistickým plánem to jde zvládnout bez vyhoření.\n\nKolik hodin reálně počítat:\n\n- Rozjezd (první 1 až 2 měsíce): nejnáročnější fáze, počítej s 5 až 10 hodinami týdně. Stavíš web, fotíš, píšeš popisky, řešíš dopravu a právní minimum.\n- Běžný provoz: když e-shop běží, často stačí 3 až 6 hodin týdně na vyřizování objednávek, balení, komunikaci a marketing.\n\nJak to skloubit s prací (klíč je dávkování, ne každodenní drobení):\n\n- Batchuj podobné úkoly: nevyřizuj objednávku po objednávce, vyhraď si pevné okno (třeba obden večer) a zabal a odešli vše najednou.\n- Nastav si rytmus: všední dny 30 až 45 minut večer na objednávky a zprávy, přes víkend 2 až 3 hodiny na obsah a fotky.\n- Automatizuj a předpřipravuj: šablony e-mailů, automatické potvrzení objednávky, výdejní místa místo osobních předávek.\n- Měj výdejní okno: jasně komunikuj zákaznicím, že balíš třeba 2x týdně.\n\nRealistická časová osa: první prodej můžeš mít za pár dní až týdnů. Stabilnější příjem přichází po 3 až 6 měsících soustavné práce. Než e-shop uživí přechod z hlavní práce, počítej spíš 6 až 18 měsíců. Není to závod, je to maraton.",
+            "a": "Dá se, dělá to tak většina holek, co začínají. E-shop vedle hlavní práce ale není pasivní příjem, je to druhá (menší) směna. S realistickým plánem to jde zvládnout bez vyhoření.\n\nKolik hodin reálně počítat:\n\n- Rozjezd (první 1 až 2 měsíce): nejnáročnější fáze, počítej s 5 až 10 hodinami týdně. Stavíš web, fotíš, píšeš popisky, řešíš dopravu a právní minimum.\n- Běžný provoz: když e-shop běží, často stačí 3 až 6 hodin týdně na vyřizování objednávek, balení, komunikaci a marketing.\n\nJak to skloubit s prací (klíč je dávkování, ne každodenní drobení):\n\n- Seskupuj podobné úkoly: nevyřizuj objednávku po objednávce, vyhraď si pevné okno (třeba obden večer) a zabal a odešli vše najednou.\n- Nastav si rytmus: všední dny 30 až 45 minut večer na objednávky a zprávy, přes víkend 2 až 3 hodiny na obsah a fotky.\n- Automatizuj a předpřipravuj: šablony e-mailů, automatické potvrzení objednávky, výdejní místa místo osobních předávek.\n- Měj výdejní okno: jasně komunikuj zákaznicím, že balíš třeba 2x týdně.\n\nRealistická časová osa: první prodej můžeš mít za pár dní až týdnů. Stabilnější příjem přichází po 3 až 6 měsících soustavné práce. Než e-shop uživí přechod z hlavní práce, počítej spíš 6 až 18 měsíců. Není to závod, je to maraton.",
             "links": [
               {
                 "text": "Ecommerce blog – Shoptet (provoz a tipy)",
@@ -926,7 +926,7 @@
           },
           {
             "q": "Jaké jsou absolutně minimální právní požadavky pro nový e-shop v ČR?",
-            "a": "Když rozjíždíš e-shop, musíš mít ze zákona:\n\n- Obchodní podmínky (VOP): identifikaci prodejce (jméno/firma, IČO, kontakt), cenu, dopravu, platby, právo na odstoupení od smlouvy do 14 dní bez udání důvodu (lhůta běží od převzetí zboží) a informace o právech z vadného plnění.\n- Informace o právech z vadného plnění (reklamace): jak může zákaznice uplatnit reklamaci. Nemusí to být samostatný dokument, nejčastěji bývá součástí obchodních podmínek.\n- Zásady ochrany osobních údajů (GDPR): jak nakládáš s osobními daty zákaznic.\n- Správné údaje o sobě: IČO, adresa, ceny včetně DPH.\n- Snadné online odstoupení od smlouvy: nová evropská povinnost, aby zákaznice mohla odstoupit od smlouvy stejně snadno online, jako nakoupila. Neboj se tím stresovat, většina platforem (Shoptet, Shopify přes aplikace) na to už má hotové řešení nebo ho brzy spustí, takže to za tebe nejčastěji vyřeší platforma.\n\nVětšinu textů (VOP, GDPR) ti vygeneruje platforma nebo připravené šablony. Nejjistější jsou vzory od APEK. AI použij na první draft, ale finální verzi nech projít člověkem.",
+            "a": "Když rozjíždíš e-shop, musíš mít ze zákona:\n\n- Obchodní podmínky (VOP): identifikaci prodejce (jméno/firma, IČO, kontakt), cenu, dopravu, platby, právo na odstoupení od smlouvy do 14 dní bez udání důvodu (lhůta běží od převzetí zboží) a informace o právech z vadného plnění.\n- Informace o právech z vadného plnění (reklamace): jak může zákaznice uplatnit reklamaci. Nemusí to být samostatný dokument, nejčastěji bývá součástí obchodních podmínek.\n- Zásady ochrany osobních údajů (GDPR): jak nakládáš s osobními daty zákaznic.\n- Správné údaje o sobě: IČO, adresa, ceny včetně DPH.\n- Snadné online odstoupení od smlouvy: nová evropská povinnost, aby zákaznice mohla odstoupit od smlouvy stejně snadno online, jako nakoupila. Neboj se tím stresovat, většina platforem (Shoptet, Shopify přes aplikace) na to už má hotové řešení nebo ho brzy spustí, takže to za tebe nejčastěji vyřeší platforma.\n\nVětšinu textů (VOP, GDPR) ti vygeneruje platforma nebo připravené šablony. Nejjistější jsou vzory od APEK. AI použij na první návrh, ale finální verzi nech projít člověkem.",
             "links": [
               {
                 "text": "Dostupný advokát – Jak správně založit e-shop",
@@ -1004,7 +1004,7 @@
           },
           {
             "q": "Mají platformy zkušební verzi zdarma? A znamená to e-shop zadarmo?",
-            "a": "Ano, zkušební verzi (free trial) nabízí jak Shopify, tak Shoptet, a většinou i další platformy. Můžeš si tak v klidu vyzkoušet, jak se v administraci cítíš, ještě než cokoli zaplatíš. Rozhodně to využij, vyzkoušej si klidně dvě tři platformy vedle sebe a porovnej, kde ti to sedne.\n\nAle pozor na rozšířený omyl: zkušební verze zdarma neznamená e-shop zdarma. Trial je jen dočasně bezplatný přístup k platformě. Aby z toho byl opravdový obchod, který vydělává, počítej i s dalšími položkami, které trial nepokryje:\n- doména (vlastní adresa typu tvojeznacka.cz), zhruba 200 až 500 Kč za rok,\n- vzhled a šablona, zvládneš svépomocí, nebo si připlatíš za prémiovou šablonu,\n- fotky produktů, mobil a denní světlo zdarma, fotografka za peníze,\n- platební brána a doprava, drobné procento a pár korun z každé objednávky,\n- marketing, ať se o tobě vůbec někdo dozví.\n\nVezmi trial jako test řidičských dovedností, auto i benzín si pak ještě musíš pořídit. Než někam naklikáš číslo karty, projdi si v kalkulačce, kolik tě e-shop reálně bude stát, a v ROI kalkulačce, za jak dlouho se ti to vrátí.",
+            "a": "Ano, zkušební verzi (free trial) nabízí jak Shopify, tak Shoptet, a většinou i další platformy. Můžeš si tak v klidu vyzkoušet, jak se v administraci cítíš, ještě než cokoli zaplatíš. Rozhodně to využij, vyzkoušej si klidně dvě tři platformy vedle sebe a porovnej, kde ti to sedne.\n\nAle pozor na rozšířený omyl: zkušební verze zdarma neznamená e-shop zdarma. Zkušební verze je jen dočasně bezplatný přístup k platformě. Aby z toho byl opravdový obchod, který vydělává, počítej i s dalšími položkami, které zkušební verze nepokryje:\n- doména (vlastní adresa typu tvojeznacka.cz), zhruba 200 až 500 Kč za rok,\n- vzhled a šablona, zvládneš svépomocí, nebo si připlatíš za prémiovou šablonu,\n- fotky produktů, mobil a denní světlo zdarma, fotografka za peníze,\n- platební brána a doprava, drobné procento a pár korun z každé objednávky,\n- marketing, ať se o tobě vůbec někdo dozví.\n\nBer zkušební verzi jako test řidičských dovedností, auto i benzín si pak ještě musíš pořídit. Než někam naklikáš číslo karty, projdi si v kalkulačce, kolik tě e-shop reálně bude stát, a v ROI kalkulačce, za jak dlouho se ti to vrátí.",
             "links": [
               {
                 "text": "Kolik e-shop reálně stojí, kalkulačka",
@@ -1057,7 +1057,7 @@
             ]
           },
           {
-            "q": "Za co si připlatit a co naopak vynechat? Mysli v návratnosti, ne v ceně",
+            "q": "Za co si připlatit a co naopak vynechat? Přemýšlej z pohledu návratnosti, ne ceny",
             "a": "Neptej se, jestli je to drahé nebo levné. Ptej se: vrátí se mi to? Každý poplatek i jednorázová investice si musí na sebe vydělat.\n\nCo se obvykle vyplatí zaplatit hned:\n\n- Spolehlivá platforma a platební brána: když nefunguje košík nebo platba, přicházíš o reálné peníze každý den.\n- Dobré fotky a popisky produktů: nejlevnější marketing, který existuje. Špatná fotka zabije prodej dřív, než zákaznice stihne vidět cenu.\n- Kvalitní šablona a vzhled: prémiová šablona není vyhozená koruna. Hezký a důvěryhodný e-shop podvědomě zvyšuje vnímanou hodnotu zboží.\n\nCo klidně počká na později:\n\n- Pokročilé SEO audity.\n- Věrnostní programy a složité slevové systémy.\n- Hromada doplňkových aplikací.\n- Velké zásoby zboží.\n\nPravidlo palce: investuj do toho, co lidé vidí a co tě živí (fotky, vzhled, plynulý nákup). Šetři na tom, co řeší problém, který ještě nemáš.",
             "links": [
               {
@@ -1114,7 +1114,7 @@
           },
           {
             "q": "Jaké jsou specifika pro charitativní e-shop?",
-            "a": "Specifika pro charitativní e-shop spočívají především v transparentnosti a jasné komunikaci, kam přesně putují vybrané peníze.\n\nPro prodej fyzických či symbolických produktů: Běžné e-commerce platformy jako Shopify nebo Wix s důrazem na detailní informace o poslání a účelu zisku.\n\nPro přímé dárcovství a sbírky: Specializované fundraisingové platformy, české Darujme.cz, Donio.cz nebo Znesnáze21, které usnadňují bezpečné přijímání darů a budování důvěry dárců, často s možností odečitatelnosti z daní.",
+            "a": "Specifika pro charitativní e-shop spočívají především v transparentnosti a jasné komunikaci, kam přesně putují vybrané peníze.\n\nPro prodej fyzických či symbolických produktů: Běžné e-commerce platformy jako Shopify nebo Wix s důrazem na detailní informace o poslání a účelu zisku.\n\nPro přímé dárcovství a sbírky: Specializované fundraisingové platformy, české Darujme.cz, Donio.cz nebo Znesnáze21, které usnadňují bezpečné přijímání darů a budování důvěry dárců, často s možností daňového odpočtu.",
             "links": [
               {
                 "text": "Donio.cz – Komerční projekty",
