@@ -57,7 +57,7 @@ export const PLATFORMS: Record<PlatformKey, Platform> = {
     strengths: [
       'Nativní napojení na Heureku, Zboží.cz, Zásilkovnu i Balíkovnu',
       'České platební brány (Comgate, GoPay), dobírka i česká faktura v základu',
-      'Česká podpora, čeština všude a obrovská česká komunita (přes 43 000 aktivních e-shopů)'
+      'Česká podpora, čeština všude a obrovská česká komunita (přes 40 000 aktivních e-shopů)'
     ],
     watchOut:
       'Na prodej za hranice a hodně atypický design je méně ohebný než Shopify. Hodí se hlavně, dokud zůstáváš na českém a slovenském trhu.',
@@ -67,14 +67,14 @@ export const PLATFORMS: Record<PlatformKey, Platform> = {
     key: 'shopify',
     name: 'Shopify',
     tagline: 'Nejsilnější platforma na růst, značku a prodej za hranice.',
-    monthlyCost: '800 až 2 500 Kč / měsíc (plus aplikace)',
+    monthlyCost: 'od 499 Kč / měsíc (Basic při roční platbě), vyšší tarify 1 370 a 7 130 Kč, plus aplikace',
     strengths: [
       'Nejlepší základ pro silnou značku, krásný design a rychlý růst',
       'Obrovský výběr aplikací a šablon, snadno přidáš jazyky a měny',
       'Poroste s tebou až do velkého obchodu, nemusíš se nikam stěhovat'
     ],
     watchOut:
-      'Shopify Payments v ČR funguje. České brány jako Comgate nebo GoPay přidáš pro dobírku, převod nebo lokální metody. Na Slovensku Shopify Payments zatím není. Část českých věcí (třeba Zásilkovnu) přidáš přes aplikace. Podpora je hlavně anglicky a měsíčně vyjde dráž.',
+      'Dobírku i převod zapneš jako platební metodu i bez platební brány. Shopify Payments v ČR funguje (karty, Apple/Google Pay), na Slovensku zatím ne. Část českých vychytávek (Zásilkovna, Balíkovna, napojení na české účetnictví) přidáš přes aplikace, ne nativně. Podpora je hlavně anglicky a měsíčně vyjde dráž než český Shoptet.',
     nextStep: 'Spusť si zkušební verzi na shopify.com, plány jdou platit i v CZK.'
   },
   upgates: {
@@ -110,7 +110,7 @@ export const PLATFORMS: Record<PlatformKey, Platform> = {
     key: 'builder',
     name: 'Wix a Squarespace',
     tagline: 'Uděláš si hezký web a malý obchod sama, klikáním a bez programátora.',
-    monthlyCost: '300 až 700 Kč / měsíc',
+    monthlyCost: '400 až 900 Kč / měsíc',
     strengths: [
       'Postavíš si web i obchod klikáním, opravdu během odpoledne',
       'Hezké šablony, hodí se na pár produktů, služby nebo portfolio',
