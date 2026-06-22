@@ -42,6 +42,20 @@ víc starostí než prodeje. Až když přerosteš pronajatou platformu.
 **Hned:** doména, platební brána (nebo dobírka), jedna doprava, pár produktů, košík.
 **Počká:** dokonalý design, 20 appek, věrnostní program, blog, B2B ceny.
 
+## Prodáváš spíš digitál než fyzické zboží?
+
+Tenhle průvodce řeší klasický e-shop s fyzickým zbožím. Když prodáváš něco jiného, hodí se ti specializovaná platforma:
+
+- **Fyzické zboží i digitál dohromady:** zůstaň u **Shopify**, zvládne obojí na jednom místě (fyzické produkty i digitální soubory nebo kurzy přes aplikaci).
+- **Online kurzy:** český marketplace (**Seduo**, **Naučmese**) ti dá dosah a hotové publikum, ale vezme si větší podíl a o zákaznici se s tebou nepodělí. Vlastní platforma (**Podia**, **Teachable**) je víc práce s přivedením lidí, ale publikum i marži si držíš. Vodítko: ještě nemáš publikum → marketplace; máš ho (Instagram, newsletter) → vlastní platforma.
+- **Digitální produkty ke stažení** (e-booky, šablony, presety): **Payhip** nebo **Gumroad**. Spustíš to během chvilky a obě za tebe řeší i evropskou DPH.
+- **Členství a placený obsah:** **Herohero** (česká obdoba Patreonu, v korunách) pro českou komunitu; **Substack**, když jde hlavně o newsletter.
+- **Služby a rezervace** (koučink, konzultace): **Reservio** nebo **Bookio** (české, v korunách, i s online platbou) na objednávání termínů; **Calendly** na jednoduchý rezervační odkaz.
+
+**Pozor na DPH:** u digitálu prodávaného do zahraničí řeš evropskou DPH (režim OSS). Platformy jako Payhip nebo Gumroad ji odvádějí za tebe, takže to na startu nemusíš řešit sama.
+
+Předplatné fyzického zboží nebo dropshipping zvládne Shopify (předplatné přes aplikaci Shopify Subscriptions, dropshipping přes DSers).
+
 ## AI v tomhle kroku
 
 > 💬 **Prompt:** viz [`prompts/vyber-platformy.md`](../prompts/vyber-platformy.md).

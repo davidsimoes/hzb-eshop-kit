@@ -382,6 +382,60 @@ const VyberPlatformy = () => {
             </div>
           </div>
 
+          {/* Prodáváš spíš digitál než fyzické zboží? */}
+          <div className="max-w-2xl mx-auto mt-6">
+            <details className="bg-white/80 border border-brand-light-pink rounded-xl p-5">
+              <summary className="flex items-center gap-2 cursor-pointer font-semibold text-brand-wine">
+                <Sparkles className="w-5 h-5 text-brand-orange flex-shrink-0" />
+                Prodáváš spíš digitál než fyzické zboží?
+              </summary>
+              <div className="mt-4 space-y-3 text-sm text-brand-wine/85">
+                <p>
+                  Tenhle průvodce řeší klasický e-shop s fyzickým zbožím. Pro jiné typy prodeje se
+                  hodí specializovaná platforma:
+                </p>
+                <ul className="space-y-2 list-disc pl-5">
+                  <li>
+                    <strong>Fyzické zboží i digitál dohromady:</strong> zůstaň u <strong>Shopify</strong>,
+                    zvládne obojí na jednom místě (fyzické produkty i digitální soubory nebo kurzy přes
+                    aplikaci).
+                  </li>
+                  <li>
+                    <strong>Online kurzy:</strong> český marketplace (<strong>Seduo</strong>,{' '}
+                    <strong>Naučmese</strong>) ti dá dosah a hotové publikum, ale vezme si větší podíl a
+                    o zákaznici se s tebou nepodělí. Vlastní platforma (<strong>Podia</strong>,{' '}
+                    <strong>Teachable</strong>) je víc práce s přivedením lidí, ale publikum i marži si
+                    držíš. Vodítko: ještě nemáš publikum, jdi na marketplace; máš ho (Instagram,
+                    newsletter), zvol vlastní platformu.
+                  </li>
+                  <li>
+                    <strong>Digitální produkty ke stažení</strong> (e-booky, šablony, presety):{' '}
+                    <strong>Payhip</strong> nebo <strong>Gumroad</strong>, spustíš to během chvilky a obě
+                    za tebe řeší i evropskou DPH.
+                  </li>
+                  <li>
+                    <strong>Členství a placený obsah:</strong> <strong>Herohero</strong> (česká obdoba
+                    Patreonu, v korunách) pro českou komunitu; <strong>Substack</strong>, když jde hlavně
+                    o newsletter.
+                  </li>
+                  <li>
+                    <strong>Služby a rezervace</strong> (koučink, konzultace): <strong>Reservio</strong>{' '}
+                    nebo <strong>Bookio</strong> (české, v korunách, i s online platbou) na objednávání
+                    termínů; <strong>Calendly</strong> na jednoduchý rezervační odkaz.
+                  </li>
+                </ul>
+                <p className="bg-brand-orange/10 rounded-lg p-3">
+                  <strong>Pozor na DPH:</strong> u digitálu prodávaného do zahraničí řeš evropskou DPH
+                  (režim OSS). Platformy jako Payhip nebo Gumroad ji odvádějí za tebe.
+                </p>
+                <p className="text-brand-wine/60">
+                  Předplatné fyzického zboží nebo dropshipping? Zvládne Shopify, předplatné přes
+                  aplikaci Shopify Subscriptions, dropshipping přes DSers.
+                </p>
+              </div>
+            </details>
+          </div>
+
           {/* Související průvodce */}
           <div className="max-w-2xl mx-auto mt-6 mb-4">
             <div className="flex items-center gap-3 p-4 bg-white/80 border border-brand-light-pink rounded-xl">
