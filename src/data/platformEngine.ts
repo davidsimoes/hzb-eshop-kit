@@ -181,14 +181,14 @@ export const ENGINE_QUESTIONS: EngineQuestion[] = [
         id: 'starting',
         label: 'Začínám prodávat naostro a chci to brát vážně',
         hint: 'Potřebuju stabilní základ, na kterém můžu stavět.',
-        weights: { shoptet: 3, upgates: 2, shopify: 2, builder: 1 },
+        weights: { shoptet: 3, upgates: 3, shopify: 2, builder: 1, woocommerce: 1 },
         rationale: 'začínáš naostro a chceš stabilní základ'
       },
       {
         id: 'running',
         label: 'Už prodávám a chci to posunout výš',
         hint: 'Mám první prodeje a řeším růst nebo přechod jinam.',
-        weights: { shopify: 3, upgates: 2, shoptet: 1 },
+        weights: { shopify: 2, upgates: 2, shoptet: 2, woocommerce: 2 },
         rationale: 'už prodáváš a jdeš po růstu'
       }
     ]
@@ -202,21 +202,21 @@ export const ENGINE_QUESTIONS: EngineQuestion[] = [
         id: 'clicks',
         label: 'Chci klikat, ne programovat',
         hint: 'Potřebuju hotové řešení, kde si jen nastavím své věci.',
-        weights: { shoptet: 3, builder: 3, marketplace: 2, shopify: 1, woocommerce: -3 },
+        weights: { shoptet: 2, builder: 2, marketplace: 2, shopify: 1, upgates: 1 },
         rationale: 'chceš klikat, ne řešit techniku'
       },
       {
         id: 'guided',
         label: 'Zvládnu nastavení podle srozumitelného návodu',
         hint: 'Trochu si pohraju, když je k tomu jasný postup.',
-        weights: { shopify: 2, upgates: 3, shoptet: 2, builder: 1 },
+        weights: { shoptet: 2, shopify: 2, upgates: 2, builder: 1 },
         rationale: 'zvládneš nastavení podle návodu'
       },
       {
         id: 'techy',
         label: 'Nebojím se techniky nebo mám vývojáře',
         hint: 'Server, kód a vlastní úpravy mě neodradí.',
-        weights: { woocommerce: 5, shopify: 2, upgates: 1 },
+        weights: { shopify: 3, woocommerce: 3, upgates: 1 },
         rationale: 'technika ti nedělá problém'
       }
     ]
@@ -230,21 +230,21 @@ export const ENGINE_QUESTIONS: EngineQuestion[] = [
         id: 'minimal',
         label: 'Co nejmíň, ideálně skoro nic',
         hint: 'Začínám a každá koruna se počítá.',
-        weights: { marketplace: 4, woocommerce: 3, builder: 3, shoptet: 1 },
+        weights: { marketplace: 4, builder: 3, shoptet: 3, woocommerce: 3 },
         rationale: 'chceš začít s minimálními náklady'
       },
       {
         id: 'moderate',
         label: 'Pár stovek až nižší tisíce, když to bude dávat smysl',
         hint: 'Investuju rozumně do dobrého základu.',
-        weights: { shoptet: 3, upgates: 2, shopify: 2, builder: 1 },
+        weights: { shoptet: 3, upgates: 3, shopify: 2, builder: 1 },
         rationale: 'jsi ochotná rozumně investovat do dobrého základu'
       },
       {
         id: 'invest',
         label: 'Klidně víc, hlavně ať to roste a vypadá skvěle',
         hint: 'Cena není hlavní, hraje roli kvalita a růst.',
-        weights: { shopify: 4, upgates: 3, shoptet: 1 },
+        weights: { shopify: 4, upgates: 2, shoptet: 2 },
         rationale: 'cena pro tebe není hlavní, jde ti o kvalitu a růst'
       }
     ]
@@ -258,21 +258,21 @@ export const ENGINE_QUESTIONS: EngineQuestion[] = [
         id: 'cz',
         label: 'Hlavně Češi a Slováci',
         hint: 'Moji zákazníci jsou tady doma.',
-        weights: { shoptet: 4, upgates: 3, marketplace: 1, shopify: -1 },
+        weights: { shoptet: 4, upgates: 4, marketplace: 1, shopify: -1, woocommerce: 1 },
         rationale: 'prodáváš hlavně v Česku a na Slovensku'
       },
       {
         id: 'cz_plus',
         label: 'Začínám v Česku, ale chci časem za hranice',
         hint: 'Teď CZ a SK, výhled je širší.',
-        weights: { shopify: 3, upgates: 2, shoptet: 1 },
+        weights: { shopify: 3, upgates: 2, shoptet: 1, woocommerce: 1 },
         rationale: 'začínáš v Česku, ale myslíš i na zahraničí'
       },
       {
         id: 'global',
         label: 'Hlavně zahraničí nebo cizinci',
         hint: 'Prodávám hlavně mimo Česko, často anglicky.',
-        weights: { shopify: 5, builder: 1, shoptet: -2 },
+        weights: { shopify: 5, builder: 1, shoptet: -2, woocommerce: 1 },
         rationale: 'míříš hlavně na zahraniční zákazníky'
       }
     ]
@@ -286,21 +286,21 @@ export const ENGINE_QUESTIONS: EngineQuestion[] = [
         id: 'must',
         label: 'Bez nich to nedává smysl',
         hint: 'Srovnávače a Zásilkovna jsou pro mě základ.',
-        weights: { shoptet: 4, upgates: 3, builder: -2, shopify: -1 },
+        weights: { shoptet: 4, upgates: 4, builder: -2, shopify: -1, woocommerce: 1 },
         rationale: 'české integrace (Heureka, Zásilkovna, dobírka) jsou pro tebe nutnost'
       },
       {
         id: 'nice',
         label: 'Hodily by se, ale nejsou podmínka',
         hint: 'Časem ano, na startu to přežiju.',
-        weights: { upgates: 3, shoptet: 2, shopify: 1 },
+        weights: { upgates: 3, shoptet: 2, shopify: 1, woocommerce: 1 },
         rationale: 'české integrace bereš jako příjemné plus, ne podmínku'
       },
       {
         id: 'no',
         label: 'Moc je řešit nemusím',
         hint: 'Buď je nepotřebuju, nebo prodávám do zahraničí.',
-        weights: { shopify: 2, builder: 2, marketplace: 1, woocommerce: 1 },
+        weights: { shopify: 3, upgates: 2, woocommerce: 3, builder: 1, marketplace: 1 },
         rationale: 'české integrace pro tebe nejsou klíčové'
       }
     ]
@@ -321,7 +321,7 @@ export const ENGINE_QUESTIONS: EngineQuestion[] = [
         id: 'catalog',
         label: 'Větší sortiment fyzického zboží pro koncové zákazníky',
         hint: 'Klasický e-shop s víc produkty.',
-        weights: { shoptet: 2, upgates: 2, shopify: 2 },
+        weights: { shopify: 3, shoptet: 2, upgates: 2 },
         rationale: 'plánuješ klasický e-shop s větším sortimentem'
       },
       {
@@ -368,8 +368,8 @@ export type Answers = Record<string, string>;
 export function computeRecommendation(answers: Answers): EngineResult {
   const scores: Record<PlatformKey, number> = {
     shoptet: 0,
-    shopify: 0,
     upgates: 0,
+    shopify: 0,
     woocommerce: 0,
     builder: 0,
     marketplace: 0
