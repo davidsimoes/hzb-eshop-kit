@@ -324,7 +324,7 @@
           "title": "Vybrat platební bránu",
           "description": "Rozhodni se mezi Stripe, PayPal, GoPay nebo Comgate",
           "time": "1 hodina",
-          "tips": "Stripe má nejnižší poplatky, GoPay je nejpopulárnější v ČR"
+          "tips": "Poplatky se liší podle obratu a smlouvy, porovnej aktuální ceníky. V ČR jsou rozšířené GoPay a ComGate."
         },
         "shipping": {
           "title": "Vybrat dopravu",
@@ -342,7 +342,7 @@
           "title": "Připravit právní dokumenty",
           "description": "VOP (vč. 14denního práva na odstoupení od smlouvy), zásady ochrany osobních údajů (GDPR), reklamační řád",
           "time": "2 hodiny",
-          "tips": "Použij generátor VOP online nebo se poraď s právníkem. Reklamační řád nemusí být samostatný dokument, informace o právech z vadného plnění bývají součástí VOP. Nově je potřeba i snadné online odstoupení od smlouvy, ale neboj, většina platforem (Shoptet, Shopify přes aplikace) na to už má hotové řešení nebo ho brzy spustí, takže to za tebe nejčastěji vyřeší platforma. Pravidla se mění, ověř si aktuální stav k datu spuštění (nebo se poraď s odborníkem). Tohle není právní poradenství."
+          "tips": "Použij generátor VOP online nebo se poraď s právníkem. Reklamační řád nemusí být samostatný dokument, informace o právech z vadného plnění bývají součástí VOP. Nově je potřeba i snadné online odstoupení od smlouvy, ale neboj, většina platforem (Shoptet, Shopify přes aplikace) na to už má hotové řešení, takže to za tebe nejčastěji vyřeší platforma. Pravidla se mění, ověř si aktuální stav k datu spuštění (nebo se poraď s odborníkem). Tohle není právní poradenství."
         },
         "moodboard": {
           "title": "Vytvořit moodboard značky",
@@ -691,10 +691,10 @@
       "payment": {
         "title": "Platební brány",
         "items": [
-          "Stripe - 1,4% + 5 Kč za transakci",
-          "PayPal - 3,4% + 10 Kč za transakci",
-          "ČSOB Gateway - 1,5% za transakci + měsíční poplatek",
-          "GoPay - 1,9% za transakci (oblíbená v ČR)"
+          "Stripe - karty, Apple/Google Pay, snadné mezinárodní napojení",
+          "PayPal - celosvětově známý, spíš vyšší poplatky za transakci",
+          "ČSOB Gateway - česká banka, karty + měsíční poplatek",
+          "GoPay - česká brána, oblíbená v ČR (ceník podle obratu)"
         ]
       },
       "shipping": {
@@ -926,7 +926,7 @@
           },
           {
             "q": "Jaké jsou absolutně minimální právní požadavky pro nový e-shop v ČR?",
-            "a": "Když rozjíždíš e-shop, musíš mít ze zákona:\n\n- Obchodní podmínky (VOP): identifikaci prodejce (jméno/firma, IČO, kontakt), cenu, dopravu, platby, právo na odstoupení od smlouvy do 14 dní bez udání důvodu (lhůta běží od převzetí zboží) a informace o právech z vadného plnění.\n- Informace o právech z vadného plnění (reklamace): jak může zákaznice uplatnit reklamaci. Nemusí to být samostatný dokument, nejčastěji bývá součástí obchodních podmínek.\n- Zásady ochrany osobních údajů (GDPR): jak nakládáš s osobními daty zákaznic.\n- Správné údaje o sobě: IČO, adresa, ceny včetně DPH.\n- Snadné online odstoupení od smlouvy: nová evropská povinnost, aby zákaznice mohla odstoupit od smlouvy stejně snadno online, jako nakoupila. Neboj se tím stresovat, většina platforem (Shoptet, Shopify přes aplikace) na to už má hotové řešení nebo ho brzy spustí, takže to za tebe nejčastěji vyřeší platforma.\n\nVětšinu textů (VOP, GDPR) ti vygeneruje platforma nebo připravené šablony. Nejjistější jsou vzory od APEK. AI použij na první návrh, ale finální verzi nech projít člověkem.",
+            "a": "Když rozjíždíš e-shop, musíš mít ze zákona:\n\n- Obchodní podmínky (VOP): identifikaci prodejce (jméno/firma, IČO, kontakt), cenu, dopravu, platby, právo na odstoupení od smlouvy do 14 dní bez udání důvodu (lhůta běží od převzetí zboží) a informace o právech z vadného plnění.\n- Informace o právech z vadného plnění (reklamace): jak může zákaznice uplatnit reklamaci. Nemusí to být samostatný dokument, nejčastěji bývá součástí obchodních podmínek.\n- Zásady ochrany osobních údajů (GDPR): jak nakládáš s osobními daty zákaznic.\n- Správné údaje o sobě: IČO, adresa, ceny včetně DPH.\n- Snadné online odstoupení od smlouvy: nová evropská povinnost, aby zákaznice mohla odstoupit od smlouvy stejně snadno online, jako nakoupila. Neboj se tím stresovat, většina platforem (Shoptet, Shopify přes aplikace) na to už má hotové řešení, takže to za tebe nejčastěji vyřeší platforma.\n\nVětšinu textů (VOP, GDPR) ti vygeneruje platforma nebo připravené šablony. Nejjistější jsou vzory od APEK. AI použij na první návrh, ale finální verzi nech projít člověkem.",
             "links": [
               {
                 "text": "Dostupný advokát – Jak správně založit e-shop",
